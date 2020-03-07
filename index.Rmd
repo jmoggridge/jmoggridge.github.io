@@ -1,5 +1,6 @@
 ---
-title: "Welcome to my website!"
+title: "Homepage"
 ---
 
-You're up and running!
+placeholder
+
