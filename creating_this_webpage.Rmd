@@ -1,0 +1,185 @@
+---
+title: ""
+---
+<br>
+
+# How this website was made with Rstudio + Github
+
+***
+
+## Overview  
+<br>
+**If you want to make a "your.name.github.io" website with Rstudio like this one, the process if fairly simple**. It helps if you're familiar with Rstudio's Markdown format used in notebooks a bit; if not, this is a good [walk-through](https://seb951.github.io/rmarkdown_workshop/Rmarkdown/rmarkdown_main.html)  
+
+Rstudio has a great variety of tools to analyse, represent and communicate scientific information; 
+I'm hoping to leverage these to produce work that is  informative and aesthetic. I'm already a big fan of working in R notebooks and Jupyter so this route felt natural.
+
+
+There is a tutorial on the Rstudio website about how to do exactly this... but the simplest how-to I found was on [Florian Privé's github](https://github.com/privefl/rmarkdown-website-template#make-your-website-with-r-markdown-in-minutes).  The process involves 'forking' (copying) his templates to editing and adding content in Rstudio, then building the page and pushing it to github.
+
+For more guidance on structuring and Rmarkdown formatting, I learned a lot from [Emily Zabor's site](https://www.emilyzabor.com/tutorials/rmarkdown_websites_tutorial.html#personal_websites)
+<br>
+
+<br>
+
+***
+## Step by step  
+***
+<br>
+
+###  **First you'll need to install**:
+<br>
+
+  +  R and Rstudio (I'm using R v3.6.2 and v1.2)  
+  
+  +  Git and a Github account  
+  
+  +  a fewR packages:  
+  
+      *  to install a package: $ R install.packages("Package_Name_Here")  
+  
+      *  devtools -> I had to install this when the 'Build' menu only had the 'Configure built tools...' option.  
+  
+      *  tidyverse  
+<br>
+
+<br>
+
+### **Get the template**
+***
+  
+
+
+##### **1 -- Go to [Florian Privé's github repository](https://github.com/privefl/rmarkdown-website-template#make-your-website-with-r-markdown-in-minutes).**  Follow his instructions to:
+
++ Fork his GitHub repository for the webpage to yours
+
++ Rename the repository it to **yourname**.github.io 
+  
++ Once in your github, click ‘Clone’, choose ‘SSH key’ not http. **Copy the key**
+
+  * You might need to create a new SSH key for Git (I did & have included instructions on how to do this below this section; it wasn't hard).
+  <br>  
+  
+  <br>  
+
+##### **2 -- Start a new Rstudio session**
+  
+  + Open a **new project** from file menu
+  
+    * Choose **version control**  
+  
+    * Choose **Git**
+  
+    * Your repository info should paste itself in automatically now <p>  
+  
+  + Choose file directory for the website's files & save.
+  You should now have all the files you'll need to build the site in your Rstudio environment and they will be downloaded to the specified folder.
+
+<br>  
+  
+#####  **3 -- Key files** --  *\_site.yml* and *index.Rmd*
+
+  + Open these in the 'files' pane in Rstudio
+  
+  + **_site.yml** file defines the layout of the site. This is where you can:
+  
+    * Add your own info to the template
+    
+    * Set pages themes  
+  
+    * Add new pages to menus  <p>  <p>
+    
+    
+  + **index.Rmd** is the current frontpage of the site, given the setup in the _site.yml file. The **about.Rmd** is an extra page that is further down in the menu
+    
+    * These are Rmarkdown documents, you can edit their content and then they will be rendered into html files before you build the website.<p>
+    
+  *  Once you're done adding and editing, and you want to upload it, save your files, go to the 'Build' tab and click 'Build Website'
+  
+  
+  
+<br>  
+
+##### **4 -- Git add, commit and push**
+<br>  
+
+There are probably other ways to do this but using terminal is fast and easy.  
+
+* Open a terminal window, set working directory to your project folder
+
+* Enter these commands in (after $):
+```
+ if you to see a list of Git commands (optional, shows documentation for Git):
+ $ git
+ 
+ this adds all the files in the directory to the index
+ $ git add .
+ 
+ this records all the changes that were made and labels this version "first build"
+ $ git commit -m "first build"
+ ```
+<br>  
+* Now go back to your Rstudio window, to the the 'Git' tab and hit the 'Push" arrow icon.
+<br>  
+
+<br>  
+  
+***  
+### If you need a new SSH key on Github  
+<br>
+I followed [this tutorial](https://help.github.com/en/github/authenticating-to-github/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent) to generate a new SSH key on Github for the first time.
+
+While doing that, you might run into an issue with this if you are on macOS > 10.12. (see next section)
+<br>  
+  
+***
+#### Problem for setting SSH key older macs like mine
+
+I get to this step where I need to modify the ‘.ssh/config’ file:
+—————
+If you're using macOS Sierra 10.12.2 or later, you will need to modify your ~/.ssh/config file to automatically load keys into the ssh-agent and store passphrases in your keychain.
+
+Host *
+  AddKeysToAgent yes
+  UseKeychain yes
+  IdentityFile ~/.ssh/id_ra
+—————
+** now I’m using OSx10.12.6, so I found a good answer on StackOverflow and do this stuff
+    
+    Start Terminal and create the ~/.ssh directory if it doesn't exist:
+    	> mkdir -p ~/.ssh
+    
+    Now go into the directory:
+    	> cd ~/.ssh
+    
+    Now open the file config with the default editor:
+    	> open -t config
+    
+    If it says that file doesn't exist, create it with:
+    	> touch config
+    
+    and try opening again:
+     	> open -t config
+    
+    When you edit the file, make sure it is "Plain Text" using the menu at the top of the screen and clicking Format->Make Plain Text.
+    Set the permissions as instructed in your tutorial.
+
+Finish that GitHub tut and go to the next page to copy SSH info and add it into Github.
+This was fine using this:
+
+	> pbcopy < ~/.ssh/id_rsa.pub
+	# Copies the contents of the id_rsa.pub file to your clipboard
+
+
+		Ok now I could ‘Clone’ the repository by copying the SSH link
+		
+		4. The next step is
+  
+#### **Editing and adding content**
+<br>
+
+The following is a scratch-pad type record that I keep while making this website,  
+
+*first build: 2020/03/07*
+

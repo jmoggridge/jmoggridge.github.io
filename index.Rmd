@@ -1,6 +1,21 @@
 ---
-title: "Homepage"
+title: ""
 ---
+<br>
 
-placeholder
+
+### Hi this website is still in it's tiny-seahorse-looking-foetus-baby stage. 
+
+Here is an animation ~~
+*[an animation.gif] ("")
+
+
+<br>
+
+<br>
+
+***
+### List of things that people will actually want to see... what is new...
+
+can just add a link to another part of the website easily somehow like?
 

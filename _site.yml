@@ -7,19 +7,22 @@ navbar:
     - text: "Home"
       icon: fa-home
       href: index.html
+    - text: "Projects"
+      icon: fa fa-flask
+      href: projects.html
     - text: "About"
       icon: fa-user
       href: about.html
-    - text: "cv:"
-      icon: fa-file-pdf-o
-      href: cv.html
+    - text: "The making of..."
+      href: creating_this_webpage.html
+
   right:
     - text: "Contact me"
       icon: fa-envelope-o
-      href: mailto:ja.moggridge@gmail.com                    # CHANGE HERE
+      href: mailto:ja.moggridge@gmail.com
     - text: "GitHub"
       icon: fa-github
-      href: https://github.com/jmoggridge       # CHANGE HERE
+      href: https://github.com/jmoggridge
 output:
   html_document:
     theme: spacelab

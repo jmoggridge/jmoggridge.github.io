@@ -1,7 +1,16 @@
 ---
-title: "About me"
+subtitle: "About"
 ---
+<br>
 
-## Header
+***
+### Background
 
-lorem ipsm
+I'm interested in molecular biology & genetics, particularly 
+
+I would like to display if a  am currently working on, including vignettes about how to do 
+
+This is my professional website, where you can find my papers and cv
+<br>
+
+----
