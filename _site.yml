@@ -1,4 +1,4 @@
-name: "jmoggridge.github.io website"
+name: "jmoggridge.github.io"
 output_dir: "."
 navbar:
   title: ""                             # CHANGE HERE
@@ -16,12 +16,12 @@ navbar:
     - text: "The making of..."
       href: creating_this_webpage.html
   right:
-    - text: "mail"
-      icon: fa-envelope-o
+    - icon: fa-envelope-o
       href: mailto:ja.moggridge@gmail.com
-    - text: ""
-      icon: fa-github
+    - icon: fa-github
       href: https://github.com/jmoggridge
+    - icon: fa-twitter fa-lg
+      href: https://twitter.com/quaxlikeaduck
 output:
   html_document:
     theme: spacelab

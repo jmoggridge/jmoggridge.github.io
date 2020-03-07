@@ -1,5 +1,8 @@
 ---
-title: "Easy website with Rstudio + Github"
+title: "Easy website with Rstudio + Github tutorial"
+
+author: JA Moggridge
+date: 2020/03/07
 ---
 <br>
 
@@ -7,10 +10,10 @@ title: "Easy website with Rstudio + Github"
 
 # Overview  
 ***
-**If you want to make a "your.name.github.io" website with Rstudio like this one**, then you are in luck. The process is fairly simple (famous last words, I know). It helps if you're familiar with Rstudio's Markdown format used in notebooks a bit; if not, this is a good [walk-through](https://seb951.github.io/rmarkdown_workshop/Rmarkdown/rmarkdown_main.html).  
+**If you want to make a "your.name.github.io" website with Rstudio like this one**, then you are in luck. The process is fairly simple (famous last words, I know). It helps if you're a bit familiar with Rstudio's Markdown format used in notebooks; if not, this is a good [walk-through](https://seb951.github.io/rmarkdown_workshop/Rmarkdown/rmarkdown_main.html).  
 
-Rstudio has a great variety of tools to analyse, represent and communicate scientific information; 
-I'm hoping to leverage these to produce work that is  informative and aesthetic. I'm already a big fan of working with R notebooks and Jupyter, so this route felt natural.
+Rstudio has a great variety of tools to analyze, represent and communicate scientific information; 
+I'm looking to leverage these here to produce work that is both informative and aesthetic but also readily reproducible. I'm already a big fan of working with R notebooks and Jupyter, so going this route felt natural.
 
 
 Rstudio has their own tutorial on their website about making websites but the simplest how-to I found was on [Florian Privé's github](https://github.com/privefl/rmarkdown-website-template#make-your-website-with-r-markdown-in-minutes).  This tutorial demonstrates how to copy his templates and put your version up on github.
@@ -103,7 +106,7 @@ For more guidance on structuring and Rmarkdown formatting, I learned a lot from 
   
 <br>  
 
-#### **4 -- Git add, commit and push**
+#### **Git** add, commit and push to finish
 <br>  
 
 There are probably other ways to do this but using terminal is fast and easy.  
@@ -128,8 +131,9 @@ There are probably other ways to do this but using terminal is fast and easy.
            $ git push
         
         (you can also do these things in the 'Git' tab of Rstudio)
+<br>
 
-Your site should now be up on yourname.github.io. Nice!
+**Your site should now be up on yourname.github.io. Nice!**
 
 <br>  
 

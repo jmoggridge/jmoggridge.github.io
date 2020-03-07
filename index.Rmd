@@ -4,20 +4,25 @@ title: "Homepage"
 <br>
 
 
-# 
+## Welcome
 
-This page is a work in progress. Please check back soon or hit me up via email or twitter.
-
-Here is an animation ~~
-*[an animation.gif] ("")
-
-
-<br>
-
-<br>
-
-***
-### List of things that people will actually want to see... what is new...
-
-can just add a link to another part of the website easily somehow like?
-
+Hi, I'm Jason Moggridge. This is my professional page; please bear with me, it is a work in progress. Please check back soon!
+  
+----
+  
+### Things on my page that are working:
+  
+  +  [about me](about.html)
+  +  [some projects](projects.html)
+  +  [what I do for fun](stravaR.html)
+  
+----
+  
+### Things to get working:
+  
+  +  rmarkdown to pdf for hosting cv
+  +  links to twitter
+  +  dropdown menu
+  +  working R notebook
+  +  gganimate code chunks
+  +  interactive cv

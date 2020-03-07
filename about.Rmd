@@ -7,7 +7,7 @@ title: ""
 <br>
 
 ***
-## Background
+## About me
 <br>
 
 Hi, I'm a biologist interested in molecular biology, biochemistry & genetics. 
@@ -15,7 +15,7 @@ My research mainly focuses on hypometabolism and adaptive strategies to deal wit
 
   + Find [my journal publications on ORCID](https://orcid.org/0000-0003-1291-5868)
   
-  + recent [*cirriculum vitae*] (*link to pdf)
+  <+ recent [*cirriculum vitae*] (*link to pdf)>
   
   + I hope to add more interactive notebooks and science communication content shortly.
 
@@ -23,9 +23,14 @@ Please check back in soon, thanks!
 
 <br>
 
-![](weeeeee.gif) ![](sce.heatmap.full.png)
-
-# Ref:
-
 ----
 
+## Publications
+
+<br>
+----
+
+#### About this site  
+See: [how to create a website in Rstudio tutorial](creating_this_webpage.html) 
+
+----
