@@ -109,17 +109,18 @@ There are probably other ways to do this but using terminal is fast and easy.
 * Open a terminal window, set working directory to your project folder
 
 * Enter these commands in (after $):
-```
- if you to see a list of Git commands (optional, shows documentation for Git):
- $ git
- 
- this adds all the files in the directory to the index
- $ git add .
- 
- this records all the changes that were made and labels this version "first build"
- $ git commit -m "first build"
- ```
-<br>  
+          ```
+           if you to see a list of Git commands (optional, shows documentation for Git):
+           $ git
+           
+           this adds all the files in the directory to the index
+           $ git add .
+           
+           this records all the changes that were made and labels this version "first build"
+           $ git commit -m "first build"
+           
+           a summary of the changes you made will be printed in the window.
+           ```
 * Now go back to your Rstudio window, to the the 'Git' tab and hit the 'Push" arrow icon.
 <br>  
 
@@ -147,39 +148,39 @@ Host *
 —————
 ** now I’m using OSx10.12.6, so I found a good answer on StackOverflow and do this stuff
     
-    Start Terminal and create the ~/.ssh directory if it doesn't exist:
-    	> mkdir -p ~/.ssh
-    
-    Now go into the directory:
-    	> cd ~/.ssh
-    
-    Now open the file config with the default editor:
-    	> open -t config
-    
-    If it says that file doesn't exist, create it with:
-    	> touch config
-    
-    and try opening again:
-     	> open -t config
-    
-    When you edit the file, make sure it is "Plain Text" using the menu at the top of the screen and clicking Format->Make Plain Text.
-    Set the permissions as instructed in your tutorial.
+        Start Terminal and create the ~/.ssh directory if it doesn't exist:
+        	$ mkdir -p ~/.ssh
+        
+        Now go into the directory:
+        	$ cd ~/.ssh
+        
+        Now open the file config with the default editor:
+        	$ open -t config
+        
+        If it says that file doesn't exist, create it with:
+        	$ touch config
+        
+        and try opening again:
+         	$ open -t config
+        
+        When you edit the file, make sure it is "Plain Text" using the menu at the top of the screen and clicking Format->Make Plain Text.
+        Set the permissions as instructed in your tutorial.
 
 Finish that GitHub tut and go to the next page to copy SSH info and add it into Github.
 This was fine using this:
 
-	> pbcopy < ~/.ssh/id_rsa.pub
-	# Copies the contents of the id_rsa.pub file to your clipboard
-
-
-		Ok now I could ‘Clone’ the repository by copying the SSH link
+    	This copies the contents of the id_rsa.pub file to your clipboard
+        	$ pbcopy < ~/.ssh/id_rsa.pub
+    
+Now I can ‘Clone’ the repository by copying the SSH link
 		
-		4. The next step is
-  
+		
+		
 #### **Editing and adding content**
 <br>
 
-The following is a scratch-pad type record that I keep while making this website,  
+The following is a scratch-pad type record that I keep while making this website, with notes added when I figure out how to do something that maybe isn't immediately apparent to me as a habitual R user.
 
 *first build: 2020/03/07*
-
+*  had to re-install devtools to get the 'Build' function working in Rstudio
+*  

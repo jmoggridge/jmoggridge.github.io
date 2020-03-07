@@ -415,18 +415,17 @@ $(document).ready(function () {
 <p>There are probably other ways to do this but using terminal is fast and easy.</p>
 <ul>
 <li><p>Open a terminal window, set working directory to your project folder</p></li>
-<li>Enter these commands in (after $):</li>
+<li><p>Enter these commands in (after $): ``` if you to see a list of Git commands (optional, shows documentation for Git): $ git</p>
+<pre><code>     this adds all the files in the directory to the index
+     $ git add .
+
+     this records all the changes that were made and labels this version &quot;first build&quot;
+     $ git commit -m &quot;first build&quot;
+
+     a summary of the changes you made will be printed in the window.
+     ```</code></pre></li>
+<li><p>Now go back to your Rstudio window, to the the ‘Git’ tab and hit the ’Push&quot; arrow icon. <br></p></li>
 </ul>
-<pre><code> if you to see a list of Git commands (optional, shows documentation for Git):
- $ git
- 
- this adds all the files in the directory to the index
- $ git add .
- 
- this records all the changes that were made and labels this version &quot;first build&quot;
- $ git commit -m &quot;first build&quot;</code></pre>
-<p><br><br />
-* Now go back to your Rstudio window, to the the ‘Git’ tab and hit the ’Push&quot; arrow icon. <br></p>
 <p><br></p>
 <hr />
 </div>
@@ -440,37 +439,33 @@ $(document).ready(function () {
 <h4>Problem for setting SSH key older macs like mine</h4>
 <p>I get to this step where I need to modify the ‘.ssh/config’ file: ————— If you’re using macOS Sierra 10.12.2 or later, you will need to modify your ~/.ssh/config file to automatically load keys into the ssh-agent and store passphrases in your keychain.</p>
 <p>Host * AddKeysToAgent yes UseKeychain yes IdentityFile ~/.ssh/id_ra ————— ** now I’m using OSx10.12.6, so I found a good answer on StackOverflow and do this stuff</p>
-<pre><code>Start Terminal and create the ~/.ssh directory if it doesn&#39;t exist:
-    &gt; mkdir -p ~/.ssh
-
-Now go into the directory:
-    &gt; cd ~/.ssh
-
-Now open the file config with the default editor:
-    &gt; open -t config
-
-If it says that file doesn&#39;t exist, create it with:
-    &gt; touch config
-
-and try opening again:
-    &gt; open -t config
-
-When you edit the file, make sure it is &quot;Plain Text&quot; using the menu at the top of the screen and clicking Format-&gt;Make Plain Text.
-Set the permissions as instructed in your tutorial.</code></pre>
-<p>Finish that GitHub tut and go to the next page to copy SSH info and add it into Github. This was fine using this:</p>
-<pre><code>&gt; pbcopy &lt; ~/.ssh/id_rsa.pub
-# Copies the contents of the id_rsa.pub file to your clipboard
-
-
-    Ok now I could ‘Clone’ the repository by copying the SSH link
+<pre><code>    Start Terminal and create the ~/.ssh directory if it doesn&#39;t exist:
+        $ mkdir -p ~/.ssh
     
-    4. The next step is</code></pre>
+    Now go into the directory:
+        $ cd ~/.ssh
+    
+    Now open the file config with the default editor:
+        $ open -t config
+    
+    If it says that file doesn&#39;t exist, create it with:
+        $ touch config
+    
+    and try opening again:
+        $ open -t config
+    
+    When you edit the file, make sure it is &quot;Plain Text&quot; using the menu at the top of the screen and clicking Format-&gt;Make Plain Text.
+    Set the permissions as instructed in your tutorial.</code></pre>
+<p>Finish that GitHub tut and go to the next page to copy SSH info and add it into Github. This was fine using this:</p>
+<pre><code>    This copies the contents of the id_rsa.pub file to your clipboard
+        $ pbcopy &lt; ~/.ssh/id_rsa.pub</code></pre>
+<p>Now I can ‘Clone’ the repository by copying the SSH link</p>
 </div>
 <div id="editing-and-adding-content" class="section level4">
 <h4><strong>Editing and adding content</strong></h4>
 <p><br></p>
-<p>The following is a scratch-pad type record that I keep while making this website,</p>
-<p><em>first build: 2020/03/07</em></p>
+<p>The following is a scratch-pad type record that I keep while making this website, with notes added when I figure out how to do something that maybe isn’t immediately apparent to me as a habitual R user.</p>
+<p><em>first build: 2020/03/07</em> * had to re-install devtools to get the ‘Build’ function working in Rstudio *</p>
 </div>
 </div>
 </div>
