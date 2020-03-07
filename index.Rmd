@@ -4,7 +4,9 @@ title: ""
 <br>
 
 
-### Hi this website is still in it's tiny-seahorse-looking-foetus-baby stage. 
+# Welcome
+
+This page is a work in progress. Please check back soon or hit me up via email or twitter.
 
 Here is an animation ~~
 *[an animation.gif] ("")

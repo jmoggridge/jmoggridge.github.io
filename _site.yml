@@ -1,18 +1,18 @@
-name: "Jason Moggridge"                                # CHANGE HERE
+name: "jmoggridge.github.io website"
 output_dir: "."
 navbar:
-  title: "Jason Moggridge"                             # CHANGE HERE
+  title: ""                             # CHANGE HERE
   type: inverse
   left:
-    - text: "Home"
+    - text: "J.Moggridge"
       icon: fa-home
       href: index.html
-    - text: "Projects"
-      icon: fa fa-flask
-      href: projects.html
     - text: "About"
       icon: fa-user
       href: about.html
+    - text: "Projects"
+      href: projects.html
+      icon: fa fa-flask
     - text: "The making of..."
       href: creating_this_webpage.html
 

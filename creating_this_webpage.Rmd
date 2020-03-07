@@ -1,14 +1,12 @@
 ---
-title: ""
+title: "How this website was made with Rstudio + Github"
 ---
 <br>
 
-# How this website was made with Rstudio + Github
-
 ***
 
-## Overview  
-<br>
+# Overview  
+***
 **If you want to make a "your.name.github.io" website with Rstudio like this one, the process if fairly simple**. It helps if you're familiar with Rstudio's Markdown format used in notebooks a bit; if not, this is a good [walk-through](https://seb951.github.io/rmarkdown_workshop/Rmarkdown/rmarkdown_main.html)  
 
 Rstudio has a great variety of tools to analyse, represent and communicate scientific information; 
@@ -45,12 +43,13 @@ For more guidance on structuring and Rmarkdown formatting, I learned a lot from 
 
 <br>
 
-### **Get the template**
+#### **1 -- Get the template**
 ***
   
+  
 
++  **Go to [Florian Privé's github repository](https://github.com/privefl/rmarkdown-website-template#make-your-website-with-r-markdown-in-minutes).**  Follow his instructions to:
 
-##### **1 -- Go to [Florian Privé's github repository](https://github.com/privefl/rmarkdown-website-template#make-your-website-with-r-markdown-in-minutes).**  Follow his instructions to:
 
 + Fork his GitHub repository for the webpage to yours
 
@@ -63,7 +62,8 @@ For more guidance on structuring and Rmarkdown formatting, I learned a lot from 
   
   <br>  
 
-##### **2 -- Start a new Rstudio session**
+#### **2 -- Start a new Rstudio session**  
+  
   
   + Open a **new project** from file menu
   
@@ -78,8 +78,8 @@ For more guidance on structuring and Rmarkdown formatting, I learned a lot from 
 
 <br>  
   
-#####  **3 -- Key files** --  *\_site.yml* and *index.Rmd*
-
+####  **3 -- Key files** --  *\_site.yml* and *index.Rmd*  
+***  
   + Open these in the 'files' pane in Rstudio
   
   + **_site.yml** file defines the layout of the site. This is where you can:
@@ -101,7 +101,7 @@ For more guidance on structuring and Rmarkdown formatting, I learned a lot from 
   
 <br>  
 
-##### **4 -- Git add, commit and push**
+#### **4 -- Git add, commit and push**
 <br>  
 
 There are probably other ways to do this but using terminal is fast and easy.  
@@ -109,24 +109,36 @@ There are probably other ways to do this but using terminal is fast and easy.
 * Open a terminal window, set working directory to your project folder
 
 * Enter these commands in (after $):
-          ```
-           if you to see a list of Git commands (optional, shows documentation for Git):
+
+\list \of \Git \commands \to \add \commit \push
+
+        if you to see a list of Git commands (optional, shows documentation for Git):
            $ git
            
-           this adds all the files in the directory to the index
+        this adds all the files in the directory to the index  
            $ git add .
            
-           this records all the changes that were made and labels this version "first build"
+        this records all the changes that were made and labels this version "first build"  
            $ git commit -m "first build"
            
-           a summary of the changes you made will be printed in the window.
-           ```
-* Now go back to your Rstudio window, to the the 'Git' tab and hit the 'Push" arrow icon.
+        a summary of the changes you made will be printed in the window.
+        next you can use the push command to finalize your changes
+           $ git push
+        
+        (you can also do these things in the 'Git' tab of Rstudio)
+
+Your site should now be up on yourname.github.io. Nice!
+
 <br>  
 
 <br>  
+
+***
+
+# Troubleshooting
   
 ***  
+
 ### If you need a new SSH key on Github  
 <br>
 I followed [this tutorial](https://help.github.com/en/github/authenticating-to-github/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent) to generate a new SSH key on Github for the first time.
@@ -176,7 +188,7 @@ Now I can ‘Clone’ the repository by copying the SSH link
 		
 		
 		
-#### **Editing and adding content**
+# **Editing and adding content**
 <br>
 
 The following is a scratch-pad type record that I keep while making this website, with notes added when I figure out how to do something that maybe isn't immediately apparent to me as a habitual R user.
@@ -184,3 +196,4 @@ The following is a scratch-pad type record that I keep while making this website
 *first build: 2020/03/07*
 *  had to re-install devtools to get the 'Build' function working in Rstudio
 *  
+
