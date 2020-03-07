@@ -1,32 +1,34 @@
 ---
-title: "How this website was made with Rstudio + Github"
+title: "Easy website with Rstudio + Github"
 ---
 <br>
 
-***
+---
 
 # Overview  
 ***
-**If you want to make a "your.name.github.io" website with Rstudio like this one, the process if fairly simple**. It helps if you're familiar with Rstudio's Markdown format used in notebooks a bit; if not, this is a good [walk-through](https://seb951.github.io/rmarkdown_workshop/Rmarkdown/rmarkdown_main.html)  
+**If you want to make a "your.name.github.io" website with Rstudio like this one**, then you are in luck. The process is fairly simple (famous last words, I know). It helps if you're familiar with Rstudio's Markdown format used in notebooks a bit; if not, this is a good [walk-through](https://seb951.github.io/rmarkdown_workshop/Rmarkdown/rmarkdown_main.html).  
 
 Rstudio has a great variety of tools to analyse, represent and communicate scientific information; 
-I'm hoping to leverage these to produce work that is  informative and aesthetic. I'm already a big fan of working in R notebooks and Jupyter so this route felt natural.
+I'm hoping to leverage these to produce work that is  informative and aesthetic. I'm already a big fan of working with R notebooks and Jupyter, so this route felt natural.
 
 
-There is a tutorial on the Rstudio website about how to do exactly this... but the simplest how-to I found was on [Florian Privé's github](https://github.com/privefl/rmarkdown-website-template#make-your-website-with-r-markdown-in-minutes).  The process involves 'forking' (copying) his templates to editing and adding content in Rstudio, then building the page and pushing it to github.
+Rstudio has their own tutorial on their website about making websites but the simplest how-to I found was on [Florian Privé's github](https://github.com/privefl/rmarkdown-website-template#make-your-website-with-r-markdown-in-minutes).  This tutorial demonstrates how to copy his templates and put your version up on github.
 
 For more guidance on structuring and Rmarkdown formatting, I learned a lot from [Emily Zabor's site](https://www.emilyzabor.com/tutorials/rmarkdown_websites_tutorial.html#personal_websites)
 <br>
 
 <br>
 
-***
-## Step by step  
+---
+## Instructions
 ***
 <br>
 
-###  **First you'll need to install**:
-<br>
+####  **Install** if necessary
+
+
+***
 
   +  R and Rstudio (I'm using R v3.6.2 and v1.2)  
   
@@ -43,42 +45,42 @@ For more guidance on structuring and Rmarkdown formatting, I learned a lot from 
 
 <br>
 
-#### **1 -- Get the template**
+
+####  Get a ready-made **template**
+
 ***
   
-  
-
 +  **Go to [Florian Privé's github repository](https://github.com/privefl/rmarkdown-website-template#make-your-website-with-r-markdown-in-minutes).**  Follow his instructions to:
 
 
-+ Fork his GitHub repository for the webpage to yours
++ **Fork** his GitHub repository for the webpage to yours
 
 + Rename the repository it to **yourname**.github.io 
   
 + Once in your github, click ‘Clone’, choose ‘SSH key’ not http. **Copy the key**
 
-  * You might need to create a new SSH key for Git (I did & have included instructions on how to do this below this section; it wasn't hard).
-  <br>  
-  
-  <br>  
+  * You might need to create a new SSH key for Git (I did & have included instructions on how to do this below this section; it wasn't hard).  
+<br>
 
-#### **2 -- Start a new Rstudio session**  
-  
-  
+<br>
+
+
+#### Create your **building environment**
+
+***    
   + Open a **new project** from file menu
   
-    * Choose **version control**  
+  + Choose **version control** option
   
-    * Choose **Git**
+  + Choose **Git** option
   
-    * Your repository info should paste itself in automatically now <p>  
+  +  Your repository info should paste from the clipboard into the fields
   
-  + Choose file directory for the website's files & save.
-  You should now have all the files you'll need to build the site in your Rstudio environment and they will be downloaded to the specified folder.
+  + Choose a directory & save. All the files you'll need to build the site should now be downloaded and imported to your Rstudio environment for editing.
 
 <br>  
   
-####  **3 -- Key files** --  *\_site.yml* and *index.Rmd*  
+####  **Key files** --  *\_site.yml* and *index.Rmd*  
 ***  
   + Open these in the 'files' pane in Rstudio
   
@@ -139,26 +141,28 @@ Your site should now be up on yourname.github.io. Nice!
   
 ***  
 
-### If you need a new SSH key on Github  
+#### If you need a new SSH key on Github  
 <br>
 I followed [this tutorial](https://help.github.com/en/github/authenticating-to-github/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent) to generate a new SSH key on Github for the first time.
 
 While doing that, you might run into an issue with this if you are on macOS > 10.12. (see next section)
 <br>  
+
   
 ***
-#### Problem for setting SSH key older macs like mine
+#### Problem encounter while setting SSH key for Github to Rstudio:
+<br>  
 
-I get to this step where I need to modify the ‘.ssh/config’ file:
-—————
-If you're using macOS Sierra 10.12.2 or later, you will need to modify your ~/.ssh/config file to automatically load keys into the ssh-agent and store passphrases in your keychain.
+I get to this step where I need to modify the ‘.ssh/config’ file:  
+      
+    If you're using macOS Sierra 10.12.2 or later, you will need to modify your ~/.ssh/config file to automatically load keys into the ssh-agent and store passphrases in your keychain.
+            
+            Host *
+              AddKeysToAgent yes
+              UseKeychain yes
+              IdentityFile ~/.ssh/id_ra
 
-Host *
-  AddKeysToAgent yes
-  UseKeychain yes
-  IdentityFile ~/.ssh/id_ra
-—————
-** now I’m using OSx10.12.6, so I found a good answer on StackOverflow and do this stuff
+I’m using OSx10.12.6, so I found a good answer on StackOverflow and do this stuff
     
         Start Terminal and create the ~/.ssh directory if it doesn't exist:
         	$ mkdir -p ~/.ssh
@@ -184,16 +188,20 @@ This was fine using this:
     	This copies the contents of the id_rsa.pub file to your clipboard
         	$ pbcopy < ~/.ssh/id_rsa.pub
     
-Now I can ‘Clone’ the repository by copying the SSH link
-		
-		
-		
-# **Editing and adding content**
-<br>
+Now I can ‘Clone’ the repository by copying the SSH link from my github repository jmoggridge.github.io
 
-The following is a scratch-pad type record that I keep while making this website, with notes added when I figure out how to do something that maybe isn't immediately apparent to me as a habitual R user.
+<br>  	
+  
+----  
+##  Notes to myself & things I wish I knew
+     
+***  
+
+<br>
+I keep this list as an *aide-memoire* to come back to when I encounter the same problem I've already had instead of combing stackoverflow. Notes are added when I figure out how to do something that I will probably forget again.
 
 *first build: 2020/03/07*
+
 *  had to re-install devtools to get the 'Build' function working in Rstudio
 *  
 

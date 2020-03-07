@@ -15,12 +15,11 @@ navbar:
       icon: fa fa-flask
     - text: "The making of..."
       href: creating_this_webpage.html
-
   right:
-    - text: "Contact me"
+    - text: "mail"
       icon: fa-envelope-o
       href: mailto:ja.moggridge@gmail.com
-    - text: "GitHub"
+    - text: ""
       icon: fa-github
       href: https://github.com/jmoggridge
 output:

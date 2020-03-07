@@ -11,7 +11,7 @@
 
 
 
-<title>How this website was made with Rstudio + Github</title>
+<title>Easy website with Rstudio + Github</title>
 
 <script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -269,7 +269,7 @@ $(document).ready(function () {
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="index.html">Jason Moggridge</a>
+      <a class="navbar-brand" href="index.html"></a>
     </div>
     <div id="navbar" class="navbar-collapse collapse">
       <ul class="nav navbar-nav">
@@ -277,14 +277,7 @@ $(document).ready(function () {
   <a href="index.html">
     <span class="fa fa-home"></span>
      
-    Home
-  </a>
-</li>
-<li>
-  <a href="projects.html">
-    <span class="fa fa fa fa-flask"></span>
-     
-    Projects
+    J.Moggridge
   </a>
 </li>
 <li>
@@ -292,6 +285,13 @@ $(document).ready(function () {
     <span class="fa fa-user"></span>
      
     About
+  </a>
+</li>
+<li>
+  <a href="projects.html">
+    <span class="fa fa fa fa-flask"></span>
+     
+    Projects
   </a>
 </li>
 <li>
@@ -303,14 +303,14 @@ $(document).ready(function () {
   <a href="mailto:ja.moggridge@gmail.com">
     <span class="fa fa-envelope-o"></span>
      
-    Contact me
+    mail
   </a>
 </li>
 <li>
   <a href="https://github.com/jmoggridge">
     <span class="fa fa-github"></span>
      
-    GitHub
+    
   </a>
 </li>
       </ul>
@@ -322,7 +322,7 @@ $(document).ready(function () {
 
 
 
-<h1 class="title toc-ignore">How this website was made with Rstudio + Github</h1>
+<h1 class="title toc-ignore">Easy website with Rstudio + Github</h1>
 
 </div>
 
@@ -332,19 +332,19 @@ $(document).ready(function () {
 <div id="overview" class="section level1">
 <h1>Overview</h1>
 <hr />
-<p><strong>If you want to make a “your.name.github.io” website with Rstudio like this one, the process if fairly simple</strong>. It helps if you’re familiar with Rstudio’s Markdown format used in notebooks a bit; if not, this is a good <a href="https://seb951.github.io/rmarkdown_workshop/Rmarkdown/rmarkdown_main.html">walk-through</a></p>
-<p>Rstudio has a great variety of tools to analyse, represent and communicate scientific information; I’m hoping to leverage these to produce work that is informative and aesthetic. I’m already a big fan of working in R notebooks and Jupyter so this route felt natural.</p>
-<p>There is a tutorial on the Rstudio website about how to do exactly this… but the simplest how-to I found was on <a href="https://github.com/privefl/rmarkdown-website-template#make-your-website-with-r-markdown-in-minutes">Florian Privé’s github</a>. The process involves ‘forking’ (copying) his templates to editing and adding content in Rstudio, then building the page and pushing it to github.</p>
+<p><strong>If you want to make a “your.name.github.io” website with Rstudio like this one</strong>, then you are in luck. The process is fairly simple (famous last words, I know). It helps if you’re familiar with Rstudio’s Markdown format used in notebooks a bit; if not, this is a good <a href="https://seb951.github.io/rmarkdown_workshop/Rmarkdown/rmarkdown_main.html">walk-through</a>.</p>
+<p>Rstudio has a great variety of tools to analyse, represent and communicate scientific information; I’m hoping to leverage these to produce work that is informative and aesthetic. I’m already a big fan of working with R notebooks and Jupyter, so this route felt natural.</p>
+<p>Rstudio has their own tutorial on their website about making websites but the simplest how-to I found was on <a href="https://github.com/privefl/rmarkdown-website-template#make-your-website-with-r-markdown-in-minutes">Florian Privé’s github</a>. This tutorial demonstrates how to copy his templates and put your version up on github.</p>
 <p>For more guidance on structuring and Rmarkdown formatting, I learned a lot from <a href="https://www.emilyzabor.com/tutorials/rmarkdown_websites_tutorial.html#personal_websites">Emily Zabor’s site</a> <br></p>
 <p><br></p>
 <hr />
-<div id="step-by-step" class="section level2">
-<h2>Step by step</h2>
+<div id="instructions" class="section level2">
+<h2>Instructions</h2>
 <hr />
 <p><br></p>
-<div id="first-youll-need-to-install" class="section level3">
-<h3><strong>First you’ll need to install</strong>:</h3>
-<p><br></p>
+<div id="install-if-necessary" class="section level4">
+<h4><strong>Install</strong> if necessary</h4>
+<hr />
 <ul>
 <li><p>R and Rstudio (I’m using R v3.6.2 and v1.2)</p></li>
 <li><p>Git and a Github account</p></li>
@@ -357,36 +357,36 @@ $(document).ready(function () {
 </ul></li>
 </ul>
 <p><br></p>
-<div id="get-the-template" class="section level4">
-<h4><strong>1 – Get the template</strong></h4>
+</div>
+<div id="get-a-ready-made-template" class="section level4">
+<h4>Get a ready-made <strong>template</strong></h4>
 <hr />
 <ul>
 <li><p><strong>Go to <a href="https://github.com/privefl/rmarkdown-website-template#make-your-website-with-r-markdown-in-minutes">Florian Privé’s github repository</a>.</strong> Follow his instructions to:</p></li>
-<li><p>Fork his GitHub repository for the webpage to yours</p></li>
+<li><p><strong>Fork</strong> his GitHub repository for the webpage to yours</p></li>
 <li><p>Rename the repository it to <strong>yourname</strong>.github.io</p></li>
 <li><p>Once in your github, click ‘Clone’, choose ‘SSH key’ not http. <strong>Copy the key</strong></p>
 <ul>
-<li>You might need to create a new SSH key for Git (I did &amp; have included instructions on how to do this below this section; it wasn’t hard). <br></li>
-</ul>
-<p><br></p></li>
-</ul>
-</div>
-<div id="start-a-new-rstudio-session" class="section level4">
-<h4><strong>2 – Start a new Rstudio session</strong></h4>
-<ul>
-<li><p>Open a <strong>new project</strong> from file menu</p>
-<ul>
-<li><p>Choose <strong>version control</strong></p></li>
-<li><p>Choose <strong>Git</strong></p></li>
-<li>Your repository info should paste itself in automatically now
-<p></li>
+<li>You might need to create a new SSH key for Git (I did &amp; have included instructions on how to do this below this section; it wasn’t hard).<br />
+<br></li>
 </ul></li>
-<li><p>Choose file directory for the website’s files &amp; save. You should now have all the files you’ll need to build the site in your Rstudio environment and they will be downloaded to the specified folder.</p></li>
+</ul>
+<p><br></p>
+</div>
+<div id="create-your-building-environment" class="section level4">
+<h4>Create your <strong>building environment</strong></h4>
+<hr />
+<ul>
+<li><p>Open a <strong>new project</strong> from file menu</p></li>
+<li><p>Choose <strong>version control</strong> option</p></li>
+<li><p>Choose <strong>Git</strong> option</p></li>
+<li><p>Your repository info should paste from the clipboard into the fields</p></li>
+<li><p>Choose a directory &amp; save. All the files you’ll need to build the site should now be downloaded and imported to your Rstudio environment for editing.</p></li>
 </ul>
 <p><br></p>
 </div>
 <div id="key-files-_site.yml-and-index.rmd" class="section level4">
-<h4><strong>3 – Key files</strong> – <em>_site.yml</em> and <em>index.Rmd</em></h4>
+<h4><strong>Key files</strong> – <em>_site.yml</em> and <em>index.Rmd</em></h4>
 <hr />
 <ul>
 <li><p>Open these in the ‘files’ pane in Rstudio</p></li>
@@ -437,19 +437,26 @@ $(document).ready(function () {
 </div>
 </div>
 </div>
-</div>
 <div id="troubleshooting" class="section level1">
 <h1>Troubleshooting</h1>
 <hr />
-<div id="if-you-need-a-new-ssh-key-on-github" class="section level3">
-<h3>If you need a new SSH key on Github</h3>
+<div id="if-you-need-a-new-ssh-key-on-github" class="section level4">
+<h4>If you need a new SSH key on Github</h4>
 <p><br> I followed <a href="https://help.github.com/en/github/authenticating-to-github/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent">this tutorial</a> to generate a new SSH key on Github for the first time.</p>
 <p>While doing that, you might run into an issue with this if you are on macOS &gt; 10.12. (see next section) <br></p>
 <hr />
-<div id="problem-for-setting-ssh-key-older-macs-like-mine" class="section level4">
-<h4>Problem for setting SSH key older macs like mine</h4>
-<p>I get to this step where I need to modify the ‘.ssh/config’ file: ————— If you’re using macOS Sierra 10.12.2 or later, you will need to modify your ~/.ssh/config file to automatically load keys into the ssh-agent and store passphrases in your keychain.</p>
-<p>Host * AddKeysToAgent yes UseKeychain yes IdentityFile ~/.ssh/id_ra ————— ** now I’m using OSx10.12.6, so I found a good answer on StackOverflow and do this stuff</p>
+</div>
+<div id="problem-encounter-while-setting-ssh-key-for-github-to-rstudio" class="section level4">
+<h4>Problem encounter while setting SSH key for Github to Rstudio:</h4>
+<p><br></p>
+<p>I get to this step where I need to modify the ‘.ssh/config’ file:</p>
+<pre><code>If you&#39;re using macOS Sierra 10.12.2 or later, you will need to modify your ~/.ssh/config file to automatically load keys into the ssh-agent and store passphrases in your keychain.
+        
+        Host *
+          AddKeysToAgent yes
+          UseKeychain yes
+          IdentityFile ~/.ssh/id_ra</code></pre>
+<p>I’m using OSx10.12.6, so I found a good answer on StackOverflow and do this stuff</p>
 <pre><code>    Start Terminal and create the ~/.ssh directory if it doesn&#39;t exist:
         $ mkdir -p ~/.ssh
     
@@ -470,15 +477,20 @@ $(document).ready(function () {
 <p>Finish that GitHub tut and go to the next page to copy SSH info and add it into Github. This was fine using this:</p>
 <pre><code>    This copies the contents of the id_rsa.pub file to your clipboard
         $ pbcopy &lt; ~/.ssh/id_rsa.pub</code></pre>
-<p>Now I can ‘Clone’ the repository by copying the SSH link</p>
-</div>
-</div>
-</div>
-<div id="editing-and-adding-content" class="section level1">
-<h1><strong>Editing and adding content</strong></h1>
+<p>Now I can ‘Clone’ the repository by copying the SSH link from my github repository jmoggridge.github.io</p>
 <p><br></p>
-<p>The following is a scratch-pad type record that I keep while making this website, with notes added when I figure out how to do something that maybe isn’t immediately apparent to me as a habitual R user.</p>
-<p><em>first build: 2020/03/07</em> * had to re-install devtools to get the ‘Build’ function working in Rstudio *</p>
+<hr />
+</div>
+<div id="notes-to-myself-things-i-wish-i-knew" class="section level2">
+<h2>Notes to myself &amp; things I wish I knew</h2>
+<hr />
+<p><br> I keep this list as an <em>aide-memoire</em> to come back to when I encounter the same problem I’ve already had instead of combing stackoverflow. Notes are added when I figure out how to do something that I will probably forget again.</p>
+<p><em>first build: 2020/03/07</em></p>
+<ul>
+<li>had to re-install devtools to get the ‘Build’ function working in Rstudio</li>
+<li></li>
+</ul>
+</div>
 </div>
 
 

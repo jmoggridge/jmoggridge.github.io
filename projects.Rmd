@@ -1,14 +1,18 @@
 ---
-title: "Projects"
+title: "Projects, past and present"
 ---
- 
+ ***
+ ***
  ~work in progress~
  
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-*This is an R notebook of work I've put together* while working on doing the [Bioinformatics Algorithm course by Compeau & Pevzner](https://www.coursera.org/specializations/bioinformatics). I would highly recommend this course! It covers a lot of relevant topics to anyone in molecular biology and genetics, including: 
+
+
+### Cou
+*This is an R notebook of work I've put together* while working on doing the [Bioinformatics Algorithm MOOC by Compeau & Pevzner](https://www.coursera.org/specializations/bioinformatics). I would highly recommend this course! It covers a lot of interesting topics, including: 
 
   +  motif-finding
   +  sequence alignment
@@ -18,5 +22,10 @@ knitr::opts_chunk$set(echo = TRUE)
 
 
 This is a gallery of some figures ~ until I get something more structured ready for this page
+
+
+
+
+
 
 

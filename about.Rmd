@@ -1,16 +1,31 @@
 ---
-subtitle: "About"
+title: ""
 ---
 <br>
 
-***
-### Background
-
-I'm interested in molecular biology & genetics, particularly 
-
-I would like to display if a  am currently working on, including vignettes about how to do 
-
-This is my professional website, where you can find my papers and cv
+# Jason Moggridge, B.Sc. Biochemistry
 <br>
 
+***
+## Background
+<br>
+
+Hi, I'm a biologist interested in molecular biology, biochemistry & genetics. 
+My research mainly focuses on hypometabolism and adaptive strategies to deal with environmental stress in hibernators and estivators  
+
+  + Find [my journal publications on ORCID](https://orcid.org/0000-0003-1291-5868)
+  
+  + recent [*cirriculum vitae*] (*link to pdf)
+  
+  + I hope to add more interactive notebooks and science communication content shortly.
+
+Please check back in soon, thanks!
+
+<br>
+
+![](weeeeee.gif) ![](sce.heatmap.full.png)
+
+# Ref:
+
 ----
+

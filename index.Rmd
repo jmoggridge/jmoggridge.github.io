@@ -1,10 +1,10 @@
 ---
-title: ""
+title: "Homepage"
 ---
 <br>
 
 
-# Welcome
+# 
 
 This page is a work in progress. Please check back soon or hit me up via email or twitter.
 
