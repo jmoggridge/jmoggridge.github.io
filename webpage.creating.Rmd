@@ -1,0 +1,201 @@
+---
+title: "Basic website with Shiny and hosting on Github"
+date: last update 2020/06/01
+output: 
+  html_document:
+    toc: true
+    toc_float:
+      toc_collapsed: false
+    toc_depth: 6
+    # number_sections: true
+    # theme: lumen
+---
+
+
+---
+    
+  
+### Guides  
+
+- Basic tutorial and example [Florian Privé's github](https://github.com/privefl/rmarkdown-website-template#make-your-website-with-r-markdown-in-minutes). 
+- For more on structuring and Rmarkdown formatting: [Emily Zabor's site](https://www.emilyzabor.com/tutorials/rmarkdown_websites_tutorial.html#personal_websites)
+  
+---
+
+### Instructions  
+  
+---
+     
+#### 1. Setup R environment  
+  
++ Create a new Rproject, give a name (jmoggridge.github.io.Rproj), use the Git option.  
+
++  **Install/reinstall** if necessary:
+
+  *  R, Rstudio, Git (and SSH key; possibly install xcode on mac), Shiny, devtools, tidyverse  
+  *  note on devtools -> I had to reinstall this when the 'Build' menu only had the 'Configure built tools...' option for Shiny to render html documents. Reinstalling devtools solved the issue   
+
++  Create your **building environment** in Rstudio
+
++  Open a **new project** from file menu  
+
+  *  Choose **version control** option  
+  *  Choose **Git** option  
+  *  Your repository info should paste from the clipboard into the fields  
+  *  Choose a directory & save. All the files you'll need to build the site should now be downloaded and imported to your Rstudio environment for editing  
+  
+---  
+  
+#### 2. Create files
+  
+-  Create two files in Rstudio: "_site.yml" (txt file) and "index.Rmd".
+
+   +  "_site.yml" file defines the layout and themes of the site.
+   +  "index.Rmd" is the content of the site.
+  
+---  
+  
+#### 3. Add content and add structure
+    
+      
+*  ##### Rmarkdown text:
+   -  add to body of index.Rmd (or other linked .Rmd) 
+   -  use `<br><br>` to add extra line breaks. 
+   -  embed other elements in txt. links, pictures.  <br><br>
+   
+*  ##### Hyperlinks to other pages, include within site:
+   - within site: `[text on page](file.html)`  
+   - URL: `[text](URL)`     <br><br>
+   
+*  ##### Navigation bar:
+   -  for single page: add `toc` to header of `.Rmd` file  
+   -  for entire website: need to edit `navbar` in `.yml` file   <br><br>
+   
+*  ##### Create pages beyond the homepage (index.Rmd):
+   -  Need to create new Rmd file  
+   -  Create content as for index file above.
+   -  add link to file in text or yml??  <br><br>   
+     
+---  
+  
+    
+  
+#### 4. Build website  
+  
+*  Once you're done adding and editing, and you want to upload it, save your files, go to the 'Build' tab and click 'Build Website'
+  
+
+
+#### 5. Push to Git
+
+*  Open a terminal window, set working directory to your project folder
+*  Enter these commands in (after $):
+
+\list \of \Git \commands \to \add \commit \push
+
+        if you to see a list of Git commands (optional, shows documentation for Git):
+           $ git
+           
+        this adds all the files in the directory to the index  
+           $ git add .
+           
+        this records all the changes that were made and labels this version "first build"  
+           $ git commit -m "first build"
+           
+        a summary of the changes you made will be printed in the window.
+        next you can use the push command to finalize your changes
+           $ git push
+        
+        (you can also do these things in the 'Git' tab of Rstudio)
+  
+  
+ Your site should now be up on yourname.github.io. Nice! 
+  
+  - it seems easier to just build from Rstudio? 'Build > Build website'
+  
+---
+  
+#### 6. Customize styles
+
+  - create a file called styles.css in your websites' working directory
+  - add `css: style.css` to the end of the .yml file in `output`
+  
+```
+output:
+html_document:
+    theme: lumen
+    highlight: textmate
+    css: style.css
+```  
+
+---  
+  
+    
+### Troubleshooting
+  
+
+#### If you need a new SSH key on Github  
+  
+  
+  I followed [this tutorial](https://help.github.com/en/github/authenticating-to-github/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent) to generate a new SSH key on Github for the first time.
+
+While doing that, you might run into an issue with this if you are on macOS > 10.12. (see next section)
+<br>  
+
+  
+***
+
+#### Problem encounter while setting SSH key for Github to Rstudio:
+  
+  
+I get to this step where I need to modify the ‘.ssh/config’ file:  
+      
+    If you're using macOS Sierra 10.12.2 or later, you will need to modify your ~/.ssh/config file to automatically load keys into the ssh-agent and store passphrases in your keychain.
+            
+            Host *
+              AddKeysToAgent yes
+              UseKeychain yes
+              IdentityFile ~/.ssh/id_ra
+
+I’m using OSx10.12.6, so I found a good answer on StackOverflow and do this stuff
+    
+        Start Terminal and create the ~/.ssh directory if it doesn't exist:
+        	$ mkdir -p ~/.ssh
+        
+        Now go into the directory:
+        	$ cd ~/.ssh
+        
+        Now open the file config with the default editor:
+        	$ open -t config
+        
+        If it says that file doesn't exist, create it with:
+        	$ touch config
+        
+        and try opening again:
+         	$ open -t config
+        
+        When you edit the file, make sure it is "Plain Text" using the menu at the top of the screen and clicking Format->Make Plain Text.
+        Set the permissions as instructed in your tutorial.
+
+Finish that GitHub tut and go to the next page to copy SSH info and add it into Github.
+This was fine using this:
+
+    	This copies the contents of the id_rsa.pub file to your clipboard
+        	$ pbcopy < ~/.ssh/id_rsa.pub
+    
+Now I can ‘Clone’ the repository by copying the SSH link from my github repository jmoggridge.github.io
+
+
+----  
+####  Other notes
+     
+*first build: 2020/03/07*
+
+*  had to re-install devtools to get the 'Build' function working in Rstudio
+
+*new version 2020/06/01*
+
+* switched theme to 'lumen'
+* added OttawaBeaches dashboard
+
+

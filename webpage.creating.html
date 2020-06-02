@@ -1,0 +1,645 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<meta charset="utf-8" />
+<meta name="generator" content="pandoc" />
+<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
+
+
+
+
+<title>Basic website with Shiny and hosting on Github</title>
+
+<script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="site_libs/bootstrap-3.3.5/css/lumen.min.css" rel="stylesheet" />
+<script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
+<script src="site_libs/jqueryui-1.11.4/jquery-ui.min.js"></script>
+<link href="site_libs/tocify-1.9.1/jquery.tocify.css" rel="stylesheet" />
+<script src="site_libs/tocify-1.9.1/jquery.tocify.js"></script>
+<script src="site_libs/navigation-1.1/tabsets.js"></script>
+<link href="site_libs/highlightjs-9.12.0/textmate.css" rel="stylesheet" />
+<script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
+<link href="site_libs/font-awesome-5.1.0/css/all.css" rel="stylesheet" />
+<link href="site_libs/font-awesome-5.1.0/css/v4-shims.css" rel="stylesheet" />
+
+<style type="text/css">code{white-space: pre;}</style>
+<style type="text/css">
+  pre:not([class]) {
+    background-color: white;
+  }
+</style>
+<script type="text/javascript">
+if (window.hljs) {
+  hljs.configure({languages: []});
+  hljs.initHighlightingOnLoad();
+  if (document.readyState && document.readyState === "complete") {
+    window.setTimeout(function() { hljs.initHighlighting(); }, 0);
+  }
+}
+</script>
+
+
+
+<style type="text/css">
+h1 {
+  font-size: 34px;
+}
+h1.title {
+  font-size: 38px;
+}
+h2 {
+  font-size: 30px;
+}
+h3 {
+  font-size: 24px;
+}
+h4 {
+  font-size: 18px;
+}
+h5 {
+  font-size: 16px;
+}
+h6 {
+  font-size: 12px;
+}
+.table th:not([align]) {
+  text-align: left;
+}
+</style>
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+
+
+
+<style type = "text/css">
+.main-container {
+  max-width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+}
+code {
+  color: inherit;
+  background-color: rgba(0, 0, 0, 0.04);
+}
+img {
+  max-width:100%;
+}
+.tabbed-pane {
+  padding-top: 12px;
+}
+.html-widget {
+  margin-bottom: 20px;
+}
+button.code-folding-btn:focus {
+  outline: none;
+}
+summary {
+  display: list-item;
+}
+</style>
+
+
+<style type="text/css">
+/* padding for bootstrap navbar */
+body {
+  padding-top: 54px;
+  padding-bottom: 40px;
+}
+/* offset scroll position for anchor links (for fixed navbar)  */
+.section h1 {
+  padding-top: 59px;
+  margin-top: -59px;
+}
+.section h2 {
+  padding-top: 59px;
+  margin-top: -59px;
+}
+.section h3 {
+  padding-top: 59px;
+  margin-top: -59px;
+}
+.section h4 {
+  padding-top: 59px;
+  margin-top: -59px;
+}
+.section h5 {
+  padding-top: 59px;
+  margin-top: -59px;
+}
+.section h6 {
+  padding-top: 59px;
+  margin-top: -59px;
+}
+.dropdown-submenu {
+  position: relative;
+}
+.dropdown-submenu>.dropdown-menu {
+  top: 0;
+  left: 100%;
+  margin-top: -6px;
+  margin-left: -1px;
+  border-radius: 0 6px 6px 6px;
+}
+.dropdown-submenu:hover>.dropdown-menu {
+  display: block;
+}
+.dropdown-submenu>a:after {
+  display: block;
+  content: " ";
+  float: right;
+  width: 0;
+  height: 0;
+  border-color: transparent;
+  border-style: solid;
+  border-width: 5px 0 5px 5px;
+  border-left-color: #cccccc;
+  margin-top: 5px;
+  margin-right: -10px;
+}
+.dropdown-submenu:hover>a:after {
+  border-left-color: #ffffff;
+}
+.dropdown-submenu.pull-left {
+  float: none;
+}
+.dropdown-submenu.pull-left>.dropdown-menu {
+  left: -100%;
+  margin-left: 10px;
+  border-radius: 6px 0 6px 6px;
+}
+</style>
+
+<script>
+// manage active state of menu based on current page
+$(document).ready(function () {
+  // active menu anchor
+  href = window.location.pathname
+  href = href.substr(href.lastIndexOf('/') + 1)
+  if (href === "")
+    href = "index.html";
+  var menuAnchor = $('a[href="' + href + '"]');
+
+  // mark it active
+  menuAnchor.parent().addClass('active');
+
+  // if it's got a parent navbar menu mark it active as well
+  menuAnchor.closest('li.dropdown').addClass('active');
+});
+</script>
+
+<!-- tabsets -->
+
+<style type="text/css">
+.tabset-dropdown > .nav-tabs {
+  display: inline-table;
+  max-height: 500px;
+  min-height: 44px;
+  overflow-y: auto;
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.tabset-dropdown > .nav-tabs > li.active:before {
+  content: "";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li.active:before {
+  content: "&#xe258;";
+  border: none;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open:before {
+  content: "";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs > li.active {
+  display: block;
+}
+
+.tabset-dropdown > .nav-tabs > li > a,
+.tabset-dropdown > .nav-tabs > li > a:focus,
+.tabset-dropdown > .nav-tabs > li > a:hover {
+  border: none;
+  display: inline-block;
+  border-radius: 4px;
+  background-color: transparent;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li {
+  display: block;
+  float: none;
+}
+
+.tabset-dropdown > .nav-tabs > li {
+  display: none;
+}
+</style>
+
+<!-- code folding -->
+
+
+
+<style type="text/css">
+
+#TOC {
+  margin: 25px 0px 20px 0px;
+}
+@media (max-width: 768px) {
+#TOC {
+  position: relative;
+  width: 100%;
+}
+}
+
+@media print {
+.toc-content {
+  /* see https://github.com/w3c/csswg-drafts/issues/4434 */
+  float: right;
+}
+}
+
+.toc-content {
+  padding-left: 30px;
+  padding-right: 40px;
+}
+
+div.main-container {
+  max-width: 1200px;
+}
+
+div.tocify {
+  width: 20%;
+  max-width: 260px;
+  max-height: 85%;
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  div.tocify {
+    width: 25%;
+  }
+}
+
+@media (max-width: 767px) {
+  div.tocify {
+    width: 100%;
+    max-width: none;
+  }
+}
+
+.tocify ul, .tocify li {
+  line-height: 20px;
+}
+
+.tocify-subheader .tocify-item {
+  font-size: 0.90em;
+}
+
+.tocify .list-group-item {
+  border-radius: 0px;
+}
+
+
+</style>
+
+
+
+</head>
+
+<body>
+
+
+<div class="container-fluid main-container">
+
+
+<!-- setup 3col/9col grid for toc_float and main content  -->
+<div class="row-fluid">
+<div class="col-xs-12 col-sm-4 col-md-3">
+<div id="TOC" class="tocify">
+</div>
+</div>
+
+<div class="toc-content col-xs-12 col-sm-8 col-md-9">
+
+
+
+
+<div class="navbar navbar-inverse  navbar-fixed-top" role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="index.html"></a>
+    </div>
+    <div id="navbar" class="navbar-collapse collapse">
+      <ul class="nav navbar-nav">
+        
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li>
+  <a href="index.html">
+    <span class="fa fa-home"></span>
+     
+  </a>
+</li>
+<li>
+  <a href="https://github.com/jmoggridge">
+    <span class="fa fa-github"></span>
+     
+  </a>
+</li>
+<li>
+  <a href="mailto:ja.moggridge@gmail.com">
+    <span class="fa fa-envelope-o"></span>
+     
+  </a>
+</li>
+<li>
+  <a href="https://twitter.com/quaxlikeaduck">
+    <span class="fa fa-twitter fa-lg"></span>
+     
+  </a>
+</li>
+      </ul>
+    </div><!--/.nav-collapse -->
+  </div><!--/.container -->
+</div><!--/.navbar -->
+
+<div class="fluid-row" id="header">
+
+
+
+<h1 class="title toc-ignore">Basic website with Shiny and hosting on Github</h1>
+<h4 class="date">last update 2020/06/01</h4>
+
+</div>
+
+
+<hr />
+<div id="guides" class="section level3">
+<h3>Guides</h3>
+<ul>
+<li>Basic tutorial and example <a href="https://github.com/privefl/rmarkdown-website-template#make-your-website-with-r-markdown-in-minutes">Florian Privé’s github</a>.</li>
+<li>For more on structuring and Rmarkdown formatting: <a href="https://www.emilyzabor.com/tutorials/rmarkdown_websites_tutorial.html#personal_websites">Emily Zabor’s site</a></li>
+</ul>
+<hr />
+</div>
+<div id="instructions" class="section level3">
+<h3>Instructions</h3>
+<hr />
+<div id="setup-r-environment" class="section level4">
+<h4>1. Setup R environment</h4>
+<ul>
+<li><p>Create a new Rproject, give a name (jmoggridge.github.io.Rproj), use the Git option.</p></li>
+<li><p><strong>Install/reinstall</strong> if necessary:</p></li>
+<li><p>R, Rstudio, Git (and SSH key; possibly install xcode on mac), Shiny, devtools, tidyverse<br />
+</p></li>
+<li><p>note on devtools -&gt; I had to reinstall this when the ‘Build’ menu only had the ‘Configure built tools…’ option for Shiny to render html documents. Reinstalling devtools solved the issue</p></li>
+<li><p>Create your <strong>building environment</strong> in Rstudio</p></li>
+<li><p>Open a <strong>new project</strong> from file menu</p></li>
+<li><p>Choose <strong>version control</strong> option<br />
+</p></li>
+<li><p>Choose <strong>Git</strong> option<br />
+</p></li>
+<li><p>Your repository info should paste from the clipboard into the fields<br />
+</p></li>
+<li><p>Choose a directory &amp; save. All the files you’ll need to build the site should now be downloaded and imported to your Rstudio environment for editing</p></li>
+</ul>
+<hr />
+</div>
+<div id="create-files" class="section level4">
+<h4>2. Create files</h4>
+<ul>
+<li><p>Create two files in Rstudio: "_site.yml" (txt file) and “index.Rmd”.</p>
+<ul>
+<li>"_site.yml" file defines the layout and themes of the site.</li>
+<li>“index.Rmd” is the content of the site.</li>
+</ul></li>
+</ul>
+<hr />
+</div>
+<div id="add-content-and-add-structure" class="section level4">
+<h4>3. Add content and add structure</h4>
+<ul>
+<li><h5 id="rmarkdown-text">Rmarkdown text:</h5>
+<ul>
+<li>add to body of index.Rmd (or other linked .Rmd)</li>
+<li>use <code>&lt;br&gt;&lt;br&gt;</code> to add extra line breaks.</li>
+<li>embed other elements in txt. links, pictures. <br><br></li>
+</ul></li>
+<li><h5 id="hyperlinks-to-other-pages-include-within-site">Hyperlinks to other pages, include within site:</h5>
+<ul>
+<li>within site: <code>[text on page](file.html)</code><br />
+</li>
+<li>URL: <code>[text](URL)</code> <br><br></li>
+</ul></li>
+<li><h5 id="navigation-bar">Navigation bar:</h5>
+<ul>
+<li>for single page: add <code>toc</code> to header of <code>.Rmd</code> file<br />
+</li>
+<li>for entire website: need to edit <code>navbar</code> in <code>.yml</code> file <br><br></li>
+</ul></li>
+<li><h5 id="create-pages-beyond-the-homepage-index.rmd">Create pages beyond the homepage (index.Rmd):</h5>
+<ul>
+<li>Need to create new Rmd file<br />
+</li>
+<li>Create content as for index file above.</li>
+<li>add link to file in text or yml?? <br><br></li>
+</ul></li>
+</ul>
+<hr />
+</div>
+<div id="build-website" class="section level4">
+<h4>4. Build website</h4>
+<ul>
+<li>Once you’re done adding and editing, and you want to upload it, save your files, go to the ‘Build’ tab and click ‘Build Website’</li>
+</ul>
+</div>
+<div id="push-to-git" class="section level4">
+<h4>5. Push to Git</h4>
+<ul>
+<li>Open a terminal window, set working directory to your project folder</li>
+<li>Enter these commands in (after $):</li>
+</ul>
+
+<pre><code>    if you to see a list of Git commands (optional, shows documentation for Git):
+       $ git
+       
+    this adds all the files in the directory to the index  
+       $ git add .
+       
+    this records all the changes that were made and labels this version &quot;first build&quot;  
+       $ git commit -m &quot;first build&quot;
+       
+    a summary of the changes you made will be printed in the window.
+    next you can use the push command to finalize your changes
+       $ git push
+    
+    (you can also do these things in the &#39;Git&#39; tab of Rstudio)</code></pre>
+<p>Your site should now be up on yourname.github.io. Nice!</p>
+<ul>
+<li>it seems easier to just build from Rstudio? ‘Build &gt; Build website’</li>
+</ul>
+<hr />
+</div>
+<div id="customize-styles" class="section level4">
+<h4>6. Customize styles</h4>
+<ul>
+<li>create a file called styles.css in your websites’ working directory</li>
+<li>add <code>css: style.css</code> to the end of the .yml file in <code>output</code></li>
+</ul>
+<pre><code>output:
+html_document:
+    theme: lumen
+    highlight: textmate
+    css: style.css</code></pre>
+<hr />
+</div>
+</div>
+<div id="troubleshooting" class="section level3">
+<h3>Troubleshooting</h3>
+<div id="if-you-need-a-new-ssh-key-on-github" class="section level4">
+<h4>If you need a new SSH key on Github</h4>
+<p>I followed <a href="https://help.github.com/en/github/authenticating-to-github/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent">this tutorial</a> to generate a new SSH key on Github for the first time.</p>
+<p>While doing that, you might run into an issue with this if you are on macOS &gt; 10.12. (see next section) <br></p>
+<hr />
+</div>
+<div id="problem-encounter-while-setting-ssh-key-for-github-to-rstudio" class="section level4">
+<h4>Problem encounter while setting SSH key for Github to Rstudio:</h4>
+<p>I get to this step where I need to modify the ‘.ssh/config’ file:</p>
+<pre><code>If you&#39;re using macOS Sierra 10.12.2 or later, you will need to modify your ~/.ssh/config file to automatically load keys into the ssh-agent and store passphrases in your keychain.
+        
+        Host *
+          AddKeysToAgent yes
+          UseKeychain yes
+          IdentityFile ~/.ssh/id_ra</code></pre>
+<p>I’m using OSx10.12.6, so I found a good answer on StackOverflow and do this stuff</p>
+<pre><code>    Start Terminal and create the ~/.ssh directory if it doesn&#39;t exist:
+        $ mkdir -p ~/.ssh
+    
+    Now go into the directory:
+        $ cd ~/.ssh
+    
+    Now open the file config with the default editor:
+        $ open -t config
+    
+    If it says that file doesn&#39;t exist, create it with:
+        $ touch config
+    
+    and try opening again:
+        $ open -t config
+    
+    When you edit the file, make sure it is &quot;Plain Text&quot; using the menu at the top of the screen and clicking Format-&gt;Make Plain Text.
+    Set the permissions as instructed in your tutorial.</code></pre>
+<p>Finish that GitHub tut and go to the next page to copy SSH info and add it into Github. This was fine using this:</p>
+<pre><code>    This copies the contents of the id_rsa.pub file to your clipboard
+        $ pbcopy &lt; ~/.ssh/id_rsa.pub</code></pre>
+<p>Now I can ‘Clone’ the repository by copying the SSH link from my github repository jmoggridge.github.io</p>
+<hr />
+</div>
+<div id="other-notes" class="section level4">
+<h4>Other notes</h4>
+<p><em>first build: 2020/03/07</em></p>
+<ul>
+<li>had to re-install devtools to get the ‘Build’ function working in Rstudio</li>
+</ul>
+<p><em>new version 2020/06/01</em></p>
+<ul>
+<li>switched theme to ‘lumen’</li>
+<li>added OttawaBeaches dashboard</li>
+</ul>
+</div>
+</div>
+
+
+
+</div>
+</div>
+
+</div>
+
+<script>
+
+// add bootstrap table styles to pandoc tables
+function bootstrapStylePandocTables() {
+  $('tr.header').parent('thead').parent('table').addClass('table table-condensed');
+}
+$(document).ready(function () {
+  bootstrapStylePandocTables();
+});
+
+
+</script>
+
+<!-- tabsets -->
+
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+
+$(document).ready(function () {
+  $('.tabset-dropdown > .nav-tabs > li').click(function () {
+    $(this).parent().toggleClass('nav-tabs-open')
+  });
+});
+</script>
+
+<!-- code folding -->
+
+<script>
+$(document).ready(function ()  {
+
+    // move toc-ignore selectors from section div to header
+    $('div.section.toc-ignore')
+        .removeClass('toc-ignore')
+        .children('h1,h2,h3,h4,h5').addClass('toc-ignore');
+
+    // establish options
+    var options = {
+      selectors: "h1,h2,h3,h4,h5,h6",
+      theme: "bootstrap3",
+      context: '.toc-content',
+      hashGenerator: function (text) {
+        return text.replace(/[.\\/?&!#<>]/g, '').replace(/\s/g, '_').toLowerCase();
+      },
+      ignoreSelector: ".toc-ignore",
+      scrollTo: 0
+    };
+    options.showAndHide = true;
+    options.smoothScroll = true;
+
+    // tocify
+    var toc = $("#TOC").tocify(options).data("toc-tocify");
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+</body>
+</html>

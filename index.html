@@ -11,14 +11,17 @@
 
 
 
-<title>Homepage</title>
+<title>Jason A. Moggridge</title>
 
 <script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<link href="site_libs/bootstrap-3.3.5/css/spacelab.min.css" rel="stylesheet" />
+<link href="site_libs/bootstrap-3.3.5/css/lumen.min.css" rel="stylesheet" />
 <script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
 <script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
 <script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
+<script src="site_libs/jqueryui-1.11.4/jquery-ui.min.js"></script>
+<link href="site_libs/tocify-1.9.1/jquery.tocify.css" rel="stylesheet" />
+<script src="site_libs/tocify-1.9.1/jquery.tocify.js"></script>
 <script src="site_libs/navigation-1.1/tabsets.js"></script>
 <link href="site_libs/highlightjs-9.12.0/textmate.css" rel="stylesheet" />
 <script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
@@ -70,6 +73,7 @@ h6 {
 }
 </style>
 
+<link rel="stylesheet" href="style.css" type="text/css" />
 
 
 
@@ -104,33 +108,33 @@ summary {
 <style type="text/css">
 /* padding for bootstrap navbar */
 body {
-  padding-top: 52px;
+  padding-top: 54px;
   padding-bottom: 40px;
 }
 /* offset scroll position for anchor links (for fixed navbar)  */
 .section h1 {
-  padding-top: 57px;
-  margin-top: -57px;
+  padding-top: 59px;
+  margin-top: -59px;
 }
 .section h2 {
-  padding-top: 57px;
-  margin-top: -57px;
+  padding-top: 59px;
+  margin-top: -59px;
 }
 .section h3 {
-  padding-top: 57px;
-  margin-top: -57px;
+  padding-top: 59px;
+  margin-top: -59px;
 }
 .section h4 {
-  padding-top: 57px;
-  margin-top: -57px;
+  padding-top: 59px;
+  margin-top: -59px;
 }
 .section h5 {
-  padding-top: 57px;
-  margin-top: -57px;
+  padding-top: 59px;
+  margin-top: -59px;
 }
 .section h6 {
-  padding-top: 57px;
-  margin-top: -57px;
+  padding-top: 59px;
+  margin-top: -59px;
 }
 .dropdown-submenu {
   position: relative;
@@ -250,6 +254,69 @@ $(document).ready(function () {
 
 
 
+<style type="text/css">
+
+#TOC {
+  margin: 25px 0px 20px 0px;
+}
+@media (max-width: 768px) {
+#TOC {
+  position: relative;
+  width: 100%;
+}
+}
+
+@media print {
+.toc-content {
+  /* see https://github.com/w3c/csswg-drafts/issues/4434 */
+  float: right;
+}
+}
+
+.toc-content {
+  padding-left: 30px;
+  padding-right: 40px;
+}
+
+div.main-container {
+  max-width: 1200px;
+}
+
+div.tocify {
+  width: 20%;
+  max-width: 260px;
+  max-height: 85%;
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  div.tocify {
+    width: 25%;
+  }
+}
+
+@media (max-width: 767px) {
+  div.tocify {
+    width: 100%;
+    max-width: none;
+  }
+}
+
+.tocify ul, .tocify li {
+  line-height: 20px;
+}
+
+.tocify-subheader .tocify-item {
+  font-size: 0.90em;
+}
+
+.tocify .list-group-item {
+  border-radius: 0px;
+}
+
+
+</style>
+
+
 
 </head>
 
@@ -257,6 +324,16 @@ $(document).ready(function () {
 
 
 <div class="container-fluid main-container">
+
+
+<!-- setup 3col/9col grid for toc_float and main content  -->
+<div class="row-fluid">
+<div class="col-xs-12 col-sm-4 col-md-3">
+<div id="TOC" class="tocify">
+</div>
+</div>
+
+<div class="toc-content col-xs-12 col-sm-8 col-md-9">
 
 
 
@@ -273,41 +350,24 @@ $(document).ready(function () {
     </div>
     <div id="navbar" class="navbar-collapse collapse">
       <ul class="nav navbar-nav">
-        <li>
-  <a href="index.html">
-    <span class="fa fa-home"></span>
-     
-    J.Moggridge
-  </a>
-</li>
-<li>
-  <a href="about.html">
-    <span class="fa fa-user"></span>
-     
-    About
-  </a>
-</li>
-<li>
-  <a href="projects.html">
-    <span class="fa fa fa fa-flask"></span>
-     
-    Projects
-  </a>
-</li>
-<li>
-  <a href="creating_this_webpage.html">The making of...</a>
-</li>
+        
       </ul>
       <ul class="nav navbar-nav navbar-right">
         <li>
-  <a href="mailto:ja.moggridge@gmail.com">
-    <span class="fa fa-envelope-o"></span>
+  <a href="index.html">
+    <span class="fa fa-home"></span>
      
   </a>
 </li>
 <li>
   <a href="https://github.com/jmoggridge">
     <span class="fa fa-github"></span>
+     
+  </a>
+</li>
+<li>
+  <a href="mailto:ja.moggridge@gmail.com">
+    <span class="fa fa-envelope-o"></span>
      
   </a>
 </li>
@@ -326,40 +386,68 @@ $(document).ready(function () {
 
 
 
-<h1 class="title toc-ignore">Homepage</h1>
+<h1 class="title toc-ignore">Jason A. Moggridge</h1>
 
 </div>
 
 
+<p>B. Sc. Biochemistry Hons., Carleton University, Ottawa ON<br />
+Student, researcher, biologist, programmer, science communicator</p>
+<hr />
+<div id="publications" class="section level2">
+<h2>Publications</h2>
+<ul>
+<li><p>Sensitive Detection of Immunoglobulin G Stability Using in Real-Time Isothermal Differential Scanning Fluorimetry: Determinants of Protein Stability for Antibody-Based Therapeutics.<br />
+Technology in Cancer Research &amp; Treatment. 2017-06. <a href="https://journals.sagepub.com/doi/10.1177/1533034617714149">DOI: 10.1177/1533034617714149</a> <a href="https://pubmed.ncbi.nlm.nih.gov/27090740">open-access</a></p></li>
+<li><p>The hibernating South American marsupial, Dromiciops gliroides, displays torpor-sensitive microRNA expression patterns. Scientific Reports. 2016-04. <a href="https://doi.org/10.1038/srep24627">DOI: 10.1038/srep24627</a></p>
+<p><a href="https://orcid.org/0000-0003-1291-5868">ORCID identifier</a></p></li>
+</ul>
+<!-- --- -->
+<!-- bibliography: works.bib -->
+<!-- csl: style.csl -->
+<!-- ---   -->
+<hr />
+</div>
+<div id="projects" class="section level2">
+<h2>Projects</h2>
+<p>Find my code at: <a href="https://github.com/jmoggridge">Github</a></p>
+<hr />
+<div id="ottawa-beaches" class="section level3">
+<h3>Ottawa Beaches</h3>
+<p><a href="https://jmoggridge.shinyapps.io/OttawaBeaches/">Ottawa Beaches Water Quality Dashboard</a></p>
+<p>A dashboard exploring beach water quality data from five public beaches in Ottawa during 2014-2019. This is a project that started on a whim because I wanted to learn to make a dashboard in R using Shiny and dashboards are so hot right now.</p>
+<p><a href="figures/beachyears1.png"></a></p>
+<p>I chose to present the City of Ottawa beach water quality and closures data because I saw a fairly influencial person (by local Ottawa standards) arguing about beach water quality on twitter. The city provides all the historic data back to 2014 to the public, but I couldn’t find any good visualizations of the two thousand paired observations (<em>E. coli</em> count, beach status). It seemed like it would be useful to anyone interested in the beaches’ water quality to provide some good data viz from this dataset.<br />
+Ultimately, I hope this turns into a larger project; I am busy preparing a proposal for a predictive tool to augment the current persistence model for water quality-related closures.</p>
+<!-- --- -->
+<!-- ### Bioinformatics Notebooks -->
+<!-- Notes, codes, references collected hile working on doing the [Bioinformatics Algorithm MOOC by Compeau & Pevzner](https://www.coursera.org/specializations/bioinformatics). Topics include motif-finding, sequence alignment, phylogeny, clustering, mass-spectrometry -->
+<hr />
+</div>
+<div id="small-projects-and-tutorials" class="section level3">
+<h3>Small projects and tutorials</h3>
 <p><br></p>
-<div id="welcome" class="section level2">
-<h2>Welcome</h2>
-<p>Hi, I’m Jason Moggridge. This is my professional page; please bear with me, it is a work in progress. Please check back soon!</p>
-<hr />
-<div id="things-on-my-page-that-are-working" class="section level3">
-<h3>Things on my page that are working:</h3>
+<div id="easy-webpage-with-rstudio-knitr-and-github" class="section level4">
+<h4>Easy webpage with Rstudio, knitr, and GitHub</h4>
 <ul>
-<li><a href="about.html">about me</a></li>
-<li><a href="projects.html">some projects</a></li>
-<li><a href="stravaR.html">what I do for fun</a></li>
+<li><a href="webpage.creating.html">Documentation/tutorial</a></li>
+<li><a href="https://github.com/jmoggridge/jmoggridge.github.io">Github repository</a></li>
 </ul>
 <hr />
 </div>
-<div id="things-to-get-working" class="section level3">
-<h3>Things to get working:</h3>
-<ul>
-<li>rmarkdown to pdf for hosting cv</li>
-<li>links to twitter</li>
-<li>dropdown menu</li>
-<li>working R notebook</li>
-<li>gganimate code chunks</li>
-<li>interactive cv</li>
-</ul>
 </div>
+</div>
+<div id="about-me" class="section level2">
+<h2>About me</h2>
+<p>Bioinformatics graduate student interested in next-generation sequencing and string algorithms for applications in molecular biology, biochemistry, genetics. Lives in Ottawa, Ontario. Enjoys cycling (<a href="https://www.strava.com/athletes/17492854">follow on Strava</a>), cross-country skiing and exploring natural areas around the city. Favourite TV shows are Nathan For You and Freaks and Geeks. I have two cats. Challenge me to a game of <a href="https://lichess.org/@/JasonMoggridge">chess</a></p>
+<p><br></p>
+<hr />
 </div>
 
 
 
+</div>
+</div>
 
 </div>
 
@@ -392,6 +480,32 @@ $(document).ready(function () {
 
 <!-- code folding -->
 
+<script>
+$(document).ready(function ()  {
+
+    // move toc-ignore selectors from section div to header
+    $('div.section.toc-ignore')
+        .removeClass('toc-ignore')
+        .children('h1,h2,h3,h4,h5').addClass('toc-ignore');
+
+    // establish options
+    var options = {
+      selectors: "h1,h2,h3,h4",
+      theme: "bootstrap3",
+      context: '.toc-content',
+      hashGenerator: function (text) {
+        return text.replace(/[.\\/?&!#<>]/g, '').replace(/\s/g, '_').toLowerCase();
+      },
+      ignoreSelector: ".toc-ignore",
+      scrollTo: 0
+    };
+    options.showAndHide = true;
+    options.smoothScroll = true;
+
+    // tocify
+    var toc = $("#TOC").tocify(options).data("toc-tocify");
+});
+</script>
 
 <!-- dynamically load mathjax for compatibility with self-contained -->
 <script>

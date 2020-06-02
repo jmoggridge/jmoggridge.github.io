@@ -1,27 +1,82 @@
 ---
-title: "Homepage"
+title: 'Jason A. Moggridge'
+
+output: 
+  html_document:
+    toc: true
+    toc_float:
+      toc_collapsed: false
+    toc_depth: 4
+    # number_sections: true
+    # theme: lumen
+---   
+
+
+  B. Sc. Biochemistry Hons.,  Carleton University, Ottawa ON  
+  Student, researcher, biologist, programmer, science communicator
+      
 ---
+
+## Publications 
+  
+- Sensitive Detection of Immunoglobulin G Stability Using in Real-Time Isothermal Differential Scanning Fluorimetry: Determinants of Protein Stability for Antibody-Based Therapeutics.  
+Technology in Cancer Research & Treatment. 2017-06. [DOI: 10.1177/1533034617714149](https://journals.sagepub.com/doi/10.1177/1533034617714149) [open-access](https://pubmed.ncbi.nlm.nih.gov/27090740)
+
+- The hibernating South American marsupial, Dromiciops gliroides, displays torpor-sensitive microRNA expression patterns. Scientific Reports. 2016-04. [DOI: 10.1038/srep24627](https://doi.org/10.1038/srep24627)  
+  
+  
+  [ORCID identifier](https://orcid.org/0000-0003-1291-5868)  
+  
+<!-- --- -->
+<!-- bibliography: works.bib -->
+<!-- csl: style.csl -->
+<!-- ---   -->
+  
+----
+  
+  
+## Projects
+  
+  
+Find my code at: [Github](https://github.com/jmoggridge)  
+  
+---
+  
+### Ottawa Beaches
+
+[Ottawa Beaches Water Quality Dashboard](https://jmoggridge.shinyapps.io/OttawaBeaches/)
+  
+   A dashboard exploring beach water quality data from five public beaches in Ottawa during 2014-2019. This is a project that started on a whim because  I wanted to learn to make a dashboard in R using Shiny and dashboards are so hot right now.  
+   
+   [](figures/beachyears1.png)
+   
+   I chose to present the City of Ottawa beach water quality and closures data because I saw a fairly influencial person (by local Ottawa standards) arguing about beach water quality on twitter. The city provides all the historic data back to 2014 to the public, but I couldn't find any good visualizations of the two thousand paired observations (*E. coli* count, beach status).  It seemed like it would be useful to anyone interested in the beaches' water quality to provide some good data viz from this dataset.  
+    Ultimately, I hope this turns into a larger project; I am busy preparing a proposal for a predictive tool to augment the current persistence model for water quality-related closures.
+
+<!-- --- -->
+
+<!-- ### Bioinformatics Notebooks -->
+
+<!-- Notes, codes, references collected hile working on doing the [Bioinformatics Algorithm MOOC by Compeau & Pevzner](https://www.coursera.org/specializations/bioinformatics). Topics include motif-finding, sequence alignment, phylogeny, clustering, mass-spectrometry -->
+
+---
+  
+### Small projects and tutorials
+  
+  <br>
+  
+#### Easy webpage with Rstudio, knitr, and GitHub
+
+-  [Documentation/tutorial](webpage.creating.html)
+-  [Github repository](https://github.com/jmoggridge/jmoggridge.github.io)
+
+----
+
+    
+## About me
+
+Bioinformatics graduate student interested in next-generation sequencing and string algorithms for applications in molecular biology, biochemistry, genetics. Lives in Ottawa, Ontario. Enjoys cycling ([follow on Strava](https://www.strava.com/athletes/17492854)), cross-country skiing and exploring natural areas around the city. Favourite TV shows are Nathan For You and Freaks and Geeks. I have two cats. Challenge me to a game of [chess](https://lichess.org/@/JasonMoggridge)
+  
 <br>
 
-
-## Welcome
-
-Hi, I'm Jason Moggridge. This is my professional page; please bear with me, it is a work in progress. Please check back soon!
-  
-----
-  
-### Things on my page that are working:
-  
-  +  [about](about.html)
-  +  [projects](projects.html)
-  
-----
-  
-### Things to get working:
-  
-  +  rmarkdown to pdf for hosting cv
-  +  links to twitter
-  +  dropdown menu
-  +  working R notebook
-  +  gganimate code chunks
-  +  interactive cv
+---
