@@ -12,9 +12,8 @@ Hi, I'm Jason Moggridge. This is my professional page; please bear with me, it i
   
 ### Things on my page that are working:
   
-  +  [about me](about.html)
-  +  [some projects](projects.html)
-  +  [what I do for fun](stravaR.html)
+  +  [about](about.html)
+  +  [projects](projects.html)
   
 ----
   
