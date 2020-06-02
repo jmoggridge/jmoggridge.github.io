@@ -2,29 +2,37 @@
 CSS for MyWebsite
 Updated: 06/01/2020
 
-Cool colours:
+plain colours
+
+white: #fffff
+'transparent' works in most cases if wanted
+
+Custom colours:
 
 light blue links = 2469e0
 dark blue side and nav bar = 363966
 
+greens -
+138D75
 
+title :   #363966;
+Header 1  #138D75;
+Header 2  #117A65;
+Header 3  #0E6655;
+Header 4  #0E6655;
+Code block  #2469e0; (hyperlinks)
 */
-
 
 /* colour of the home icon*/
 .navbar-inverse .navbar-nav>.active>a, .navbar-inverse .navbar-nav>.active>a:hover, .navbar-inverse .navbar-nav>.active>a:focus {
     color: #363966;
     background-color: transparent;
 }
-
 /* Controls header navbar?? */
 .navbar-inverse {
     background-color: #fffff;
     border-color: #e6e6e6;
 }
-
-
-
 /* Styles for toc on left */
 .list-group-item.active, .list-group-item.active:hover, .list-group-item.active:focus {
     z-index: 2;
@@ -34,7 +42,6 @@ dark blue side and nav bar = 363966
 }
 
 /* Text styles*/
-
 td {  /* Table  */
   font-size: 12px;
 }
@@ -60,22 +67,16 @@ h4 { /* Header 4 */
 }
 code.r{ /* Code block */
     font-size: 12px;
-    colour: #2469e0
-
+    colour: #2469e0;
 }
 /*  hyperlinks colours; what else? */
 a, a > code {
     color: #2469e0;
     text-decoration: none;
 }
-
-
 pre { /* Code block - determines code spacing between lines */
     font-size: 14px;
 }
-
-
 body{ /* Normal  */
       font-size: 16px;
-
   }
