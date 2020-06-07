@@ -45,19 +45,17 @@ Find my code at: [Github](https://github.com/jmoggridge)
 [Ottawa Beaches Water Quality Dashboard](https://jmoggridge.shinyapps.io/OttawaBeaches/)
   
    A dashboard exploring beach water quality data from five public beaches in Ottawa during 2014-2019. This is a project that started on a whim because  I wanted to learn to make a dashboard in R using Shiny and dashboards are so hot right now.  
-   
-   
-   
-   I chose to present the City of Ottawa beach water quality and closures data because I saw a fairly influencial person (by local Ottawa standards) arguing about beach water quality on twitter. The city provides all the historic data back to 2014 to the public, but I couldn't find any good visualizations of the two thousand paired observations (*E. coli* count, beach status).  It seemed like it would be useful to anyone interested in the beaches' water quality to provide some good data viz from this dataset.  
-    Ultimately, I hope this turns into a larger project; I am busy preparing a proposal for a predictive tool to augment the current persistence model for water quality-related closures.
+  The city has made the data public, however I couldn't find any good visualizations of the entire set of two thousand paired observations (*E. coli* count, beach status).  It seemed like it would be useful to anyone interested in the beaches' water quality to provide some good visualizations from this dataset in it's entirety.  
+    Ultimately, I hope to turn this larger project beyond the dashboard; I am working on a predictive tool to augment the current persistence model for water quality-related closures. If the model proves accurate, I hope to write a paper/proposal about implementing it in the future. 
 
 ##### Notebooks (R markdown with code):  
 
-  1. [Finding and downloading data](beaches_pages/0 - Download.nb.html)  
-  2. Tidying  
-  3. Exploratory analysis  
-  4. Modeling  
-  5. Presentation & proposal slides  
+  1. [Find & download data](beaches_pages/1-Download.nb.html)  
+  2. [Tidying](beaches_pages/2-Tidying.nb.html)   
+  3. [Exploratory analysis]  
+  4. [Modeling]
+  5. [Presentation & proposal slides]
+    - [**Random forests on Ottawa beaches**: a predictive water safety advisory tool for five City of Ottawa beaches]
 
 <hr> 
  

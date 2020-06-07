@@ -9,9 +9,11 @@
 <meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
 
 
+<meta name="author" content="JA Moggridge" />
 
+<meta name="date" content="2020-06-06" />
 
-<title>OttawaBeaches: downloading historical data</title>
+<title>OttawaBeaches: tidying</title>
 
 <script>/*! jQuery v1.11.3 | (c) 2005, 2015 jQuery Foundation, Inc. | jquery.org/license */
 !function(a,b){"object"==typeof module&&"object"==typeof module.exports?module.exports=a.document?b(a,!0):function(a){if(!a.document)throw new Error("jQuery requires a window with a document");return b(a)}:b(a)}("undefined"!=typeof window?window:this,function(a,b){var c=[],d=c.slice,e=c.concat,f=c.push,g=c.indexOf,h={},i=h.toString,j=h.hasOwnProperty,k={},l="1.11.3",m=function(a,b){return new m.fn.init(a,b)},n=/^[\s\uFEFF\xA0]+|[\s\uFEFF\xA0]+$/g,o=/^-ms-/,p=/-([\da-z])/gi,q=function(a,b){return b.toUpperCase()};m.fn=m.prototype={jquery:l,constructor:m,selector:"",length:0,toArray:function(){return d.call(this)},get:function(a){return null!=a?0>a?this[a+this.length]:this[a]:d.call(this)},pushStack:function(a){var b=m.merge(this.constructor(),a);return b.prevObject=this,b.context=this.context,b},each:function(a,b){return m.each(this,a,b)},map:function(a){return this.pushStack(m.map(this,function(b,c){return a.call(b,c,b)}))},slice:function(){return this.pushStack(d.apply(this,arguments))},first:function(){return this.eq(0)},last:function(){return this.eq(-1)},eq:function(a){var b=this.length,c=+a+(0>a?b:0);return this.pushStack(c>=0&&b>c?[this[c]]:[])},end:function(){return this.prevObject||this.constructor(null)},push:f,sort:c.sort,splice:c.splice},m.extend=m.fn.extend=function(){var a,b,c,d,e,f,g=arguments[0]||{},h=1,i=arguments.length,j=!1;for("boolean"==typeof g&&(j=g,g=arguments[h]||{},h++),"object"==typeof g||m.isFunction(g)||(g={}),h===i&&(g=this,h--);i>h;h++)if(null!=(e=arguments[h]))for(d in e)a=g[d],c=e[d],g!==c&&(j&&c&&(m.isPlainObject(c)||(b=m.isArray(c)))?(b?(b=!1,f=a&&m.isArray(a)?a:[]):f=a&&m.isPlainObject(a)?a:{},g[d]=m.extend(j,f,c)):void 0!==c&&(g[d]=c));return g},m.extend({expando:"jQuery"+(l+Math.random()).replace(/\D/g,""),isReady:!0,error:function(a){throw new Error(a)},noop:function(){},isFunction:function(a){return"function"===m.type(a)},isArray:Array.isArray||function(a){return"array"===m.type(a)},isWindow:function(a){return null!=a&&a==a.window},isNumeric:function(a){return!m.isArray(a)&&a-parseFloat(a)+1>=0},isEmptyObject:function(a){var b;for(b in a)return!1;return!0},isPlainObject:function(a){var b;if(!a||"object"!==m.type(a)||a.nodeType||m.isWindow(a))return!1;try{if(a.constructor&&!j.call(a,"constructor")&&!j.call(a.constructor.prototype,"isPrototypeOf"))return!1}catch(c){return!1}if(k.ownLast)for(b in a)return j.call(a,b);for(b in a);return void 0===b||j.call(a,b)},type:function(a){return null==a?a+"":"object"==typeof a||"function"==typeof a?h[i.call(a)]||"object":typeof a},globalEval:function(b){b&&m.trim(b)&&(a.execScript||function(b){a.eval.call(a,b)})(b)},camelCase:function(a){return a.replace(o,"ms-").replace(p,q)},nodeName:function(a,b){return a.nodeName&&a.nodeName.toLowerCase()===b.toLowerCase()},each:function(a,b,c){var d,e=0,f=a.length,g=r(a);if(c){if(g){for(;f>e;e++)if(d=b.apply(a[e],c),d===!1)break}else for(e in a)if(d=b.apply(a[e],c),d===!1)break}else if(g){for(;f>e;e++)if(d=b.call(a[e],e,a[e]),d===!1)break}else for(e in a)if(d=b.call(a[e],e,a[e]),d===!1)break;return a},trim:function(a){return null==a?"":(a+"").replace(n,"")},makeArray:function(a,b){var c=b||[];return null!=a&&(r(Object(a))?m.merge(c,"string"==typeof a?[a]:a):f.call(c,a)),c},inArray:function(a,b,c){var d;if(b){if(g)return g.call(b,a,c);for(d=b.length,c=c?0>c?Math.max(0,d+c):c:0;d>c;c++)if(c in b&&b[c]===a)return c}return-1},merge:function(a,b){var c=+b.length,d=0,e=a.length;while(c>d)a[e++]=b[d++];if(c!==c)while(void 0!==b[d])a[e++]=b[d++];return a.length=e,a},grep:function(a,b,c){for(var d,e=[],f=0,g=a.length,h=!c;g>f;f++)d=!b(a[f],f),d!==h&&e.push(a[f]);return e},map:function(a,b,c){var d,f=0,g=a.length,h=r(a),i=[];if(h)for(;g>f;f++)d=b(a[f],f,c),null!=d&&i.push(d);else for(f in a)d=b(a[f],f,c),null!=d&&i.push(d);return e.apply([],i)},guid:1,proxy:function(a,b){var c,e,f;return"string"==typeof b&&(f=a[b],b=a,a=f),m.isFunction(a)?(c=d.call(arguments,2),e=function(){return a.apply(b||this,c.concat(d.call(arguments)))},e.guid=a.guid=a.guid||m.guid++,e):void 0},now:function(){return+new Date},support:k}),m.each("Boolean Number String Function Array Date RegExp Object Error".split(" "),function(a,b){h["[object "+b+"]"]=b.toLowerCase()});function r(a){var b="length"in a&&a.length,c=m.type(a);return"function"===c||m.isWindow(a)?!1:1===a.nodeType&&b?!0:"array"===c||0===b||"number"==typeof b&&b>0&&b-1 in a}var s=function(a){var b,c,d,e,f,g,h,i,j,k,l,m,n,o,p,q,r,s,t,u="sizzle"+1*new Date,v=a.document,w=0,x=0,y=ha(),z=ha(),A=ha(),B=function(a,b){return a===b&&(l=!0),0},C=1<<31,D={}.hasOwnProperty,E=[],F=E.pop,G=E.push,H=E.push,I=E.slice,J=function(a,b){for(var c=0,d=a.length;d>c;c++)if(a[c]===b)return c;return-1},K="checked|selected|async|autofocus|autoplay|controls|defer|disabled|hidden|ismap|loop|multiple|open|readonly|required|scoped",L="[\\x20\\t\\r\\n\\f]",M="(?:\\\\.|[\\w-]|[^\\x00-\\xa0])+",N=M.replace("w","w#"),O="\\["+L+"*("+M+")(?:"+L+"*([*^$|!~]?=)"+L+"*(?:'((?:\\\\.|[^\\\\'])*)'|\"((?:\\\\.|[^\\\\\"])*)\"|("+N+"))|)"+L+"*\\]",P=":("+M+")(?:\\((('((?:\\\\.|[^\\\\'])*)'|\"((?:\\\\.|[^\\\\\"])*)\")|((?:\\\\.|[^\\\\()[\\]]|"+O+")*)|.*)\\)|)",Q=new RegExp(L+"+","g"),R=new RegExp("^"+L+"+|((?:^|[^\\\\])(?:\\\\.)*)"+L+"+$","g"),S=new RegExp("^"+L+"*,"+L+"*"),T=new RegExp("^"+L+"*([>+~]|"+L+")"+L+"*"),U=new RegExp("="+L+"*([^\\]'\"]*?)"+L+"*\\]","g"),V=new RegExp(P),W=new RegExp("^"+N+"$"),X={ID:new RegExp("^#("+M+")"),CLASS:new RegExp("^\\.("+M+")"),TAG:new RegExp("^("+M.replace("w","w*")+")"),ATTR:new RegExp("^"+O),PSEUDO:new RegExp("^"+P),CHILD:new RegExp("^:(only|first|last|nth|nth-last)-(child|of-type)(?:\\("+L+"*(even|odd|(([+-]|)(\\d*)n|)"+L+"*(?:([+-]|)"+L+"*(\\d+)|))"+L+"*\\)|)","i"),bool:new RegExp("^(?:"+K+")$","i"),needsContext:new RegExp("^"+L+"*[>+~]|:(even|odd|eq|gt|lt|nth|first|last)(?:\\("+L+"*((?:-\\d)?\\d*)"+L+"*\\)|)(?=[^-]|$)","i")},Y=/^(?:input|select|textarea|button)$/i,Z=/^h\d$/i,$=/^[^{]+\{\s*\[native \w/,_=/^(?:#([\w-]+)|(\w+)|\.([\w-]+))$/,aa=/[+~]/,ba=/'|\\/g,ca=new RegExp("\\\\([\\da-f]{1,6}"+L+"?|("+L+")|.)","ig"),da=function(a,b,c){var d="0x"+b-65536;return d!==d||c?b:0>d?String.fromCharCode(d+65536):String.fromCharCode(d>>10|55296,1023&d|56320)},ea=function(){m()};try{H.apply(E=I.call(v.childNodes),v.childNodes),E[v.childNodes.length].nodeType}catch(fa){H={apply:E.length?function(a,b){G.apply(a,I.call(b))}:function(a,b){var c=a.length,d=0;while(a[c++]=b[d++]);a.length=c-1}}}function ga(a,b,d,e){var f,h,j,k,l,o,r,s,w,x;if((b?b.ownerDocument||b:v)!==n&&m(b),b=b||n,d=d||[],k=b.nodeType,"string"!=typeof a||!a||1!==k&&9!==k&&11!==k)return d;if(!e&&p){if(11!==k&&(f=_.exec(a)))if(j=f[1]){if(9===k){if(h=b.getElementById(j),!h||!h.parentNode)return d;if(h.id===j)return d.push(h),d}else if(b.ownerDocument&&(h=b.ownerDocument.getElementById(j))&&t(b,h)&&h.id===j)return d.push(h),d}else{if(f[2])return H.apply(d,b.getElementsByTagName(a)),d;if((j=f[3])&&c.getElementsByClassName)return H.apply(d,b.getElementsByClassName(j)),d}if(c.qsa&&(!q||!q.test(a))){if(s=r=u,w=b,x=1!==k&&a,1===k&&"object"!==b.nodeName.toLowerCase()){o=g(a),(r=b.getAttribute("id"))?s=r.replace(ba,"\\$&"):b.setAttribute("id",s),s="[id='"+s+"'] ",l=o.length;while(l--)o[l]=s+ra(o[l]);w=aa.test(a)&&pa(b.parentNode)||b,x=o.join(",")}if(x)try{return H.apply(d,w.querySelectorAll(x)),d}catch(y){}finally{r||b.removeAttribute("id")}}}return i(a.replace(R,"$1"),b,d,e)}function ha(){var a=[];function b(c,e){return a.push(c+" ")>d.cacheLength&&delete b[a.shift()],b[c+" "]=e}return b}function ia(a){return a[u]=!0,a}function ja(a){var b=n.createElement("div");try{return!!a(b)}catch(c){return!1}finally{b.parentNode&&b.parentNode.removeChild(b),b=null}}function ka(a,b){var c=a.split("|"),e=a.length;while(e--)d.attrHandle[c[e]]=b}function la(a,b){var c=b&&a,d=c&&1===a.nodeType&&1===b.nodeType&&(~b.sourceIndex||C)-(~a.sourceIndex||C);if(d)return d;if(c)while(c=c.nextSibling)if(c===b)return-1;return a?1:-1}function ma(a){return function(b){var c=b.nodeName.toLowerCase();return"input"===c&&b.type===a}}function na(a){return function(b){var c=b.nodeName.toLowerCase();return("input"===c||"button"===c)&&b.type===a}}function oa(a){return ia(function(b){return b=+b,ia(function(c,d){var e,f=a([],c.length,b),g=f.length;while(g--)c[e=f[g]]&&(c[e]=!(d[e]=c[e]))})})}function pa(a){return a&&"undefined"!=typeof a.getElementsByTagName&&a}c=ga.support={},f=ga.isXML=function(a){var b=a&&(a.ownerDocument||a).documentElement;return b?"HTML"!==b.nodeName:!1},m=ga.setDocument=function(a){var b,e,g=a?a.ownerDocument||a:v;return g!==n&&9===g.nodeType&&g.documentElement?(n=g,o=g.documentElement,e=g.defaultView,e&&e!==e.top&&(e.addEventListener?e.addEventListener("unload",ea,!1):e.attachEvent&&e.attachEvent("onunload",ea)),p=!f(g),c.attributes=ja(function(a){return a.className="i",!a.getAttribute("className")}),c.getElementsByTagName=ja(function(a){return a.appendChild(g.createComment("")),!a.getElementsByTagName("*").length}),c.getElementsByClassName=$.test(g.getElementsByClassName),c.getById=ja(function(a){return o.appendChild(a).id=u,!g.getElementsByName||!g.getElementsByName(u).length}),c.getById?(d.find.ID=function(a,b){if("undefined"!=typeof b.getElementById&&p){var c=b.getElementById(a);return c&&c.parentNode?[c]:[]}},d.filter.ID=function(a){var b=a.replace(ca,da);return function(a){return a.getAttribute("id")===b}}):(delete d.find.ID,d.filter.ID=function(a){var b=a.replace(ca,da);return function(a){var c="undefined"!=typeof a.getAttributeNode&&a.getAttributeNode("id");return c&&c.value===b}}),d.find.TAG=c.getElementsByTagName?function(a,b){return"undefined"!=typeof b.getElementsByTagName?b.getElementsByTagName(a):c.qsa?b.querySelectorAll(a):void 0}:function(a,b){var c,d=[],e=0,f=b.getElementsByTagName(a);if("*"===a){while(c=f[e++])1===c.nodeType&&d.push(c);return d}return f},d.find.CLASS=c.getElementsByClassName&&function(a,b){return p?b.getElementsByClassName(a):void 0},r=[],q=[],(c.qsa=$.test(g.querySelectorAll))&&(ja(function(a){o.appendChild(a).innerHTML="<a id='"+u+"'></a><select id='"+u+"-\f]' msallowcapture=''><option selected=''></option></select>",a.querySelectorAll("[msallowcapture^='']").length&&q.push("[*^$]="+L+"*(?:''|\"\")"),a.querySelectorAll("[selected]").length||q.push("\\["+L+"*(?:value|"+K+")"),a.querySelectorAll("[id~="+u+"-]").length||q.push("~="),a.querySelectorAll(":checked").length||q.push(":checked"),a.querySelectorAll("a#"+u+"+*").length||q.push(".#.+[+~]")}),ja(function(a){var b=g.createElement("input");b.setAttribute("type","hidden"),a.appendChild(b).setAttribute("name","D"),a.querySelectorAll("[name=d]").length&&q.push("name"+L+"*[*^$|!~]?="),a.querySelectorAll(":enabled").length||q.push(":enabled",":disabled"),a.querySelectorAll("*,:x"),q.push(",.*:")})),(c.matchesSelector=$.test(s=o.matches||o.webkitMatchesSelector||o.mozMatchesSelector||o.oMatchesSelector||o.msMatchesSelector))&&ja(function(a){c.disconnectedMatch=s.call(a,"div"),s.call(a,"[s!='']:x"),r.push("!=",P)}),q=q.length&&new RegExp(q.join("|")),r=r.length&&new RegExp(r.join("|")),b=$.test(o.compareDocumentPosition),t=b||$.test(o.contains)?function(a,b){var c=9===a.nodeType?a.documentElement:a,d=b&&b.parentNode;return a===d||!(!d||1!==d.nodeType||!(c.contains?c.contains(d):a.compareDocumentPosition&&16&a.compareDocumentPosition(d)))}:function(a,b){if(b)while(b=b.parentNode)if(b===a)return!0;return!1},B=b?function(a,b){if(a===b)return l=!0,0;var d=!a.compareDocumentPosition-!b.compareDocumentPosition;return d?d:(d=(a.ownerDocument||a)===(b.ownerDocument||b)?a.compareDocumentPosition(b):1,1&d||!c.sortDetached&&b.compareDocumentPosition(a)===d?a===g||a.ownerDocument===v&&t(v,a)?-1:b===g||b.ownerDocument===v&&t(v,b)?1:k?J(k,a)-J(k,b):0:4&d?-1:1)}:function(a,b){if(a===b)return l=!0,0;var c,d=0,e=a.parentNode,f=b.parentNode,h=[a],i=[b];if(!e||!f)return a===g?-1:b===g?1:e?-1:f?1:k?J(k,a)-J(k,b):0;if(e===f)return la(a,b);c=a;while(c=c.parentNode)h.unshift(c);c=b;while(c=c.parentNode)i.unshift(c);while(h[d]===i[d])d++;return d?la(h[d],i[d]):h[d]===v?-1:i[d]===v?1:0},g):n},ga.matches=function(a,b){return ga(a,null,null,b)},ga.matchesSelector=function(a,b){if((a.ownerDocument||a)!==n&&m(a),b=b.replace(U,"='$1']"),!(!c.matchesSelector||!p||r&&r.test(b)||q&&q.test(b)))try{var d=s.call(a,b);if(d||c.disconnectedMatch||a.document&&11!==a.document.nodeType)return d}catch(e){}return ga(b,n,null,[a]).length>0},ga.contains=function(a,b){return(a.ownerDocument||a)!==n&&m(a),t(a,b)},ga.attr=function(a,b){(a.ownerDocument||a)!==n&&m(a);var e=d.attrHandle[b.toLowerCase()],f=e&&D.call(d.attrHandle,b.toLowerCase())?e(a,b,!p):void 0;return void 0!==f?f:c.attributes||!p?a.getAttribute(b):(f=a.getAttributeNode(b))&&f.specified?f.value:null},ga.error=function(a){throw new Error("Syntax error, unrecognized expression: "+a)},ga.uniqueSort=function(a){var b,d=[],e=0,f=0;if(l=!c.detectDuplicates,k=!c.sortStable&&a.slice(0),a.sort(B),l){while(b=a[f++])b===a[f]&&(e=d.push(f));while(e--)a.splice(d[e],1)}return k=null,a},e=ga.getText=function(a){var b,c="",d=0,f=a.nodeType;if(f){if(1===f||9===f||11===f){if("string"==typeof a.textContent)return a.textContent;for(a=a.firstChild;a;a=a.nextSibling)c+=e(a)}else if(3===f||4===f)return a.nodeValue}else while(b=a[d++])c+=e(b);return c},d=ga.selectors={cacheLength:50,createPseudo:ia,match:X,attrHandle:{},find:{},relative:{">":{dir:"parentNode",first:!0}," ":{dir:"parentNode"},"+":{dir:"previousSibling",first:!0},"~":{dir:"previousSibling"}},preFilter:{ATTR:function(a){return a[1]=a[1].replace(ca,da),a[3]=(a[3]||a[4]||a[5]||"").replace(ca,da),"~="===a[2]&&(a[3]=" "+a[3]+" "),a.slice(0,4)},CHILD:function(a){return a[1]=a[1].toLowerCase(),"nth"===a[1].slice(0,3)?(a[3]||ga.error(a[0]),a[4]=+(a[4]?a[5]+(a[6]||1):2*("even"===a[3]||"odd"===a[3])),a[5]=+(a[7]+a[8]||"odd"===a[3])):a[3]&&ga.error(a[0]),a},PSEUDO:function(a){var b,c=!a[6]&&a[2];return X.CHILD.test(a[0])?null:(a[3]?a[2]=a[4]||a[5]||"":c&&V.test(c)&&(b=g(c,!0))&&(b=c.indexOf(")",c.length-b)-c.length)&&(a[0]=a[0].slice(0,b),a[2]=c.slice(0,b)),a.slice(0,3))}},filter:{TAG:function(a){var b=a.replace(ca,da).toLowerCase();return"*"===a?function(){return!0}:function(a){return a.nodeName&&a.nodeName.toLowerCase()===b}},CLASS:function(a){var b=y[a+" "];return b||(b=new RegExp("(^|"+L+")"+a+"("+L+"|$)"))&&y(a,function(a){return b.test("string"==typeof a.className&&a.className||"undefined"!=typeof a.getAttribute&&a.getAttribute("class")||"")})},ATTR:function(a,b,c){return function(d){var e=ga.attr(d,a);return null==e?"!="===b:b?(e+="","="===b?e===c:"!="===b?e!==c:"^="===b?c&&0===e.indexOf(c):"*="===b?c&&e.indexOf(c)>-1:"$="===b?c&&e.slice(-c.length)===c:"~="===b?(" "+e.replace(Q," ")+" ").indexOf(c)>-1:"|="===b?e===c||e.slice(0,c.length+1)===c+"-":!1):!0}},CHILD:function(a,b,c,d,e){var f="nth"!==a.slice(0,3),g="last"!==a.slice(-4),h="of-type"===b;return 1===d&&0===e?function(a){return!!a.parentNode}:function(b,c,i){var j,k,l,m,n,o,p=f!==g?"nextSibling":"previousSibling",q=b.parentNode,r=h&&b.nodeName.toLowerCase(),s=!i&&!h;if(q){if(f){while(p){l=b;while(l=l[p])if(h?l.nodeName.toLowerCase()===r:1===l.nodeType)return!1;o=p="only"===a&&!o&&"nextSibling"}return!0}if(o=[g?q.firstChild:q.lastChild],g&&s){k=q[u]||(q[u]={}),j=k[a]||[],n=j[0]===w&&j[1],m=j[0]===w&&j[2],l=n&&q.childNodes[n];while(l=++n&&l&&l[p]||(m=n=0)||o.pop())if(1===l.nodeType&&++m&&l===b){k[a]=[w,n,m];break}}else if(s&&(j=(b[u]||(b[u]={}))[a])&&j[0]===w)m=j[1];else while(l=++n&&l&&l[p]||(m=n=0)||o.pop())if((h?l.nodeName.toLowerCase()===r:1===l.nodeType)&&++m&&(s&&((l[u]||(l[u]={}))[a]=[w,m]),l===b))break;return m-=e,m===d||m%d===0&&m/d>=0}}},PSEUDO:function(a,b){var c,e=d.pseudos[a]||d.setFilters[a.toLowerCase()]||ga.error("unsupported pseudo: "+a);return e[u]?e(b):e.length>1?(c=[a,a,"",b],d.setFilters.hasOwnProperty(a.toLowerCase())?ia(function(a,c){var d,f=e(a,b),g=f.length;while(g--)d=J(a,f[g]),a[d]=!(c[d]=f[g])}):function(a){return e(a,0,c)}):e}},pseudos:{not:ia(function(a){var b=[],c=[],d=h(a.replace(R,"$1"));return d[u]?ia(function(a,b,c,e){var f,g=d(a,null,e,[]),h=a.length;while(h--)(f=g[h])&&(a[h]=!(b[h]=f))}):function(a,e,f){return b[0]=a,d(b,null,f,c),b[0]=null,!c.pop()}}),has:ia(function(a){return function(b){return ga(a,b).length>0}}),contains:ia(function(a){return a=a.replace(ca,da),function(b){return(b.textContent||b.innerText||e(b)).indexOf(a)>-1}}),lang:ia(function(a){return W.test(a||"")||ga.error("unsupported lang: "+a),a=a.replace(ca,da).toLowerCase(),function(b){var c;do if(c=p?b.lang:b.getAttribute("xml:lang")||b.getAttribute("lang"))return c=c.toLowerCase(),c===a||0===c.indexOf(a+"-");while((b=b.parentNode)&&1===b.nodeType);return!1}}),target:function(b){var c=a.location&&a.location.hash;return c&&c.slice(1)===b.id},root:function(a){return a===o},focus:function(a){return a===n.activeElement&&(!n.hasFocus||n.hasFocus())&&!!(a.type||a.href||~a.tabIndex)},enabled:function(a){return a.disabled===!1},disabled:function(a){return a.disabled===!0},checked:function(a){var b=a.nodeName.toLowerCase();return"input"===b&&!!a.checked||"option"===b&&!!a.selected},selected:function(a){return a.parentNode&&a.parentNode.selectedIndex,a.selected===!0},empty:function(a){for(a=a.firstChild;a;a=a.nextSibling)if(a.nodeType<6)return!1;return!0},parent:function(a){return!d.pseudos.empty(a)},header:function(a){return Z.test(a.nodeName)},input:function(a){return Y.test(a.nodeName)},button:function(a){var b=a.nodeName.toLowerCase();return"input"===b&&"button"===a.type||"button"===b},text:function(a){var b;return"input"===a.nodeName.toLowerCase()&&"text"===a.type&&(null==(b=a.getAttribute("type"))||"text"===b.toLowerCase())},first:oa(function(){return[0]}),last:oa(function(a,b){return[b-1]}),eq:oa(function(a,b,c){return[0>c?c+b:c]}),even:oa(function(a,b){for(var c=0;b>c;c+=2)a.push(c);return a}),odd:oa(function(a,b){for(var c=1;b>c;c+=2)a.push(c);return a}),lt:oa(function(a,b,c){for(var d=0>c?c+b:c;--d>=0;)a.push(d);return a}),gt:oa(function(a,b,c){for(var d=0>c?c+b:c;++d<b;)a.push(d);return a})}},d.pseudos.nth=d.pseudos.eq;for(b in{radio:!0,checkbox:!0,file:!0,password:!0,image:!0})d.pseudos[b]=ma(b);for(b in{submit:!0,reset:!0})d.pseudos[b]=na(b);function qa(){}qa.prototype=d.filters=d.pseudos,d.setFilters=new qa,g=ga.tokenize=function(a,b){var c,e,f,g,h,i,j,k=z[a+" "];if(k)return b?0:k.slice(0);h=a,i=[],j=d.preFilter;while(h){(!c||(e=S.exec(h)))&&(e&&(h=h.slice(e[0].length)||h),i.push(f=[])),c=!1,(e=T.exec(h))&&(c=e.shift(),f.push({value:c,type:e[0].replace(R," ")}),h=h.slice(c.length));for(g in d.filter)!(e=X[g].exec(h))||j[g]&&!(e=j[g](e))||(c=e.shift(),f.push({value:c,type:g,matches:e}),h=h.slice(c.length));if(!c)break}return b?h.length:h?ga.error(a):z(a,i).slice(0)};function ra(a){for(var b=0,c=a.length,d="";c>b;b++)d+=a[b].value;return d}function sa(a,b,c){var d=b.dir,e=c&&"parentNode"===d,f=x++;return b.first?function(b,c,f){while(b=b[d])if(1===b.nodeType||e)return a(b,c,f)}:function(b,c,g){var h,i,j=[w,f];if(g){while(b=b[d])if((1===b.nodeType||e)&&a(b,c,g))return!0}else while(b=b[d])if(1===b.nodeType||e){if(i=b[u]||(b[u]={}),(h=i[d])&&h[0]===w&&h[1]===f)return j[2]=h[2];if(i[d]=j,j[2]=a(b,c,g))return!0}}}function ta(a){return a.length>1?function(b,c,d){var e=a.length;while(e--)if(!a[e](b,c,d))return!1;return!0}:a[0]}function ua(a,b,c){for(var d=0,e=b.length;e>d;d++)ga(a,b[d],c);return c}function va(a,b,c,d,e){for(var f,g=[],h=0,i=a.length,j=null!=b;i>h;h++)(f=a[h])&&(!c||c(f,d,e))&&(g.push(f),j&&b.push(h));return g}function wa(a,b,c,d,e,f){return d&&!d[u]&&(d=wa(d)),e&&!e[u]&&(e=wa(e,f)),ia(function(f,g,h,i){var j,k,l,m=[],n=[],o=g.length,p=f||ua(b||"*",h.nodeType?[h]:h,[]),q=!a||!f&&b?p:va(p,m,a,h,i),r=c?e||(f?a:o||d)?[]:g:q;if(c&&c(q,r,h,i),d){j=va(r,n),d(j,[],h,i),k=j.length;while(k--)(l=j[k])&&(r[n[k]]=!(q[n[k]]=l))}if(f){if(e||a){if(e){j=[],k=r.length;while(k--)(l=r[k])&&j.push(q[k]=l);e(null,r=[],j,i)}k=r.length;while(k--)(l=r[k])&&(j=e?J(f,l):m[k])>-1&&(f[j]=!(g[j]=l))}}else r=va(r===g?r.splice(o,r.length):r),e?e(null,g,r,i):H.apply(g,r)})}function xa(a){for(var b,c,e,f=a.length,g=d.relative[a[0].type],h=g||d.relative[" "],i=g?1:0,k=sa(function(a){return a===b},h,!0),l=sa(function(a){return J(b,a)>-1},h,!0),m=[function(a,c,d){var e=!g&&(d||c!==j)||((b=c).nodeType?k(a,c,d):l(a,c,d));return b=null,e}];f>i;i++)if(c=d.relative[a[i].type])m=[sa(ta(m),c)];else{if(c=d.filter[a[i].type].apply(null,a[i].matches),c[u]){for(e=++i;f>e;e++)if(d.relative[a[e].type])break;return wa(i>1&&ta(m),i>1&&ra(a.slice(0,i-1).concat({value:" "===a[i-2].type?"*":""})).replace(R,"$1"),c,e>i&&xa(a.slice(i,e)),f>e&&xa(a=a.slice(e)),f>e&&ra(a))}m.push(c)}return ta(m)}function ya(a,b){var c=b.length>0,e=a.length>0,f=function(f,g,h,i,k){var l,m,o,p=0,q="0",r=f&&[],s=[],t=j,u=f||e&&d.find.TAG("*",k),v=w+=null==t?1:Math.random()||.1,x=u.length;for(k&&(j=g!==n&&g);q!==x&&null!=(l=u[q]);q++){if(e&&l){m=0;while(o=a[m++])if(o(l,g,h)){i.push(l);break}k&&(w=v)}c&&((l=!o&&l)&&p--,f&&r.push(l))}if(p+=q,c&&q!==p){m=0;while(o=b[m++])o(r,s,g,h);if(f){if(p>0)while(q--)r[q]||s[q]||(s[q]=F.call(i));s=va(s)}H.apply(i,s),k&&!f&&s.length>0&&p+b.length>1&&ga.uniqueSort(i)}return k&&(w=v,j=t),r};return c?ia(f):f}return h=ga.compile=function(a,b){var c,d=[],e=[],f=A[a+" "];if(!f){b||(b=g(a)),c=b.length;while(c--)f=xa(b[c]),f[u]?d.push(f):e.push(f);f=A(a,ya(e,d)),f.selector=a}return f},i=ga.select=function(a,b,e,f){var i,j,k,l,m,n="function"==typeof a&&a,o=!f&&g(a=n.selector||a);if(e=e||[],1===o.length){if(j=o[0]=o[0].slice(0),j.length>2&&"ID"===(k=j[0]).type&&c.getById&&9===b.nodeType&&p&&d.relative[j[1].type]){if(b=(d.find.ID(k.matches[0].replace(ca,da),b)||[])[0],!b)return e;n&&(b=b.parentNode),a=a.slice(j.shift().value.length)}i=X.needsContext.test(a)?0:j.length;while(i--){if(k=j[i],d.relative[l=k.type])break;if((m=d.find[l])&&(f=m(k.matches[0].replace(ca,da),aa.test(j[0].type)&&pa(b.parentNode)||b))){if(j.splice(i,1),a=f.length&&ra(j),!a)return H.apply(e,f),e;break}}}return(n||h(a,o))(f,b,!p,e,aa.test(a)&&pa(b.parentNode)||b),e},c.sortStable=u.split("").sort(B).join("")===u,c.detectDuplicates=!!l,m(),c.sortDetached=ja(function(a){return 1&a.compareDocumentPosition(n.createElement("div"))}),ja(function(a){return a.innerHTML="<a href='#'></a>","#"===a.firstChild.getAttribute("href")})||ka("type|href|height|width",function(a,b,c){return c?void 0:a.getAttribute(b,"type"===b.toLowerCase()?1:2)}),c.attributes&&ja(function(a){return a.innerHTML="<input/>",a.firstChild.setAttribute("value",""),""===a.firstChild.getAttribute("value")})||ka("value",function(a,b,c){return c||"input"!==a.nodeName.toLowerCase()?void 0:a.defaultValue}),ja(function(a){return null==a.getAttribute("disabled")})||ka(K,function(a,b,c){var d;return c?void 0:a[b]===!0?b.toLowerCase():(d=a.getAttributeNode(b))&&d.specified?d.value:null}),ga}(a);m.find=s,m.expr=s.selectors,m.expr[":"]=m.expr.pseudos,m.unique=s.uniqueSort,m.text=s.getText,m.isXMLDoc=s.isXML,m.contains=s.contains;var t=m.expr.match.needsContext,u=/^<(\w+)\s*\/?>(?:<\/\1>|)$/,v=/^.[^:#\[\.,]*$/;function w(a,b,c){if(m.isFunction(b))return m.grep(a,function(a,d){return!!b.call(a,d,a)!==c});if(b.nodeType)return m.grep(a,function(a){return a===b!==c});if("string"==typeof b){if(v.test(b))return m.filter(b,a,c);b=m.filter(b,a)}return m.grep(a,function(a){return m.inArray(a,b)>=0!==c})}m.filter=function(a,b,c){var d=b[0];return c&&(a=":not("+a+")"),1===b.length&&1===d.nodeType?m.find.matchesSelector(d,a)?[d]:[]:m.find.matches(a,m.grep(b,function(a){return 1===a.nodeType}))},m.fn.extend({find:function(a){var b,c=[],d=this,e=d.length;if("string"!=typeof a)return this.pushStack(m(a).filter(function(){for(b=0;e>b;b++)if(m.contains(d[b],this))return!0}));for(b=0;e>b;b++)m.find(a,d[b],c);return c=this.pushStack(e>1?m.unique(c):c),c.selector=this.selector?this.selector+" "+a:a,c},filter:function(a){return this.pushStack(w(this,a||[],!1))},not:function(a){return this.pushStack(w(this,a||[],!0))},is:function(a){return!!w(this,"string"==typeof a&&t.test(a)?m(a):a||[],!1).length}});var x,y=a.document,z=/^(?:\s*(<[\w\W]+>)[^>]*|#([\w-]*))$/,A=m.fn.init=function(a,b){var c,d;if(!a)return this;if("string"==typeof a){if(c="<"===a.charAt(0)&&">"===a.charAt(a.length-1)&&a.length>=3?[null,a,null]:z.exec(a),!c||!c[1]&&b)return!b||b.jquery?(b||x).find(a):this.constructor(b).find(a);if(c[1]){if(b=b instanceof m?b[0]:b,m.merge(this,m.parseHTML(c[1],b&&b.nodeType?b.ownerDocument||b:y,!0)),u.test(c[1])&&m.isPlainObject(b))for(c in b)m.isFunction(this[c])?this[c](b[c]):this.attr(c,b[c]);return this}if(d=y.getElementById(c[2]),d&&d.parentNode){if(d.id!==c[2])return x.find(a);this.length=1,this[0]=d}return this.context=y,this.selector=a,this}return a.nodeType?(this.context=this[0]=a,this.length=1,this):m.isFunction(a)?"undefined"!=typeof x.ready?x.ready(a):a(m):(void 0!==a.selector&&(this.selector=a.selector,this.context=a.context),m.makeArray(a,this))};A.prototype=m.fn,x=m(y);var B=/^(?:parents|prev(?:Until|All))/,C={children:!0,contents:!0,next:!0,prev:!0};m.extend({dir:function(a,b,c){var d=[],e=a[b];while(e&&9!==e.nodeType&&(void 0===c||1!==e.nodeType||!m(e).is(c)))1===e.nodeType&&d.push(e),e=e[b];return d},sibling:function(a,b){for(var c=[];a;a=a.nextSibling)1===a.nodeType&&a!==b&&c.push(a);return c}}),m.fn.extend({has:function(a){var b,c=m(a,this),d=c.length;return this.filter(function(){for(b=0;d>b;b++)if(m.contains(this,c[b]))return!0})},closest:function(a,b){for(var c,d=0,e=this.length,f=[],g=t.test(a)||"string"!=typeof a?m(a,b||this.context):0;e>d;d++)for(c=this[d];c&&c!==b;c=c.parentNode)if(c.nodeType<11&&(g?g.index(c)>-1:1===c.nodeType&&m.find.matchesSelector(c,a))){f.push(c);break}return this.pushStack(f.length>1?m.unique(f):f)},index:function(a){return a?"string"==typeof a?m.inArray(this[0],m(a)):m.inArray(a.jquery?a[0]:a,this):this[0]&&this[0].parentNode?this.first().prevAll().length:-1},add:function(a,b){return this.pushStack(m.unique(m.merge(this.get(),m(a,b))))},addBack:function(a){return this.add(null==a?this.prevObject:this.prevObject.filter(a))}});function D(a,b){do a=a[b];while(a&&1!==a.nodeType);return a}m.each({parent:function(a){var b=a.parentNode;return b&&11!==b.nodeType?b:null},parents:function(a){return m.dir(a,"parentNode")},parentsUntil:function(a,b,c){return m.dir(a,"parentNode",c)},next:function(a){return D(a,"nextSibling")},prev:function(a){return D(a,"previousSibling")},nextAll:function(a){return m.dir(a,"nextSibling")},prevAll:function(a){return m.dir(a,"previousSibling")},nextUntil:function(a,b,c){return m.dir(a,"nextSibling",c)},prevUntil:function(a,b,c){return m.dir(a,"previousSibling",c)},siblings:function(a){return m.sibling((a.parentNode||{}).firstChild,a)},children:function(a){return m.sibling(a.firstChild)},contents:function(a){return m.nodeName(a,"iframe")?a.contentDocument||a.contentWindow.document:m.merge([],a.childNodes)}},function(a,b){m.fn[a]=function(c,d){var e=m.map(this,b,c);return"Until"!==a.slice(-5)&&(d=c),d&&"string"==typeof d&&(e=m.filter(d,e)),this.length>1&&(C[a]||(e=m.unique(e)),B.test(a)&&(e=e.reverse())),this.pushStack(e)}});var E=/\S+/g,F={};function G(a){var b=F[a]={};return m.each(a.match(E)||[],function(a,c){b[c]=!0}),b}m.Callbacks=function(a){a="string"==typeof a?F[a]||G(a):m.extend({},a);var b,c,d,e,f,g,h=[],i=!a.once&&[],j=function(l){for(c=a.memory&&l,d=!0,f=g||0,g=0,e=h.length,b=!0;h&&e>f;f++)if(h[f].apply(l[0],l[1])===!1&&a.stopOnFalse){c=!1;break}b=!1,h&&(i?i.length&&j(i.shift()):c?h=[]:k.disable())},k={add:function(){if(h){var d=h.length;!function f(b){m.each(b,function(b,c){var d=m.type(c);"function"===d?a.unique&&k.has(c)||h.push(c):c&&c.length&&"string"!==d&&f(c)})}(arguments),b?e=h.length:c&&(g=d,j(c))}return this},remove:function(){return h&&m.each(arguments,function(a,c){var d;while((d=m.inArray(c,h,d))>-1)h.splice(d,1),b&&(e>=d&&e--,f>=d&&f--)}),this},has:function(a){return a?m.inArray(a,h)>-1:!(!h||!h.length)},empty:function(){return h=[],e=0,this},disable:function(){return h=i=c=void 0,this},disabled:function(){return!h},lock:function(){return i=void 0,c||k.disable(),this},locked:function(){return!i},fireWith:function(a,c){return!h||d&&!i||(c=c||[],c=[a,c.slice?c.slice():c],b?i.push(c):j(c)),this},fire:function(){return k.fireWith(this,arguments),this},fired:function(){return!!d}};return k},m.extend({Deferred:function(a){var b=[["resolve","done",m.Callbacks("once memory"),"resolved"],["reject","fail",m.Callbacks("once memory"),"rejected"],["notify","progress",m.Callbacks("memory")]],c="pending",d={state:function(){return c},always:function(){return e.done(arguments).fail(arguments),this},then:function(){var a=arguments;return m.Deferred(function(c){m.each(b,function(b,f){var g=m.isFunction(a[b])&&a[b];e[f[1]](function(){var a=g&&g.apply(this,arguments);a&&m.isFunction(a.promise)?a.promise().done(c.resolve).fail(c.reject).progress(c.notify):c[f[0]+"With"](this===d?c.promise():this,g?[a]:arguments)})}),a=null}).promise()},promise:function(a){return null!=a?m.extend(a,d):d}},e={};return d.pipe=d.then,m.each(b,function(a,f){var g=f[2],h=f[3];d[f[1]]=g.add,h&&g.add(function(){c=h},b[1^a][2].disable,b[2][2].lock),e[f[0]]=function(){return e[f[0]+"With"](this===e?d:this,arguments),this},e[f[0]+"With"]=g.fireWith}),d.promise(e),a&&a.call(e,e),e},when:function(a){var b=0,c=d.call(arguments),e=c.length,f=1!==e||a&&m.isFunction(a.promise)?e:0,g=1===f?a:m.Deferred(),h=function(a,b,c){return function(e){b[a]=this,c[a]=arguments.length>1?d.call(arguments):e,c===i?g.notifyWith(b,c):--f||g.resolveWith(b,c)}},i,j,k;if(e>1)for(i=new Array(e),j=new Array(e),k=new Array(e);e>b;b++)c[b]&&m.isFunction(c[b].promise)?c[b].promise().done(h(b,k,c)).fail(g.reject).progress(h(b,j,i)):--f;return f||g.resolveWith(k,c),g.promise()}});var H;m.fn.ready=function(a){return m.ready.promise().done(a),this},m.extend({isReady:!1,readyWait:1,holdReady:function(a){a?m.readyWait++:m.ready(!0)},ready:function(a){if(a===!0?!--m.readyWait:!m.isReady){if(!y.body)return setTimeout(m.ready);m.isReady=!0,a!==!0&&--m.readyWait>0||(H.resolveWith(y,[m]),m.fn.triggerHandler&&(m(y).triggerHandler("ready"),m(y).off("ready")))}}});function I(){y.addEventListener?(y.removeEventListener("DOMContentLoaded",J,!1),a.removeEventListener("load",J,!1)):(y.detachEvent("onreadystatechange",J),a.detachEvent("onload",J))}function J(){(y.addEventListener||"load"===event.type||"complete"===y.readyState)&&(I(),m.ready())}m.ready.promise=function(b){if(!H)if(H=m.Deferred(),"complete"===y.readyState)setTimeout(m.ready);else if(y.addEventListener)y.addEventListener("DOMContentLoaded",J,!1),a.addEventListener("load",J,!1);else{y.attachEvent("onreadystatechange",J),a.attachEvent("onload",J);var c=!1;try{c=null==a.frameElement&&y.documentElement}catch(d){}c&&c.doScroll&&!function e(){if(!m.isReady){try{c.doScroll("left")}catch(a){return setTimeout(e,50)}I(),m.ready()}}()}return H.promise(b)};var K="undefined",L;for(L in m(k))break;k.ownLast="0"!==L,k.inlineBlockNeedsLayout=!1,m(function(){var a,b,c,d;c=y.getElementsByTagName("body")[0],c&&c.style&&(b=y.createElement("div"),d=y.createElement("div"),d.style.cssText="position:absolute;border:0;width:0;height:0;top:0;left:-9999px",c.appendChild(d).appendChild(b),typeof b.style.zoom!==K&&(b.style.cssText="display:inline;margin:0;border:0;padding:1px;width:1px;zoom:1",k.inlineBlockNeedsLayout=a=3===b.offsetWidth,a&&(c.style.zoom=1)),c.removeChild(d))}),function(){var a=y.createElement("div");if(null==k.deleteExpando){k.deleteExpando=!0;try{delete a.test}catch(b){k.deleteExpando=!1}}a=null}(),m.acceptData=function(a){var b=m.noData[(a.nodeName+" ").toLowerCase()],c=+a.nodeType||1;return 1!==c&&9!==c?!1:!b||b!==!0&&a.getAttribute("classid")===b};var M=/^(?:\{[\w\W]*\}|\[[\w\W]*\])$/,N=/([A-Z])/g;function O(a,b,c){if(void 0===c&&1===a.nodeType){var d="data-"+b.replace(N,"-$1").toLowerCase();if(c=a.getAttribute(d),"string"==typeof c){try{c="true"===c?!0:"false"===c?!1:"null"===c?null:+c+""===c?+c:M.test(c)?m.parseJSON(c):c}catch(e){}m.data(a,b,c)}else c=void 0}return c}function P(a){var b;for(b in a)if(("data"!==b||!m.isEmptyObject(a[b]))&&"toJSON"!==b)return!1;
@@ -1743,171 +1745,279 @@ summary {
 
 
 
-<h1 class="title toc-ignore">OttawaBeaches: downloading historical data</h1>
+<h1 class="title toc-ignore">OttawaBeaches: tidying</h1>
+<h4 class="author">JA Moggridge</h4>
+<h4 class="date">2020-06-06</h4>
 
 </div>
 
 <div id="TOC">
 <ul>
-<li><a href="#beach-water-sampling">Beach Water Sampling</a><ul>
-<li><a href="#source">Source</a></li>
-<li><a href="#process">Process</a></li>
-<li><a href="#code">Code</a></li>
+<li><a href="#beaches-data">Beaches data</a><ul>
+<li><a href="#pivot-to-long-form-as-set-variable-classes">1. Pivot to long-form as set variable classes</a></li>
+<li><a href="#merge-e.coli-and-status-dataframes">2. Merge <code>e.coli</code> and <code>status</code> dataframes</a></li>
+<li><a href="#fix-beach-status-labels">3. Fix beach <code>status</code> labels</a></li>
+<li><a href="#check-beaches-summary">4. Check <code>beaches</code> summary</a></li>
 </ul></li>
 <li><a href="#weather-data">Weather data</a><ul>
-<li><a href="#source-1">Source</a></li>
-<li><a href="#process-1">Process</a></li>
-<li><a href="#code-1">Code</a></li>
+<li><a href="#load-weather-and-look-at-variables-in-df">1. Load <code>weather</code> and look at variables in df</a></li>
+<li><a href="#subset-weather-to-useful-columns">2. Subset <code>weather</code> to useful columns</a></li>
+<li><a href="#tidy-and-create-new-variables">3. Tidy and create new variables</a></li>
+<li><a href="#save-full-weather-dataset-2014-2019-for-weather-analysis">4. Save full weather dataset 2014-2019 for weather analysis</a></li>
+<li><a href="#join-weather-data-to-beaches">5. Join weather data to <code>beaches</code></a></li>
 </ul></li>
-<li><a href="#hydrometry-data">Hydrometry data</a><ul>
-<li><a href="#source-2">Source</a></li>
-<li><a href="#process-2">Process</a></li>
-<li><a href="#code-2">Code</a></li>
+<li><a href="#hydrology-data">Hydrology data</a><ul>
+<li><a href="#read-two-rivers-dataframes">1. Read two <code>rivers</code> dataframes</a></li>
+<li><a href="#tidy-each-set-in-parallel">2. Tidy each set in parallel</a></li>
+<li><a href="#join-both-df-into-rivers-format-dates">3. Join both df into <code>rivers</code>, format dates</a></li>
+<li><a href="#read-in-recent-river-data">4. Read in recent river data</a></li>
+<li><a href="#average-the-recent-data-to-daily-values-to-bind-with-rivers-then-to-beaches">5. Average the recent data to daily values to bind with <code>rivers</code> then to <code>beaches</code></a></li>
+<li><a href="#left-join-to-beaches">6. Left-join to <code>beaches</code></a></li>
 </ul></li>
+<li><a href="#save-everything-for-analysis">Save everything for analysis</a></li>
 </ul>
 </div>
 
 <!-- rnb-text-begin -->
+<style>
+body{ /* Normal  */
+      font-size: 15px;
+  }
+</style>
+<hr />
 <!-- rnb-text-end -->
 <!-- rnb-text-begin -->
 <p><br></p>
-<p>This notebook explains how historical data were obtained programmatically with R. There are three datasets: beaches, weather, and hydrometry. The code here simply obtains and saves the raw data in an R data series (RDS) format.</p>
-<p>The sources are included with the code used and there are notes about station numbers and so forth.</p>
-<p>For any EC weather data, use this guide to API for sourcing data: - <a href="https://geo.weather.gc.ca/geomet/features/api?f=html" class="uri">https://geo.weather.gc.ca/geomet/features/api?f=html</a></p>
-<p>API for hydrometric data: - <a href="https://scrap2api.web.app/" class="uri">https://scrap2api.web.app/</a></p>
-<p>Libraries for this notebook:</p>
+<p>This notebook details all the steps to clean up the data before starting analysis. We won’t remove any data points at this stage; we’re just formatting everything and renaming things to make analysis easier.</p>
+<p>We have to tidy and temporally link observations from beaches, weather and rivers.</p>
+<div id="beaches-data" class="section level3">
+<h3>Beaches data</h3>
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxubGlicmFyeShrbml0cilcbmxpYnJhcnkodGlkeXZlcnNlKVxubGlicmFyeShyZWFkeGwpXG5saWJyYXJ5KGh0dHIpXG5saWJyYXJ5KGpzb25saXRlKVxuYGBgIn0= -->
-<pre class="r"><code>library(knitr)
-library(tidyverse)
-library(readxl)
-library(httr)
-library(jsonlite)</code></pre>
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxubGlicmFyeSh0aWR5dmVyc2UpXG5saWJyYXJ5KGx1YnJpZGF0ZSlcbmxpYnJhcnkoa2FibGVFeHRyYSlcbmxpYnJhcnkodmFyaGFuZGxlKVxuYmVhY2hlcy5yYXcgPC0gcmVhZFJEUyhcImRhdGEvYmVhY2hlcy5yYXcuUkRTXCIpXG5gYGAifQ== -->
+<pre class="r"><code>library(tidyverse)
+library(lubridate)
+library(kableExtra)
+library(varhandle)
+beaches.raw &lt;- readRDS(&quot;data/beaches.raw.RDS&quot;)</code></pre>
 <!-- rnb-source-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
-<hr>
-<div id="beach-water-sampling" class="section level3">
-<h3>Beach Water Sampling</h3>
-<div id="source" class="section level4">
-<h4>Source</h4>
+<div id="pivot-to-long-form-as-set-variable-classes" class="section level4">
+<h4>1. Pivot to long-form as set variable classes</h4>
 <ul>
-<li><a href="https://www.ottawapublichealth.ca/en/public-health-services/beach-water-quality-results.aspx">Link to Ottawa public health / beach water quality results</a></li>
-<li>Direct download link to Excel file for all historical data (2014-2019) from OPH:
+<li>Extract <code>count</code> info
 <ul>
-<li><a href="https://www.arcgis.com/sharing/rest/content/items/0bbb24d8a55946b5a3e50fbc24631cd2/data">beach-water-sampling2019.xlsx</a></li>
+<li>create long form table with rows: (date, location, count)</li>
+<li>set count to numeric variable, location is factor</li>
 </ul></li>
 </ul>
-</div>
-<div id="process" class="section level4">
-<h4>Process</h4>
-<ul>
-<li>Grab data from URL<br />
-</li>
-<li>Parse .xlsx file with 7 sheets
-<ul>
-<li>2nd sheet is Constance bay, not of interest<br />
-</li>
-</ul></li>
-<li>Concatenate sheets (ie. all years) into single dataframe<br />
-</li>
-<li>Save .RDS file for tidying</li>
-</ul>
-</div>
-<div id="code" class="section level4">
-<h4>Code</h4>
-<ol style="list-style-type: decimal">
-<li>Grab csv file from URL</li>
-</ol>
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxudXJsMSA8LSBcImh0dHBzOi8vd3d3LmFyY2dpcy5jb20vc2hhcmluZy9yZXN0L2NvbnRlbnQvaXRlbXMvMGJiYjI0ZDhhNTU5NDZiNWEzZTUwZmJjMjQ2MzFjZDIvZGF0YVwiXG5HRVQodXJsMSwgd3JpdGVfZGlzayh0ZiA8LSB0ZW1wZmlsZShmaWxlZXh0ID0gXCIueGxzeFwiKSkpXG5gYGAifQ== -->
-<pre class="r"><code>url1 &lt;- &quot;https://www.arcgis.com/sharing/rest/content/items/0bbb24d8a55946b5a3e50fbc24631cd2/data&quot;
-GET(url1, write_disk(tf &lt;- tempfile(fileext = &quot;.xlsx&quot;)))</code></pre>
-<!-- rnb-source-end -->
-<!-- rnb-chunk-end -->
-<!-- rnb-text-begin -->
-<ol start="2" style="list-style-type: decimal">
-<li>Parse sheets</li>
-</ol>
-<!-- rnb-text-end -->
-<!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuc2hlZXRzIDwtIHRmICU+JVxuICAgZXhjZWxfc2hlZXRzKCkgJT4lXG4gICBzZXRfbmFtZXMoKSAlPiVcbiAgIG1hcChyZWFkX2V4Y2VsLCBwYXRoID0gdGYpXG5cbnN1bW1hcnkoc2hlZXRzKVxuYGBgIn0= -->
-<pre class="r"><code>sheets &lt;- tf %&gt;%
-   excel_sheets() %&gt;%
-   set_names() %&gt;%
-   map(read_excel, path = tf)
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuIyByZW5hbWUgJ2NvdW50JyBjb2x1bW5zIGJ5IGxvY2F0aW9uXG5uYW1lcyA8LSBjKCdkYXRlJywnQnJpdGFubmlhJywnV2VzdGJvcm8nLFwiTW9vbmV5c1wiLCBcIlBldHJpZUVhc3RcIixcIlBldHJpZVJpdmVyXCIpXG5cbiMgRXh0cmFjdCBFLmNvbGkgJ2NvdW50JyB2YXJpYWJsZSBcbmVjb2xpIDwtIGJlYWNoZXMucmF3W2MoMSwyLDQsNiw4LDEwKV1cbm5hbWVzKGVjb2xpKSA8LSBuYW1lc1xuIFxuI2NyZWF0ZSBsb25nLWZvcm0gdGFibGUgYGVjb2xpYFxuZWNvbGkgPC0gZWNvbGkgJT4lXG4gIG11dGF0ZV9hdCgnUGV0cmllRWFzdCcsIGZ1bnMoYXMubnVtZXJpYykpICU+JVxuICBtdXRhdGVfYXQoJ1BldHJpZVJpdmVyJywgZnVucyhhcy5udW1lcmljKSkgJT4lXG4gIHBpdm90X2xvbmdlcihuYW1lcyhlY29saSlbLTFdLCBuYW1lc190byA9IFwibG9jYXRpb25cIiwgdmFsdWVzX3RvID0gXCJjb3VudFwiKSAlPiVcbiAgbXV0YXRlKGxvY2F0aW9uID0gYXMuZmFjdG9yKGxvY2F0aW9uKSxcbiAgICAgICAgIGNvdW50ID0gYXMubnVtZXJpYyhjb3VudCkpIFxuc3VtbWFyeShlY29saSlcbmBgYCJ9 -->
+<pre class="r"><code># rename &#39;count&#39; columns by location
+names &lt;- c(&#39;date&#39;,&#39;Britannia&#39;,&#39;Westboro&#39;,&quot;Mooneys&quot;, &quot;PetrieEast&quot;,&quot;PetrieRiver&quot;)
 
-summary(sheets)</code></pre>
+# Extract E.coli &#39;count&#39; variable 
+ecoli &lt;- beaches.raw[c(1,2,4,6,8,10)]
+names(ecoli) &lt;- names
+ 
+#create long-form table `ecoli`
+ecoli &lt;- ecoli %&gt;%
+  mutate_at(&#39;PetrieEast&#39;, funs(as.numeric)) %&gt;%
+  mutate_at(&#39;PetrieRiver&#39;, funs(as.numeric)) %&gt;%
+  pivot_longer(names(ecoli)[-1], names_to = &quot;location&quot;, values_to = &quot;count&quot;) %&gt;%
+  mutate(location = as.factor(location),
+         count = as.numeric(count)) 
+summary(ecoli)</code></pre>
 <!-- rnb-source-end -->
-<!-- rnb-output-begin eyJkYXRhIjoiICAgICAgICAgICAgICAgICAgICAgICAgIExlbmd0aCBDbGFzcyAgTW9kZVxuMjAxOSAgICAgICAgICAgICAgICAgICAgIDExICAgICB0YmxfZGYgbGlzdFxuQ29udGFuY2UgJiBCdWNraGFtJ3MgQmF5ICA3ICAgICB0YmxfZGYgbGlzdFxuMjAxOCAgICAgICAgICAgICAgICAgICAgIDExICAgICB0YmxfZGYgbGlzdFxuMjAxNyAgICAgICAgICAgICAgICAgICAgIDExICAgICB0YmxfZGYgbGlzdFxuMjAxNiAgICAgICAgICAgICAgICAgICAgIDExICAgICB0YmxfZGYgbGlzdFxuMjAxNSAgICAgICAgICAgICAgICAgICAgIDExICAgICB0YmxfZGYgbGlzdFxuMjAxNCAgICAgICAgICAgICAgICAgICAgIDExICAgICB0YmxfZGYgbGlzdFxuIn0= -->
-<pre><code>                         Length Class  Mode
-2019                     11     tbl_df list
-Contance &amp; Buckham&#39;s Bay  7     tbl_df list
-2018                     11     tbl_df list
-2017                     11     tbl_df list
-2016                     11     tbl_df list
-2015                     11     tbl_df list
-2014                     11     tbl_df list</code></pre>
+<!-- rnb-output-begin eyJkYXRhIjoiICAgICAgZGF0ZSAgICAgICAgICAgICAgICAgICAgICAgICAgICBsb2NhdGlvbiAgICAgICBjb3VudCAgICAgICAgIFxuIE1pbi4gICA6MjAxNC0wNi0yMCAwMDowMDowMCAgIEJyaXRhbm5pYSAgOjQwNCAgIE1pbi4gICA6ICAgOS4xOTIgIFxuIDFzdCBRdS46MjAxNS0wNy0zMSAxODowMDowMCAgIE1vb25leXMgICAgOjQwNCAgIDFzdCBRdS46ICAxOC44ODIgIFxuIE1lZGlhbiA6MjAxNy0wNi0zMCAxMjowMDowMCAgIFBldHJpZUVhc3QgOjQwNCAgIE1lZGlhbiA6ICAzNS4wMTkgIFxuIE1lYW4gICA6MjAxNy0wMy0xMCAxNTo0ODowNyAgIFBldHJpZVJpdmVyOjQwNCAgIE1lYW4gICA6ICA4MS4yNjkgIFxuIDNyZCBRdS46MjAxOC0wNy0yOCAwNjowMDowMCAgIFdlc3Rib3JvICAgOjQwNCAgIDNyZCBRdS46ICA3Mi41OTQgIFxuIE1heC4gICA6MjAxOS0wOC0yNSAwMDowMDowMCAgICAgICAgICAgICAgICAgICAgIE1heC4gICA6MTAwMC4wMDAgIFxuICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIE5BJ3MgICA6NDAgICAgICAgIFxuIn0= -->
+<pre><code>      date                            location       count         
+ Min.   :2014-06-20 00:00:00   Britannia  :404   Min.   :   9.192  
+ 1st Qu.:2015-07-31 18:00:00   Mooneys    :404   1st Qu.:  18.882  
+ Median :2017-06-30 12:00:00   PetrieEast :404   Median :  35.019  
+ Mean   :2017-03-10 15:48:07   PetrieRiver:404   Mean   :  81.269  
+ 3rd Qu.:2018-07-28 06:00:00   Westboro   :404   3rd Qu.:  72.594  
+ Max.   :2019-08-25 00:00:00                     Max.   :1000.000  
+                                                 NA&#39;s   :40        </code></pre>
 <!-- rnb-output-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
-<ol start="3" style="list-style-type: decimal">
-<li>Turn xlsx sheets into dataframe, skip 2nd sheet. Save as <code>beaches.raw.RDS</code> file.</li>
-</ol>
 <ul>
-<li>renamed columns location.C for counts .S for statuses</li>
+<li>extract <code>status</code> info, as above</li>
 </ul>
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuXG4jIHRoZSBvdGhlciBiZWFjaGVzIGFyZSBpbiBzaGVldHM6ICcyMDE5JzonMjAxNCcgKDEsMzo3KVxubmFtZXMgPC0gYygnRGF0ZScsXG4gICAgICAgICAgICdCcml0YW5uaWEuQycsJ0JyaXRhbm5pYS5TJyxcbiAgICAgICAgICAgJ1dlc3Rib3JvLkMnLCAnV2VzdGJvcm8uUycsXG4gICAgICAgICAgIFwiTW9vbmV5cy5DXCIsIFwiTW9vbmV5cy5TXCIsXG4gICAgICAgICAgIFwiUGV0cmllRWFzdC5DXCIsIFwiUGV0cmllRWFzdC5TXCIsXG4gICAgICAgICAgIFwiUGV0cmllUml2ZXIuQ1wiLFwiUGV0cmllUml2ZXIuU1wiKVxuXG4jIGJlYWNoZXMgaXMgYSBsaXN0IG9mIHNoZWV0cyB0aGF0IG5lZWRzIHRvIGJlIGNvbmNhdGVuYXRlZFxuYmVhY2hlcyA8LSBhcy5kYXRhLmZyYW1lKHNoZWV0c1sxXSlcbmNvbG5hbWVzKGJlYWNoZXMpIDwtIG5hbWVzXG5mb3IgKHNoZWV0IGluIHNoZWV0c1stYygxLDIpXSl7XG4gIGIgPC0gIGFzLmRhdGEuZnJhbWUoc2hlZXQpXG4gIGNvbG5hbWVzKGIpIDwtIG5hbWVzXG4gIGJlYWNoZXMgPC0gcmJpbmQoYmVhY2hlcywgYilcbiAgIyBwcmludChiKVxufSBcblxuc3VtbWFyeShiZWFjaGVzKVxuYGBgIn0= -->
-<pre class="r"><code>
-# the other beaches are in sheets: &#39;2019&#39;:&#39;2014&#39; (1,3:7)
-names &lt;- c(&#39;Date&#39;,
-           &#39;Britannia.C&#39;,&#39;Britannia.S&#39;,
-           &#39;Westboro.C&#39;, &#39;Westboro.S&#39;,
-           &quot;Mooneys.C&quot;, &quot;Mooneys.S&quot;,
-           &quot;PetrieEast.C&quot;, &quot;PetrieEast.S&quot;,
-           &quot;PetrieRiver.C&quot;,&quot;PetrieRiver.S&quot;)
-
-# beaches is a list of sheets that needs to be concatenated
-beaches &lt;- as.data.frame(sheets[1])
-colnames(beaches) &lt;- names
-for (sheet in sheets[-c(1,2)]){
-  b &lt;-  as.data.frame(sheet)
-  colnames(b) &lt;- names
-  beaches &lt;- rbind(beaches, b)
-  # print(b)
-} 
-
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuIyBFeHRyYWN0IGJlYWNoICdzdGF0dXMnIHZhcmlhYmxlIHRvIGxvbmctZm9ybSB0YWJsZVxuYnN0YXR1cyA8LSBiZWFjaGVzLnJhd1tjKDEsMyw1LDcsOSwxMSldXG5uYW1lcyhic3RhdHVzKSA8LSBuYW1lc1xuYnN0YXR1cyA8LSBic3RhdHVzICU+JVxuICBwaXZvdF9sb25nZXIobmFtZXMoYnN0YXR1cylbLTFdLCBuYW1lc190byA9IFwibG9jYXRpb25cIiwgdmFsdWVzX3RvID0gXCJzdGF0dXNcIikgJT4lXG4gIG11dGF0ZShzdGF0dXMgPSB0b2xvd2VyKHN0YXR1cyksXG4gICAgICAgICBzdGF0dXMgPSBzdHJfcmVwbGFjZV9hbGwoc3RhdHVzLCAnICcsICcnKSxcbiAgICAgICAgIHN0YXR1cyA9IGFzLmZhY3RvcihzdGF0dXMpLFxuICAgICAgICAgbG9jYXRpb24gPSBhcy5mYWN0b3IobG9jYXRpb24pKVxuc3VtbWFyeShic3RhdHVzKVxuYGBgIn0= -->
+<pre class="r"><code># Extract beach &#39;status&#39; variable to long-form table
+bstatus &lt;- beaches.raw[c(1,3,5,7,9,11)]
+names(bstatus) &lt;- names
+bstatus &lt;- bstatus %&gt;%
+  pivot_longer(names(bstatus)[-1], names_to = &quot;location&quot;, values_to = &quot;status&quot;) %&gt;%
+  mutate(status = tolower(status),
+         status = str_replace_all(status, &#39; &#39;, &#39;&#39;),
+         status = as.factor(status),
+         location = as.factor(location))
+summary(bstatus)</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiICAgICAgZGF0ZSAgICAgICAgICAgICAgICAgICAgICAgICAgICBsb2NhdGlvbiAgICAgICAgICAgICAgICBzdGF0dXMgICAgXG4gTWluLiAgIDoyMDE0LTA2LTIwIDAwOjAwOjAwICAgQnJpdGFubmlhICA6NDA0ICAgc3dpbSAgICAgICAgICAgIDoxNjU4ICBcbiAxc3QgUXUuOjIwMTUtMDctMzEgMTg6MDA6MDAgICBNb29uZXlzICAgIDo0MDQgICBub3N3aW0gICAgICAgICAgOiAxMjQgIFxuIE1lZGlhbiA6MjAxNy0wNi0zMCAxMjowMDowMCAgIFBldHJpZUVhc3QgOjQwNCAgIG5zYSAgICAgICAgICAgICA6ICA4MyAgXG4gTWVhbiAgIDoyMDE3LTAzLTEwIDE1OjQ4OjA3ICAgUGV0cmllUml2ZXI6NDA0ICAgbm9zd2ltKHJhaW5mYWxsKTogIDU1ICBcbiAzcmQgUXUuOjIwMTgtMDctMjggMDY6MDA6MDAgICBXZXN0Ym9ybyAgIDo0MDQgICBuc2EtcmFpbiAgICAgICAgOiAgNDQgIFxuIE1heC4gICA6MjAxOS0wOC0yNSAwMDowMDowMCAgICAgICAgICAgICAgICAgICAgIGNsb3NlZCAgICAgICAgICA6ICAyOCAgXG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgKE90aGVyKSAgICAgICAgIDogIDI4ICBcbiJ9 -->
+<pre><code>      date                            location                status    
+ Min.   :2014-06-20 00:00:00   Britannia  :404   swim            :1658  
+ 1st Qu.:2015-07-31 18:00:00   Mooneys    :404   noswim          : 124  
+ Median :2017-06-30 12:00:00   PetrieEast :404   nsa             :  83  
+ Mean   :2017-03-10 15:48:07   PetrieRiver:404   noswim(rainfall):  55  
+ 3rd Qu.:2018-07-28 06:00:00   Westboro   :404   nsa-rain        :  44  
+ Max.   :2019-08-25 00:00:00                     closed          :  28  
+                                                 (Other)         :  28  </code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+</div>
+<div id="merge-e.coli-and-status-dataframes" class="section level4">
+<h4>2. Merge <code>e.coli</code> and <code>status</code> dataframes</h4>
+<ul>
+<li>merge by (date, location)</li>
+<li>create some convenience times variables as factors.</li>
+<li>add in some trailing/leading counts to each row.</li>
+</ul>
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuYmVhY2hlcyA8LSAgIFxuICBtZXJnZShlY29saSwgYnN0YXR1cywgYnkgPSBjKCdkYXRlJywnbG9jYXRpb24nKSwgYWxsPVRSVUUpICU+JVxuICBtdXRhdGUoanVsaWFuID0gYXMuZmFjdG9yKHlkYXkoZGF0ZSkpLFxuICAgICAgICAgd2VlayA9IGFzLmZhY3Rvcih3ZWVrKGRhdGUpKSxcbiAgICAgICAgIG1vbnRoID0gYXMuZmFjdG9yKG1vbnRoKGRhdGUpKSxcbiAgICAgICAgIHllYXIgPSBhcy5mYWN0b3IoeWVhcihkYXRlKSksXG4gICAgICAgICBkYXRlID0gZGF0ZShkYXRlKSwgIyBqdXN0IGluIGNhc2UgdGhpcyBpcyBjYXBpdGFsaXplZCBzb21ld2hlcmU/XG4gICAgICAgICApICU+JVxuICBncm91cF9ieShsb2NhdGlvbiwgeWVhcikgJT4lXG4gIG11dGF0ZShjb3VudC5wcmV2ID0gbGFnKGNvdW50KSxcbiAgICAgICAgIGNvdW50Lm5leHQgPSBsZWFkKGNvdW50KSkgJT4lXG4gIHVuZ3JvdXAoKVxuc3VtbWFyeShiZWFjaGVzKVxuYGBgIn0= -->
+<pre class="r"><code>beaches &lt;-   
+  merge(ecoli, bstatus, by = c(&#39;date&#39;,&#39;location&#39;), all=TRUE) %&gt;%
+  mutate(julian = as.factor(yday(date)),
+         week = as.factor(week(date)),
+         month = as.factor(month(date)),
+         year = as.factor(year(date)),
+         date = date(date), # just in case this is capitalized somewhere?
+         ) %&gt;%
+  group_by(location, year) %&gt;%
+  mutate(count.prev = lag(count),
+         count.next = lead(count)) %&gt;%
+  ungroup()
 summary(beaches)</code></pre>
 <!-- rnb-source-end -->
-<!-- rnb-output-begin eyJkYXRhIjoiICAgICAgRGF0ZSAgICAgICAgICAgICAgICAgICAgICBCcml0YW5uaWEuQyAgICAgIEJyaXRhbm5pYS5TICAgICAgICAgIFdlc3Rib3JvLkMgICAgICBcbiBNaW4uICAgOjIwMTQtMDYtMjAgMDA6MDA6MDAgICBNaW4uICAgOiAgOS4xOTIgICBMZW5ndGg6NDA0ICAgICAgICAgTWluLiAgIDogICA5LjU4NyAgXG4gMXN0IFF1LjoyMDE1LTA3LTMxIDE4OjAwOjAwICAgMXN0IFF1LjogMTQuMzEwICAgQ2xhc3MgOmNoYXJhY3RlciAgIDFzdCBRdS46ICAyMC40NzcgIFxuIE1lZGlhbiA6MjAxNy0wNi0zMCAxMjowMDowMCAgIE1lZGlhbiA6IDIxLjY4OSAgIE1vZGUgIDpjaGFyYWN0ZXIgICBNZWRpYW4gOiAgMzcuOTk2ICBcbiBNZWFuICAgOjIwMTctMDMtMTAgMTU6NDg6MDcgICBNZWFuICAgOiA1MC42MTQgICAgICAgICAgICAgICAgICAgICAgTWVhbiAgIDogIDc2Ljg1MyAgXG4gM3JkIFF1LjoyMDE4LTA3LTI4IDA2OjAwOjAwICAgM3JkIFF1LjogNTAuNTI2ICAgICAgICAgICAgICAgICAgICAgIDNyZCBRdS46ICA3Mi4zMTUgIFxuIE1heC4gICA6MjAxOS0wOC0yNSAwMDowMDowMCAgIE1heC4gICA6ODY2LjEzOSAgICAgICAgICAgICAgICAgICAgICBNYXguICAgOjEwMDAuMDAwICBcbiAgV2VzdGJvcm8uUyAgICAgICAgICBNb29uZXlzLkMgICAgICAgIE1vb25leXMuUyAgICAgICAgIFBldHJpZUVhc3QuQyAgICAgIFxuIExlbmd0aDo0MDQgICAgICAgICBNaW4uICAgOiAgMTAuMDAgICBMZW5ndGg6NDA0ICAgICAgICAgTGVuZ3RoOjQwNCAgICAgICAgXG4gQ2xhc3MgOmNoYXJhY3RlciAgIDFzdCBRdS46ICAxOC44OCAgIENsYXNzIDpjaGFyYWN0ZXIgICBDbGFzcyA6Y2hhcmFjdGVyICBcbiBNb2RlICA6Y2hhcmFjdGVyICAgTWVkaWFuIDogIDMyLjQ1ICAgTW9kZSAgOmNoYXJhY3RlciAgIE1vZGUgIDpjaGFyYWN0ZXIgIFxuICAgICAgICAgICAgICAgICAgICBNZWFuICAgOiAgOTIuNjggICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgXG4gICAgICAgICAgICAgICAgICAgIDNyZCBRdS46ICA4MC4yNCAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICBcbiAgICAgICAgICAgICAgICAgICAgTWF4LiAgIDoxMDAwLjAwICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIFxuIFBldHJpZUVhc3QuUyAgICAgICBQZXRyaWVSaXZlci5DICAgICAgUGV0cmllUml2ZXIuUyAgICAgXG4gTGVuZ3RoOjQwNCAgICAgICAgIExlbmd0aDo0MDQgICAgICAgICBMZW5ndGg6NDA0ICAgICAgICBcbiBDbGFzcyA6Y2hhcmFjdGVyICAgQ2xhc3MgOmNoYXJhY3RlciAgIENsYXNzIDpjaGFyYWN0ZXIgIFxuIE1vZGUgIDpjaGFyYWN0ZXIgICBNb2RlICA6Y2hhcmFjdGVyICAgTW9kZSAgOmNoYXJhY3RlciAgXG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICBcbiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIFxuICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgXG4ifQ== -->
-<pre><code>      Date                      Britannia.C      Britannia.S          Westboro.C      
- Min.   :2014-06-20 00:00:00   Min.   :  9.192   Length:404         Min.   :   9.587  
- 1st Qu.:2015-07-31 18:00:00   1st Qu.: 14.310   Class :character   1st Qu.:  20.477  
- Median :2017-06-30 12:00:00   Median : 21.689   Mode  :character   Median :  37.996  
- Mean   :2017-03-10 15:48:07   Mean   : 50.614                      Mean   :  76.853  
- 3rd Qu.:2018-07-28 06:00:00   3rd Qu.: 50.526                      3rd Qu.:  72.315  
- Max.   :2019-08-25 00:00:00   Max.   :866.139                      Max.   :1000.000  
-  Westboro.S          Mooneys.C        Mooneys.S         PetrieEast.C      
- Length:404         Min.   :  10.00   Length:404         Length:404        
- Class :character   1st Qu.:  18.88   Class :character   Class :character  
- Mode  :character   Median :  32.45   Mode  :character   Mode  :character  
-                    Mean   :  92.68                                        
-                    3rd Qu.:  80.24                                        
-                    Max.   :1000.00                                        
- PetrieEast.S       PetrieRiver.C      PetrieRiver.S     
- Length:404         Length:404         Length:404        
- Class :character   Class :character   Class :character  
- Mode  :character   Mode  :character   Mode  :character  
-                                                         
-                                                         
-                                                         </code></pre>
+<!-- rnb-output-begin eyJkYXRhIjoiICAgICAgZGF0ZSAgICAgICAgICAgICAgICAgICBsb2NhdGlvbiAgICAgICBjb3VudCAgICAgICAgICAgICAgICAgICAgICAgc3RhdHVzICAgIFxuIE1pbi4gICA6MjAxNC0wNi0yMCAgIEJyaXRhbm5pYSAgOjQwNCAgIE1pbi4gICA6ICAgOS4xOTIgICBzd2ltICAgICAgICAgICAgOjE2NTggIFxuIDFzdCBRdS46MjAxNS0wNy0zMSAgIE1vb25leXMgICAgOjQwNCAgIDFzdCBRdS46ICAxOC44ODIgICBub3N3aW0gICAgICAgICAgOiAxMjQgIFxuIE1lZGlhbiA6MjAxNy0wNi0zMCAgIFBldHJpZUVhc3QgOjQwNCAgIE1lZGlhbiA6ICAzNS4wMTkgICBuc2EgICAgICAgICAgICAgOiAgODMgIFxuIE1lYW4gICA6MjAxNy0wMy0xMCAgIFBldHJpZVJpdmVyOjQwNCAgIE1lYW4gICA6ICA4MS4yNjkgICBub3N3aW0ocmFpbmZhbGwpOiAgNTUgIFxuIDNyZCBRdS46MjAxOC0wNy0yOCAgIFdlc3Rib3JvICAgOjQwNCAgIDNyZCBRdS46ICA3Mi41OTQgICBuc2EtcmFpbiAgICAgICAgOiAgNDQgIFxuIE1heC4gICA6MjAxOS0wOC0yNSAgICAgICAgICAgICAgICAgICAgIE1heC4gICA6MTAwMC4wMDAgICBjbG9zZWQgICAgICAgICAgOiAgMjggIFxuICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIE5BJ3MgICA6NDAgICAgICAgICAoT3RoZXIpICAgICAgICAgOiAgMjggIFxuICAgICBqdWxpYW4gICAgICAgICAgd2VlayAgICAgbW9udGggICAgIHllYXIgICAgICAgY291bnQucHJldiAgICAgICAgIGNvdW50Lm5leHQgICAgICBcbiAxNzEgICAgOiAgMzAgICAyNiAgICAgOjIxMCAgIDY6NDA1ICAgMjAxNDoyOTAgICBNaW4uICAgOiAgIDkuMTkyICAgTWluLiAgIDogICA5LjE5MiAgXG4gMTcyICAgIDogIDMwICAgMjcgICAgIDoyMTAgICA3OjkzMCAgIDIwMTU6MjkwICAgMXN0IFF1LjogIDE4Ljg4MiAgIDFzdCBRdS46ICAxOC44ODIgIFxuIDE3MyAgICA6ICAzMCAgIDI4ICAgICA6MjEwICAgODo2ODUgICAyMDE2OjM2MCAgIE1lZGlhbiA6ICAzNS4wMDAgICBNZWRpYW4gOiAgMzUuMTk1ICBcbiAxNzQgICAgOiAgMzAgICAyOSAgICAgOjIxMCAgICAgICAgICAgMjAxNzozNjAgICBNZWFuICAgOiAgODEuNzIxICAgTWVhbiAgIDogIDgxLjg1NCAgXG4gMTc1ICAgIDogIDMwICAgMzAgICAgIDoyMTAgICAgICAgICAgIDIwMTg6MzYwICAgM3JkIFF1LjogIDcyLjU5NCAgIDNyZCBRdS46ICA3Mi45OTUgIFxuIDE3NiAgICA6ICAzMCAgIDMxICAgICA6MjEwICAgICAgICAgICAyMDE5OjM2MCAgIE1heC4gICA6MTAwMC4wMDAgICBNYXguICAgOjEwMDAuMDAwICBcbiAoT3RoZXIpOjE4NDAgICAoT3RoZXIpOjc2MCAgICAgICAgICAgICAgICAgICAgICBOQSdzICAgOjcwICAgICAgICAgTkEncyAgIDo2NiAgICAgICAgXG4ifQ== -->
+<pre><code>      date                   location       count                       status    
+ Min.   :2014-06-20   Britannia  :404   Min.   :   9.192   swim            :1658  
+ 1st Qu.:2015-07-31   Mooneys    :404   1st Qu.:  18.882   noswim          : 124  
+ Median :2017-06-30   PetrieEast :404   Median :  35.019   nsa             :  83  
+ Mean   :2017-03-10   PetrieRiver:404   Mean   :  81.269   noswim(rainfall):  55  
+ 3rd Qu.:2018-07-28   Westboro   :404   3rd Qu.:  72.594   nsa-rain        :  44  
+ Max.   :2019-08-25                     Max.   :1000.000   closed          :  28  
+                                        NA&#39;s   :40         (Other)         :  28  
+     julian          week     month     year       count.prev         count.next      
+ 171    :  30   26     :210   6:405   2014:290   Min.   :   9.192   Min.   :   9.192  
+ 172    :  30   27     :210   7:930   2015:290   1st Qu.:  18.882   1st Qu.:  18.882  
+ 173    :  30   28     :210   8:685   2016:360   Median :  35.000   Median :  35.195  
+ 174    :  30   29     :210           2017:360   Mean   :  81.721   Mean   :  81.854  
+ 175    :  30   30     :210           2018:360   3rd Qu.:  72.594   3rd Qu.:  72.995  
+ 176    :  30   31     :210           2019:360   Max.   :1000.000   Max.   :1000.000  
+ (Other):1840   (Other):760                      NA&#39;s   :70         NA&#39;s   :66        </code></pre>
 <!-- rnb-output-end -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuc2F2ZVJEUyhiZWFjaGVzLFwiZGF0YS9iZWFjaGVzLnJhdy5SRFNcIilcbmBgYCJ9 -->
-<pre class="r"><code>saveRDS(beaches,&quot;data/beaches.raw.RDS&quot;)</code></pre>
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxubGV2ZWxzKGJlYWNoZXMkc3RhdHVzKVxuYGBgIn0= -->
+<pre class="r"><code>levels(beaches$status)</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiIFsxXSBcIjBcIiAgICAgICAgICAgICAgICBcImNsb3NlZFwiICAgICAgICAgICBcIm5vc3dpbVwiICAgICAgICAgICBcIm5vc3dpbShyYWluKVwiICAgIFxuIFs1XSBcIm5vc3dpbShyYWluZmFsbClcIiBcIm5vc3dpbWNzby9yYWluXCIgICBcIm5vdG9wZW5cIiAgICAgICAgICBcIm5zYVwiICAgICAgICAgICAgIFxuIFs5XSBcIm5zYS1yYWluXCIgICAgICAgICBcInN3aW1cIiAgICAgICAgICAgIFxuIn0= -->
+<pre><code> [1] &quot;0&quot;                &quot;closed&quot;           &quot;noswim&quot;           &quot;noswim(rain)&quot;    
+ [5] &quot;noswim(rainfall)&quot; &quot;noswimcso/rain&quot;   &quot;notopen&quot;          &quot;nsa&quot;             
+ [9] &quot;nsa-rain&quot;         &quot;swim&quot;            </code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+</div>
+<div id="fix-beach-status-labels" class="section level4">
+<h4>3. Fix beach <code>status</code> labels</h4>
+<ul>
+<li>need to remove a lot of duplicated labels (has 18, should be 4 or maybe 5?):</li>
+<li>switched to lowercase earlier to remove Case/case differences</li>
+<li>making sure not to lose any information:
+<ul>
+<li>‘closed’: is only Petrie isl in june 2019 (pre-season) -&gt; Closed</li>
+<li>‘not open’: is only in Petrie isl june 2017 (pre-season, no count) -&gt; Closed</li>
+<li>‘0’: is only the last day at brit, mooneys, wstbro in aug 2019 (post-season, has count?) -&gt; Closed</li>
+<li>Others refer to ‘rain’ -&gt; Rain</li>
+<li>Others are closed because of E.coli counts -&gt; E.coli</li>
+</ul></li>
+</ul>
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxucHJpbnQoXCJBZnRlciByZW1vdmluZyBhbGwgc3BhY2VzIGFuZCBjb252ZXJ0aW5nIHRvIGxvd2VyY2FzZTpcIilcbmBgYCJ9 -->
+<pre class="r"><code>print(&quot;After removing all spaces and converting to lowercase:&quot;)</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiWzFdIFwiQWZ0ZXIgcmVtb3ZpbmcgYWxsIHNwYWNlcyBhbmQgY29udmVydGluZyB0byBsb3dlcmNhc2U6XCJcbiJ9 -->
+<pre><code>[1] &quot;After removing all spaces and converting to lowercase:&quot;</code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuc3VtbWFyeShiZWFjaGVzJHN0YXR1cylcbmBgYCJ9 -->
+<pre class="r"><code>summary(beaches$status)</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiICAgICAgICAgICAgICAgMCAgICAgICAgICAgY2xvc2VkICAgICAgICAgICBub3N3aW0gICAgIG5vc3dpbShyYWluKSBub3N3aW0ocmFpbmZhbGwpIFxuICAgICAgICAgICAgICAgMyAgICAgICAgICAgICAgIDI4ICAgICAgICAgICAgICAxMjQgICAgICAgICAgICAgICAxMSAgICAgICAgICAgICAgIDU1IFxuICBub3N3aW1jc28vcmFpbiAgICAgICAgICBub3RvcGVuICAgICAgICAgICAgICBuc2EgICAgICAgICBuc2EtcmFpbiAgICAgICAgICAgICBzd2ltIFxuICAgICAgICAgICAgICAgMiAgICAgICAgICAgICAgIDEyICAgICAgICAgICAgICAgODMgICAgICAgICAgICAgICA0NCAgICAgICAgICAgICAxNjU4IFxuIn0= -->
+<pre><code>               0           closed           noswim     noswim(rain) noswim(rainfall) 
+               3               28              124               11               55 
+  noswimcso/rain          notopen              nsa         nsa-rain             swim 
+               2               12               83               44             1658 </code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxubGV2ZWxzKGJlYWNoZXMkc3RhdHVzKSA8LSBsaXN0KFxuICBTd2ltID0gYygnc3dpbScpLFxuICBFLmNvbGkgPSBjKCduc2EnLCAnbm9zd2ltJyksXG4gIFJhaW4gPSBjKCduc2EtcmFpbicsICdub3N3aW1jc28vcmFpbicsICdub3N3aW0ocmFpbiknLCdub3N3aW0ocmFpbmZhbGwpJyksXG4gIENsb3NlZCA9IGMoXCJjbG9zZWRcIiwgJzAnLCAnbm90b3BlbicpXG4pXG5wcmludChcIkZpbmlzaGVkIGBzdGF0dXNgIGxldmVsc1wiKVxuYGBgIn0= -->
+<pre class="r"><code>levels(beaches$status) &lt;- list(
+  Swim = c(&#39;swim&#39;),
+  E.coli = c(&#39;nsa&#39;, &#39;noswim&#39;),
+  Rain = c(&#39;nsa-rain&#39;, &#39;noswimcso/rain&#39;, &#39;noswim(rain)&#39;,&#39;noswim(rainfall)&#39;),
+  Closed = c(&quot;closed&quot;, &#39;0&#39;, &#39;notopen&#39;)
+)
+print(&quot;Finished `status` levels&quot;)</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiWzFdIFwiRmluaXNoZWQgYHN0YXR1c2AgbGV2ZWxzXCJcbiJ9 -->
+<pre><code>[1] &quot;Finished `status` levels&quot;</code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuc3VtbWFyeShiZWFjaGVzJHN0YXR1cykgIFxuYGBgIn0= -->
+<pre class="r"><code>summary(beaches$status)  </code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiICBTd2ltIEUuY29saSAgIFJhaW4gQ2xvc2VkIFxuICAxNjU4ICAgIDIwNyAgICAxMTIgICAgIDQzIFxuIn0= -->
+<pre><code>  Swim E.coli   Rain Closed 
+  1658    207    112     43 </code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+</div>
+<div id="check-beaches-summary" class="section level4">
+<h4>4. Check <code>beaches</code> summary</h4>
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxucm0uYWxsLmJ1dChrZWVwID0gJ2JlYWNoZXMnKVxuc3VtbWFyeShiZWFjaGVzKVxuYGBgIn0= -->
+<pre class="r"><code>rm.all.but(keep = &#39;beaches&#39;)
+summary(beaches)</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiICAgICAgZGF0ZSAgICAgICAgICAgICAgICAgICBsb2NhdGlvbiAgICAgICBjb3VudCAgICAgICAgICAgICBzdGF0dXMgICAgICAgICBqdWxpYW4gICAgXG4gTWluLiAgIDoyMDE0LTA2LTIwICAgQnJpdGFubmlhICA6NDA0ICAgTWluLiAgIDogICA5LjE5MiAgIFN3aW0gIDoxNjU4ICAgMTcxICAgIDogIDMwICBcbiAxc3QgUXUuOjIwMTUtMDctMzEgICBNb29uZXlzICAgIDo0MDQgICAxc3QgUXUuOiAgMTguODgyICAgRS5jb2xpOiAyMDcgICAxNzIgICAgOiAgMzAgIFxuIE1lZGlhbiA6MjAxNy0wNi0zMCAgIFBldHJpZUVhc3QgOjQwNCAgIE1lZGlhbiA6ICAzNS4wMTkgICBSYWluICA6IDExMiAgIDE3MyAgICA6ICAzMCAgXG4gTWVhbiAgIDoyMDE3LTAzLTEwICAgUGV0cmllUml2ZXI6NDA0ICAgTWVhbiAgIDogIDgxLjI2OSAgIENsb3NlZDogIDQzICAgMTc0ICAgIDogIDMwICBcbiAzcmQgUXUuOjIwMTgtMDctMjggICBXZXN0Ym9ybyAgIDo0MDQgICAzcmQgUXUuOiAgNzIuNTk0ICAgICAgICAgICAgICAgICAxNzUgICAgOiAgMzAgIFxuIE1heC4gICA6MjAxOS0wOC0yNSAgICAgICAgICAgICAgICAgICAgIE1heC4gICA6MTAwMC4wMDAgICAgICAgICAgICAgICAgIDE3NiAgICA6ICAzMCAgXG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgTkEncyAgIDo0MCAgICAgICAgICAgICAgICAgICAgICAgKE90aGVyKToxODQwICBcbiAgICAgIHdlZWsgICAgIG1vbnRoICAgICB5ZWFyICAgICAgIGNvdW50LnByZXYgICAgICAgICBjb3VudC5uZXh0ICAgICAgXG4gMjYgICAgIDoyMTAgICA2OjQwNSAgIDIwMTQ6MjkwICAgTWluLiAgIDogICA5LjE5MiAgIE1pbi4gICA6ICAgOS4xOTIgIFxuIDI3ICAgICA6MjEwICAgNzo5MzAgICAyMDE1OjI5MCAgIDFzdCBRdS46ICAxOC44ODIgICAxc3QgUXUuOiAgMTguODgyICBcbiAyOCAgICAgOjIxMCAgIDg6Njg1ICAgMjAxNjozNjAgICBNZWRpYW4gOiAgMzUuMDAwICAgTWVkaWFuIDogIDM1LjE5NSAgXG4gMjkgICAgIDoyMTAgICAgICAgICAgIDIwMTc6MzYwICAgTWVhbiAgIDogIDgxLjcyMSAgIE1lYW4gICA6ICA4MS44NTQgIFxuIDMwICAgICA6MjEwICAgICAgICAgICAyMDE4OjM2MCAgIDNyZCBRdS46ICA3Mi41OTQgICAzcmQgUXUuOiAgNzIuOTk1ICBcbiAzMSAgICAgOjIxMCAgICAgICAgICAgMjAxOTozNjAgICBNYXguICAgOjEwMDAuMDAwICAgTWF4LiAgIDoxMDAwLjAwMCAgXG4gKE90aGVyKTo3NjAgICAgICAgICAgICAgICAgICAgICAgTkEncyAgIDo3MCAgICAgICAgIE5BJ3MgICA6NjYgICAgICAgIFxuIn0= -->
+<pre><code>      date                   location       count             status         julian    
+ Min.   :2014-06-20   Britannia  :404   Min.   :   9.192   Swim  :1658   171    :  30  
+ 1st Qu.:2015-07-31   Mooneys    :404   1st Qu.:  18.882   E.coli: 207   172    :  30  
+ Median :2017-06-30   PetrieEast :404   Median :  35.019   Rain  : 112   173    :  30  
+ Mean   :2017-03-10   PetrieRiver:404   Mean   :  81.269   Closed:  43   174    :  30  
+ 3rd Qu.:2018-07-28   Westboro   :404   3rd Qu.:  72.594                 175    :  30  
+ Max.   :2019-08-25                     Max.   :1000.000                 176    :  30  
+                                        NA&#39;s   :40                       (Other):1840  
+      week     month     year       count.prev         count.next      
+ 26     :210   6:405   2014:290   Min.   :   9.192   Min.   :   9.192  
+ 27     :210   7:930   2015:290   1st Qu.:  18.882   1st Qu.:  18.882  
+ 28     :210   8:685   2016:360   Median :  35.000   Median :  35.195  
+ 29     :210           2017:360   Mean   :  81.721   Mean   :  81.854  
+ 30     :210           2018:360   3rd Qu.:  72.594   3rd Qu.:  72.995  
+ 31     :210           2019:360   Max.   :1000.000   Max.   :1000.000  
+ (Other):760                      NA&#39;s   :70         NA&#39;s   :66        </code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuaGVhZChiZWFjaGVzKVxuYGBgIn0= -->
+<pre class="r"><code>head(beaches)</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-frame-begin eyJtZXRhZGF0YSI6eyJjbGFzc2VzIjpbInRibF9kZiIsInRibCIsImRhdGEuZnJhbWUiXSwibnJvdyI6NiwibmNvbCI6MTB9LCJyZGYiOiJINHNJQUFBQUFBQUFBNjJXdlcvVFFCakduY3RYRStpSDFQK0FnUUdSVU52NXNCZHErZ0dxQkJJcUZMcGVrNk14ZGV4aU8wazcwWVVSc2FGS1NBalJvV3d3RmdraEpnWkE2b2JZRUJzYnJJRFVjSTU5ZnBLb3FLMUVKTjg5ZnM5M3YvY2VmN3habkZ0Vzg4dDVTWktTVWlwbzA3eVIwa3MzTHhjMFNVb1JmcExnQTdtZzMrRERrMXp3cTVOanZNOFkrM3Rid2VWSDk2K2w4RGV3WUxwbVVjL2pZcUl2bUpxalB1UDlBWWVNQnBEZW1DU1JYb3BTTDhsMEdCdFlMR094TnJQRWF1a29tcHR4VFovYXRrbWpRUGFhNDloczA0dE84OWVaNzVwc25ucCtGRGtWUmhiTk5uT2owTWh0NXZrcmp1dUVTTklkU2psemg5Wjh4dzJUbGtKbnRPM2xNMyttMjhhRm5KZjlVaWdhTXp0dkhxOVllOGFWZCtwQ3N6NXV6TDY5dGZRay9jRTRWL3ZXMkgyeE1MVFpRNDZBbkJUa2xERHJSc2RzaWl6bWl6WEhNc1hJSWpWdE1USnJPUjZySHlmN09JdkRqdXhRRmxlakZaSnlwUUpaaGRRZzlWaFdweUJsU0FWU2hTeEJsaUZCcTRKV0JhMEttZ2FhQnBvR21nYWFCcG9HbWdhYUJwb0dtZ2FhRHBvT21nNmFEcG9PbWc2YURwb09tZzZhSHRPVXFTbElHVktCVkNGTGtHWElDbVFWVW9NRVRRWk5CazBHVFFaTkJrMEdUUVpOQmswR1RRWk5BVTBCVFFGTkFVMEJUUUZOQVUwQlRRRk5BVTBGVFFWTkJVMEZUUVZOQlUwRlRRVk5CVTBGclFSYVNUN1JXMGtPUHdiZXl0UFJDaVMyaGNTdWtOZ1VFbnRDWWt0STdBaUpEU0d4SHlTMmc4UnVrTmdNd3IwNHlVNk84NVZMaXNJamtrNkluQlBhZjRkbHhJZVR2MHVsUGwzdTA1VStYZTNUV3AvV2oxOGs3di9rclpSOWZsUXZpb21ZSjRxR01mMys4Mzc1M2lmai9OTkhIMmRlMnNiRm5ZZVpCN3NUeHRsZlM5L05aNVBHcGUwZlgzT3Y2c05sMTZaTkpncGxYcVJlRDhwdVZPOHNwMFo5MHhIMUkxMXpXcmFvanhuUHAzNUwxTS9NM1pabFVuRmhxc1BZbXBqVWRHeS9JUVkyR1JYVk5OOWJyYmp1c3ZaZ3hHWWIvbENxT2RmcEZFVzZ3ZDBrVzd6cGRydS8vK0Z5bm0rREZ1KzRmRXJvOU1CeVdXYzkyQlpmakFUL1kwWjYrOGNqSWJRMHBQc0JDWGNvTU42eWd3VHJoVnFqWmE4VnFrTnpSeU9kNmRQNU1LMlVTSDVFdU1ScURVZWt5dmZzMFZWeFM3SWQ2dHFtdlNwc1ovYXFhWXZCdEVWWG1CV2RqSEhMZW81eGg4MzRydVY1MUN2NmprOHRtRzZKU1BoTUh2d0ZRWWJUK1F3S0FBQT0ifQ== -->
+<div data-pagedtable="false">
+<script data-pagedtable-source type="application/json">
+{"columns":[{"label":["date"],"name":[1],"type":["date"],"align":["right"]},{"label":["location"],"name":[2],"type":["fctr"],"align":["left"]},{"label":["count"],"name":[3],"type":["dbl"],"align":["right"]},{"label":["status"],"name":[4],"type":["fctr"],"align":["left"]},{"label":["julian"],"name":[5],"type":["fctr"],"align":["left"]},{"label":["week"],"name":[6],"type":["fctr"],"align":["left"]},{"label":["month"],"name":[7],"type":["fctr"],"align":["left"]},{"label":["year"],"name":[8],"type":["fctr"],"align":["left"]},{"label":["count.prev"],"name":[9],"type":["dbl"],"align":["right"]},{"label":["count.next"],"name":[10],"type":["dbl"],"align":["right"]}],"data":[{"1":"2014-06-20","2":"Britannia","3":"24.59509","4":"Swim","5":"171","6":"25","7":"6","8":"2014","9":"NA","10":"13.19508"},{"1":"2014-06-20","2":"Mooneys","3":"15.51846","4":"Swim","5":"171","6":"25","7":"6","8":"2014","9":"NA","10":"31.77672"},{"1":"2014-06-20","2":"PetrieEast","3":"37.27919","4":"Swim","5":"171","6":"25","7":"6","8":"2014","9":"NA","10":"14.30969"},{"1":"2014-06-20","2":"PetrieRiver","3":"47.50157","4":"Swim","5":"171","6":"25","7":"6","8":"2014","9":"NA","10":"30.63887"},{"1":"2014-06-20","2":"Westboro","3":"39.48701","4":"Swim","5":"171","6":"25","7":"6","8":"2014","9":"NA","10":"11.48698"},{"1":"2014-06-21","2":"Britannia","3":"13.19508","4":"Swim","5":"172","6":"25","7":"6","8":"2014","9":"24.59509","10":"35.19482"}],"options":{"columns":{"min":{},"max":[10],"total":[10]},"rows":{"min":[10],"max":[10],"total":[6]},"pages":{}}}
+  </script>
+</div>
+<!-- rnb-frame-end -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuIyBzYXZlUkRTKGJlYWNoZXMsXCJkYXRhL2JlYWNoZXMudGlkeS5SRFNcIikgIyBzdGlsbCBuZWVkcyBlbnZpcm8gZGF0YVxuXG5gYGAifQ== -->
+<pre class="r"><code># saveRDS(beaches,&quot;data/beaches.tidy.RDS&quot;) # still needs enviro data
+</code></pre>
 <!-- rnb-source-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
@@ -1918,109 +2028,218 @@ summary(beaches)</code></pre>
 </div>
 <div id="weather-data" class="section level3">
 <h3>Weather data</h3>
-<div id="source-1" class="section level4">
-<h4>Source</h4>
-<ul>
-<li>Environment Canada data from Ottawa Intl Airport id# 49568 (climate.weather.gc.ca)</li>
-<li>example <a href="https://climate.weather.gc.ca/climate_data/daily_data_e.html?hlyRange=2011-12-14%7C2020-04-22&amp;dlyRange=2011-12-15%7C2020-04-22&amp;mlyRange=%7C&amp;StationID=49568&amp;Prov=ON&amp;urlExtension=_e.html&amp;searchType=stnName&amp;optLimit=yearRange&amp;StartYear=1840&amp;EndYear=2020&amp;selRowPerPage=25&amp;Line=14&amp;searchMethod=contains&amp;txtStationName=ottawa&amp;timeframe=2&amp;Day=22&amp;Year=2014&amp;Month=1#">2014</a></li>
-</ul>
-</div>
-<div id="process-1" class="section level4">
-<h4>Process</h4>
-<ul>
-<li>Iterating over years 2014-2020, grab data from URL into tibble:</li>
-</ul>
-<p><code>\https://climate.weather.gc.ca/climate_data/bulk_data_e.html?format=csv&amp;stationID=&quot;station&quot;&amp;Year=&quot;year&quot;&amp;Month=12&amp;Day=14&amp;timeframe=2&amp;submit=Download+Data</code></p>
-<ul>
-<li>Create URLs starting with this: <code>&quot;https://climate.weather.gc.ca/climate_data/bulk_data_e.html?format=csv&amp;stationID=&quot;</code>
-<ul>
-<li>enter the station ID next: <code>49568</code><br />
-</li>
-<li>then paste <code>&amp;Year=</code> and enter the year<br />
-</li>
-<li>paste the rest of the string
-<ul>
-<li><code>&amp;Month=12&amp;Day=14&amp;timeframe=2&amp;submit=Download+Data</code><br />
-</li>
-</ul></li>
-<li>Note: <code>Month=</code> and <code>Day=</code> seem to not matter, changing ‘year’ gets entire year of daily obs.<br />
-</li>
-<li>Could get hourly data like this in the future for predictions by changing <code>timeframe</code></li>
-</ul></li>
-<li>Create dataframe<br />
-</li>
-<li>Save dataframe to weather.raw.RDS</li>
-</ul>
-</div>
-<div id="code-1" class="section level4">
-<h4>Code</h4>
-<ol style="list-style-type: decimal">
-<li>Loop over years 2014-2020, grab data &amp; store in tibble of dataframes.</li>
-</ol>
+<div id="load-weather-and-look-at-variables-in-df" class="section level4">
+<h4>1. Load <code>weather</code> and look at variables in df</h4>
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuIyBVUkwgcGllY2VzIGZvciBPdHRhd2EgQWlycG9ydCAjNDk1NjhcbmBgYCJ9 -->
-<pre class="r"><code># URL pieces for Ottawa Airport #49568</code></pre>
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxud2VhdGhlciA8LSByZWFkUkRTKFwiZGF0YS93ZWF0aGVyLnJhdy5SRFNcIilcbm5hbWVzKHdlYXRoZXIpXG5gYGAifQ== -->
+<pre class="r"><code>weather &lt;- readRDS(&quot;data/weather.raw.RDS&quot;)
+names(weather)</code></pre>
 <!-- rnb-source-end -->
-<!-- rnb-output-begin eyJkYXRhIjoiVGhlcmUgd2VyZSAyNiB3YXJuaW5ncyAodXNlIHdhcm5pbmdzKCkgdG8gc2VlIHRoZW0pXG4ifQ== -->
-<pre><code>There were 26 warnings (use warnings() to see them)</code></pre>
-<!-- rnb-output-end -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxucHJlZml4IDwtICBcImh0dHBzOi8vY2xpbWF0ZS53ZWF0aGVyLmdjLmNhL2NsaW1hdGVfZGF0YS9idWxrX2RhdGFfZS5odG1sP2Zvcm1hdD1jc3Ymc3RhdGlvbklEPVwiXG5zdGF0aW9uLmlkIDwtIGFzLmNoYXJhY3Rlcig0OTU2OClcbnByZWZpeCA8LSBwYXN0ZShwcmVmaXgsIHN0YXRpb24uaWQsXCImWWVhcj1cIiwgc2VwPScnKVxuc3VmZml4IDwtICBcIiZNb250aD0xMiZEYXk9MTQmdGltZWZyYW1lPTImc3VibWl0PURvd25sb2FkK0RhdGFcIlxuXG4jIGdyYWIgZGF0YVxud2VhdGhlcnMgPC0gbGlzdCgpXG55ZWFycyA8LSBjKHNlcSgyMDE0LDIwMjApKVxuZm9yICh4IGluIGMoc2VxKGxlbmd0aCh5ZWFycykpKSl7XG4gIHllYXIgPC0geWVhcnNbeF1cbiAgYWRkcmVzcyA8LSBwYXN0ZShwcmVmaXgsIHllYXIsIHN1ZmZpeCwgc2VwPScnKVxuICBuYW1lIDwtIHBhc3RlKCdzdGF0aW9uJyxzdGF0aW9uLmlkLCB5ZWFyLHNlcD0nXycpXG4gIEdFVChhZGRyZXNzLCB3cml0ZV9kaXNrKHRmIDwtIHRlbXBmaWxlKGZpbGVleHQgPSBcIi5jc3ZcIikpKVxuICBkZiA8LSByZWFkX2Nzdih0ZilcbiAgd2VhdGhlcnNbW3hdXSA8LSBkZlxufVxubmFtZXMod2VhdGhlcnMpIDwtIGFzLmNoYXJhY3Rlcih5ZWFycylcbnN1bW1hcnkod2VhdGhlcnMpXG5gYGAifQ== -->
-<pre class="r"><code>prefix &lt;-  &quot;https://climate.weather.gc.ca/climate_data/bulk_data_e.html?format=csv&amp;stationID=&quot;
-station.id &lt;- as.character(49568)
-prefix &lt;- paste(prefix, station.id,&quot;&amp;Year=&quot;, sep=&#39;&#39;)
-suffix &lt;-  &quot;&amp;Month=12&amp;Day=14&amp;timeframe=2&amp;submit=Download+Data&quot;
-
-# grab data
-weathers &lt;- list()
-years &lt;- c(seq(2014,2020))
-for (x in c(seq(length(years)))){
-  year &lt;- years[x]
-  address &lt;- paste(prefix, year, suffix, sep=&#39;&#39;)
-  name &lt;- paste(&#39;station&#39;,station.id, year,sep=&#39;_&#39;)
-  GET(address, write_disk(tf &lt;- tempfile(fileext = &quot;.csv&quot;)))
-  df &lt;- read_csv(tf)
-  weathers[[x]] &lt;- df
-}
-names(weathers) &lt;- as.character(years)
-summary(weathers)</code></pre>
-<!-- rnb-source-end -->
-<!-- rnb-output-begin eyJkYXRhIjoiICAgICBMZW5ndGggQ2xhc3MgICAgICAgTW9kZVxuMjAxNCAzMSAgICAgc3BlY190YmxfZGYgbGlzdFxuMjAxNSAzMSAgICAgc3BlY190YmxfZGYgbGlzdFxuMjAxNiAzMSAgICAgc3BlY190YmxfZGYgbGlzdFxuMjAxNyAzMSAgICAgc3BlY190YmxfZGYgbGlzdFxuMjAxOCAzMSAgICAgc3BlY190YmxfZGYgbGlzdFxuMjAxOSAzMSAgICAgc3BlY190YmxfZGYgbGlzdFxuMjAyMCAzMSAgICAgc3BlY190YmxfZGYgbGlzdFxuIn0= -->
-<pre><code>     Length Class       Mode
-2014 31     spec_tbl_df list
-2015 31     spec_tbl_df list
-2016 31     spec_tbl_df list
-2017 31     spec_tbl_df list
-2018 31     spec_tbl_df list
-2019 31     spec_tbl_df list
-2020 31     spec_tbl_df list</code></pre>
+<!-- rnb-output-begin eyJkYXRhIjoiIFsxXSBcIlgyMDE0LkxvbmdpdHVkZS4ueC5cIiAgICAgICAgICAgICBcIlgyMDE0LkxhdGl0dWRlLi55LlwiICAgICAgICAgICAgIFxuIFszXSBcIlgyMDE0LlN0YXRpb24uTmFtZVwiICAgICAgICAgICAgICBcIlgyMDE0LkNsaW1hdGUuSURcIiAgICAgICAgICAgICAgIFxuIFs1XSBcIlgyMDE0LkRhdGUuVGltZVwiICAgICAgICAgICAgICAgICBcIlgyMDE0LlllYXJcIiAgICAgICAgICAgICAgICAgICAgIFxuIFs3XSBcIlgyMDE0Lk1vbnRoXCIgICAgICAgICAgICAgICAgICAgICBcIlgyMDE0LkRheVwiICAgICAgICAgICAgICAgICAgICAgIFxuIFs5XSBcIlgyMDE0LkRhdGEuUXVhbGl0eVwiICAgICAgICAgICAgICBcIlgyMDE0Lk1heC5UZW1wLi4uQy5cIiAgICAgICAgICAgIFxuWzExXSBcIlgyMDE0Lk1heC5UZW1wLkZsYWdcIiAgICAgICAgICAgICBcIlgyMDE0Lk1pbi5UZW1wLi4uQy5cIiAgICAgICAgICAgIFxuWzEzXSBcIlgyMDE0Lk1pbi5UZW1wLkZsYWdcIiAgICAgICAgICAgICBcIlgyMDE0Lk1lYW4uVGVtcC4uLkMuXCIgICAgICAgICAgIFxuWzE1XSBcIlgyMDE0Lk1lYW4uVGVtcC5GbGFnXCIgICAgICAgICAgICBcIlgyMDE0LkhlYXQuRGVnLkRheXMuLi5DLlwiICAgICAgIFxuWzE3XSBcIlgyMDE0LkhlYXQuRGVnLkRheXMuRmxhZ1wiICAgICAgICBcIlgyMDE0LkNvb2wuRGVnLkRheXMuLi5DLlwiICAgICAgIFxuWzE5XSBcIlgyMDE0LkNvb2wuRGVnLkRheXMuRmxhZ1wiICAgICAgICBcIlgyMDE0LlRvdGFsLlJhaW4uLm1tLlwiICAgICAgICAgIFxuWzIxXSBcIlgyMDE0LlRvdGFsLlJhaW4uRmxhZ1wiICAgICAgICAgICBcIlgyMDE0LlRvdGFsLlNub3cuLmNtLlwiICAgICAgICAgIFxuWzIzXSBcIlgyMDE0LlRvdGFsLlNub3cuRmxhZ1wiICAgICAgICAgICBcIlgyMDE0LlRvdGFsLlByZWNpcC4ubW0uXCIgICAgICAgIFxuWzI1XSBcIlgyMDE0LlRvdGFsLlByZWNpcC5GbGFnXCIgICAgICAgICBcIlgyMDE0LlNub3cub24uR3JuZC4uY20uXCIgICAgICAgIFxuWzI3XSBcIlgyMDE0LlNub3cub24uR3JuZC5GbGFnXCIgICAgICAgICBcIlgyMDE0LkRpci5vZi5NYXguR3VzdC4uMTBzLmRlZy5cIlxuWzI5XSBcIlgyMDE0LkRpci5vZi5NYXguR3VzdC5GbGFnXCIgICAgICBcIlgyMDE0LlNwZC5vZi5NYXguR3VzdC4ua20uaC5cIiAgIFxuWzMxXSBcIlgyMDE0LlNwZC5vZi5NYXguR3VzdC5GbGFnXCIgICAgIFxuIn0= -->
+<pre><code> [1] &quot;X2014.Longitude..x.&quot;             &quot;X2014.Latitude..y.&quot;             
+ [3] &quot;X2014.Station.Name&quot;              &quot;X2014.Climate.ID&quot;               
+ [5] &quot;X2014.Date.Time&quot;                 &quot;X2014.Year&quot;                     
+ [7] &quot;X2014.Month&quot;                     &quot;X2014.Day&quot;                      
+ [9] &quot;X2014.Data.Quality&quot;              &quot;X2014.Max.Temp...C.&quot;            
+[11] &quot;X2014.Max.Temp.Flag&quot;             &quot;X2014.Min.Temp...C.&quot;            
+[13] &quot;X2014.Min.Temp.Flag&quot;             &quot;X2014.Mean.Temp...C.&quot;           
+[15] &quot;X2014.Mean.Temp.Flag&quot;            &quot;X2014.Heat.Deg.Days...C.&quot;       
+[17] &quot;X2014.Heat.Deg.Days.Flag&quot;        &quot;X2014.Cool.Deg.Days...C.&quot;       
+[19] &quot;X2014.Cool.Deg.Days.Flag&quot;        &quot;X2014.Total.Rain..mm.&quot;          
+[21] &quot;X2014.Total.Rain.Flag&quot;           &quot;X2014.Total.Snow..cm.&quot;          
+[23] &quot;X2014.Total.Snow.Flag&quot;           &quot;X2014.Total.Precip..mm.&quot;        
+[25] &quot;X2014.Total.Precip.Flag&quot;         &quot;X2014.Snow.on.Grnd..cm.&quot;        
+[27] &quot;X2014.Snow.on.Grnd.Flag&quot;         &quot;X2014.Dir.of.Max.Gust..10s.deg.&quot;
+[29] &quot;X2014.Dir.of.Max.Gust.Flag&quot;      &quot;X2014.Spd.of.Max.Gust..km.h.&quot;   
+[31] &quot;X2014.Spd.of.Max.Gust.Flag&quot;     </code></pre>
 <!-- rnb-output-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
-<ol start="2" style="list-style-type: decimal">
-<li>Turn <code>weathers</code> sheets into dataframe</li>
-</ol>
+</div>
+<div id="subset-weather-to-useful-columns" class="section level4">
+<h4>2. Subset <code>weather</code> to useful columns</h4>
+<ul>
+<li>nothing with flag or deg-days is worthwile (mostly for calc heating/AC costs)
+<ul>
+<li>basically left with: temps, precip, wind gust + direction.</li>
+</ul></li>
+</ul>
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuIyBjb25jYXRlbmF0ZSBkYXRhZnJhbWVzXG53ZWF0aGVyIDwtIGFzLmRhdGEuZnJhbWUod2VhdGhlcnNbMV0pXG5uYW1lcyA8LSBuYW1lcyh3ZWF0aGVyKVxuZm9yICh5ZWFyIGluIHdlYXRoZXJzWy1jKDEpXSl7XG4gIHggPC0gIGFzLmRhdGEuZnJhbWUoeWVhcilcbiAgbmFtZXMoeCkgPC0gbmFtZXNcbiAgd2VhdGhlciA8LSByYmluZCh3ZWF0aGVyLCB4KVxufSBcbmBgYCJ9 -->
-<pre class="r"><code># concatenate dataframes
-weather &lt;- as.data.frame(weathers[1])
-names &lt;- names(weather)
-for (year in weathers[-c(1)]){
-  x &lt;-  as.data.frame(year)
-  names(x) &lt;- names
-  weather &lt;- rbind(weather, x)
-} </code></pre>
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxud2VhdGhlciA8LSB3ZWF0aGVyW2MoNSwxMCwxMiwxNCwyMCwyNCwyOCwzMCldXG5uYW1lcyh3ZWF0aGVyKSA8LSBjKFwiZGF0ZVwiLCBcIlRtYXhcIiwgXCJUbWluXCIsIFwiVG1lYW5cIiwgXCJSYWluXCIsIFwiUHJlY2lwXCIsIFwiV2luZC5kaXJlY3Rpb25cIixcbiAgICAgICAgICAgICAgICAgICBcIldpbmQuc3BlZWRcIilcbnN1bW1hcnkod2VhdGhlcilcbmBgYCJ9 -->
+<pre class="r"><code>weather &lt;- weather[c(5,10,12,14,20,24,28,30)]
+names(weather) &lt;- c(&quot;date&quot;, &quot;Tmax&quot;, &quot;Tmin&quot;, &quot;Tmean&quot;, &quot;Rain&quot;, &quot;Precip&quot;, &quot;Wind.direction&quot;,
+                   &quot;Wind.speed&quot;)
+summary(weather)</code></pre>
 <!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiICAgICAgZGF0ZSAgICAgICAgICAgICAgICAgVG1heCAgICAgICAgICAgICBUbWluICAgICAgICAgICAgICBUbWVhbiAgICAgICAgICAgICBSYWluICAgICAgIFxuIE1pbi4gICA6MjAxNC0wMS0wMSAgIE1pbi4gICA6LTIyLjQwICAgTWluLiAgIDotMzAuMjAwMCAgIE1pbi4gICA6LTI1LjEwICAgTWluLiAgIDogMC4wMDAgIFxuIDFzdCBRdS46MjAxNS0xMC0wMiAgIDFzdCBRdS46ICAwLjgwICAgMXN0IFF1LjogLTcuMjI1MCAgIDFzdCBRdS46IC0zLjEwICAgMXN0IFF1LjogMC4wMDAgIFxuIE1lZGlhbiA6MjAxNy0wNy0wMiAgIE1lZGlhbiA6IDExLjMwICAgTWVkaWFuIDogIDEuMTAwMCAgIE1lZGlhbiA6ICA2LjQ1ICAgTWVkaWFuIDogMC4wMDAgIFxuIE1lYW4gICA6MjAxNy0wNy0wMiAgIE1lYW4gICA6IDExLjM0ICAgTWVhbiAgIDogIDAuNjI0NSAgIE1lYW4gICA6ICA1Ljk5ICAgTWVhbiAgIDogMi4xMzUgIFxuIDNyZCBRdS46MjAxOS0wNC0wMiAgIDNyZCBRdS46IDIzLjQwICAgM3JkIFF1LjogMTAuNTAwMCAgIDNyZCBRdS46IDE3LjAwICAgM3JkIFF1LjogMC44MDAgIFxuIE1heC4gICA6MjAyMC0xMi0zMSAgIE1heC4gICA6IDM2LjAwICAgTWF4LiAgIDogMjIuOTAwMCAgIE1heC4gICA6IDI5LjEwICAgTWF4LiAgIDo3OS4wMDAgIFxuICAgICAgICAgICAgICAgICAgICAgIE5BJ3MgICA6MjE4ICAgICAgTkEncyAgIDoyMTcgICAgICAgIE5BJ3MgICA6MjE5ICAgICAgTkEncyAgIDoyMzAgICAgIFxuICAgICBQcmVjaXAgICAgICAgV2luZC5kaXJlY3Rpb24gICBXaW5kLnNwZWVkICAgICAgIFxuIE1pbi4gICA6IDAuMDAwICAgTWluLiAgIDogMC4wMCAgIExlbmd0aDoyNTU3ICAgICAgIFxuIDFzdCBRdS46IDAuMDAwICAgMXN0IFF1LjoxNy4wMCAgIENsYXNzIDpjaGFyYWN0ZXIgIFxuIE1lZGlhbiA6IDAuMDAwICAgTWVkaWFuIDoyNS4wMCAgIE1vZGUgIDpjaGFyYWN0ZXIgIFxuIE1lYW4gICA6IDIuNjAxICAgTWVhbiAgIDoyMi4xNCAgICAgICAgICAgICAgICAgICAgIFxuIDNyZCBRdS46IDIuMDAwICAgM3JkIFF1LjoyOS4wMCAgICAgICAgICAgICAgICAgICAgIFxuIE1heC4gICA6NzkuMDAwICAgTWF4LiAgIDozNi4wMCAgICAgICAgICAgICAgICAgICAgIFxuIE5BJ3MgICA6MjIyICAgICAgTkEncyAgIDo3MjIgICAgICAgICAgICAgICAgICAgICAgIFxuIn0= -->
+<pre><code>      date                 Tmax             Tmin              Tmean             Rain       
+ Min.   :2014-01-01   Min.   :-22.40   Min.   :-30.2000   Min.   :-25.10   Min.   : 0.000  
+ 1st Qu.:2015-10-02   1st Qu.:  0.80   1st Qu.: -7.2250   1st Qu.: -3.10   1st Qu.: 0.000  
+ Median :2017-07-02   Median : 11.30   Median :  1.1000   Median :  6.45   Median : 0.000  
+ Mean   :2017-07-02   Mean   : 11.34   Mean   :  0.6245   Mean   :  5.99   Mean   : 2.135  
+ 3rd Qu.:2019-04-02   3rd Qu.: 23.40   3rd Qu.: 10.5000   3rd Qu.: 17.00   3rd Qu.: 0.800  
+ Max.   :2020-12-31   Max.   : 36.00   Max.   : 22.9000   Max.   : 29.10   Max.   :79.000  
+                      NA&#39;s   :218      NA&#39;s   :217        NA&#39;s   :219      NA&#39;s   :230     
+     Precip       Wind.direction   Wind.speed       
+ Min.   : 0.000   Min.   : 0.00   Length:2557       
+ 1st Qu.: 0.000   1st Qu.:17.00   Class :character  
+ Median : 0.000   Median :25.00   Mode  :character  
+ Mean   : 2.601   Mean   :22.14                     
+ 3rd Qu.: 2.000   3rd Qu.:29.00                     
+ Max.   :79.000   Max.   :36.00                     
+ NA&#39;s   :222      NA&#39;s   :722                       </code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuaGVhZCh3ZWF0aGVyKVxuYGBgIn0= -->
+<pre class="r"><code>head(weather)</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-frame-begin eyJtZXRhZGF0YSI6eyJjbGFzc2VzIjpbImRhdGEuZnJhbWUiXSwibnJvdyI6NiwibmNvbCI6OH0sInJkZiI6Ikg0c0lBQUFBQUFBQUE0VlR6VXJEUUJCZWEvcGp3QjlVVU1HRDROVUdNVnBiUll3Z25qeUlWUFM2SnRzYWJEY2xpZWpSMTlEWDhBSE1BeWllZlFIQmwxQm5NenV4M1lNT0pOLzh6NWZaemVuaGhXdGYySXl4Y1dhcGR4bGVySHpXUHFvM0diTktZSXhCWUVMaEhZVG5RS2tCVGdGV3ZEZi9YcVY3YndIVHFHMmhiYUh0RGtNWmFWajJlenhKUUprWmNscUhQRlhWWC9Ea1F6TDN5VldTYldsc2RITEpMR3o1L1BtZzVORmJRQ3pxZGpDZTdSNi9nTHhtdXkrSUxjekxWblc4YnRRMVByQi84eDdqclNYTVgzTngvcnp1TTh0SThqcjJqM2lMR2xldzNxemJmeTk0ak5qZUtzNDE2N3c5bys4Qjh2VTJ0YjJzc1ZGUW1Nbm40WjVMN2thaGJmL2wyMW9uYlh2VFBFREorNElPc0VZSEdLZ0QxSHE3eis5KzlWQlNZYnN2T0JuV0tTOENsWk5ZK09GQVcxUG5vUXljSUFSZkdrYVVZK2ZlWkNCRVlQQ1ppS05iaHpoTktzcTRFclZrbFZqNlpxT1h6UWF1M09uRVVNTHlLemZTcmhvTjFGaG9WdExYbnRsNUdCL1NtYUVQRHhpTERjZjBqVlFFZzdwL2RTT3Y2eTJqNTZUR3lwQmVRMXJqUkw1WXRQQ3ZJcUlLMzV6d0x1Mjllc3RqR2NvdWJWWEliaWdwV083eFM5R2pGY1BLOG8wNWd6aVVLZTBGdkltVFJpbW5QTnVQZXVUQm4vUHJCNGQrNndZN0JBQUEifQ== -->
+<div data-pagedtable="false">
+<script data-pagedtable-source type="application/json">
+{"columns":[{"label":[""],"name":["_rn_"],"type":[""],"align":["left"]},{"label":["date"],"name":[1],"type":["date"],"align":["right"]},{"label":["Tmax"],"name":[2],"type":["dbl"],"align":["right"]},{"label":["Tmin"],"name":[3],"type":["dbl"],"align":["right"]},{"label":["Tmean"],"name":[4],"type":["dbl"],"align":["right"]},{"label":["Rain"],"name":[5],"type":["dbl"],"align":["right"]},{"label":["Precip"],"name":[6],"type":["dbl"],"align":["right"]},{"label":["Wind.direction"],"name":[7],"type":["dbl"],"align":["right"]},{"label":["Wind.speed"],"name":[8],"type":["chr"],"align":["left"]}],"data":[{"1":"2014-01-01","2":"-19.7","3":"-26.0","4":"-22.9","5":"0.0","6":"0.0","7":"29","8":"32","_rn_":"1"},{"1":"2014-01-02","2":"-21.7","3":"-27.3","4":"-24.5","5":"0.0","6":"0.4","7":"6","8":"37","_rn_":"2"},{"1":"2014-01-03","2":"-22.4","3":"-27.8","4":"-25.1","5":"0.0","6":"0.0","7":"35","8":"32","_rn_":"3"},{"1":"2014-01-04","2":"-2.5","3":"-25.6","4":"-14.1","5":"0.0","6":"0.4","7":"20","8":"37","_rn_":"4"},{"1":"2014-01-05","2":"-0.8","3":"-9.5","4":"-5.2","5":"6.0","6":"9.6","7":"7","8":"50","_rn_":"5"},{"1":"2014-01-06","2":"5.9","3":"-14.8","4":"-4.5","5":"8.4","6":"8.4","7":"22","8":"74","_rn_":"6"}],"options":{"columns":{"min":{},"max":[10],"total":[8]},"rows":{"min":[10],"max":[10],"total":[6]},"pages":{}}}
+  </script>
+</div>
+<!-- rnb-frame-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
-<ol start="3" style="list-style-type: decimal">
-<li>Save raw weather data in file <code>weather.raw.RDS</code></li>
-</ol>
+</div>
+<div id="tidy-and-create-new-variables" class="section level4">
+<h4>3. Tidy and create new variables</h4>
+<ul>
+<li>Make <code>Wind.speed</code> numeric</li>
+<li>Create trailing averages and weighted averages for temp and precipitation
+<ul>
+<li>do this before joining link weather-beach observations to minimize NaN’s</li>
+</ul></li>
+</ul>
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuc2F2ZVJEUyhiZWFjaGVzLFwiZGF0YS93ZWF0aGVyLnJhdy5SRFNcIilcbmBgYCJ9 -->
-<pre class="r"><code>saveRDS(beaches,&quot;data/weather.raw.RDS&quot;)</code></pre>
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxud2VhdGhlciA8LSB3ZWF0aGVyICU+JVxuICBkcGx5cjo6bXV0YXRlKFdpbmQuc3BlZWQgPSBhcy5udW1lcmljKFdpbmQuc3BlZWQpLFxuICAgICAgICAgICAgICAgIGRhdGUgPSBkYXRlKGRhdGUpLFxuICAgICAgICAgICAgICAgIFIuMWQgPSBsYWcoUmFpbiwxKSxcbiAgICAgICAgICAgICAgICBSLjJkbSA9IGxhZyhSYWluLCAxKSArIGxhZyhSYWluLDIpLFxuICAgICAgICAgICAgICAgIFIuMmR3ID0gKDIqbGFnKFJhaW4sIDEpICsgbGFnKFJhaW4sMikpLzMsXG4gICAgICAgICAgICAgICAgUi4zZG0gPSAobGFnKFJhaW4sIDEpICsgbGFnKFJhaW4sMikgKyBsYWcoUmFpbiwgMykpLzMsXG4gICAgICAgICAgICAgICAgUi4zZHcgPSAoMypsYWcoUmFpbiwgMSkgKyAyKmxhZyhSYWluLCAyKSArIDEqbGFnKFJhaW4sIDMpKS82LFxuICAgICAgICAgICAgICAgIFQuMWQgPSBsYWcoVG1lYW4pLFxuICAgICAgICAgICAgICAgIFQuMmQgPSAobGFnKFRtZWFuKSArIGxhZyhUbWVhbiwyKSkvMixcbiAgICAgICAgICAgICAgICBULjNkID0gKGxhZyhUbWVhbikgKyBsYWcoVG1lYW4sMikgK2xhZyhUbWVhbiwzKSkvM1xuICApXG5oZWFkKHdlYXRoZXIpXG5gYGAifQ== -->
+<pre class="r"><code>weather &lt;- weather %&gt;%
+  dplyr::mutate(Wind.speed = as.numeric(Wind.speed),
+                date = date(date),
+                R.1d = lag(Rain,1),
+                R.2dm = lag(Rain, 1) + lag(Rain,2),
+                R.2dw = (2*lag(Rain, 1) + lag(Rain,2))/3,
+                R.3dm = (lag(Rain, 1) + lag(Rain,2) + lag(Rain, 3))/3,
+                R.3dw = (3*lag(Rain, 1) + 2*lag(Rain, 2) + 1*lag(Rain, 3))/6,
+                T.1d = lag(Tmean),
+                T.2d = (lag(Tmean) + lag(Tmean,2))/2,
+                T.3d = (lag(Tmean) + lag(Tmean,2) +lag(Tmean,3))/3
+  )
+head(weather)</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-frame-begin eyJtZXRhZGF0YSI6eyJjbGFzc2VzIjpbImRhdGEuZnJhbWUiXSwibnJvdyI6NiwibmNvbCI6MTZ9LCJyZGYiOiJINHNJQUFBQUFBQUFBNjFVVDJ2VVFCU2ZicFBkTnRDeXFLQ0NCNkUzY1lOdDdMcnRJbzVTQktFSFdWYnNkVXhtdDhIZHlaS2tiRy9kcjZIZVBPclJvNEw1QUpXZS9RS0N0eDQ5VmQ5azVtV1RnZFlpUGtqZSs3MzNmbS9lL08zdDdIbk9ua01JV1NTVy9OdndJL2FML3ROV2h4Q3JCbUFCQXN0U0gwTDRLaGhOMEt1ZzYvVEVuOGwwZWhJUXJUWG1Hbk9OQjBSSnBhRHRqMWlTcUlLRjA5cGhxV1Nmd1pjUGtubWZQQ25acHRidFFTNlpwVXArL2ZsR3lsdDZYZW1DdDYzaVdYZjNHT1JiMWoxV2VrdmxaV3M2M2pKNDdSK3FmbWVtNGxzM1ZmNWRUNDEvVGRlNVFsQnlIdm1MMEJ0YTMxWjhrL2ZvZTlGSEJkTTFOYTdKb3crTnVvOVZ2L1MreHJlMGJsZjdwRlQ3bitoOEV6L1R1RGVyOEk1T3BkbDRmOWw1RnJ4ZmlvZjZ2L09hRi9QTzQxUHlqN3dsZzNlcThpNTdiczRiTDN1Z3ozZEhueThQeitudWhieUMzN256QWVSanR0bjlEUEpGbit0MzVxVVRiTXp4MGpYeDBnWHkwbW03UDJhSGN6c1VTT3lQT1VOZzlWZ1JxRCtQdVI5T05GcDlHWXJBRFVMd3BXR0VPVTd1VFNhY0IwVUZkeDF0dStkdUJPTXltTTZCVjQ1NFJjVHF6L2xnYjVSc0x6RG12QnhIVXhmbnZRSmZUVzJSdkh3eXNmYWJWQjhoQjlhRHVZTVlLQ1IvaWlybEd0RkVUZzJLMWVSektNK0RrNGZWaHpZeDdQSUFDN0hoYUI0STJXRFE4dmNQeE92VytqMmo2SXJXOVpMZFZIMHRZdmRMdUFUYzM0K3dWNWgwd29hNHVZMHBpMFVvaHJoMVhBeERnVUY3eEY3eEVlNGpyRm0rWk80a0RrV0tDd1BleEUyamxHR2U0MGNqOUtoWCsrd1BOMXd4VlZRR0FBQT0ifQ== -->
+<div data-pagedtable="false">
+<script data-pagedtable-source type="application/json">
+{"columns":[{"label":[""],"name":["_rn_"],"type":[""],"align":["left"]},{"label":["date"],"name":[1],"type":["date"],"align":["right"]},{"label":["Tmax"],"name":[2],"type":["dbl"],"align":["right"]},{"label":["Tmin"],"name":[3],"type":["dbl"],"align":["right"]},{"label":["Tmean"],"name":[4],"type":["dbl"],"align":["right"]},{"label":["Rain"],"name":[5],"type":["dbl"],"align":["right"]},{"label":["Precip"],"name":[6],"type":["dbl"],"align":["right"]},{"label":["Wind.direction"],"name":[7],"type":["dbl"],"align":["right"]},{"label":["Wind.speed"],"name":[8],"type":["dbl"],"align":["right"]},{"label":["R.1d"],"name":[9],"type":["dbl"],"align":["right"]},{"label":["R.2dm"],"name":[10],"type":["dbl"],"align":["right"]},{"label":["R.2dw"],"name":[11],"type":["dbl"],"align":["right"]},{"label":["R.3dm"],"name":[12],"type":["dbl"],"align":["right"]},{"label":["R.3dw"],"name":[13],"type":["dbl"],"align":["right"]},{"label":["T.1d"],"name":[14],"type":["dbl"],"align":["right"]},{"label":["T.2d"],"name":[15],"type":["dbl"],"align":["right"]},{"label":["T.3d"],"name":[16],"type":["dbl"],"align":["right"]}],"data":[{"1":"2014-01-01","2":"-19.7","3":"-26.0","4":"-22.9","5":"0.0","6":"0.0","7":"29","8":"32","9":"NA","10":"NA","11":"NA","12":"NA","13":"NA","14":"NA","15":"NA","16":"NA","_rn_":"1"},{"1":"2014-01-02","2":"-21.7","3":"-27.3","4":"-24.5","5":"0.0","6":"0.4","7":"6","8":"37","9":"0","10":"NA","11":"NA","12":"NA","13":"NA","14":"-22.9","15":"NA","16":"NA","_rn_":"2"},{"1":"2014-01-03","2":"-22.4","3":"-27.8","4":"-25.1","5":"0.0","6":"0.0","7":"35","8":"32","9":"0","10":"0","11":"0","12":"NA","13":"NA","14":"-24.5","15":"-23.70","16":"NA","_rn_":"3"},{"1":"2014-01-04","2":"-2.5","3":"-25.6","4":"-14.1","5":"0.0","6":"0.4","7":"20","8":"37","9":"0","10":"0","11":"0","12":"0","13":"0","14":"-25.1","15":"-24.80","16":"-24.16667","_rn_":"4"},{"1":"2014-01-05","2":"-0.8","3":"-9.5","4":"-5.2","5":"6.0","6":"9.6","7":"7","8":"50","9":"0","10":"0","11":"0","12":"0","13":"0","14":"-14.1","15":"-19.60","16":"-21.23333","_rn_":"5"},{"1":"2014-01-06","2":"5.9","3":"-14.8","4":"-4.5","5":"8.4","6":"8.4","7":"22","8":"74","9":"6","10":"6","11":"4","12":"2","13":"3","14":"-5.2","15":"-9.65","16":"-14.80000","_rn_":"6"}],"options":{"columns":{"min":{},"max":[10],"total":[16]},"rows":{"min":[10],"max":[10],"total":[6]},"pages":{}}}
+  </script>
+</div>
+<!-- rnb-frame-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+</div>
+<div id="save-full-weather-dataset-2014-2019-for-weather-analysis" class="section level4">
+<h4>4. Save full weather dataset 2014-2019 for weather analysis</h4>
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuc2F2ZVJEUyh3ZWF0aGVyLCBmaWxlID0gJ2RhdGEvd2VhdGhlci50aWR5LlJEUycpXG5zdW1tYXJ5KHdlYXRoZXIpXG5gYGAifQ== -->
+<pre class="r"><code>saveRDS(weather, file = &#39;data/weather.tidy.RDS&#39;)
+summary(weather)</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiICAgICAgZGF0ZSAgICAgICAgICAgICAgICAgVG1heCAgICAgICAgICAgICBUbWluICAgICAgICAgICAgICBUbWVhbiAgICAgICAgICAgICBSYWluICAgICAgIFxuIE1pbi4gICA6MjAxNC0wMS0wMSAgIE1pbi4gICA6LTIyLjQwICAgTWluLiAgIDotMzAuMjAwMCAgIE1pbi4gICA6LTI1LjEwICAgTWluLiAgIDogMC4wMDAgIFxuIDFzdCBRdS46MjAxNS0xMC0wMiAgIDFzdCBRdS46ICAwLjgwICAgMXN0IFF1LjogLTcuMjI1MCAgIDFzdCBRdS46IC0zLjEwICAgMXN0IFF1LjogMC4wMDAgIFxuIE1lZGlhbiA6MjAxNy0wNy0wMiAgIE1lZGlhbiA6IDExLjMwICAgTWVkaWFuIDogIDEuMTAwMCAgIE1lZGlhbiA6ICA2LjQ1ICAgTWVkaWFuIDogMC4wMDAgIFxuIE1lYW4gICA6MjAxNy0wNy0wMiAgIE1lYW4gICA6IDExLjM0ICAgTWVhbiAgIDogIDAuNjI0NSAgIE1lYW4gICA6ICA1Ljk5ICAgTWVhbiAgIDogMi4xMzUgIFxuIDNyZCBRdS46MjAxOS0wNC0wMiAgIDNyZCBRdS46IDIzLjQwICAgM3JkIFF1LjogMTAuNTAwMCAgIDNyZCBRdS46IDE3LjAwICAgM3JkIFF1LjogMC44MDAgIFxuIE1heC4gICA6MjAyMC0xMi0zMSAgIE1heC4gICA6IDM2LjAwICAgTWF4LiAgIDogMjIuOTAwMCAgIE1heC4gICA6IDI5LjEwICAgTWF4LiAgIDo3OS4wMDAgIFxuICAgICAgICAgICAgICAgICAgICAgIE5BJ3MgICA6MjE4ICAgICAgTkEncyAgIDoyMTcgICAgICAgIE5BJ3MgICA6MjE5ICAgICAgTkEncyAgIDoyMzAgICAgIFxuICAgICBQcmVjaXAgICAgICAgV2luZC5kaXJlY3Rpb24gICAgV2luZC5zcGVlZCAgICAgICAgIFIuMWQgICAgICAgICAgICBSLjJkbSAgICAgICBcbiBNaW4uICAgOiAwLjAwMCAgIE1pbi4gICA6IDAuMDAgICBNaW4uICAgOjMwLjAwICAgTWluLiAgIDogMC4wMDAgICBNaW4uICAgOiAwLjAwMCAgXG4gMXN0IFF1LjogMC4wMDAgICAxc3QgUXUuOjE3LjAwICAgMXN0IFF1LjozNy4wMCAgIDFzdCBRdS46IDAuMDAwICAgMXN0IFF1LjogMC4wMDAgIFxuIE1lZGlhbiA6IDAuMDAwICAgTWVkaWFuIDoyNS4wMCAgIE1lZGlhbiA6NDMuMDAgICBNZWRpYW4gOiAwLjAwMCAgIE1lZGlhbiA6IDAuMDAwICBcbiBNZWFuICAgOiAyLjYwMSAgIE1lYW4gICA6MjIuMTQgICBNZWFuICAgOjQ0LjUxICAgTWVhbiAgIDogMi4xMzUgICBNZWFuICAgOiA0LjI1NiAgXG4gM3JkIFF1LjogMi4wMDAgICAzcmQgUXUuOjI5LjAwICAgM3JkIFF1Ljo1MC4wMCAgIDNyZCBRdS46IDAuODAwICAgM3JkIFF1LjogNC40MDAgIFxuIE1heC4gICA6NzkuMDAwICAgTWF4LiAgIDozNi4wMCAgIE1heC4gICA6OTYuMDAgICBNYXguICAgOjc5LjAwMCAgIE1heC4gICA6OTUuMDAwICBcbiBOQSdzICAgOjIyMiAgICAgIE5BJ3MgICA6NzIyICAgICBOQSdzICAgOjcyMiAgICAgTkEncyAgIDoyMzAgICAgICBOQSdzICAgOjI1MiAgICAgXG4gICAgIFIuMmR3ICAgICAgICAgICAgUi4zZG0gICAgICAgICAgICBSLjNkdyAgICAgICAgICAgICAgVC4xZCAgICAgICAgICAgICBULjJkICAgICAgIFxuIE1pbi4gICA6IDAuMDAwICAgTWluLiAgIDogMC4wMDAgICBNaW4uICAgOiAwLjAwMDAgICBNaW4uICAgOi0yNS4xMCAgIE1pbi4gICA6LTI0LjgwICBcbiAxc3QgUXUuOiAwLjAwMCAgIDFzdCBRdS46IDAuMDAwICAgMXN0IFF1LjogMC4wMDAwICAgMXN0IFF1LjogLTMuMTAgICAxc3QgUXUuOiAtMy4xNSAgXG4gTWVkaWFuIDogMC4wMDAgICBNZWRpYW4gOiAwLjQwMCAgIE1lZGlhbiA6IDAuMzMzMyAgIE1lZGlhbiA6ICA2LjQ1ICAgTWVkaWFuIDogIDYuNjAgIFxuIE1lYW4gICA6IDIuMTMxICAgTWVhbiAgIDogMi4xMzYgICBNZWFuICAgOiAyLjEzNzAgICBNZWFuICAgOiAgNS45OSAgIE1lYW4gICA6ICA2LjAwICBcbiAzcmQgUXUuOiAyLjAwMCAgIDNyZCBRdS46IDIuNzMzICAgM3JkIFF1LjogMi41NDE3ICAgM3JkIFF1LjogMTcuMDAgICAzcmQgUXUuOiAxNy4wNSAgXG4gTWF4LiAgIDo1Mi44NjcgICBNYXguICAgOjM4LjA2NyAgIE1heC4gICA6NDIuMjY2NyAgIE1heC4gICA6IDI5LjEwICAgTWF4LiAgIDogMjguODUgIFxuIE5BJ3MgICA6MjUyICAgICAgTkEncyAgIDoyNzQgICAgICBOQSdzICAgOjI3NCAgICAgICBOQSdzICAgOjIxOSAgICAgIE5BJ3MgICA6MjI4ICAgICBcbiAgICAgIFQuM2QgICAgICAgIFxuIE1pbi4gICA6LTI0LjE2NyAgXG4gMXN0IFF1LjogLTMuMjc1ICBcbiBNZWRpYW4gOiAgNi42MDAgIFxuIE1lYW4gICA6ICA2LjAxNCAgXG4gM3JkIFF1LjogMTcuMDA4ICBcbiBNYXguICAgOiAyOC4yNjcgIFxuIE5BJ3MgICA6MjM3ICAgICAgXG4ifQ== -->
+<pre><code>      date                 Tmax             Tmin              Tmean             Rain       
+ Min.   :2014-01-01   Min.   :-22.40   Min.   :-30.2000   Min.   :-25.10   Min.   : 0.000  
+ 1st Qu.:2015-10-02   1st Qu.:  0.80   1st Qu.: -7.2250   1st Qu.: -3.10   1st Qu.: 0.000  
+ Median :2017-07-02   Median : 11.30   Median :  1.1000   Median :  6.45   Median : 0.000  
+ Mean   :2017-07-02   Mean   : 11.34   Mean   :  0.6245   Mean   :  5.99   Mean   : 2.135  
+ 3rd Qu.:2019-04-02   3rd Qu.: 23.40   3rd Qu.: 10.5000   3rd Qu.: 17.00   3rd Qu.: 0.800  
+ Max.   :2020-12-31   Max.   : 36.00   Max.   : 22.9000   Max.   : 29.10   Max.   :79.000  
+                      NA&#39;s   :218      NA&#39;s   :217        NA&#39;s   :219      NA&#39;s   :230     
+     Precip       Wind.direction    Wind.speed         R.1d            R.2dm       
+ Min.   : 0.000   Min.   : 0.00   Min.   :30.00   Min.   : 0.000   Min.   : 0.000  
+ 1st Qu.: 0.000   1st Qu.:17.00   1st Qu.:37.00   1st Qu.: 0.000   1st Qu.: 0.000  
+ Median : 0.000   Median :25.00   Median :43.00   Median : 0.000   Median : 0.000  
+ Mean   : 2.601   Mean   :22.14   Mean   :44.51   Mean   : 2.135   Mean   : 4.256  
+ 3rd Qu.: 2.000   3rd Qu.:29.00   3rd Qu.:50.00   3rd Qu.: 0.800   3rd Qu.: 4.400  
+ Max.   :79.000   Max.   :36.00   Max.   :96.00   Max.   :79.000   Max.   :95.000  
+ NA&#39;s   :222      NA&#39;s   :722     NA&#39;s   :722     NA&#39;s   :230      NA&#39;s   :252     
+     R.2dw            R.3dm            R.3dw              T.1d             T.2d       
+ Min.   : 0.000   Min.   : 0.000   Min.   : 0.0000   Min.   :-25.10   Min.   :-24.80  
+ 1st Qu.: 0.000   1st Qu.: 0.000   1st Qu.: 0.0000   1st Qu.: -3.10   1st Qu.: -3.15  
+ Median : 0.000   Median : 0.400   Median : 0.3333   Median :  6.45   Median :  6.60  
+ Mean   : 2.131   Mean   : 2.136   Mean   : 2.1370   Mean   :  5.99   Mean   :  6.00  
+ 3rd Qu.: 2.000   3rd Qu.: 2.733   3rd Qu.: 2.5417   3rd Qu.: 17.00   3rd Qu.: 17.05  
+ Max.   :52.867   Max.   :38.067   Max.   :42.2667   Max.   : 29.10   Max.   : 28.85  
+ NA&#39;s   :252      NA&#39;s   :274      NA&#39;s   :274       NA&#39;s   :219      NA&#39;s   :228     
+      T.3d        
+ Min.   :-24.167  
+ 1st Qu.: -3.275  
+ Median :  6.600  
+ Mean   :  6.014  
+ 3rd Qu.: 17.008  
+ Max.   : 28.267  
+ NA&#39;s   :237      </code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+<ul>
+<li>maybe we can use imputation to fill in some of these NA’s later, with Impute()</li>
+</ul>
+</div>
+<div id="join-weather-data-to-beaches" class="section level4">
+<h4>5. Join weather data to <code>beaches</code></h4>
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuYmVhY2hlcyA8LSBsZWZ0X2pvaW4oYmVhY2hlcywgd2VhdGhlciwgYnkgPSAnZGF0ZScpXG5zdW1tYXJ5KGJlYWNoZXMpXG5gYGAifQ== -->
+<pre class="r"><code>beaches &lt;- left_join(beaches, weather, by = &#39;date&#39;)
+summary(beaches)</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiICAgICAgZGF0ZSAgICAgICAgICAgICAgICAgICBsb2NhdGlvbiAgICAgICBjb3VudCAgICAgICAgICAgICBzdGF0dXMgICAgICAgICBqdWxpYW4gICAgXG4gTWluLiAgIDoyMDE0LTA2LTIwICAgQnJpdGFubmlhICA6NDA0ICAgTWluLiAgIDogICA5LjE5MiAgIFN3aW0gIDoxNjU4ICAgMTcxICAgIDogIDMwICBcbiAxc3QgUXUuOjIwMTUtMDctMzEgICBNb29uZXlzICAgIDo0MDQgICAxc3QgUXUuOiAgMTguODgyICAgRS5jb2xpOiAyMDcgICAxNzIgICAgOiAgMzAgIFxuIE1lZGlhbiA6MjAxNy0wNi0zMCAgIFBldHJpZUVhc3QgOjQwNCAgIE1lZGlhbiA6ICAzNS4wMTkgICBSYWluICA6IDExMiAgIDE3MyAgICA6ICAzMCAgXG4gTWVhbiAgIDoyMDE3LTAzLTEwICAgUGV0cmllUml2ZXI6NDA0ICAgTWVhbiAgIDogIDgxLjI2OSAgIENsb3NlZDogIDQzICAgMTc0ICAgIDogIDMwICBcbiAzcmQgUXUuOjIwMTgtMDctMjggICBXZXN0Ym9ybyAgIDo0MDQgICAzcmQgUXUuOiAgNzIuNTk0ICAgICAgICAgICAgICAgICAxNzUgICAgOiAgMzAgIFxuIE1heC4gICA6MjAxOS0wOC0yNSAgICAgICAgICAgICAgICAgICAgIE1heC4gICA6MTAwMC4wMDAgICAgICAgICAgICAgICAgIDE3NiAgICA6ICAzMCAgXG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgTkEncyAgIDo0MCAgICAgICAgICAgICAgICAgICAgICAgKE90aGVyKToxODQwICBcbiAgICAgIHdlZWsgICAgIG1vbnRoICAgICB5ZWFyICAgICAgIGNvdW50LnByZXYgICAgICAgICBjb3VudC5uZXh0ICAgICAgICAgICAgVG1heCAgICAgIFxuIDI2ICAgICA6MjEwICAgNjo0MDUgICAyMDE0OjI5MCAgIE1pbi4gICA6ICAgOS4xOTIgICBNaW4uICAgOiAgIDkuMTkyICAgTWluLiAgIDoxNS43MCAgXG4gMjcgICAgIDoyMTAgICA3OjkzMCAgIDIwMTU6MjkwICAgMXN0IFF1LjogIDE4Ljg4MiAgIDFzdCBRdS46ICAxOC44ODIgICAxc3QgUXUuOjI0LjQwICBcbiAyOCAgICAgOjIxMCAgIDg6Njg1ICAgMjAxNjozNjAgICBNZWRpYW4gOiAgMzUuMDAwICAgTWVkaWFuIDogIDM1LjE5NSAgIE1lZGlhbiA6MjcuMTAgIFxuIDI5ICAgICA6MjEwICAgICAgICAgICAyMDE3OjM2MCAgIE1lYW4gICA6ICA4MS43MjEgICBNZWFuICAgOiAgODEuODU0ICAgTWVhbiAgIDoyNi45MiAgXG4gMzAgICAgIDoyMTAgICAgICAgICAgIDIwMTg6MzYwICAgM3JkIFF1LjogIDcyLjU5NCAgIDNyZCBRdS46ICA3Mi45OTUgICAzcmQgUXUuOjI5LjMwICBcbiAzMSAgICAgOjIxMCAgICAgICAgICAgMjAxOTozNjAgICBNYXguICAgOjEwMDAuMDAwICAgTWF4LiAgIDoxMDAwLjAwMCAgIE1heC4gICA6MzYuMDAgIFxuIChPdGhlcik6NzYwICAgICAgICAgICAgICAgICAgICAgIE5BJ3MgICA6NzAgICAgICAgICBOQSdzICAgOjY2ICAgICAgICAgTkEncyAgIDoxNSAgICAgXG4gICAgICBUbWluICAgICAgICAgICBUbWVhbiAgICAgICAgICAgIFJhaW4gICAgICAgICAgICBQcmVjaXAgICAgICAgV2luZC5kaXJlY3Rpb24gXG4gTWluLiAgIDogNS45MCAgIE1pbi4gICA6MTMuODAgICBNaW4uICAgOiAwLjAwMCAgIE1pbi4gICA6IDAuMDAwICAgTWluLiAgIDogMS4wMCAgXG4gMXN0IFF1LjoxMi4wMCAgIDFzdCBRdS46MTguNjAgICAxc3QgUXUuOiAwLjAwMCAgIDFzdCBRdS46IDAuMDAwICAgMXN0IFF1LjoyMC4wMCAgXG4gTWVkaWFuIDoxNC4yMCAgIE1lZGlhbiA6MjAuNzAgICBNZWRpYW4gOiAwLjAwMCAgIE1lZGlhbiA6IDAuMDAwICAgTWVkaWFuIDoyNi4wMCAgXG4gTWVhbiAgIDoxNC4zNyAgIE1lYW4gICA6MjAuNjcgICBNZWFuICAgOiAzLjM5OCAgIE1lYW4gICA6IDMuMzk4ICAgTWVhbiAgIDoyMy45NCAgXG4gM3JkIFF1LjoxNi43MCAgIDNyZCBRdS46MjIuNjAgICAzcmQgUXUuOiAxLjgwMCAgIDNyZCBRdS46IDEuODAwICAgM3JkIFF1LjozMC4wMCAgXG4gTWF4LiAgIDoyMi45MCAgIE1heC4gICA6MjkuMTAgICBNYXguICAgOjc5LjAwMCAgIE1heC4gICA6NzkuMDAwICAgTWF4LiAgIDozNi4wMCAgXG4gTkEncyAgIDoxNSAgICAgIE5BJ3MgICA6MTUgICAgICBOQSdzICAgOjEwICAgICAgIE5BJ3MgICA6MTAgICAgICAgTkEncyAgIDo0NjUgICAgXG4gICBXaW5kLnNwZWVkICAgICAgICAgUi4xZCAgICAgICAgICAgIFIuMmRtICAgICAgICAgICAgUi4yZHcgICAgICAgICAgICAgUi4zZG0gICAgICAgIFxuIE1pbi4gICA6MzAuMDAgICBNaW4uICAgOiAwLjAwMCAgIE1pbi4gICA6IDAuMDAwICAgTWluLiAgIDogMC4wMDAwICAgTWluLiAgIDogMC4wMDAwICBcbiAxc3QgUXUuOjM1LjAwICAgMXN0IFF1LjogMC4wMDAgICAxc3QgUXUuOiAwLjAwMCAgIDFzdCBRdS46IDAuMDAwMCAgIDFzdCBRdS46IDAuMDAwMCAgXG4gTWVkaWFuIDozOS4wMCAgIE1lZGlhbiA6IDAuMDAwICAgTWVkaWFuIDogMC42MDAgICBNZWRpYW4gOiAwLjMzMzMgICBNZWRpYW4gOiAwLjc2NjcgIFxuIE1lYW4gICA6NDEuNzkgICBNZWFuICAgOiAzLjQwMiAgIE1lYW4gICA6IDYuODIyICAgTWVhbiAgIDogMy40MDIxICAgTWVhbiAgIDogMy40NTU4ICBcbiAzcmQgUXUuOjQ2LjAwICAgM3JkIFF1LjogMS44MDAgICAzcmQgUXUuOiA3LjQwMCAgIDNyZCBRdS46IDMuNjE2NyAgIDNyZCBRdS46IDQuNDAwMCAgXG4gTWF4LiAgIDo4MC4wMCAgIE1heC4gICA6NzkuMDAwICAgTWF4LiAgIDo4MS4wMDAgICBNYXguICAgOjUyLjg2NjcgICBNYXguICAgOjM4LjA2NjcgIFxuIE5BJ3MgICA6NDY1ICAgICBOQSdzICAgOjEwICAgICAgIE5BJ3MgICA6MjAgICAgICAgTkEncyAgIDoyMCAgICAgICAgTkEncyAgIDozMCAgICAgICBcbiAgICAgUi4zZHcgICAgICAgICAgICAgIFQuMWQgICAgICAgICAgICBULjJkICAgICAgICAgICAgVC4zZCAgICAgIFxuIE1pbi4gICA6IDAuMDAwMCAgIE1pbi4gICA6MTMuODAgICBNaW4uICAgOjEzLjg1ICAgTWluLiAgIDoxNC41MyAgXG4gMXN0IFF1LjogMC4wMDAwICAgMXN0IFF1LjoxOC42MCAgIDFzdCBRdS46MTguODUgICAxc3QgUXUuOjE5LjA3ICBcbiBNZWRpYW4gOiAwLjc2NjcgICBNZWRpYW4gOjIwLjcwICAgTWVkaWFuIDoyMC42MCAgIE1lZGlhbiA6MjAuNTcgIFxuIE1lYW4gICA6IDMuNDMxNiAgIE1lYW4gICA6MjAuNjQgICBNZWFuICAgOjIwLjY1ICAgTWVhbiAgIDoyMC42NSAgXG4gM3JkIFF1LjogNC4zMzMzICAgM3JkIFF1LjoyMi42MCAgIDNyZCBRdS46MjIuMzEgICAzcmQgUXUuOjIyLjMwICBcbiBNYXguICAgOjQxLjEzMzMgICBNYXguICAgOjI5LjEwICAgTWF4LiAgIDoyOC44NSAgIE1heC4gICA6MjguMjcgIFxuIE5BJ3MgICA6MzAgICAgICAgIE5BJ3MgICA6MTUgICAgICBOQSdzICAgOjIwICAgICAgTkEncyAgIDoyNSAgICAgXG4ifQ== -->
+<pre><code>      date                   location       count             status         julian    
+ Min.   :2014-06-20   Britannia  :404   Min.   :   9.192   Swim  :1658   171    :  30  
+ 1st Qu.:2015-07-31   Mooneys    :404   1st Qu.:  18.882   E.coli: 207   172    :  30  
+ Median :2017-06-30   PetrieEast :404   Median :  35.019   Rain  : 112   173    :  30  
+ Mean   :2017-03-10   PetrieRiver:404   Mean   :  81.269   Closed:  43   174    :  30  
+ 3rd Qu.:2018-07-28   Westboro   :404   3rd Qu.:  72.594                 175    :  30  
+ Max.   :2019-08-25                     Max.   :1000.000                 176    :  30  
+                                        NA&#39;s   :40                       (Other):1840  
+      week     month     year       count.prev         count.next            Tmax      
+ 26     :210   6:405   2014:290   Min.   :   9.192   Min.   :   9.192   Min.   :15.70  
+ 27     :210   7:930   2015:290   1st Qu.:  18.882   1st Qu.:  18.882   1st Qu.:24.40  
+ 28     :210   8:685   2016:360   Median :  35.000   Median :  35.195   Median :27.10  
+ 29     :210           2017:360   Mean   :  81.721   Mean   :  81.854   Mean   :26.92  
+ 30     :210           2018:360   3rd Qu.:  72.594   3rd Qu.:  72.995   3rd Qu.:29.30  
+ 31     :210           2019:360   Max.   :1000.000   Max.   :1000.000   Max.   :36.00  
+ (Other):760                      NA&#39;s   :70         NA&#39;s   :66         NA&#39;s   :15     
+      Tmin           Tmean            Rain            Precip       Wind.direction 
+ Min.   : 5.90   Min.   :13.80   Min.   : 0.000   Min.   : 0.000   Min.   : 1.00  
+ 1st Qu.:12.00   1st Qu.:18.60   1st Qu.: 0.000   1st Qu.: 0.000   1st Qu.:20.00  
+ Median :14.20   Median :20.70   Median : 0.000   Median : 0.000   Median :26.00  
+ Mean   :14.37   Mean   :20.67   Mean   : 3.398   Mean   : 3.398   Mean   :23.94  
+ 3rd Qu.:16.70   3rd Qu.:22.60   3rd Qu.: 1.800   3rd Qu.: 1.800   3rd Qu.:30.00  
+ Max.   :22.90   Max.   :29.10   Max.   :79.000   Max.   :79.000   Max.   :36.00  
+ NA&#39;s   :15      NA&#39;s   :15      NA&#39;s   :10       NA&#39;s   :10       NA&#39;s   :465    
+   Wind.speed         R.1d            R.2dm            R.2dw             R.3dm        
+ Min.   :30.00   Min.   : 0.000   Min.   : 0.000   Min.   : 0.0000   Min.   : 0.0000  
+ 1st Qu.:35.00   1st Qu.: 0.000   1st Qu.: 0.000   1st Qu.: 0.0000   1st Qu.: 0.0000  
+ Median :39.00   Median : 0.000   Median : 0.600   Median : 0.3333   Median : 0.7667  
+ Mean   :41.79   Mean   : 3.402   Mean   : 6.822   Mean   : 3.4021   Mean   : 3.4558  
+ 3rd Qu.:46.00   3rd Qu.: 1.800   3rd Qu.: 7.400   3rd Qu.: 3.6167   3rd Qu.: 4.4000  
+ Max.   :80.00   Max.   :79.000   Max.   :81.000   Max.   :52.8667   Max.   :38.0667  
+ NA&#39;s   :465     NA&#39;s   :10       NA&#39;s   :20       NA&#39;s   :20        NA&#39;s   :30       
+     R.3dw              T.1d            T.2d            T.3d      
+ Min.   : 0.0000   Min.   :13.80   Min.   :13.85   Min.   :14.53  
+ 1st Qu.: 0.0000   1st Qu.:18.60   1st Qu.:18.85   1st Qu.:19.07  
+ Median : 0.7667   Median :20.70   Median :20.60   Median :20.57  
+ Mean   : 3.4316   Mean   :20.64   Mean   :20.65   Mean   :20.65  
+ 3rd Qu.: 4.3333   3rd Qu.:22.60   3rd Qu.:22.31   3rd Qu.:22.30  
+ Max.   :41.1333   Max.   :29.10   Max.   :28.85   Max.   :28.27  
+ NA&#39;s   :30        NA&#39;s   :15      NA&#39;s   :20      NA&#39;s   :25     </code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxucm0uYWxsLmJ1dChrZWVwID0gYygnYmVhY2hlcycsICd3ZWF0aGVyJykpXG5gYGAifQ== -->
+<pre class="r"><code>rm.all.but(keep = c(&#39;beaches&#39;, &#39;weather&#39;))</code></pre>
 <!-- rnb-source-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
@@ -2029,103 +2248,303 @@ for (year in weathers[-c(1)]){
 <p><br></p>
 </div>
 </div>
-<div id="hydrometry-data" class="section level3">
-<h3>Hydrometry data</h3>
-<div id="source-2" class="section level4">
-<h4>Source</h4>
+<div id="hydrology-data" class="section level3">
+<h3>Hydrology data</h3>
+<div id="read-two-rivers-dataframes" class="section level4">
+<h4>1. Read two <code>rivers</code> dataframes</h4>
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxub3R0YXdhIDwtIHJlYWRSRFMoXCJkYXRhL3JpdmVyLm90dGF3YS5SRFNcIilcbnJpZGVhdSA8LSByZWFkUkRTKFwiZGF0YS9yaXZlci5yaWRlYXUuUkRTXCIpXG5gYGAifQ== -->
+<pre class="r"><code>ottawa &lt;- readRDS(&quot;data/river.ottawa.RDS&quot;)
+rideau &lt;- readRDS(&quot;data/river.rideau.RDS&quot;)</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+</div>
+<div id="tidy-each-set-in-parallel" class="section level4">
+<h4>2. Tidy each set in parallel</h4>
 <ul>
-<li>Stations: go to link, click download, select &quot;Julian Date-data format (CSV with missing days)
-<ul>
-<li>Ottawa @ Britannia: 02KF005
-<ul>
-<li><a href="https://wateroffice.ec.gc.ca/search/historical_results_e.html?search_type=station_number&amp;station_number=02KF005&amp;start_year=1850&amp;end_year=2020&amp;minimum_years=&amp;gross_drainage_operator=%3E&amp;gross_drainage_area=&amp;effective_drainage_operator=%3E&amp;effective_drainage_area=">Historical data link</a><br />
-</li>
-<li><a href="https://wateroffice.ec.gc.ca/search/real_time_results_e.html?search_type=station_number&amp;station_number=02KF005&amp;gross_drainage_operator=%3E&amp;gross_drainage_area=&amp;effective_drainage_operator=%3E&amp;effective_drainage_area=">Real-time link</a></li>
-</ul></li>
-<li>Rideau @ Ottawa: 02LA004
-<ul>
-<li><a href="https://wateroffice.ec.gc.ca/search/historical_results_e.html?search_type=station_number&amp;station_number=02LA004&amp;start_year=1850&amp;end_year=2020&amp;minimum_years=&amp;gross_drainage_operator=%3E&amp;gross_drainage_area=&amp;effective_drainage_operator=%3E&amp;effective_drainage_area=">Historical data link</a><br />
-</li>
-<li><a href="https://wateroffice.ec.gc.ca/search/real_time_results_e.html?search_type=station_number&amp;station_number=02LA004&amp;gross_drainage_operator=%3E&amp;gross_drainage_area=&amp;effective_drainage_operator=%3E&amp;effective_drainage_area=">Real-time data link</a></li>
-</ul></li>
-</ul></li>
-<li>example URL: <code>https://wateroffice.ec.gc.ca/download/report_e.html?dt=dd&amp;df=jdf&amp;md=1&amp;ext=csv</code> doesn’t work because downloads are based on browsing session…</li>
+<li>pivot <code>PARAM</code> Parameter {1,2} + Value -&gt; to <code>discharge</code> and <code>water.level</code> columns</li>
+<li>join datasets to have date + all four columns</li>
 </ul>
-<p><strong>Note</strong> need to combine historic and recent datasets (historic is missing 2019 season)</p>
-</div>
-<div id="process-2" class="section level4">
-<h4>Process</h4>
-<ol style="list-style-type: decimal">
-<li>Get data</li>
-<li>Save data</li>
-</ol>
-</div>
-<div id="code-2" class="section level4">
-<h4>Code</h4>
-<div id="real-time-data-for-models" class="section level5">
-<h5>Real time data for models</h5>
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjpbIiMgZnJlcSA8LSBkYWlseSIsIiIsImh5ZHJvLm90dC5ydCA8LSByZWFkX2NzdihcImh0dHBzOi8vZGQud2VhdGhlci5nYy5jYS9oeWRyb21ldHJpYy9jc3YvT04vZGFpbHkvT05fMDJLRjAwNV9kYWlseV9oeWRyb21ldHJpYy5jc3ZcIikiLCJoeWRyby5vdHQucnQgPC0gc2VsZWN0KGh5ZHJvLm90dC5ydCwgYygyLDMsNykpIiwic2F2ZVJEUyhoeWRyby5vdHQucnQsIFwiZGF0YS9oeWRyby5vdHQucnQuUkRTXCIpIiwiIiwiaHlkcm8ucmlkLnJ0IDwtIHJlYWRfY3N2KFwiaHR0cHM6Ly9kZC53ZWF0aGVyLmdjLmNhL2h5ZHJvbWV0cmljL2Nzdi9PTi9kYWlseS9PTl8wMkxBMDA0X2RhaWx5X2h5ZHJvbWV0cmljLmNzdlwiKSIsImh5ZHJvLnJpZC5ydCA8LSBzZWxlY3QoaHlkcm8ucmlkLnJ0LCBjKDIsMyw3KSkiLCJzYXZlUkRTKGh5ZHJvLnJpZC5ydCwgXCJkYXRhL2h5ZHJvLnJpZC5ydC5SRFNcIikiLCIiLCIjIGZyZXEgPC0gaG91cmx5IiwiIiwiaHlkcm8ub3R0LmhvdXIgPC0gcmVhZF9jc3YoXCJodHRwczovL2RkLndlYXRoZXIuZ2MuY2EvaHlkcm9tZXRyaWMvY3N2L09OL2hvdXJseS9PTl8wMktGMDA1X2hvdXJseV9oeWRyb21ldHJpYy5jc3ZcIikiLCJoeWRyby5vdHQuaG91ciA8LSBzZWxlY3QoaHlkcm8ub3R0LmhvdXIsIGMoMiwzLDcpKSIsIiMgc2F2ZVJEUyhoeWRyby5vdHQuaG91ciwgXCJkYXRhL2h5ZHJvLm90dC5ob3VybHkuUkRTXCIpIiwiIiwiaHlkcm8ucmlkLmhvdXIgPC0gcmVhZF9jc3YoXCJodHRwczovL2RkLndlYXRoZXIuZ2MuY2EvaHlkcm9tZXRyaWMvY3N2L09OL2hvdXJseS9PTl8wMkxBMDA0X2hvdXJseV9oeWRyb21ldHJpYy5jc3ZcIikiLCJoeWRyby5yaWQuaG91ciA8LSBzZWxlY3QoaHlkcm8ucmlkLmhvdXIsIGMoMiwzLDcpKSIsIiMgc2F2ZVJEUyhoeWRyby5yaWQuaG91ciwgXCJkYXRhL2h5ZHJvLnJpZC5ob3VybHkuUkRTXCIpIiwiIiwiIyB0byBjaGVjayBkYXRldGltZSByYW5nZSBvZiBkYXRhIGFuZCBhZ2Ugb2YgbGFzdCBvYnNlcnZhdGlvbiIsInN1bW1hcnkoaHlkcm8ub3R0LnJ0KSIsImhlYWQoaHlkcm8ub3R0LnJ0KSIsInRhaWwoaHlkcm8ub3R0LnJ0KSIsIiIsInN1bW1hcnkoaHlkcm8ub3R0LmhvdXIpIiwiaGVhZChoeWRyby5vdHQuaG91cikiLCJ0YWlsKGh5ZHJvLm90dC5ob3VyKSIsIiIsInN1bW1hcnkoaHlkcm8ucmlkLnJ0KSIsImhlYWQoaHlkcm8ucmlkLnJ0KSIsInRhaWwoaHlkcm8ucmlkLnJ0KSIsIiIsInN1bW1hcnkoaHlkcm8ucmlkLmhvdXIpIiwiaGVhZChoeWRyby5yaWQuaG91cikiLCJ0YWlsKGh5ZHJvLnJpZC5ob3VyKSJdfQ== -->
-<pre class="r"><code># freq &lt;- daily
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxub3R0YXdhIDwtIHN1YnNldChvdHRhd2EsIHNlbGVjdCA9IGMoWUVBUiwgREQsIFBBUkFNLCBWYWx1ZSkpXG5vdHRhd2EkUEFSQU0gPC0gYXMuZmFjdG9yKG90dGF3YSRQQVJBTSlcbmxldmVscyhvdHRhd2EkUEFSQU0pIDwtIGMoXCJkaXNjaGFyZ2Uub3R0XCIsIFwid2F0ZXIubGV2ZWwub3R0XCIpXG5vdHRhd2EgPC0gb3R0YXdhICU+JVxuICBwaXZvdF93aWRlcihuYW1lc19mcm9tID0gUEFSQU0sIHZhbHVlc19mcm9tID0gVmFsdWUpICU+JVxuICBtdXRhdGUoREQgPSBhcy5udW1lcmljKEREKSlcblxuIyBzYW1lIGZvciBSaWRlYXUgcml2ZXJcbnJpZGVhdSA8LSBzdWJzZXQocmlkZWF1LCBzZWxlY3QgPSBjKFlFQVIsIERELCBQQVJBTSwgVmFsdWUpKVxucmlkZWF1JFBBUkFNIDwtIGFzLmZhY3RvcihyaWRlYXUkUEFSQU0pXG5sZXZlbHMocmlkZWF1JFBBUkFNKSA8LSBjKFwiZGlzY2hhcmdlLnJpZFwiLCBcIndhdGVyLmxldmVsLnJpZFwiKVxucmlkZWF1IDwtIHJpZGVhdSAlPiVcbiAgcGl2b3Rfd2lkZXIobmFtZXNfZnJvbSA9IFBBUkFNLCB2YWx1ZXNfZnJvbSA9IFZhbHVlKSAlPiVcbiAgbXV0YXRlKEREID0gYXMubnVtZXJpYyhERCkpXG5gYGAifQ== -->
+<pre class="r"><code>ottawa &lt;- subset(ottawa, select = c(YEAR, DD, PARAM, Value))
+ottawa$PARAM &lt;- as.factor(ottawa$PARAM)
+levels(ottawa$PARAM) &lt;- c(&quot;discharge.ott&quot;, &quot;water.level.ott&quot;)
+ottawa &lt;- ottawa %&gt;%
+  pivot_wider(names_from = PARAM, values_from = Value) %&gt;%
+  mutate(DD = as.numeric(DD))
 
-hydro.ott.rt &lt;- read_csv(&quot;https://dd.weather.gc.ca/hydrometric/csv/ON/daily/ON_02KF005_daily_hydrometric.csv&quot;)
-hydro.ott.rt &lt;- select(hydro.ott.rt, c(2,3,7))
-saveRDS(hydro.ott.rt, &quot;data/hydro.ott.rt.RDS&quot;)
-
-hydro.rid.rt &lt;- read_csv(&quot;https://dd.weather.gc.ca/hydrometric/csv/ON/daily/ON_02LA004_daily_hydrometric.csv&quot;)
-hydro.rid.rt &lt;- select(hydro.rid.rt, c(2,3,7))
-saveRDS(hydro.rid.rt, &quot;data/hydro.rid.rt.RDS&quot;)
-
-# freq &lt;- hourly
-
-hydro.ott.hour &lt;- read_csv(&quot;https://dd.weather.gc.ca/hydrometric/csv/ON/hourly/ON_02KF005_hourly_hydrometric.csv&quot;)
-hydro.ott.hour &lt;- select(hydro.ott.hour, c(2,3,7))
-# saveRDS(hydro.ott.hour, &quot;data/hydro.ott.hourly.RDS&quot;)
-
-hydro.rid.hour &lt;- read_csv(&quot;https://dd.weather.gc.ca/hydrometric/csv/ON/hourly/ON_02LA004_hourly_hydrometric.csv&quot;)
-hydro.rid.hour &lt;- select(hydro.rid.hour, c(2,3,7))
-# saveRDS(hydro.rid.hour, &quot;data/hydro.rid.hourly.RDS&quot;)
-
-# to check datetime range of data and age of last observation
-summary(hydro.ott.rt)
-head(hydro.ott.rt)
-tail(hydro.ott.rt)
-
-summary(hydro.ott.hour)
-head(hydro.ott.hour)
-tail(hydro.ott.hour)
-
-summary(hydro.rid.rt)
-head(hydro.rid.rt)
-tail(hydro.rid.rt)
-
-summary(hydro.rid.hour)
-head(hydro.rid.hour)
-tail(hydro.rid.hour)</code></pre>
+# same for Rideau river
+rideau &lt;- subset(rideau, select = c(YEAR, DD, PARAM, Value))
+rideau$PARAM &lt;- as.factor(rideau$PARAM)
+levels(rideau$PARAM) &lt;- c(&quot;discharge.rid&quot;, &quot;water.level.rid&quot;)
+rideau &lt;- rideau %&gt;%
+  pivot_wider(names_from = PARAM, values_from = Value) %&gt;%
+  mutate(DD = as.numeric(DD))</code></pre>
 <!-- rnb-source-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
 </div>
-<div id="historic-data" class="section level5">
-<h5>Historic data</h5>
+<div id="join-both-df-into-rivers-format-dates" class="section level4">
+<h4>3. Join both df into <code>rivers</code>, format dates</h4>
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuIyBqdXN0IGxvYWQgY3N2IGFuZCBjYWxsIGl0IGEgZGF5XG5yaXZlci5vdHRhd2EgPC0gcmVhZF9jc3YoXCJkYXRhL3NvdXJjZS9icml0YW5uaWFfcml2ZXJfZmxvdy5jc3ZcIilcbnJpdmVyLnJpZGVhdSA8LSByZWFkX2NzdihcImRhdGEvc291cmNlL3JpZGVhdV9yaXZlcl9mbG93LmNzdlwiKVxuc2F2ZVJEUyhyaXZlci5vdHRhd2EsIFwiZGF0YS9yaXZlci5vdHRhd2EuUkRTXCIpXG5zYXZlUkRTKHJpdmVyLnJpZGVhdSwgXCJkYXRhL3JpdmVyLnJpZGVhdS5SRFNcIilcbmBgYCJ9 -->
-<pre class="r"><code># just load csv and call it a day
-river.ottawa &lt;- read_csv(&quot;data/source/britannia_river_flow.csv&quot;)
-river.rideau &lt;- read_csv(&quot;data/source/rideau_river_flow.csv&quot;)
-saveRDS(river.ottawa, &quot;data/river.ottawa.RDS&quot;)
-saveRDS(river.rideau, &quot;data/river.rideau.RDS&quot;)</code></pre>
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxucml2ZXJzIDwtIGZ1bGxfam9pbihvdHRhd2EscmlkZWF1LCBieT1jKFwiWUVBUlwiLCBcIkREXCIpKSAlPiVcbiAgZmlsdGVyKFlFQVIgPiAyMDEzKSAlPiVcbiAgbXV0YXRlKHllYXIgPSB5bWQocGFzdGUoYXMuY2hhcmFjdGVyKFlFQVIpLCctMDEtMDEnLCBzZXA9JycpKSxcbiAgICAgICAgIHlkYXkgPSBkYXlzKERELTEpLFxuICAgICAgICAgZGF0ZSA9IHllYXIgKyB5ZGF5KSAlPiVcbiAgc2VsZWN0KGMoLTEsLTIsLTcsLTgpKVxuXG5zdW1tYXJ5KHJpdmVycylcbmBgYCJ9 -->
+<pre class="r"><code>rivers &lt;- full_join(ottawa,rideau, by=c(&quot;YEAR&quot;, &quot;DD&quot;)) %&gt;%
+  filter(YEAR &gt; 2013) %&gt;%
+  mutate(year = ymd(paste(as.character(YEAR),&#39;-01-01&#39;, sep=&#39;&#39;)),
+         yday = days(DD-1),
+         date = year + yday) %&gt;%
+  select(c(-1,-2,-7,-8))
+
+summary(rivers)</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiIGRpc2NoYXJnZS5vdHQgIHdhdGVyLmxldmVsLm90dCBkaXNjaGFyZ2UucmlkICAgIHdhdGVyLmxldmVsLnJpZCAgICAgIGRhdGUgICAgICAgICAgIFxuIE1pbi4gICA6IDQ0NSAgIE1pbi4gICA6NTcuNjUgICBNaW4uICAgOiAgMy4yMCAgIE1pbi4gICA6Mi41NDcgICBNaW4uICAgOjIwMTQtMDEtMDEgIFxuIDFzdCBRdS46IDg2MiAgIDFzdCBRdS46NTguMDMgICAxc3QgUXUuOiAxNS4zMCAgIDFzdCBRdS46Mi44MjUgICAxc3QgUXUuOjIwMTUtMDQtMDIgIFxuIE1lZGlhbiA6MTMyMCAgIE1lZGlhbiA6NTguMzggICBNZWRpYW4gOiAzMS43MCAgIE1lZGlhbiA6My4wNzcgICBNZWRpYW4gOjIwMTYtMDctMDEgIFxuIE1lYW4gICA6MTQ0OCAgIE1lYW4gICA6NTguNDEgICBNZWFuICAgOiA1Mi40OCAgIE1lYW4gICA6My4xNTQgICBNZWFuICAgOjIwMTYtMDctMDEgIFxuIDNyZCBRdS46MTc0MCAgIDNyZCBRdS46NTguNjMgICAzcmQgUXUuOiA1OS43MyAgIDNyZCBRdS46My4zNjkgICAzcmQgUXUuOjIwMTctMDktMzAgIFxuIE1heC4gICA6NTM3MCAgIE1heC4gICA6NjAuNDQgICBNYXguICAgOjQ1My4wMCAgIE1heC4gICA6NS4wNDUgICBNYXguICAgOjIwMTgtMTItMzEgIFxuICAgICAgICAgICAgICAgIE5BJ3MgICA6MSAgICAgICAgICAgICAgICAgICAgICAgIE5BJ3MgICA6NCAgICAgICAgICAgICAgICAgICAgICAgICAgIFxuIn0= -->
+<pre><code> discharge.ott  water.level.ott discharge.rid    water.level.rid      date           
+ Min.   : 445   Min.   :57.65   Min.   :  3.20   Min.   :2.547   Min.   :2014-01-01  
+ 1st Qu.: 862   1st Qu.:58.03   1st Qu.: 15.30   1st Qu.:2.825   1st Qu.:2015-04-02  
+ Median :1320   Median :58.38   Median : 31.70   Median :3.077   Median :2016-07-01  
+ Mean   :1448   Mean   :58.41   Mean   : 52.48   Mean   :3.154   Mean   :2016-07-01  
+ 3rd Qu.:1740   3rd Qu.:58.63   3rd Qu.: 59.73   3rd Qu.:3.369   3rd Qu.:2017-09-30  
+ Max.   :5370   Max.   :60.44   Max.   :453.00   Max.   :5.045   Max.   :2018-12-31  
+                NA&#39;s   :1                        NA&#39;s   :4                           </code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+<ul>
+<li>the last date in the dataset is 2018-12-31, but we need the 2019 season too</li>
+</ul>
+</div>
+<div id="read-in-recent-river-data" class="section level4">
+<h4>4. Read in recent river data</h4>
+<ul>
+<li>Note: date-time needs to be in format: <code>ymd_hm</code> for lubridate functions to create dates.</li>
+<li>Clean up just enough to merge by formatting dates. Need dates to be accurate.</li>
+</ul>
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxub3R0YXdhLjE5IDwtIHJlYWRSRFMoXCJkYXRhL3JpdmVyLm90dGF3YS4xOS5SRFNcIilcbnN1bW1hcnkob3R0YXdhLjE5KVxuYGBgIn0= -->
+<pre class="r"><code>ottawa.19 &lt;- readRDS(&quot;data/river.ottawa.19.RDS&quot;)
+summary(ottawa.19)</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiICAgRGF0ZXRpbWUgICAgICAgICAgIERpc2NoYXJnZSAgICAgV2F0ZXJfbGV2ZWwgICBcbiBMZW5ndGg6MTU2ODU0ICAgICAgTWluLiAgIDogMzU5ICAgTWluLiAgIDo1Ny41NiAgXG4gQ2xhc3MgOmNoYXJhY3RlciAgIDFzdCBRdS46MTEwMCAgIDFzdCBRdS46NTguMjIgIFxuIE1vZGUgIDpjaGFyYWN0ZXIgICBNZWRpYW4gOjEzNzAgICBNZWRpYW4gOjU4LjQxICBcbiAgICAgICAgICAgICAgICAgICAgTWVhbiAgIDoxNjQwICAgTWVhbiAgIDo1OC41MSAgXG4gICAgICAgICAgICAgICAgICAgIDNyZCBRdS46MTU5MCAgIDNyZCBRdS46NTguNTYgIFxuICAgICAgICAgICAgICAgICAgICBNYXguICAgOjYwMzAgICBNYXguICAgOjYwLjcwICBcbiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgTkEncyAgIDo0MzQgICAgXG4ifQ== -->
+<pre><code>   Datetime           Discharge     Water_level   
+ Length:156854      Min.   : 359   Min.   :57.56  
+ Class :character   1st Qu.:1100   1st Qu.:58.22  
+ Mode  :character   Median :1370   Median :58.41  
+                    Mean   :1640   Mean   :58.51  
+                    3rd Qu.:1590   3rd Qu.:58.56  
+                    Max.   :6030   Max.   :60.70  
+                                   NA&#39;s   :434    </code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuIyBmaXggY29sIG5hbWVzIHRvIGFkZCByaXZlciBuYW1lIGAub3R0YCwgc2V0IGRhdGVzXG5uYW1lcyhvdHRhd2EuMTkpIDwtIGMoJ2RhdGV0aW1lJywgJ3dhdGVyLmxldmVsLm90dCcsICdkaXNjaGFyZ2Uub3R0Jylcbm90dGF3YS4xOSRkYXRldGltZSA8LSB5bWRfaG0ob3R0YXdhLjE5JGRhdGV0aW1lKVxuc3VtbWFyeShvdHRhd2EuMTkpXG5gYGAifQ== -->
+<pre class="r"><code># fix col names to add river name `.ott`, set dates
+names(ottawa.19) &lt;- c(&#39;datetime&#39;, &#39;water.level.ott&#39;, &#39;discharge.ott&#39;)
+ottawa.19$datetime &lt;- ymd_hm(ottawa.19$datetime)
+summary(ottawa.19)</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiICAgIGRhdGV0aW1lICAgICAgICAgICAgICAgICAgIHdhdGVyLmxldmVsLm90dCBkaXNjaGFyZ2Uub3R0ICBcbiBNaW4uICAgOjIwMTgtMTAtMjcgMDA6MDA6MDAgICBNaW4uICAgOiAzNTkgICAgTWluLiAgIDo1Ny41NiAgXG4gMXN0IFF1LjoyMDE5LTAzLTEyIDA3OjE2OjE1ICAgMXN0IFF1LjoxMTAwICAgIDFzdCBRdS46NTguMjIgIFxuIE1lZGlhbiA6MjAxOS0wNy0yNiAyMjo0NzozMCAgIE1lZGlhbiA6MTM3MCAgICBNZWRpYW4gOjU4LjQxICBcbiBNZWFuICAgOjIwMTktMDctMjcgMTE6MDI6MTUgICBNZWFuICAgOjE2NDAgICAgTWVhbiAgIDo1OC41MSAgXG4gM3JkIFF1LjoyMDE5LTEyLTEyIDA0OjEzOjQ1ICAgM3JkIFF1LjoxNTkwICAgIDNyZCBRdS46NTguNTYgIFxuIE1heC4gICA6MjAyMC0wNC0yNiAxOTozNTowMCAgIE1heC4gICA6NjAzMCAgICBNYXguICAgOjYwLjcwICBcbiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgTkEncyAgIDo0MzQgICAgXG4ifQ== -->
+<pre><code>    datetime                   water.level.ott discharge.ott  
+ Min.   :2018-10-27 00:00:00   Min.   : 359    Min.   :57.56  
+ 1st Qu.:2019-03-12 07:16:15   1st Qu.:1100    1st Qu.:58.22  
+ Median :2019-07-26 22:47:30   Median :1370    Median :58.41  
+ Mean   :2019-07-27 11:02:15   Mean   :1640    Mean   :58.51  
+ 3rd Qu.:2019-12-12 04:13:45   3rd Qu.:1590    3rd Qu.:58.56  
+ Max.   :2020-04-26 19:35:00   Max.   :6030    Max.   :60.70  
+                                               NA&#39;s   :434    </code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuIyBzYW1lIGZvciBSaWRlYXVcbnJpZGVhdS4xOSA8LSByZWFkUkRTKFwiZGF0YS9yaXZlci5yaWRlYXUuMTkuUkRTXCIpXG5uYW1lcyhyaWRlYXUuMTkpIDwtIGMoJ2RhdGV0aW1lJywgJ3dhdGVyLmxldmVsLnJpZCcsICdkaXNjaGFyZ2UucmlkJylcbnJpZGVhdS4xOSRkYXRldGltZSA8LSB5bWRfaG0ocmlkZWF1LjE5JGRhdGV0aW1lKVxuc3VtbWFyeShyaWRlYXUuMTkpXG5gYGAifQ== -->
+<pre class="r"><code># same for Rideau
+rideau.19 &lt;- readRDS(&quot;data/river.rideau.19.RDS&quot;)
+names(rideau.19) &lt;- c(&#39;datetime&#39;, &#39;water.level.rid&#39;, &#39;discharge.rid&#39;)
+rideau.19$datetime &lt;- ymd_hm(rideau.19$datetime)
+summary(rideau.19)</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiICAgIGRhdGV0aW1lICAgICAgICAgICAgICAgICAgIHdhdGVyLmxldmVsLnJpZCAgZGlzY2hhcmdlLnJpZCAgXG4gTWluLiAgIDoyMDE4LTEwLTI3IDAwOjAwOjAwICAgTWluLiAgIDogIDEuOTMgICBNaW4uICAgOjIuNDk1ICBcbiAxc3QgUXUuOjIwMTktMDMtMTIgMjI6NTM6NDUgICAxc3QgUXUuOiAyNi42MCAgIDFzdCBRdS46Mi45NDkgIFxuIE1lZGlhbiA6MjAxOS0wNy0yNyAyMTo1MjozMCAgIE1lZGlhbiA6IDQxLjAwICAgTWVkaWFuIDozLjE3MCAgXG4gTWVhbiAgIDoyMDE5LTA3LTI3IDIxOjU4OjAzICAgTWVhbiAgIDogNjMuOTAgICBNZWFuICAgOjMuMjM1ICBcbiAzcmQgUXUuOjIwMTktMTItMTEgMjA6NDY6MTUgICAzcmQgUXUuOiA3NS45MCAgIDNyZCBRdS46My40MjcgIFxuIE1heC4gICA6MjAyMC0wNC0yNiAxOTo0MDowMCAgIE1heC4gICA6MzU5LjAwICAgTWF4LiAgIDo0LjczMiAgXG4ifQ== -->
+<pre><code>    datetime                   water.level.rid  discharge.rid  
+ Min.   :2018-10-27 00:00:00   Min.   :  1.93   Min.   :2.495  
+ 1st Qu.:2019-03-12 22:53:45   1st Qu.: 26.60   1st Qu.:2.949  
+ Median :2019-07-27 21:52:30   Median : 41.00   Median :3.170  
+ Mean   :2019-07-27 21:58:03   Mean   : 63.90   Mean   :3.235  
+ 3rd Qu.:2019-12-11 20:46:15   3rd Qu.: 75.90   3rd Qu.:3.427  
+ Max.   :2020-04-26 19:40:00   Max.   :359.00   Max.   :4.732  </code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxucml2ZXJzLjE5IDwtIGZ1bGxfam9pbihvdHRhd2EuMTksIHJpZGVhdS4xOSwgYnkgPSAnZGF0ZXRpbWUnKVxuc3VtbWFyeShyaXZlcnMuMTkpXG5gYGAifQ== -->
+<pre class="r"><code>rivers.19 &lt;- full_join(ottawa.19, rideau.19, by = &#39;datetime&#39;)
+summary(rivers.19)</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiICAgIGRhdGV0aW1lICAgICAgICAgICAgICAgICAgIHdhdGVyLmxldmVsLm90dCBkaXNjaGFyZ2Uub3R0ICAgd2F0ZXIubGV2ZWwucmlkICBkaXNjaGFyZ2UucmlkICBcbiBNaW4uICAgOjIwMTgtMTAtMjcgMDA6MDA6MDAgICBNaW4uICAgOiAzNTkgICAgTWluLiAgIDo1Ny41NiAgIE1pbi4gICA6ICAxLjkzICAgTWluLiAgIDoyLjQ5NSAgXG4gMXN0IFF1LjoyMDE5LTAzLTEyIDIzOjM2OjE1ICAgMXN0IFF1LjoxMTAwICAgIDFzdCBRdS46NTguMjIgICAxc3QgUXUuOiAyNi42MCAgIDFzdCBRdS46Mi45NDkgIFxuIE1lZGlhbiA6MjAxOS0wNy0yNyAyMjoxNzozMCAgIE1lZGlhbiA6MTM3MCAgICBNZWRpYW4gOjU4LjQxICAgTWVkaWFuIDogNDEuMDAgICBNZWRpYW4gOjMuMTcwICBcbiBNZWFuICAgOjIwMTktMDctMjcgMjI6MDY6NDQgICBNZWFuICAgOjE2NDAgICAgTWVhbiAgIDo1OC41MSAgIE1lYW4gICA6IDYzLjkwICAgTWVhbiAgIDozLjIzNSAgXG4gM3JkIFF1LjoyMDE5LTEyLTExIDIwOjU4OjQ1ICAgM3JkIFF1LjoxNTkwICAgIDNyZCBRdS46NTguNTYgICAzcmQgUXUuOiA3NS45MCAgIDNyZCBRdS46My40MjcgIFxuIE1heC4gICA6MjAyMC0wNC0yNiAxOTo0MDowMCAgIE1heC4gICA6NjAzMCAgICBNYXguICAgOjYwLjcwICAgTWF4LiAgIDozNTkuMDAgICBNYXguICAgOjQuNzMyICBcbiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICBOQSdzICAgOjkwOCAgICAgTkEncyAgIDoxMzQyICAgIE5BJ3MgICA6MzggICAgICAgTkEncyAgIDozOCAgICAgXG4ifQ== -->
+<pre><code>    datetime                   water.level.ott discharge.ott   water.level.rid  discharge.rid  
+ Min.   :2018-10-27 00:00:00   Min.   : 359    Min.   :57.56   Min.   :  1.93   Min.   :2.495  
+ 1st Qu.:2019-03-12 23:36:15   1st Qu.:1100    1st Qu.:58.22   1st Qu.: 26.60   1st Qu.:2.949  
+ Median :2019-07-27 22:17:30   Median :1370    Median :58.41   Median : 41.00   Median :3.170  
+ Mean   :2019-07-27 22:06:44   Mean   :1640    Mean   :58.51   Mean   : 63.90   Mean   :3.235  
+ 3rd Qu.:2019-12-11 20:58:45   3rd Qu.:1590    3rd Qu.:58.56   3rd Qu.: 75.90   3rd Qu.:3.427  
+ Max.   :2020-04-26 19:40:00   Max.   :6030    Max.   :60.70   Max.   :359.00   Max.   :4.732  
+                               NA&#39;s   :908     NA&#39;s   :1342    NA&#39;s   :38       NA&#39;s   :38     </code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuIyBhIGxvdCBvZiBtaXNzaW5nIHZhbHVlcyB0byBkcm9wIGZyb20gZGF0YSwgd2Ugd2FudCB0aGUgZGFpbHkgbWVhbiB0byB3b3JrIG9rLlxucml2ZXJzLjE5IDwtIG5hLm9taXQocml2ZXJzLjE5KVxuc3VtbWFyeShyaXZlcnMuMTkpXG5gYGAifQ== -->
+<pre class="r"><code># a lot of missing values to drop from data, we want the daily mean to work ok.
+rivers.19 &lt;- na.omit(rivers.19)
+summary(rivers.19)</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiICAgIGRhdGV0aW1lICAgICAgICAgICAgICAgICAgIHdhdGVyLmxldmVsLm90dCBkaXNjaGFyZ2Uub3R0ICAgd2F0ZXIubGV2ZWwucmlkICBkaXNjaGFyZ2UucmlkICBcbiBNaW4uICAgOjIwMTgtMTAtMjcgMDA6MDA6MDAgICBNaW4uICAgOiAzNTkgICAgTWluLiAgIDo1Ny41NiAgIE1pbi4gICA6ICAxLjkzICAgTWluLiAgIDoyLjQ5NSAgXG4gMXN0IFF1LjoyMDE5LTAzLTExIDIxOjMxOjE1ICAgMXN0IFF1LjoxMTAwICAgIDFzdCBRdS46NTguMjIgICAxc3QgUXUuOiAyNS45MCAgIDFzdCBRdS46Mi45NDEgIFxuIE1lZGlhbiA6MjAxOS0wNy0yNiAwNDoxNzozMCAgIE1lZGlhbiA6MTM3MCAgICBNZWRpYW4gOjU4LjQxICAgTWVkaWFuIDogNDEuMDAgICBNZWRpYW4gOjMuMTcwICBcbiBNZWFuICAgOjIwMTktMDctMjYgMTY6Mzk6NTQgICBNZWFuICAgOjE2MzkgICAgTWVhbiAgIDo1OC41MSAgIE1lYW4gICA6IDYzLjkwICAgTWVhbiAgIDozLjIzNSAgXG4gM3JkIFF1LjoyMDE5LTEyLTExIDAwOjUzOjQ1ICAgM3JkIFF1LjoxNTgwICAgIDNyZCBRdS46NTguNTYgICAzcmQgUXUuOiA3Ni4wMCAgIDNyZCBRdS46My40MjggIFxuIE1heC4gICA6MjAyMC0wNC0yNSAwNzoyNTowMCAgIE1heC4gICA6NjAzMCAgICBNYXguICAgOjYwLjcwICAgTWF4LiAgIDozNTkuMDAgICBNYXguICAgOjQuNzMyICBcbiJ9 -->
+<pre><code>    datetime                   water.level.ott discharge.ott   water.level.rid  discharge.rid  
+ Min.   :2018-10-27 00:00:00   Min.   : 359    Min.   :57.56   Min.   :  1.93   Min.   :2.495  
+ 1st Qu.:2019-03-11 21:31:15   1st Qu.:1100    1st Qu.:58.22   1st Qu.: 25.90   1st Qu.:2.941  
+ Median :2019-07-26 04:17:30   Median :1370    Median :58.41   Median : 41.00   Median :3.170  
+ Mean   :2019-07-26 16:39:54   Mean   :1639    Mean   :58.51   Mean   : 63.90   Mean   :3.235  
+ 3rd Qu.:2019-12-11 00:53:45   3rd Qu.:1580    3rd Qu.:58.56   3rd Qu.: 76.00   3rd Qu.:3.428  
+ Max.   :2020-04-25 07:25:00   Max.   :6030    Max.   :60.70   Max.   :359.00   Max.   :4.732  </code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxucml2ZXJzLjE5IDwtIHJpdmVycy4xOSAlPiVcbiAgbXV0YXRlKGRhdGUgPSBhcy5mYWN0b3IoYXNfZGF0ZShkYXRldGltZSkpLFxuICAgICAgICAgd2VlayA9IGFzLmZhY3Rvcih3ZWVrKGRhdGUpKSxcbiAgICAgICAgIG1vbnRoID0gYXMuZmFjdG9yKG1vbnRoKGRhdGUpKSxcbiAgICAgICAgIHllYXIgPSBhcy5udW1lcmljKHllYXIoZGF0ZSkpLFxuICAgICAgICAgKVxuYGBgIn0= -->
+<pre class="r"><code>rivers.19 &lt;- rivers.19 %&gt;%
+  mutate(date = as.factor(as_date(datetime)),
+         week = as.factor(week(date)),
+         month = as.factor(month(date)),
+         year = as.numeric(year(date)),
+         )</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+<ul>
+<li>All the hydrometric variables are highly correlated…</li>
+</ul>
+</div>
+<div id="average-the-recent-data-to-daily-values-to-bind-with-rivers-then-to-beaches" class="section level4">
+<h4>5. Average the recent data to daily values to bind with <code>rivers</code> then to <code>beaches</code></h4>
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxucml2ZXJzLjE5LmRhaWx5IDwtIHJpdmVycy4xOSAlPiVcbiAgZ3JvdXBfYnkoZGF0ZSkgJT4lXG4gIHN1bW1hcml6ZShkaXNjaGFyZ2Uub3R0ID0gbWVhbihkaXNjaGFyZ2Uub3R0KSxcbiAgICAgICAgICAgICMgZGlzY2hhcmdlLm90dC5taW4gPSBtaW4oZGlzY2hhcmdlLm90dCksXG4gICAgICAgICAgICAjIGRpc2NoYXJnZS5vdHQubWF4ID0gbWF4KGRpc2NoYXJnZS5vdHQpLFxuICAgICAgICAgICAgIyBkaXNjaGFyZ2UucmlkLm1pbiA9IG1pbihkaXNjaGFyZ2UucmlkKSxcbiAgICAgICAgICAgICMgZGlzY2hhcmdlLnJpZC5tYXggPSBtYXgoZGlzY2hhcmdlLnJpZCksXG4gICAgICAgICAgICBkaXNjaGFyZ2UucmlkID0gbWVhbihkaXNjaGFyZ2UucmlkKSkgJT4lXG4gIHVuZ3JvdXAoKVxuc3VtbWFyeShyaXZlcnMuMTkuZGFpbHkpXG5gYGAifQ== -->
+<pre class="r"><code>rivers.19.daily &lt;- rivers.19 %&gt;%
+  group_by(date) %&gt;%
+  summarize(discharge.ott = mean(discharge.ott),
+            # discharge.ott.min = min(discharge.ott),
+            # discharge.ott.max = max(discharge.ott),
+            # discharge.rid.min = min(discharge.rid),
+            # discharge.rid.max = max(discharge.rid),
+            discharge.rid = mean(discharge.rid)) %&gt;%
+  ungroup()
+summary(rivers.19.daily)</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiICAgICAgICAgZGF0ZSAgICAgZGlzY2hhcmdlLm90dCAgIGRpc2NoYXJnZS5yaWQgIFxuIDIwMTgtMTAtMjc6ICAxICAgTWluLiAgIDo1Ny42MCAgIE1pbi4gICA6Mi41NzggIFxuIDIwMTgtMTAtMjg6ICAxICAgMXN0IFF1Ljo1OC4yMyAgIDFzdCBRdS46Mi45NTMgIFxuIDIwMTgtMTAtMjk6ICAxICAgTWVkaWFuIDo1OC40MSAgIE1lZGlhbiA6My4xNzIgIFxuIDIwMTgtMTAtMzA6ICAxICAgTWVhbiAgIDo1OC41MSAgIE1lYW4gICA6My4yMzUgIFxuIDIwMTgtMTAtMzE6ICAxICAgM3JkIFF1Ljo1OC41NSAgIDNyZCBRdS46My40MjYgIFxuIDIwMTgtMTEtMDE6ICAxICAgTWF4LiAgIDo2MC42OCAgIE1heC4gICA6NC43MTAgIFxuIChPdGhlcikgICA6NTQxICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIFxuIn0= -->
+<pre><code>         date     discharge.ott   discharge.rid  
+ 2018-10-27:  1   Min.   :57.60   Min.   :2.578  
+ 2018-10-28:  1   1st Qu.:58.23   1st Qu.:2.953  
+ 2018-10-29:  1   Median :58.41   Median :3.172  
+ 2018-10-30:  1   Mean   :58.51   Mean   :3.235  
+ 2018-10-31:  1   3rd Qu.:58.55   3rd Qu.:3.426  
+ 2018-11-01:  1   Max.   :60.68   Max.   :4.710  
+ (Other)   :541                                  </code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxucml2ZXJzIDwtIHJiaW5kKHNlbGVjdChyaXZlcnMsIGMoMSwzLDUpKSwgcml2ZXJzLjE5LmRhaWx5KVxuc3VtbWFyeShyaXZlcnMpXG5gYGAifQ== -->
+<pre class="r"><code>rivers &lt;- rbind(select(rivers, c(1,3,5)), rivers.19.daily)
+summary(rivers)</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiIGRpc2NoYXJnZS5vdHQgICAgZGlzY2hhcmdlLnJpZCAgICAgICAgICBkYXRlICAgICAgICAgICBcbiBNaW4uICAgOiAgNTcuNiAgIE1pbi4gICA6ICAyLjU3OCAgIE1pbi4gICA6MjAxNC0wMS0wMSAgXG4gMXN0IFF1LjogNTE2LjAgICAxc3QgUXUuOiAgNS4xMjAgICAxc3QgUXUuOjIwMTUtMDgtMTcgIFxuIE1lZGlhbiA6MTA2MC4wICAgTWVkaWFuIDogMjAuNzAwICAgTWVkaWFuIDoyMDE3LTA0LTAxICBcbiBNZWFuICAgOjExMjcuNyAgIE1lYW4gICA6IDQxLjEyNSAgIE1lYW4gICA6MjAxNy0wMy0xNiAgXG4gM3JkIFF1LjoxNTgwLjAgICAzcmQgUXUuOiA0Ni4xMDAgICAzcmQgUXUuOjIwMTgtMTEtMDUgIFxuIE1heC4gICA6NTM3MC4wICAgTWF4LiAgIDo0NTMuMDAwICAgTWF4LiAgIDoyMDIwLTA0LTI1ICBcbiJ9 -->
+<pre><code> discharge.ott    discharge.rid          date           
+ Min.   :  57.6   Min.   :  2.578   Min.   :2014-01-01  
+ 1st Qu.: 516.0   1st Qu.:  5.120   1st Qu.:2015-08-17  
+ Median :1060.0   Median : 20.700   Median :2017-04-01  
+ Mean   :1127.7   Mean   : 41.125   Mean   :2017-03-16  
+ 3rd Qu.:1580.0   3rd Qu.: 46.100   3rd Qu.:2018-11-05  
+ Max.   :5370.0   Max.   :453.000   Max.   :2020-04-25  </code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+</div>
+<div id="left-join-to-beaches" class="section level4">
+<h4>6. Left-join to <code>beaches</code></h4>
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuXG5iZWFjaGVzIDwtIGxlZnRfam9pbihiZWFjaGVzLCByaXZlcnMsIGJ5PSAnZGF0ZScpXG5zdW1tYXJ5KGJlYWNoZXMpXG5gYGAifQ== -->
+<pre class="r"><code>
+beaches &lt;- left_join(beaches, rivers, by= &#39;date&#39;)
+summary(beaches)</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiICAgICAgZGF0ZSAgICAgICAgICAgICAgICAgICBsb2NhdGlvbiAgICAgICBjb3VudCAgICAgICAgICAgICBzdGF0dXMgICAgICAgICBqdWxpYW4gICAgXG4gTWluLiAgIDoyMDE0LTA2LTIwICAgQnJpdGFubmlhICA6NDA0ICAgTWluLiAgIDogICA5LjE5MiAgIFN3aW0gIDoxNjU4ICAgMTcxICAgIDogIDMwICBcbiAxc3QgUXUuOjIwMTUtMDctMzEgICBNb29uZXlzICAgIDo0MDQgICAxc3QgUXUuOiAgMTguODgyICAgRS5jb2xpOiAyMDcgICAxNzIgICAgOiAgMzAgIFxuIE1lZGlhbiA6MjAxNy0wNi0zMCAgIFBldHJpZUVhc3QgOjQwNCAgIE1lZGlhbiA6ICAzNS4wMTkgICBSYWluICA6IDExMiAgIDE3MyAgICA6ICAzMCAgXG4gTWVhbiAgIDoyMDE3LTAzLTEwICAgUGV0cmllUml2ZXI6NDA0ICAgTWVhbiAgIDogIDgxLjI2OSAgIENsb3NlZDogIDQzICAgMTc0ICAgIDogIDMwICBcbiAzcmQgUXUuOjIwMTgtMDctMjggICBXZXN0Ym9ybyAgIDo0MDQgICAzcmQgUXUuOiAgNzIuNTk0ICAgICAgICAgICAgICAgICAxNzUgICAgOiAgMzAgIFxuIE1heC4gICA6MjAxOS0wOC0yNSAgICAgICAgICAgICAgICAgICAgIE1heC4gICA6MTAwMC4wMDAgICAgICAgICAgICAgICAgIDE3NiAgICA6ICAzMCAgXG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgTkEncyAgIDo0MCAgICAgICAgICAgICAgICAgICAgICAgKE90aGVyKToxODQwICBcbiAgICAgIHdlZWsgICAgIG1vbnRoICAgICB5ZWFyICAgICAgIGNvdW50LnByZXYgICAgICAgICBjb3VudC5uZXh0ICAgICAgICAgICAgVG1heCAgICAgIFxuIDI2ICAgICA6MjEwICAgNjo0MDUgICAyMDE0OjI5MCAgIE1pbi4gICA6ICAgOS4xOTIgICBNaW4uICAgOiAgIDkuMTkyICAgTWluLiAgIDoxNS43MCAgXG4gMjcgICAgIDoyMTAgICA3OjkzMCAgIDIwMTU6MjkwICAgMXN0IFF1LjogIDE4Ljg4MiAgIDFzdCBRdS46ICAxOC44ODIgICAxc3QgUXUuOjI0LjQwICBcbiAyOCAgICAgOjIxMCAgIDg6Njg1ICAgMjAxNjozNjAgICBNZWRpYW4gOiAgMzUuMDAwICAgTWVkaWFuIDogIDM1LjE5NSAgIE1lZGlhbiA6MjcuMTAgIFxuIDI5ICAgICA6MjEwICAgICAgICAgICAyMDE3OjM2MCAgIE1lYW4gICA6ICA4MS43MjEgICBNZWFuICAgOiAgODEuODU0ICAgTWVhbiAgIDoyNi45MiAgXG4gMzAgICAgIDoyMTAgICAgICAgICAgIDIwMTg6MzYwICAgM3JkIFF1LjogIDcyLjU5NCAgIDNyZCBRdS46ICA3Mi45OTUgICAzcmQgUXUuOjI5LjMwICBcbiAzMSAgICAgOjIxMCAgICAgICAgICAgMjAxOTozNjAgICBNYXguICAgOjEwMDAuMDAwICAgTWF4LiAgIDoxMDAwLjAwMCAgIE1heC4gICA6MzYuMDAgIFxuIChPdGhlcik6NzYwICAgICAgICAgICAgICAgICAgICAgIE5BJ3MgICA6NzAgICAgICAgICBOQSdzICAgOjY2ICAgICAgICAgTkEncyAgIDoxNSAgICAgXG4gICAgICBUbWluICAgICAgICAgICBUbWVhbiAgICAgICAgICAgIFJhaW4gICAgICAgICAgICBQcmVjaXAgICAgICAgV2luZC5kaXJlY3Rpb24gXG4gTWluLiAgIDogNS45MCAgIE1pbi4gICA6MTMuODAgICBNaW4uICAgOiAwLjAwMCAgIE1pbi4gICA6IDAuMDAwICAgTWluLiAgIDogMS4wMCAgXG4gMXN0IFF1LjoxMi4wMCAgIDFzdCBRdS46MTguNjAgICAxc3QgUXUuOiAwLjAwMCAgIDFzdCBRdS46IDAuMDAwICAgMXN0IFF1LjoyMC4wMCAgXG4gTWVkaWFuIDoxNC4yMCAgIE1lZGlhbiA6MjAuNzAgICBNZWRpYW4gOiAwLjAwMCAgIE1lZGlhbiA6IDAuMDAwICAgTWVkaWFuIDoyNi4wMCAgXG4gTWVhbiAgIDoxNC4zNyAgIE1lYW4gICA6MjAuNjcgICBNZWFuICAgOiAzLjM5OCAgIE1lYW4gICA6IDMuMzk4ICAgTWVhbiAgIDoyMy45NCAgXG4gM3JkIFF1LjoxNi43MCAgIDNyZCBRdS46MjIuNjAgICAzcmQgUXUuOiAxLjgwMCAgIDNyZCBRdS46IDEuODAwICAgM3JkIFF1LjozMC4wMCAgXG4gTWF4LiAgIDoyMi45MCAgIE1heC4gICA6MjkuMTAgICBNYXguICAgOjc5LjAwMCAgIE1heC4gICA6NzkuMDAwICAgTWF4LiAgIDozNi4wMCAgXG4gTkEncyAgIDoxNSAgICAgIE5BJ3MgICA6MTUgICAgICBOQSdzICAgOjEwICAgICAgIE5BJ3MgICA6MTAgICAgICAgTkEncyAgIDo0NjUgICAgXG4gICBXaW5kLnNwZWVkICAgICAgICAgUi4xZCAgICAgICAgICAgIFIuMmRtICAgICAgICAgICAgUi4yZHcgICAgICAgICAgICAgUi4zZG0gICAgICAgIFxuIE1pbi4gICA6MzAuMDAgICBNaW4uICAgOiAwLjAwMCAgIE1pbi4gICA6IDAuMDAwICAgTWluLiAgIDogMC4wMDAwICAgTWluLiAgIDogMC4wMDAwICBcbiAxc3QgUXUuOjM1LjAwICAgMXN0IFF1LjogMC4wMDAgICAxc3QgUXUuOiAwLjAwMCAgIDFzdCBRdS46IDAuMDAwMCAgIDFzdCBRdS46IDAuMDAwMCAgXG4gTWVkaWFuIDozOS4wMCAgIE1lZGlhbiA6IDAuMDAwICAgTWVkaWFuIDogMC42MDAgICBNZWRpYW4gOiAwLjMzMzMgICBNZWRpYW4gOiAwLjc2NjcgIFxuIE1lYW4gICA6NDEuNzkgICBNZWFuICAgOiAzLjQwMiAgIE1lYW4gICA6IDYuODIyICAgTWVhbiAgIDogMy40MDIxICAgTWVhbiAgIDogMy40NTU4ICBcbiAzcmQgUXUuOjQ2LjAwICAgM3JkIFF1LjogMS44MDAgICAzcmQgUXUuOiA3LjQwMCAgIDNyZCBRdS46IDMuNjE2NyAgIDNyZCBRdS46IDQuNDAwMCAgXG4gTWF4LiAgIDo4MC4wMCAgIE1heC4gICA6NzkuMDAwICAgTWF4LiAgIDo4MS4wMDAgICBNYXguICAgOjUyLjg2NjcgICBNYXguICAgOjM4LjA2NjcgIFxuIE5BJ3MgICA6NDY1ICAgICBOQSdzICAgOjEwICAgICAgIE5BJ3MgICA6MjAgICAgICAgTkEncyAgIDoyMCAgICAgICAgTkEncyAgIDozMCAgICAgICBcbiAgICAgUi4zZHcgICAgICAgICAgICAgIFQuMWQgICAgICAgICAgICBULjJkICAgICAgICAgICAgVC4zZCAgICAgICBkaXNjaGFyZ2Uub3R0ICAgIFxuIE1pbi4gICA6IDAuMDAwMCAgIE1pbi4gICA6MTMuODAgICBNaW4uICAgOjEzLjg1ICAgTWluLiAgIDoxNC41MyAgIE1pbi4gICA6ICA1Ny43MSAgXG4gMXN0IFF1LjogMC4wMDAwICAgMXN0IFF1LjoxOC42MCAgIDFzdCBRdS46MTguODUgICAxc3QgUXUuOjE5LjA3ICAgMXN0IFF1LjogNTMyLjc1ICBcbiBNZWRpYW4gOiAwLjc2NjcgICBNZWRpYW4gOjIwLjcwICAgTWVkaWFuIDoyMC42MCAgIE1lZGlhbiA6MjAuNTcgICBNZWRpYW4gOiA3MDUuNTAgIFxuIE1lYW4gICA6IDMuNDMxNiAgIE1lYW4gICA6MjAuNjQgICBNZWFuICAgOjIwLjY1ICAgTWVhbiAgIDoyMC42NSAgIE1lYW4gICA6IDc1Ni41NiAgXG4gM3JkIFF1LjogNC4zMzMzICAgM3JkIFF1LjoyMi42MCAgIDNyZCBRdS46MjIuMzEgICAzcmQgUXUuOjIyLjMwICAgM3JkIFF1LjogOTk3LjUwICBcbiBNYXguICAgOjQxLjEzMzMgICBNYXguICAgOjI5LjEwICAgTWF4LiAgIDoyOC44NSAgIE1heC4gICA6MjguMjcgICBNYXguICAgOjIyMzAuMDAgIFxuIE5BJ3MgICA6MzAgICAgICAgIE5BJ3MgICA6MTUgICAgICBOQSdzICAgOjIwICAgICAgTkEncyAgIDoyNSAgICAgICAgICAgICAgICAgICAgICAgXG4gZGlzY2hhcmdlLnJpZCAgICBcbiBNaW4uICAgOiAgMi41OTEgIFxuIDFzdCBRdS46ICA1LjA5OCAgXG4gTWVkaWFuIDogIDkuMDc1ICBcbiBNZWFuICAgOiAyMy4zNjcgIFxuIDNyZCBRdS46IDI4LjAyNSAgXG4gTWF4LiAgIDoyNTAuMDAwICBcbiAgICAgICAgICAgICAgICAgIFxuIn0= -->
+<pre><code>      date                   location       count             status         julian    
+ Min.   :2014-06-20   Britannia  :404   Min.   :   9.192   Swim  :1658   171    :  30  
+ 1st Qu.:2015-07-31   Mooneys    :404   1st Qu.:  18.882   E.coli: 207   172    :  30  
+ Median :2017-06-30   PetrieEast :404   Median :  35.019   Rain  : 112   173    :  30  
+ Mean   :2017-03-10   PetrieRiver:404   Mean   :  81.269   Closed:  43   174    :  30  
+ 3rd Qu.:2018-07-28   Westboro   :404   3rd Qu.:  72.594                 175    :  30  
+ Max.   :2019-08-25                     Max.   :1000.000                 176    :  30  
+                                        NA&#39;s   :40                       (Other):1840  
+      week     month     year       count.prev         count.next            Tmax      
+ 26     :210   6:405   2014:290   Min.   :   9.192   Min.   :   9.192   Min.   :15.70  
+ 27     :210   7:930   2015:290   1st Qu.:  18.882   1st Qu.:  18.882   1st Qu.:24.40  
+ 28     :210   8:685   2016:360   Median :  35.000   Median :  35.195   Median :27.10  
+ 29     :210           2017:360   Mean   :  81.721   Mean   :  81.854   Mean   :26.92  
+ 30     :210           2018:360   3rd Qu.:  72.594   3rd Qu.:  72.995   3rd Qu.:29.30  
+ 31     :210           2019:360   Max.   :1000.000   Max.   :1000.000   Max.   :36.00  
+ (Other):760                      NA&#39;s   :70         NA&#39;s   :66         NA&#39;s   :15     
+      Tmin           Tmean            Rain            Precip       Wind.direction 
+ Min.   : 5.90   Min.   :13.80   Min.   : 0.000   Min.   : 0.000   Min.   : 1.00  
+ 1st Qu.:12.00   1st Qu.:18.60   1st Qu.: 0.000   1st Qu.: 0.000   1st Qu.:20.00  
+ Median :14.20   Median :20.70   Median : 0.000   Median : 0.000   Median :26.00  
+ Mean   :14.37   Mean   :20.67   Mean   : 3.398   Mean   : 3.398   Mean   :23.94  
+ 3rd Qu.:16.70   3rd Qu.:22.60   3rd Qu.: 1.800   3rd Qu.: 1.800   3rd Qu.:30.00  
+ Max.   :22.90   Max.   :29.10   Max.   :79.000   Max.   :79.000   Max.   :36.00  
+ NA&#39;s   :15      NA&#39;s   :15      NA&#39;s   :10       NA&#39;s   :10       NA&#39;s   :465    
+   Wind.speed         R.1d            R.2dm            R.2dw             R.3dm        
+ Min.   :30.00   Min.   : 0.000   Min.   : 0.000   Min.   : 0.0000   Min.   : 0.0000  
+ 1st Qu.:35.00   1st Qu.: 0.000   1st Qu.: 0.000   1st Qu.: 0.0000   1st Qu.: 0.0000  
+ Median :39.00   Median : 0.000   Median : 0.600   Median : 0.3333   Median : 0.7667  
+ Mean   :41.79   Mean   : 3.402   Mean   : 6.822   Mean   : 3.4021   Mean   : 3.4558  
+ 3rd Qu.:46.00   3rd Qu.: 1.800   3rd Qu.: 7.400   3rd Qu.: 3.6167   3rd Qu.: 4.4000  
+ Max.   :80.00   Max.   :79.000   Max.   :81.000   Max.   :52.8667   Max.   :38.0667  
+ NA&#39;s   :465     NA&#39;s   :10       NA&#39;s   :20       NA&#39;s   :20        NA&#39;s   :30       
+     R.3dw              T.1d            T.2d            T.3d       discharge.ott    
+ Min.   : 0.0000   Min.   :13.80   Min.   :13.85   Min.   :14.53   Min.   :  57.71  
+ 1st Qu.: 0.0000   1st Qu.:18.60   1st Qu.:18.85   1st Qu.:19.07   1st Qu.: 532.75  
+ Median : 0.7667   Median :20.70   Median :20.60   Median :20.57   Median : 705.50  
+ Mean   : 3.4316   Mean   :20.64   Mean   :20.65   Mean   :20.65   Mean   : 756.56  
+ 3rd Qu.: 4.3333   3rd Qu.:22.60   3rd Qu.:22.31   3rd Qu.:22.30   3rd Qu.: 997.50  
+ Max.   :41.1333   Max.   :29.10   Max.   :28.85   Max.   :28.27   Max.   :2230.00  
+ NA&#39;s   :30        NA&#39;s   :15      NA&#39;s   :20      NA&#39;s   :25                       
+ discharge.rid    
+ Min.   :  2.591  
+ 1st Qu.:  5.098  
+ Median :  9.075  
+ Mean   : 23.367  
+ 3rd Qu.: 28.025  
+ Max.   :250.000  
+                  </code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxucm0uYWxsLmJ1dChrZWVwPWMoJ2JlYWNoZXMnLCd3ZWF0aGVyJywgJ3JpdmVycycpKVxuYGBgIn0= -->
+<pre class="r"><code>rm.all.but(keep=c(&#39;beaches&#39;,&#39;weather&#39;, &#39;rivers&#39;))</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+<ul>
+<li><em>Notes</em>
+<ul>
+<li>nearly 1/4 of wind observations are missing… why is that?</li>
+<li>check how many NA’s in the original dataset after filtering, 722 &gt; 465 in beaches…</li>
+<li>maybe they are 0’s? think about turning NA into own factor &amp; bin others.</li>
+</ul></li>
+</ul>
+</div>
+</div>
+<div id="save-everything-for-analysis" class="section level3">
+<h3>Save everything for analysis</h3>
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuc2F2ZVJEUyhiZWFjaGVzLCBmaWxlID0gJ2RhdGEvYmVhY2hlcy50aWR5LlJEUycpXG5zYXZlUkRTKHdlYXRoZXIsIGZpbGUgPSAnZGF0YS93ZWF0aGVyLnRpZHkuUkRTJylcbnNhdmVSRFMocml2ZXJzLCBmaWxlPSAnZGF0YS9yaXZlcnMudGlkeS5SRFMnKVxuYGBgIn0= -->
+<pre class="r"><code>saveRDS(beaches, file = &#39;data/beaches.tidy.RDS&#39;)
+saveRDS(weather, file = &#39;data/weather.tidy.RDS&#39;)
+saveRDS(rivers, file= &#39;data/rivers.tidy.RDS&#39;)</code></pre>
 <!-- rnb-source-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
 <!-- rnb-text-end -->
 </div>
-</div>
-</div>
 
-<div id="rmd-source-code">LS0tCnRpdGxlOiAiT3R0YXdhQmVhY2hlczogZG93bmxvYWRpbmcgaGlzdG9yaWNhbCBkYXRhIgojIGF1dGhvcjogIkpBIE1vZ2dyaWRnZSIKIyBkYXRlOiAiSnVuZSAxLCAyMDIwIgpvdXRwdXQ6CiAgaHRtbF9kb2N1bWVudDoKICAgIHRvYzogeWVzCiAgICB0b2NfZmxvYXQ6IHllcwogICAgdG9jX2RlcHRoOiA1CiAgICBudW1iZXJfc2VjdGlvbnM6IG5vCiAgaHRtbF9ub3RlYm9vazoKICAgIHRvYzogeWVzCiAgICB0b2NfZGVwdGg6ICc0JwotLS0KCgoKYGBge3Igc2V0dXAsIGluY2x1ZGUgPSBGQUxTRSwgIHJlc3VsdHMgPSAnYXNpcyd9CmtuaXRyOjpvcHRzX2NodW5rJHNldCgKCWVjaG8gPSBUUlVFLAoJbWVzc2FnZSA9IEZBTFNFLAoJd2FybmluZyA9IEZBTFNFCikKbGlicmFyeShrbml0cikKIyBzZXQgdGhlIHdvcmtpbmcgZGlyZWN0b3J5IHRvIHRoZSBSIHByb2plY3QgZGlyZWN0b3J5CmtuaXRyOjpvcHRzX2tuaXQkc2V0KHJvb3QuZGlyID0gcnByb2pyb290OjpmaW5kX3JzdHVkaW9fcm9vdF9maWxlKCkpCmBgYAoKICA8YnI+ICAgIAogICAgClRoaXMgbm90ZWJvb2sgZXhwbGFpbnMgaG93IGhpc3RvcmljYWwgZGF0YSB3ZXJlIG9idGFpbmVkIHByb2dyYW1tYXRpY2FsbHkgd2l0aCBSLgpUaGVyZSBhcmUgdGhyZWUgZGF0YXNldHM6IGJlYWNoZXMsIHdlYXRoZXIsIGFuZCBoeWRyb21ldHJ5LiBUaGUgY29kZSBoZXJlIHNpbXBseSBvYnRhaW5zIGFuZCBzYXZlcyB0aGUgcmF3IGRhdGEgaW4gYW4gUiBkYXRhIHNlcmllcyAoUkRTKSBmb3JtYXQuCgpUaGUgc291cmNlcyBhcmUgaW5jbHVkZWQgd2l0aCB0aGUgY29kZSB1c2VkIGFuZCB0aGVyZSBhcmUgbm90ZXMgYWJvdXQgc3RhdGlvbiBudW1iZXJzIGFuZCBzbyBmb3J0aC4gCgpGb3IgYW55IEVDIHdlYXRoZXIgZGF0YSwgdXNlIHRoaXMgZ3VpZGUgdG8gQVBJIGZvciBzb3VyY2luZyBkYXRhOgotIGh0dHBzOi8vZ2VvLndlYXRoZXIuZ2MuY2EvZ2VvbWV0L2ZlYXR1cmVzL2FwaT9mPWh0bWwgIAoKQVBJIGZvciBoeWRyb21ldHJpYyBkYXRhOgotIGh0dHBzOi8vc2NyYXAyYXBpLndlYi5hcHAvCgoKTGlicmFyaWVzIGZvciB0aGlzIG5vdGVib29rOgpgYGB7cn0KbGlicmFyeShrbml0cikKbGlicmFyeSh0aWR5dmVyc2UpCmxpYnJhcnkocmVhZHhsKQpsaWJyYXJ5KGh0dHIpCmxpYnJhcnkoanNvbmxpdGUpCmBgYAoKCiAKICA8aHI+ICAgIAogICAgCiMjIyBCZWFjaCBXYXRlciBTYW1wbGluZyAgCiAgICAgICAgCgojIyMjIFNvdXJjZSAgICAKCi0gW0xpbmsgdG8gT3R0YXdhIHB1YmxpYyBoZWFsdGggLyBiZWFjaCB3YXRlciBxdWFsaXR5IHJlc3VsdHNdKGh0dHBzOi8vd3d3Lm90dGF3YXB1YmxpY2hlYWx0aC5jYS9lbi9wdWJsaWMtaGVhbHRoLXNlcnZpY2VzL2JlYWNoLXdhdGVyLXF1YWxpdHktcmVzdWx0cy5hc3B4KQotIERpcmVjdCBkb3dubG9hZCBsaW5rIHRvIEV4Y2VsIGZpbGUgZm9yIGFsbCBoaXN0b3JpY2FsIGRhdGEgKDIwMTQtMjAxOSkgZnJvbSBPUEg6CiAgLSBbYmVhY2gtd2F0ZXItc2FtcGxpbmcyMDE5Lnhsc3hdKGh0dHBzOi8vd3d3LmFyY2dpcy5jb20vc2hhcmluZy9yZXN0L2NvbnRlbnQvaXRlbXMvMGJiYjI0ZDhhNTU5NDZiNWEzZTUwZmJjMjQ2MzFjZDIvZGF0YSkgICAgIAogICAKIyMjIyBQcm9jZXNzICAgCi0gR3JhYiBkYXRhIGZyb20gVVJMICAgIAotIFBhcnNlIC54bHN4IGZpbGUgd2l0aCA3IHNoZWV0cyAgICAKICAtIDJuZCBzaGVldCBpcyBDb25zdGFuY2UgYmF5LCBub3Qgb2YgaW50ZXJlc3QgICAgCi0gQ29uY2F0ZW5hdGUgc2hlZXRzIChpZS4gYWxsIHllYXJzKSBpbnRvIHNpbmdsZSBkYXRhZnJhbWUgICAgCi0gU2F2ZSAuUkRTIGZpbGUgZm9yIHRpZHlpbmcKCiAgCiMjIyMgQ29kZQoKMS4gR3JhYiBjc3YgZmlsZSBmcm9tIFVSTCAgICAKIApgYGB7ciBiZWFjaGVzIGRhdGEgZGwsIGVjaG89VFJVRSwgbWVzc2FnZT1GQUxTRSwgd2FybmluZz1GQUxTRSwgcmVzdWx0cz0naGlkZSd9CnVybDEgPC0gImh0dHBzOi8vd3d3LmFyY2dpcy5jb20vc2hhcmluZy9yZXN0L2NvbnRlbnQvaXRlbXMvMGJiYjI0ZDhhNTU5NDZiNWEzZTUwZmJjMjQ2MzFjZDIvZGF0YSIKR0VUKHVybDEsIHdyaXRlX2Rpc2sodGYgPC0gdGVtcGZpbGUoZmlsZWV4dCA9ICIueGxzeCIpKSkKYGBgCiAgCjIuIFBhcnNlIHNoZWV0cyAgICAKCmBgYHtyIGJlYWNoZXMgc2hlZXRzLCBlY2hvPVRSVUUsIG1lc3NhZ2U9RkFMU0UsIHdhcm5pbmc9RkFMU0V9CnNoZWV0cyA8LSB0ZiAlPiUKICAgZXhjZWxfc2hlZXRzKCkgJT4lICAgICAgICAgICMgcGFyc2VzIHhsc3ggZmlsZQogICBzZXRfbmFtZXMoKSAlPiUgICAgICAgICAgICAgIyBnZXQgdGliYmxlIHJvdyBuYW1lcyBmcm9tIHNoZWV0IG5hbWVzCiAgIG1hcChyZWFkX2V4Y2VsLCBwYXRoID0gdGYpICAjIG1hcCBzaGVldCBkYXRhIGludG8gdGliYmxlCgpzdW1tYXJ5KHNoZWV0cykKYGBgCgoKMy4gVHVybiB4bHN4IHNoZWV0cyBpbnRvIGRhdGFmcmFtZSwgc2tpcCAybmQgc2hlZXQuIFNhdmUgYXMgYGJlYWNoZXMucmF3LlJEU2AgZmlsZS4KICAtIHJlbmFtZWQgY29sdW1ucyBsb2NhdGlvbi5DIGZvciBjb3VudHMgLlMgZm9yIHN0YXR1c2VzCgpgYGB7ciBtZXNzYWdlPUZBTFNFLCB3YXJuaW5nPUZBTFNFLCBwYWdlZC5wcmludD1UUlVFfQojIHJlbmFtZSBjb2x1bW5zIHRvIHNvbWV0aGluZyByZWFkYWJsZQpuYW1lcyA8LSBjKCdEYXRlJywKICAgICAgICAgICAnQnJpdGFubmlhLkMnLCdCcml0YW5uaWEuUycsCiAgICAgICAgICAgJ1dlc3Rib3JvLkMnLCAnV2VzdGJvcm8uUycsCiAgICAgICAgICAgIk1vb25leXMuQyIsICJNb29uZXlzLlMiLAogICAgICAgICAgICJQZXRyaWVFYXN0LkMiLCAiUGV0cmllRWFzdC5TIiwKICAgICAgICAgICAiUGV0cmllUml2ZXIuQyIsIlBldHJpZVJpdmVyLlMiKQoKIyBpbml0IGRmIHdpdGggMXN0IHNoZWV0CmJlYWNoZXMgPC0gYXMuZGF0YS5mcmFtZShzaGVldHNbMV0pCgojcmVuYW1lIGNvbHMKY29sbmFtZXMoYmVhY2hlcykgPC0gbmFtZXMKCiMgbG9vcCBvdmVyIHNoZWV0cyBhbmQgY29uY2F0ZW5hdGUKZm9yIChzaGVldCBpbiBzaGVldHNbLWMoMSwyKV0peyAgICAgIyBkcm9wIHNlY29uZCBzaGVldCBieSBzdGFydGluZyBsb29wIEAgM3JkCiAgYiA8LSAgYXMuZGF0YS5mcmFtZShzaGVldCkKICBjb2xuYW1lcyhiKSA8LSBuYW1lcyAgICAgICAgICAgICAgIyByZW5hbWUgY29scyAKICBiZWFjaGVzIDwtIHJiaW5kKGJlYWNoZXMsIGIpICAgICAgIyBjb25jYXRlbmF0ZSByb3dzCn0gCnN1bW1hcnkoYmVhY2hlcykKc2F2ZVJEUyhiZWFjaGVzLCJkYXRhL2JlYWNoZXMucmF3LlJEUyIpCmBgYCAgCiAgCiAKICA8YnI+CiAgCiAgPGhyPgogIAogIDxicj4KICAKICAKICAKICAKIyMjIFdlYXRoZXIgZGF0YQogIAoKIyMjIyBTb3VyY2UKCi0gRW52aXJvbm1lbnQgQ2FuYWRhIGRhdGEgZnJvbSBPdHRhd2EgSW50bCBBaXJwb3J0IGlkIyA0OTU2OCAoY2xpbWF0ZS53ZWF0aGVyLmdjLmNhKQogLSAgZXhhbXBsZSBbMjAxNF0oaHR0cHM6Ly9jbGltYXRlLndlYXRoZXIuZ2MuY2EvY2xpbWF0ZV9kYXRhL2RhaWx5X2RhdGFfZS5odG1sP2hseVJhbmdlPTIwMTEtMTItMTQlN0MyMDIwLTA0LTIyJmRseVJhbmdlPTIwMTEtMTItMTUlN0MyMDIwLTA0LTIyJm1seVJhbmdlPSU3QyZTdGF0aW9uSUQ9NDk1NjgmUHJvdj1PTiZ1cmxFeHRlbnNpb249X2UuaHRtbCZzZWFyY2hUeXBlPXN0bk5hbWUmb3B0TGltaXQ9eWVhclJhbmdlJlN0YXJ0WWVhcj0xODQwJkVuZFllYXI9MjAyMCZzZWxSb3dQZXJQYWdlPTI1JkxpbmU9MTQmc2VhcmNoTWV0aG9kPWNvbnRhaW5zJnR4dFN0YXRpb25OYW1lPW90dGF3YSZ0aW1lZnJhbWU9MiZEYXk9MjImWWVhcj0yMDE0Jk1vbnRoPTEjKSAgICAKICAgICAKCiMjIyMgUHJvY2VzcwogICAKLSBJdGVyYXRpbmcgb3ZlciB5ZWFycyAyMDE0LTIwMjAsIGdyYWIgZGF0YSBmcm9tIFVSTCBpbnRvIHRpYmJsZTogICAKCmAgXGh0dHBzOi8vY2xpbWF0ZS53ZWF0aGVyLmdjLmNhL2NsaW1hdGVfZGF0YS9idWxrX2RhdGFfZS5odG1sP2Zvcm1hdD1jc3Ymc3RhdGlvbklEPSJzdGF0aW9uIiZZZWFyPSJ5ZWFyIiZNb250aD0xMiZEYXk9MTQmdGltZWZyYW1lPTImc3VibWl0PURvd25sb2FkK0RhdGEgYCAgIAoKICAqIENyZWF0ZSBVUkxzIHN0YXJ0aW5nIHdpdGggdGhpczogICBgImh0dHBzOi8vY2xpbWF0ZS53ZWF0aGVyLmdjLmNhL2NsaW1hdGVfZGF0YS9idWxrX2RhdGFfZS5odG1sP2Zvcm1hdD1jc3Ymc3RhdGlvbklEPSJgICAKICAqIGVudGVyIHRoZSBzdGF0aW9uIElEIG5leHQ6IGA0OTU2OGAgIAogICogdGhlbiBwYXN0ZSBgJlllYXI9YCBhbmQgZW50ZXIgdGhlIHllYXIgIAogICogcGFzdGUgdGhlIHJlc3Qgb2YgdGhlIHN0cmluZyAgCiAgICAqIGAmTW9udGg9MTImRGF5PTE0JnRpbWVmcmFtZT0yJnN1Ym1pdD1Eb3dubG9hZCtEYXRhYCAgCiAgKiBOb3RlOiBgTW9udGg9YCBhbmQgYERheT1gIHNlZW0gdG8gbm90IG1hdHRlciwgY2hhbmdpbmcgJ3llYXInIGdldHMgZW50aXJlIHllYXIgb2YgZGFpbHkgb2JzLiAgCiAgKiBDb3VsZCBnZXQgaG91cmx5IGRhdGEgbGlrZSB0aGlzIGluIHRoZSBmdXR1cmUgZm9yIHByZWRpY3Rpb25zIGJ5IGNoYW5naW5nIGB0aW1lZnJhbWVgICAKICAKLSBDcmVhdGUgZGF0YWZyYW1lICAgIAotIFNhdmUgZGF0YWZyYW1lIHRvIHdlYXRoZXIucmF3LlJEUyAgICAKCiMjIyMgQ29kZSAgCgoxLiBMb29wIG92ZXIgeWVhcnMgMjAxNC0yMDIwLCBncmFiIGRhdGEgJiBzdG9yZSBpbiB0aWJibGUgb2YgZGF0YWZyYW1lcy4KYGBge3IgbWVzc2FnZT1GQUxTRSwgd2FybmluZz1GQUxTRX0KIyBVUkwgcGllY2VzIGZvciBPdHRhd2EgQWlycG9ydCAjNDk1NjgKcHJlZml4IDwtICAiaHR0cHM6Ly9jbGltYXRlLndlYXRoZXIuZ2MuY2EvY2xpbWF0ZV9kYXRhL2J1bGtfZGF0YV9lLmh0bWw/Zm9ybWF0PWNzdiZzdGF0aW9uSUQ9IgpzdGF0aW9uLmlkIDwtIGFzLmNoYXJhY3Rlcig0OTU2OCkKcHJlZml4IDwtIHBhc3RlKHByZWZpeCwgc3RhdGlvbi5pZCwiJlllYXI9Iiwgc2VwPScnKQpzdWZmaXggPC0gICImTW9udGg9MTImRGF5PTE0JnRpbWVmcmFtZT0yJnN1Ym1pdD1Eb3dubG9hZCtEYXRhIgoKIyBncmFiIGRhdGEKd2VhdGhlcnMgPC0gbGlzdCgpCnllYXJzIDwtIGMoc2VxKDIwMTQsMjAyMCkpCmZvciAoeCBpbiBjKHNlcShsZW5ndGgoeWVhcnMpKSkpewogIHllYXIgPC0geWVhcnNbeF0KICBhZGRyZXNzIDwtIHBhc3RlKHByZWZpeCwgeWVhciwgc3VmZml4LCBzZXA9JycpCiAgbmFtZSA8LSBwYXN0ZSgnc3RhdGlvbicsc3RhdGlvbi5pZCwgeWVhcixzZXA9J18nKQogIEdFVChhZGRyZXNzLCB3cml0ZV9kaXNrKHRmIDwtIHRlbXBmaWxlKGZpbGVleHQgPSAiLmNzdiIpKSkKICBkZiA8LSByZWFkX2Nzdih0ZikKICB3ZWF0aGVyc1tbeF1dIDwtIGRmCn0KbmFtZXMod2VhdGhlcnMpIDwtIGFzLmNoYXJhY3Rlcih5ZWFycykKc3VtbWFyeSh3ZWF0aGVycykKCmBgYAogICAKMi4gVHVybiBgd2VhdGhlcnNgIHNoZWV0cyBpbnRvIGRhdGFmcmFtZQogIApgYGB7cn0KIyBjb25jYXRlbmF0ZSBkYXRhZnJhbWVzCndlYXRoZXIgPC0gYXMuZGF0YS5mcmFtZSh3ZWF0aGVyc1sxXSkKbmFtZXMgPC0gbmFtZXMod2VhdGhlcikKZm9yICh5ZWFyIGluIHdlYXRoZXJzWy1jKDEpXSl7CiAgeCA8LSAgYXMuZGF0YS5mcmFtZSh5ZWFyKQogIG5hbWVzKHgpIDwtIG5hbWVzCiAgd2VhdGhlciA8LSByYmluZCh3ZWF0aGVyLCB4KQp9IApgYGAKICAzLiBTYXZlIHJhdyB3ZWF0aGVyIGRhdGEgaW4gZmlsZSBgd2VhdGhlci5yYXcuUkRTYApgYGB7cn0Kc2F2ZVJEUyhiZWFjaGVzLCJkYXRhL3dlYXRoZXIucmF3LlJEUyIpCmBgYAogIAogIDxicj4KICAKICA8aHI+CiAgCiAgPGJyPgogIAogIAogIAogIAogIAogIAogIAogIAogIAogIAojIyMgSHlkcm9tZXRyeSBkYXRhCgojIyMjIFNvdXJjZQotIFN0YXRpb25zOiBnbyB0byBsaW5rLCBjbGljayBkb3dubG9hZCwgc2VsZWN0ICJKdWxpYW4gRGF0ZS1kYXRhIGZvcm1hdCAoQ1NWIHdpdGggbWlzc2luZyBkYXlzKSAgICAgCiAgIC0gT3R0YXdhIEAgQnJpdGFubmlhOiAwMktGMDA1ICAgIAogICAgIC0gW0hpc3RvcmljYWwgZGF0YSBsaW5rXShodHRwczovL3dhdGVyb2ZmaWNlLmVjLmdjLmNhL3NlYXJjaC9oaXN0b3JpY2FsX3Jlc3VsdHNfZS5odG1sP3NlYXJjaF90eXBlPXN0YXRpb25fbnVtYmVyJnN0YXRpb25fbnVtYmVyPTAyS0YwMDUmc3RhcnRfeWVhcj0xODUwJmVuZF95ZWFyPTIwMjAmbWluaW11bV95ZWFycz0mZ3Jvc3NfZHJhaW5hZ2Vfb3BlcmF0b3I9JTNFJmdyb3NzX2RyYWluYWdlX2FyZWE9JmVmZmVjdGl2ZV9kcmFpbmFnZV9vcGVyYXRvcj0lM0UmZWZmZWN0aXZlX2RyYWluYWdlX2FyZWE9KSAgICAKICAgICAtIFtSZWFsLXRpbWUgbGlua10oaHR0cHM6Ly93YXRlcm9mZmljZS5lYy5nYy5jYS9zZWFyY2gvcmVhbF90aW1lX3Jlc3VsdHNfZS5odG1sP3NlYXJjaF90eXBlPXN0YXRpb25fbnVtYmVyJnN0YXRpb25fbnVtYmVyPTAyS0YwMDUmZ3Jvc3NfZHJhaW5hZ2Vfb3BlcmF0b3I9JTNFJmdyb3NzX2RyYWluYWdlX2FyZWE9JmVmZmVjdGl2ZV9kcmFpbmFnZV9vcGVyYXRvcj0lM0UmZWZmZWN0aXZlX2RyYWluYWdlX2FyZWE9KSAgICAgICAKICAgICAKICAgLSBSaWRlYXUgQCBPdHRhd2E6IDAyTEEwMDQgICAgICAKICAgICAtIFtIaXN0b3JpY2FsIGRhdGEgbGlua10oaHR0cHM6Ly93YXRlcm9mZmljZS5lYy5nYy5jYS9zZWFyY2gvaGlzdG9yaWNhbF9yZXN1bHRzX2UuaHRtbD9zZWFyY2hfdHlwZT1zdGF0aW9uX251bWJlciZzdGF0aW9uX251bWJlcj0wMkxBMDA0JnN0YXJ0X3llYXI9MTg1MCZlbmRfeWVhcj0yMDIwJm1pbmltdW1feWVhcnM9Jmdyb3NzX2RyYWluYWdlX29wZXJhdG9yPSUzRSZncm9zc19kcmFpbmFnZV9hcmVhPSZlZmZlY3RpdmVfZHJhaW5hZ2Vfb3BlcmF0b3I9JTNFJmVmZmVjdGl2ZV9kcmFpbmFnZV9hcmVhPSkgICAgCiAgICAgLSBbUmVhbC10aW1lIGRhdGEgbGlua10oaHR0cHM6Ly93YXRlcm9mZmljZS5lYy5nYy5jYS9zZWFyY2gvcmVhbF90aW1lX3Jlc3VsdHNfZS5odG1sP3NlYXJjaF90eXBlPXN0YXRpb25fbnVtYmVyJnN0YXRpb25fbnVtYmVyPTAyTEEwMDQmZ3Jvc3NfZHJhaW5hZ2Vfb3BlcmF0b3I9JTNFJmdyb3NzX2RyYWluYWdlX2FyZWE9JmVmZmVjdGl2ZV9kcmFpbmFnZV9vcGVyYXRvcj0lM0UmZWZmZWN0aXZlX2RyYWluYWdlX2FyZWE9KSAgICAgCiAgICAKICAgIAotIGV4YW1wbGUgVVJMOiBgaHR0cHM6Ly93YXRlcm9mZmljZS5lYy5nYy5jYS9kb3dubG9hZC9yZXBvcnRfZS5odG1sP2R0PWRkJmRmPWpkZiZtZD0xJmV4dD1jc3ZgCiAgZG9lc24ndCB3b3JrIGJlY2F1c2UgZG93bmxvYWRzIGFyZSBiYXNlZCBvbiBicm93c2luZyBzZXNzaW9uLi4uCiAgCgoqKk5vdGUqKgpuZWVkIHRvIGNvbWJpbmUgaGlzdG9yaWMgYW5kIHJlY2VudCBkYXRhc2V0cyAoaGlzdG9yaWMgaXMgbWlzc2luZyAyMDE5IHNlYXNvbikKCiMjIyMgUHJvY2VzcwoxLiBHZXQgZGF0YQoyLiBTYXZlIGRhdGEKCiMjIyMgQ29kZQoKIyMjIyMgUmVhbCB0aW1lIGRhdGEgZm9yIG1vZGVscwoKYGBge3IgZXZhbD1GQUxTRX0KIyBmcmVxIDwtIGRhaWx5CgpoeWRyby5vdHQucnQgPC0gcmVhZF9jc3YoImh0dHBzOi8vZGQud2VhdGhlci5nYy5jYS9oeWRyb21ldHJpYy9jc3YvT04vZGFpbHkvT05fMDJLRjAwNV9kYWlseV9oeWRyb21ldHJpYy5jc3YiKQpoeWRyby5vdHQucnQgPC0gc2VsZWN0KGh5ZHJvLm90dC5ydCwgYygyLDMsNykpCnNhdmVSRFMoaHlkcm8ub3R0LnJ0LCAiZGF0YS9oeWRyby5vdHQucnQuUkRTIikKCmh5ZHJvLnJpZC5ydCA8LSByZWFkX2NzdigiaHR0cHM6Ly9kZC53ZWF0aGVyLmdjLmNhL2h5ZHJvbWV0cmljL2Nzdi9PTi9kYWlseS9PTl8wMkxBMDA0X2RhaWx5X2h5ZHJvbWV0cmljLmNzdiIpCmh5ZHJvLnJpZC5ydCA8LSBzZWxlY3QoaHlkcm8ucmlkLnJ0LCBjKDIsMyw3KSkKc2F2ZVJEUyhoeWRyby5yaWQucnQsICJkYXRhL2h5ZHJvLnJpZC5ydC5SRFMiKQoKIyBmcmVxIDwtIGhvdXJseQoKaHlkcm8ub3R0LmhvdXIgPC0gcmVhZF9jc3YoImh0dHBzOi8vZGQud2VhdGhlci5nYy5jYS9oeWRyb21ldHJpYy9jc3YvT04vaG91cmx5L09OXzAyS0YwMDVfaG91cmx5X2h5ZHJvbWV0cmljLmNzdiIpCmh5ZHJvLm90dC5ob3VyIDwtIHNlbGVjdChoeWRyby5vdHQuaG91ciwgYygyLDMsNykpCiMgc2F2ZVJEUyhoeWRyby5vdHQuaG91ciwgImRhdGEvaHlkcm8ub3R0LmhvdXJseS5SRFMiKQoKaHlkcm8ucmlkLmhvdXIgPC0gcmVhZF9jc3YoImh0dHBzOi8vZGQud2VhdGhlci5nYy5jYS9oeWRyb21ldHJpYy9jc3YvT04vaG91cmx5L09OXzAyTEEwMDRfaG91cmx5X2h5ZHJvbWV0cmljLmNzdiIpCmh5ZHJvLnJpZC5ob3VyIDwtIHNlbGVjdChoeWRyby5yaWQuaG91ciwgYygyLDMsNykpCiMgc2F2ZVJEUyhoeWRyby5yaWQuaG91ciwgImRhdGEvaHlkcm8ucmlkLmhvdXJseS5SRFMiKQoKIyB0byBjaGVjayBkYXRldGltZSByYW5nZSBvZiBkYXRhIGFuZCBhZ2Ugb2YgbGFzdCBvYnNlcnZhdGlvbgpzdW1tYXJ5KGh5ZHJvLm90dC5ydCkKaGVhZChoeWRyby5vdHQucnQpCnRhaWwoaHlkcm8ub3R0LnJ0KQoKc3VtbWFyeShoeWRyby5vdHQuaG91cikKaGVhZChoeWRyby5vdHQuaG91cikKdGFpbChoeWRyby5vdHQuaG91cikKCnN1bW1hcnkoaHlkcm8ucmlkLnJ0KQpoZWFkKGh5ZHJvLnJpZC5ydCkKdGFpbChoeWRyby5yaWQucnQpCgpzdW1tYXJ5KGh5ZHJvLnJpZC5ob3VyKQpoZWFkKGh5ZHJvLnJpZC5ob3VyKQp0YWlsKGh5ZHJvLnJpZC5ob3VyKQpgYGAKCgoKIyMjIyMgSGlzdG9yaWMgZGF0YQoKYGBge3J9CiMganVzdCBsb2FkIGNzdiBhbmQgY2FsbCBpdCBhIGRheTsgY2FuJ3QgZmluZCBhIGRlY2VudCBBUEkgZm9yIHRoaXMuCgpyaXZlci5vdHRhd2EgPC0gcmVhZF9jc3YoImRhdGEvc291cmNlL2JyaXRhbm5pYV9yaXZlcl9mbG93LmNzdiIpCnJpdmVyLnJpZGVhdSA8LSByZWFkX2NzdigiZGF0YS9zb3VyY2UvcmlkZWF1X3JpdmVyX2Zsb3cuY3N2IikKc2F2ZVJEUyhyaXZlci5vdHRhd2EsICJkYXRhL3JpdmVyLm90dGF3YS5SRFMiKQpzYXZlUkRTKHJpdmVyLnJpZGVhdSwgImRhdGEvcml2ZXIucmlkZWF1LlJEUyIpCmBgYAogIAogIA==</div>
+<div id="rmd-source-code">LS0tCnRpdGxlOiAiT3R0YXdhQmVhY2hlczogdGlkeWluZyIKYXV0aG9yOiAiSkEgTW9nZ3JpZGdlIgpkYXRlOiAiMjAyMC0wNi0wNiIKb3V0cHV0OgogIGh0bWxfZG9jdW1lbnQ6CiAgICB0b2M6IHllcwogICAgdG9jX2Zsb2F0OiB5ZXMKICAgIHRvY19kZXB0aDogNQogICAgbnVtYmVyX3NlY3Rpb25zOiBubwogIGh0bWxfbm90ZWJvb2s6CiAgICB0b2M6IHllcwogICAgdG9jX2RlcHRoOiAnNCcKLS0tCgo8c3R5bGU+CmJvZHl7IC8qIE5vcm1hbCAgKi8KICAgICAgZm9udC1zaXplOiAxNXB4OwogIH0KPC9zdHlsZT4KCi0tLQoKCmBgYHtyIHNldHVwLCBpbmNsdWRlID0gRkFMU0UsICByZXN1bHRzID0gJ2FzaXMnfQprbml0cjo6b3B0c19jaHVuayRzZXQoCgllY2hvID0gVFJVRSwKCW1lc3NhZ2UgPSBGQUxTRSwKCXdhcm5pbmcgPSBGQUxTRQopCmxpYnJhcnkoa25pdHIpCiMgc2V0IHRoZSB3b3JraW5nIGRpcmVjdG9yeSB0byB0aGUgUiBwcm9qZWN0IGRpcmVjdG9yeQprbml0cjo6b3B0c19rbml0JHNldChyb290LmRpciA9IHJwcm9qcm9vdDo6ZmluZF9yc3R1ZGlvX3Jvb3RfZmlsZSgpKQpgYGAKCiAgPGJyPiAgICAKICAKVGhpcyBub3RlYm9vayBkZXRhaWxzIGFsbCB0aGUgc3RlcHMgdG8gY2xlYW4gdXAgdGhlIGRhdGEgYmVmb3JlIHN0YXJ0aW5nIGFuYWx5c2lzLgpXZSB3b24ndCByZW1vdmUgYW55IGRhdGEgcG9pbnRzIGF0IHRoaXMgc3RhZ2U7IHdlJ3JlIGp1c3QgZm9ybWF0dGluZyBldmVyeXRoaW5nIGFuZCByZW5hbWluZyB0aGluZ3MgdG8gbWFrZSBhbmFseXNpcyBlYXNpZXIuCgpXZSBoYXZlIHRvIHRpZHkgYW5kIHRlbXBvcmFsbHkgbGluayBvYnNlcnZhdGlvbnMgZnJvbSBiZWFjaGVzLCB3ZWF0aGVyIGFuZCByaXZlcnMuCgoKIyMjIEJlYWNoZXMgZGF0YQoKCmBgYHtyfQpsaWJyYXJ5KHRpZHl2ZXJzZSkKbGlicmFyeShsdWJyaWRhdGUpCmxpYnJhcnkoa2FibGVFeHRyYSkKbGlicmFyeSh2YXJoYW5kbGUpCmJlYWNoZXMucmF3IDwtIHJlYWRSRFMoImRhdGEvYmVhY2hlcy5yYXcuUkRTIikKYGBgCgojIyMjIDEuIFBpdm90IHRvIGxvbmctZm9ybSBhcyBzZXQgdmFyaWFibGUgY2xhc3NlcwogIAogIC0gRXh0cmFjdCBgY291bnRgIGluZm8KICAgIC0gY3JlYXRlIGxvbmcgZm9ybSB0YWJsZSB3aXRoIHJvd3M6IChkYXRlLCBsb2NhdGlvbiwgY291bnQpCiAgICAtIHNldCBjb3VudCB0byBudW1lcmljIHZhcmlhYmxlLCBsb2NhdGlvbiBpcyBmYWN0b3IKYGBge3J9CiMgcmVuYW1lICdjb3VudCcgY29sdW1ucyBieSBsb2NhdGlvbgpuYW1lcyA8LSBjKCdkYXRlJywnQnJpdGFubmlhJywnV2VzdGJvcm8nLCJNb29uZXlzIiwgIlBldHJpZUVhc3QiLCJQZXRyaWVSaXZlciIpCgojIEV4dHJhY3QgRS5jb2xpICdjb3VudCcgdmFyaWFibGUgCmVjb2xpIDwtIGJlYWNoZXMucmF3W2MoMSwyLDQsNiw4LDEwKV0KbmFtZXMoZWNvbGkpIDwtIG5hbWVzCiAKI2NyZWF0ZSBsb25nLWZvcm0gdGFibGUgYGVjb2xpYAplY29saSA8LSBlY29saSAlPiUKICBtdXRhdGVfYXQoJ1BldHJpZUVhc3QnLCBmdW5zKGFzLm51bWVyaWMpKSAlPiUKICBtdXRhdGVfYXQoJ1BldHJpZVJpdmVyJywgZnVucyhhcy5udW1lcmljKSkgJT4lCiAgcGl2b3RfbG9uZ2VyKG5hbWVzKGVjb2xpKVstMV0sIG5hbWVzX3RvID0gImxvY2F0aW9uIiwgdmFsdWVzX3RvID0gImNvdW50IikgJT4lCiAgbXV0YXRlKGxvY2F0aW9uID0gYXMuZmFjdG9yKGxvY2F0aW9uKSwKICAgICAgICAgY291bnQgPSBhcy5udW1lcmljKGNvdW50KSkgCnN1bW1hcnkoZWNvbGkpCmBgYAoKICAtIGV4dHJhY3QgYHN0YXR1c2AgaW5mbywgYXMgYWJvdmUKYGBge3J9CiMgRXh0cmFjdCBiZWFjaCAnc3RhdHVzJyB2YXJpYWJsZSB0byBsb25nLWZvcm0gdGFibGUKYnN0YXR1cyA8LSBiZWFjaGVzLnJhd1tjKDEsMyw1LDcsOSwxMSldCm5hbWVzKGJzdGF0dXMpIDwtIG5hbWVzCmJzdGF0dXMgPC0gYnN0YXR1cyAlPiUKICBwaXZvdF9sb25nZXIobmFtZXMoYnN0YXR1cylbLTFdLCBuYW1lc190byA9ICJsb2NhdGlvbiIsIHZhbHVlc190byA9ICJzdGF0dXMiKSAlPiUKICBtdXRhdGUoc3RhdHVzID0gdG9sb3dlcihzdGF0dXMpLAogICAgICAgICBzdGF0dXMgPSBzdHJfcmVwbGFjZV9hbGwoc3RhdHVzLCAnICcsICcnKSwKICAgICAgICAgc3RhdHVzID0gYXMuZmFjdG9yKHN0YXR1cyksCiAgICAgICAgIGxvY2F0aW9uID0gYXMuZmFjdG9yKGxvY2F0aW9uKSkKc3VtbWFyeShic3RhdHVzKQpgYGAKCgojIyMjIDIuIE1lcmdlIGBlLmNvbGlgIGFuZCBgc3RhdHVzYCBkYXRhZnJhbWVzCgotIG1lcmdlIGJ5IChkYXRlLCBsb2NhdGlvbikKLSBjcmVhdGUgc29tZSBjb252ZW5pZW5jZSB0aW1lcyB2YXJpYWJsZXMgYXMgZmFjdG9ycy4KLSBhZGQgaW4gc29tZSB0cmFpbGluZy9sZWFkaW5nIGNvdW50cyB0byBlYWNoIHJvdy4KCmBgYHtyfQpiZWFjaGVzIDwtICAgCiAgbWVyZ2UoZWNvbGksIGJzdGF0dXMsIGJ5ID0gYygnZGF0ZScsJ2xvY2F0aW9uJyksIGFsbD1UUlVFKSAlPiUKICBtdXRhdGUoanVsaWFuID0gYXMuZmFjdG9yKHlkYXkoZGF0ZSkpLAogICAgICAgICB3ZWVrID0gYXMuZmFjdG9yKHdlZWsoZGF0ZSkpLAogICAgICAgICBtb250aCA9IGFzLmZhY3Rvcihtb250aChkYXRlKSksCiAgICAgICAgIHllYXIgPSBhcy5mYWN0b3IoeWVhcihkYXRlKSksCiAgICAgICAgIGRhdGUgPSBkYXRlKGRhdGUpLCAjIGp1c3QgaW4gY2FzZSB0aGlzIGlzIGNhcGl0YWxpemVkIHNvbWV3aGVyZT8KICAgICAgICAgKSAlPiUKICBncm91cF9ieShsb2NhdGlvbiwgeWVhcikgJT4lCiAgbXV0YXRlKGNvdW50LnByZXYgPSBsYWcoY291bnQpLAogICAgICAgICBjb3VudC5uZXh0ID0gbGVhZChjb3VudCkpICU+JQogIHVuZ3JvdXAoKQpzdW1tYXJ5KGJlYWNoZXMpCmxldmVscyhiZWFjaGVzJHN0YXR1cykKYGBgCgogIAojIyMjIDMuIEZpeCBiZWFjaCBgc3RhdHVzYCBsYWJlbHMKICAKLSBuZWVkIHRvIHJlbW92ZSBhIGxvdCBvZiBkdXBsaWNhdGVkIGxhYmVscyAoaGFzIDE4LCBzaG91bGQgYmUgNCBvciBtYXliZSA1Pyk6Ci0gc3dpdGNoZWQgdG8gbG93ZXJjYXNlIGVhcmxpZXIgdG8gcmVtb3ZlIENhc2UvY2FzZSBkaWZmZXJlbmNlcwotIG1ha2luZyBzdXJlIG5vdCB0byBsb3NlIGFueSBpbmZvcm1hdGlvbjoKICAtICdjbG9zZWQnOiBpcyBvbmx5IFBldHJpZSBpc2wgaW4ganVuZSAyMDE5IChwcmUtc2Vhc29uKSAtPiBDbG9zZWQKICAtICdub3Qgb3Blbic6IGlzIG9ubHkgaW4gUGV0cmllIGlzbCBqdW5lIDIwMTcgKHByZS1zZWFzb24sIG5vIGNvdW50KSAtPiBDbG9zZWQKICAtICcwJzogaXMgb25seSB0aGUgbGFzdCBkYXkgYXQgYnJpdCwgbW9vbmV5cywgd3N0YnJvIGluIGF1ZyAyMDE5IChwb3N0LXNlYXNvbiwgaGFzIGNvdW50PykgLT4gQ2xvc2VkCiAgLSBPdGhlcnMgcmVmZXIgdG8gJ3JhaW4nIC0+IFJhaW4KICAtIE90aGVycyBhcmUgY2xvc2VkIGJlY2F1c2Ugb2YgRS5jb2xpIGNvdW50cyAtPiBFLmNvbGkKCmBgYHtyfQpwcmludCgiQWZ0ZXIgcmVtb3ZpbmcgYWxsIHNwYWNlcyBhbmQgY29udmVydGluZyB0byBsb3dlcmNhc2U6IikKc3VtbWFyeShiZWFjaGVzJHN0YXR1cykKbGV2ZWxzKGJlYWNoZXMkc3RhdHVzKSA8LSBsaXN0KAogIFN3aW0gPSBjKCdzd2ltJyksCiAgRS5jb2xpID0gYygnbnNhJywgJ25vc3dpbScpLAogIFJhaW4gPSBjKCduc2EtcmFpbicsICdub3N3aW1jc28vcmFpbicsICdub3N3aW0ocmFpbiknLCdub3N3aW0ocmFpbmZhbGwpJyksCiAgQ2xvc2VkID0gYygiY2xvc2VkIiwgJzAnLCAnbm90b3BlbicpCikKcHJpbnQoIkZpbmlzaGVkIGBzdGF0dXNgIGxldmVscyIpCnN1bW1hcnkoYmVhY2hlcyRzdGF0dXMpICAKYGBgCgojIyMjIDQuIENoZWNrIGBiZWFjaGVzYCBzdW1tYXJ5CiAgICAKYGBge3J9CnJtLmFsbC5idXQoa2VlcCA9ICdiZWFjaGVzJykKc3VtbWFyeShiZWFjaGVzKQpoZWFkKGJlYWNoZXMpCiMgc2F2ZVJEUyhiZWFjaGVzLCJkYXRhL2JlYWNoZXMudGlkeS5SRFMiKSAjIHN0aWxsIG5lZWRzIGVudmlybyBkYXRhCgpgYGAKCgo8YnI+Cgo8aHI+Cgo8YnI+CgoKCiMjIyBXZWF0aGVyIGRhdGEgCgoKIyMjIyAxLiBMb2FkIGB3ZWF0aGVyYCBhbmQgbG9vayBhdCB2YXJpYWJsZXMgaW4gZGYKCmBgYHtyfQp3ZWF0aGVyIDwtIHJlYWRSRFMoImRhdGEvd2VhdGhlci5yYXcuUkRTIikKbmFtZXMod2VhdGhlcikKYGBgCgojIyMjIDIuIFN1YnNldCBgd2VhdGhlcmAgdG8gdXNlZnVsIGNvbHVtbnMKLSBub3RoaW5nIHdpdGggZmxhZyBvciBkZWctZGF5cyBpcyB3b3J0aHdpbGUgKG1vc3RseSBmb3IgY2FsYyBoZWF0aW5nL0FDIGNvc3RzKQogIC0gYmFzaWNhbGx5IGxlZnQgd2l0aDogdGVtcHMsIHByZWNpcCwgd2luZCBndXN0ICsgZGlyZWN0aW9uLgogIApgYGB7cn0Kd2VhdGhlciA8LSB3ZWF0aGVyW2MoNSwxMCwxMiwxNCwyMCwyNCwyOCwzMCldCm5hbWVzKHdlYXRoZXIpIDwtIGMoImRhdGUiLCAiVG1heCIsICJUbWluIiwgIlRtZWFuIiwgIlJhaW4iLCAiUHJlY2lwIiwgIldpbmQuZGlyZWN0aW9uIiwKICAgICAgICAgICAgICAgICAgICJXaW5kLnNwZWVkIikKc3VtbWFyeSh3ZWF0aGVyKQpoZWFkKHdlYXRoZXIpCmBgYAoKIyMjIyAzLiBUaWR5IGFuZCBjcmVhdGUgbmV3IHZhcmlhYmxlcyAKCi0gTWFrZSBgV2luZC5zcGVlZGAgbnVtZXJpYwotIENyZWF0ZSB0cmFpbGluZyBhdmVyYWdlcyBhbmQgd2VpZ2h0ZWQgYXZlcmFnZXMgZm9yIHRlbXAgYW5kIHByZWNpcGl0YXRpb24KICAtIGRvIHRoaXMgYmVmb3JlIGpvaW5pbmcgbGluayB3ZWF0aGVyLWJlYWNoIG9ic2VydmF0aW9ucyB0byBtaW5pbWl6ZSBOYU4ncwogIAoKYGBge3J9CndlYXRoZXIgPC0gd2VhdGhlciAlPiUKICBkcGx5cjo6bXV0YXRlKFdpbmQuc3BlZWQgPSBhcy5udW1lcmljKFdpbmQuc3BlZWQpLAogICAgICAgICAgICAgICAgZGF0ZSA9IGRhdGUoZGF0ZSksCiAgICAgICAgICAgICAgICBSLjFkID0gbGFnKFJhaW4sMSksCiAgICAgICAgICAgICAgICBSLjJkbSA9IGxhZyhSYWluLCAxKSArIGxhZyhSYWluLDIpLAogICAgICAgICAgICAgICAgUi4yZHcgPSAoMipsYWcoUmFpbiwgMSkgKyBsYWcoUmFpbiwyKSkvMywKICAgICAgICAgICAgICAgIFIuM2RtID0gKGxhZyhSYWluLCAxKSArIGxhZyhSYWluLDIpICsgbGFnKFJhaW4sIDMpKS8zLAogICAgICAgICAgICAgICAgUi4zZHcgPSAoMypsYWcoUmFpbiwgMSkgKyAyKmxhZyhSYWluLCAyKSArIDEqbGFnKFJhaW4sIDMpKS82LAogICAgICAgICAgICAgICAgVC4xZCA9IGxhZyhUbWVhbiksCiAgICAgICAgICAgICAgICBULjJkID0gKGxhZyhUbWVhbikgKyBsYWcoVG1lYW4sMikpLzIsCiAgICAgICAgICAgICAgICBULjNkID0gKGxhZyhUbWVhbikgKyBsYWcoVG1lYW4sMikgK2xhZyhUbWVhbiwzKSkvMwogICkKaGVhZCh3ZWF0aGVyKQpgYGAKCgojIyMjIDQuICBTYXZlIGZ1bGwgd2VhdGhlciBkYXRhc2V0IDIwMTQtMjAxOSBmb3Igd2VhdGhlciBhbmFseXNpcwoKYGBge3J9CnNhdmVSRFMod2VhdGhlciwgZmlsZSA9ICdkYXRhL3dlYXRoZXIudGlkeS5SRFMnKQpzdW1tYXJ5KHdlYXRoZXIpCmBgYAoKLSBtYXliZSB3ZSBjYW4gdXNlIGltcHV0YXRpb24gdG8gZmlsbCBpbiBzb21lIG9mIHRoZXNlIE5BJ3MgbGF0ZXIsIHdpdGggSW1wdXRlKCkKCiMjIyMgNS4gSm9pbiB3ZWF0aGVyIGRhdGEgdG8gYGJlYWNoZXNgCgpgYGB7cn0KYmVhY2hlcyA8LSBsZWZ0X2pvaW4oYmVhY2hlcywgd2VhdGhlciwgYnkgPSAnZGF0ZScpCnN1bW1hcnkoYmVhY2hlcykKcm0uYWxsLmJ1dChrZWVwID0gYygnYmVhY2hlcycsICd3ZWF0aGVyJykpCmBgYAoKPGJyPgoKPGhyPgoKPGJyPgoKIyMjIEh5ZHJvbG9neSBkYXRhCgoKCiMjIyMgMS4gUmVhZCB0d28gYHJpdmVyc2AgZGF0YWZyYW1lcwpgYGB7cn0Kb3R0YXdhIDwtIHJlYWRSRFMoImRhdGEvcml2ZXIub3R0YXdhLlJEUyIpCnJpZGVhdSA8LSByZWFkUkRTKCJkYXRhL3JpdmVyLnJpZGVhdS5SRFMiKQpgYGAKCiMjIyMgMi4gVGlkeSBlYWNoIHNldCBpbiBwYXJhbGxlbAoKLSBwaXZvdCBgUEFSQU1gIFBhcmFtZXRlciB7MSwyfSArIFZhbHVlIC0+IHRvIGBkaXNjaGFyZ2VgIGFuZCBgd2F0ZXIubGV2ZWxgIGNvbHVtbnMKLSBqb2luIGRhdGFzZXRzIHRvIGhhdmUgZGF0ZSArIGFsbCBmb3VyIGNvbHVtbnMKYGBge3J9Cm90dGF3YSA8LSBzdWJzZXQob3R0YXdhLCBzZWxlY3QgPSBjKFlFQVIsIERELCBQQVJBTSwgVmFsdWUpKQpvdHRhd2EkUEFSQU0gPC0gYXMuZmFjdG9yKG90dGF3YSRQQVJBTSkKbGV2ZWxzKG90dGF3YSRQQVJBTSkgPC0gYygiZGlzY2hhcmdlLm90dCIsICJ3YXRlci5sZXZlbC5vdHQiKQpvdHRhd2EgPC0gb3R0YXdhICU+JQogIHBpdm90X3dpZGVyKG5hbWVzX2Zyb20gPSBQQVJBTSwgdmFsdWVzX2Zyb20gPSBWYWx1ZSkgJT4lCiAgbXV0YXRlKEREID0gYXMubnVtZXJpYyhERCkpCgojIHNhbWUgZm9yIFJpZGVhdSByaXZlcgpyaWRlYXUgPC0gc3Vic2V0KHJpZGVhdSwgc2VsZWN0ID0gYyhZRUFSLCBERCwgUEFSQU0sIFZhbHVlKSkKcmlkZWF1JFBBUkFNIDwtIGFzLmZhY3RvcihyaWRlYXUkUEFSQU0pCmxldmVscyhyaWRlYXUkUEFSQU0pIDwtIGMoImRpc2NoYXJnZS5yaWQiLCAid2F0ZXIubGV2ZWwucmlkIikKcmlkZWF1IDwtIHJpZGVhdSAlPiUKICBwaXZvdF93aWRlcihuYW1lc19mcm9tID0gUEFSQU0sIHZhbHVlc19mcm9tID0gVmFsdWUpICU+JQogIG11dGF0ZShERCA9IGFzLm51bWVyaWMoREQpKQpgYGAKCiMjIyMgMy4gSm9pbiBib3RoIGRmIGludG8gYHJpdmVyc2AsIGZvcm1hdCBkYXRlcwoKYGBge3J9CnJpdmVycyA8LSBmdWxsX2pvaW4ob3R0YXdhLHJpZGVhdSwgYnk9YygiWUVBUiIsICJERCIpKSAlPiUKICBmaWx0ZXIoWUVBUiA+IDIwMTMpICU+JQogIG11dGF0ZSh5ZWFyID0geW1kKHBhc3RlKGFzLmNoYXJhY3RlcihZRUFSKSwnLTAxLTAxJywgc2VwPScnKSksCiAgICAgICAgIHlkYXkgPSBkYXlzKERELTEpLAogICAgICAgICBkYXRlID0geWVhciArIHlkYXkpICU+JQogIHNlbGVjdChjKC0xLC0yLC03LC04KSkKCnN1bW1hcnkocml2ZXJzKQpgYGAKCi0gdGhlIGxhc3QgZGF0ZSBpbiB0aGUgZGF0YXNldCBpcyAyMDE4LTEyLTMxLCBidXQgd2UgbmVlZCB0aGUgMjAxOSBzZWFzb24gdG9vCgojIyMjIDQuIFJlYWQgaW4gcmVjZW50IHJpdmVyIGRhdGEKCi0gTm90ZTogZGF0ZS10aW1lIG5lZWRzIHRvIGJlIGluIGZvcm1hdDogYHltZF9obWAgZm9yIGx1YnJpZGF0ZSBmdW5jdGlvbnMgdG8gY3JlYXRlIGRhdGVzLgotIENsZWFuIHVwIGp1c3QgZW5vdWdoIHRvIG1lcmdlIGJ5IGZvcm1hdHRpbmcgZGF0ZXMuIE5lZWQgZGF0ZXMgdG8gYmUgYWNjdXJhdGUuCmBgYHtyfQpvdHRhd2EuMTkgPC0gcmVhZFJEUygiZGF0YS9yaXZlci5vdHRhd2EuMTkuUkRTIikKc3VtbWFyeShvdHRhd2EuMTkpCgojIGZpeCBjb2wgbmFtZXMgdG8gYWRkIHJpdmVyIG5hbWUgYC5vdHRgLCBzZXQgZGF0ZXMKbmFtZXMob3R0YXdhLjE5KSA8LSBjKCdkYXRldGltZScsICd3YXRlci5sZXZlbC5vdHQnLCAnZGlzY2hhcmdlLm90dCcpCm90dGF3YS4xOSRkYXRldGltZSA8LSB5bWRfaG0ob3R0YXdhLjE5JGRhdGV0aW1lKQpzdW1tYXJ5KG90dGF3YS4xOSkKCiMgc2FtZSBmb3IgUmlkZWF1CnJpZGVhdS4xOSA8LSByZWFkUkRTKCJkYXRhL3JpdmVyLnJpZGVhdS4xOS5SRFMiKQpuYW1lcyhyaWRlYXUuMTkpIDwtIGMoJ2RhdGV0aW1lJywgJ3dhdGVyLmxldmVsLnJpZCcsICdkaXNjaGFyZ2UucmlkJykKcmlkZWF1LjE5JGRhdGV0aW1lIDwtIHltZF9obShyaWRlYXUuMTkkZGF0ZXRpbWUpCnN1bW1hcnkocmlkZWF1LjE5KQoKcml2ZXJzLjE5IDwtIGZ1bGxfam9pbihvdHRhd2EuMTksIHJpZGVhdS4xOSwgYnkgPSAnZGF0ZXRpbWUnKQpzdW1tYXJ5KHJpdmVycy4xOSkKCiMgYSBsb3Qgb2YgbWlzc2luZyB2YWx1ZXMgdG8gZHJvcCBmcm9tIGRhdGEsIHdlIHdhbnQgdGhlIGRhaWx5IG1lYW4gdG8gd29yayBvay4Kcml2ZXJzLjE5IDwtIG5hLm9taXQocml2ZXJzLjE5KQpzdW1tYXJ5KHJpdmVycy4xOSkKCnJpdmVycy4xOSA8LSByaXZlcnMuMTkgJT4lCiAgbXV0YXRlKGRhdGUgPSBhcy5mYWN0b3IoYXNfZGF0ZShkYXRldGltZSkpLAogICAgICAgICB3ZWVrID0gYXMuZmFjdG9yKHdlZWsoZGF0ZSkpLAogICAgICAgICBtb250aCA9IGFzLmZhY3Rvcihtb250aChkYXRlKSksCiAgICAgICAgIHllYXIgPSBhcy5udW1lcmljKHllYXIoZGF0ZSkpLAogICAgICAgICApCmBgYAoKCgoKLSBBbGwgdGhlIGh5ZHJvbWV0cmljIHZhcmlhYmxlcyBhcmUgaGlnaGx5IGNvcnJlbGF0ZWQuLi4KCiMjIyMgNS4gQXZlcmFnZSB0aGUgcmVjZW50IGRhdGEgdG8gZGFpbHkgdmFsdWVzIHRvIGJpbmQgd2l0aCBgcml2ZXJzYCB0aGVuIHRvIGBiZWFjaGVzYAoKYGBge3J9CnJpdmVycy4xOS5kYWlseSA8LSByaXZlcnMuMTkgJT4lCiAgZ3JvdXBfYnkoZGF0ZSkgJT4lCiAgc3VtbWFyaXplKGRpc2NoYXJnZS5vdHQgPSBtZWFuKGRpc2NoYXJnZS5vdHQpLAogICAgICAgICAgICAjIGRpc2NoYXJnZS5vdHQubWluID0gbWluKGRpc2NoYXJnZS5vdHQpLAogICAgICAgICAgICAjIGRpc2NoYXJnZS5vdHQubWF4ID0gbWF4KGRpc2NoYXJnZS5vdHQpLAogICAgICAgICAgICAjIGRpc2NoYXJnZS5yaWQubWluID0gbWluKGRpc2NoYXJnZS5yaWQpLAogICAgICAgICAgICAjIGRpc2NoYXJnZS5yaWQubWF4ID0gbWF4KGRpc2NoYXJnZS5yaWQpLAogICAgICAgICAgICBkaXNjaGFyZ2UucmlkID0gbWVhbihkaXNjaGFyZ2UucmlkKSkgJT4lCiAgdW5ncm91cCgpCnN1bW1hcnkocml2ZXJzLjE5LmRhaWx5KQoKcml2ZXJzIDwtIHJiaW5kKHNlbGVjdChyaXZlcnMsIGMoMSwzLDUpKSwgcml2ZXJzLjE5LmRhaWx5KQpzdW1tYXJ5KHJpdmVycykKYGBgCgoKIyMjIyA2LiBMZWZ0LWpvaW4gdG8gYGJlYWNoZXNgCgpgYGB7cn0KCmJlYWNoZXMgPC0gbGVmdF9qb2luKGJlYWNoZXMsIHJpdmVycywgYnk9ICdkYXRlJykKc3VtbWFyeShiZWFjaGVzKQpybS5hbGwuYnV0KGtlZXA9YygnYmVhY2hlcycsJ3dlYXRoZXInLCAncml2ZXJzJykpCmBgYAoKLSAqTm90ZXMqCiAgLSBuZWFybHkgMS80IG9mIHdpbmQgb2JzZXJ2YXRpb25zIGFyZSBtaXNzaW5nLi4uIHdoeSBpcyB0aGF0PwogIC0gY2hlY2sgaG93IG1hbnkgTkEncyBpbiB0aGUgb3JpZ2luYWwgZGF0YXNldCBhZnRlciBmaWx0ZXJpbmcsIDcyMiA+IDQ2NSBpbiBiZWFjaGVzLi4uCiAgLSBtYXliZSB0aGV5IGFyZSAwJ3M/IHRoaW5rIGFib3V0IHR1cm5pbmcgTkEgaW50byBvd24gZmFjdG9yICYgYmluIG90aGVycy4KCiMjIyBTYXZlIGV2ZXJ5dGhpbmcgZm9yIGFuYWx5c2lzCgpgYGB7cn0Kc2F2ZVJEUyhiZWFjaGVzLCBmaWxlID0gJ2RhdGEvYmVhY2hlcy50aWR5LlJEUycpCnNhdmVSRFMod2VhdGhlciwgZmlsZSA9ICdkYXRhL3dlYXRoZXIudGlkeS5SRFMnKQpzYXZlUkRTKHJpdmVycywgZmlsZT0gJ2RhdGEvcml2ZXJzLnRpZHkuUkRTJykKYGBgCgo=</div>
 
 
 
@@ -2172,7 +2591,7 @@ $(document).ready(function () {
 <!-- code folding -->
 <script>
 $(document).ready(function () {
-  window.initializeSourceEmbed("0 - Download.Rmd");
+  window.initializeSourceEmbed("2-Tidying.Rmd");
   window.initializeCodeFolding("show" === "show");
 });
 </script>
