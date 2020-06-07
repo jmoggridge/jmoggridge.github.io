@@ -34,9 +34,7 @@ Technology in Cancer Research & Treatment. 2017-06. [DOI: 10.1177/15330346177141
   
 ----
   
-  
 ## Projects
-  
   
 Find my code at: [Github](https://github.com/jmoggridge)  
   
@@ -48,27 +46,49 @@ Find my code at: [Github](https://github.com/jmoggridge)
   
    A dashboard exploring beach water quality data from five public beaches in Ottawa during 2014-2019. This is a project that started on a whim because  I wanted to learn to make a dashboard in R using Shiny and dashboards are so hot right now.  
    
-   [](figures/beachyears1.png)
+   
    
    I chose to present the City of Ottawa beach water quality and closures data because I saw a fairly influencial person (by local Ottawa standards) arguing about beach water quality on twitter. The city provides all the historic data back to 2014 to the public, but I couldn't find any good visualizations of the two thousand paired observations (*E. coli* count, beach status).  It seemed like it would be useful to anyone interested in the beaches' water quality to provide some good data viz from this dataset.  
     Ultimately, I hope this turns into a larger project; I am busy preparing a proposal for a predictive tool to augment the current persistence model for water quality-related closures.
 
-<!-- --- -->
+##### Notebooks (R markdown with code):  
 
-<!-- ### Bioinformatics Notebooks -->
+  1. [Finding and downloading data](beaches_pages/0 - Download.nb.html)  
+  2. Tidying  
+  3. Exploratory analysis  
+  4. Modeling  
+  5. Presentation & proposal slides  
 
+<hr> 
+ 
+### Bioinformatics Notebooks 
+
+(coming soon)
+
+  1. Burrows-Wheeler transform and Manber Myers suffix array construction algorithm
+  2. Tree building: Neighbour-Joining, UPGMA
+  3. Clustering: Lloyd algorithm, k-means, hierarchical clustering
+  4. Sequence analysis
+    - Alignments: Smith-Waterman, Needleman-Wunsch
+    - De Bruijn graphs & assemble
+  5. Hidden Markov Models:
+    - Viterbi algorithm, maximum likelihood 
+    - Forward/backward algorithm, Viterbi learning, Baum-Welch learning
+
+<br>
+  
 <!-- Notes, codes, references collected hile working on doing the [Bioinformatics Algorithm MOOC by Compeau & Pevzner](https://www.coursera.org/specializations/bioinformatics). Topics include motif-finding, sequence alignment, phylogeny, clustering, mass-spectrometry -->
 
 ---
   
-### Small projects and tutorials
+#### Small projects and tutorials
   
   <br>
   
-#### Easy webpage with Rstudio, knitr, and GitHub
+##### Easy webpage with Rstudio, knitr, and GitHub
 
--  [Documentation/tutorial](webpage.creating.html)
--  [Github repository](https://github.com/jmoggridge/jmoggridge.github.io)
+-  [tutorial](webpage.creating.html)
+-  [github repository](https://github.com/jmoggridge/jmoggridge.github.io)
 
 ----
 
