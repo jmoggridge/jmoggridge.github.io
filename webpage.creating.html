@@ -389,7 +389,6 @@ div.tocify {
 
 
 <h1 class="title toc-ignore">Basic website with Shiny and hosting on Github</h1>
-<h4 class="date">last update 2020/06/01</h4>
 
 </div>
 
@@ -409,7 +408,7 @@ div.tocify {
 <div id="setup-r-environment" class="section level4">
 <h4>1. Setup R environment</h4>
 <ul>
-<li><p>Create a new Rproject, give a name (jmoggridge.github.io.Rproj), use the Git option.</p></li>
+<li><p>Create a new Rproject, name it, and select the Git option for .</p></li>
 <li><p><strong>Install/reinstall</strong> if necessary:</p></li>
 <li><p>R, Rstudio, Git (and SSH key; possibly install xcode on mac), Shiny, devtools, tidyverse<br />
 </p></li>
@@ -442,15 +441,26 @@ div.tocify {
 <ul>
 <li><h5 id="rmarkdown-text">Rmarkdown text:</h5>
 <ul>
-<li>add to body of index.Rmd (or other linked .Rmd)</li>
-<li>use <code>&lt;br&gt;&lt;br&gt;</code> to add extra line breaks.</li>
-<li>embed other elements in txt. links, pictures. <br><br></li>
-</ul></li>
-<li><h5 id="hyperlinks-to-other-pages-include-within-site">Hyperlinks to other pages, include within site:</h5>
-<ul>
-<li>within site: <code>[text on page](file.html)</code><br />
+<li>Add to body of index.Rmd (or other linked .Rmd)</li>
+<li>Use <code>&lt;br&gt;&lt;br&gt;</code> to add extra line breaks.</li>
+<li>Embed other elements in text: links, pictures.<br />
 </li>
-<li>URL: <code>[text](URL)</code> <br><br></li>
+<li>Use 2 spaces at end of line to start a new line.</li>
+<li>Enclose text with single asterisk for <em>italics</em> or two for <strong>bold</strong> face.<br />
+</li>
+<li>Use hash signs # to create nesting headers<br />
+</li>
+<li>Use \$ to enclose math expressions written with mathjax syntax:
+<ul>
+<li><span class="math inline">\(0 = e^{i*\pi}+1\)</span></li>
+</ul></li>
+</ul>
+<p><br><br></p></li>
+<li><h5 id="hyperlinks-to-other-pages-including-between-different-pages-on-your-site">Hyperlinks to other pages, including between different pages on your site:</h5>
+<ul>
+<li>within site to other .html documents: <code>[text on page](filename.html)</code><br />
+</li>
+<li>URLs: <code>[text](URL)</code> <br><br></li>
 </ul></li>
 <li><h5 id="navigation-bar">Navigation bar:</h5>
 <ul>
@@ -463,42 +473,45 @@ div.tocify {
 <li>Need to create new Rmd file<br />
 </li>
 <li>Create content as for index file above.</li>
-<li>add link to file in text or yml?? <br><br></li>
-</ul></li>
+<li>‘Knit’ .Rmd file to render .html document.</li>
+<li>Add a link to the html file in text using the filename as above.</li>
+</ul>
+<p><br><br></p></li>
 </ul>
 <hr />
 </div>
 <div id="build-website" class="section level4">
 <h4>4. Build website</h4>
 <ul>
-<li>Once you’re done adding and editing, and you want to upload it, save your files, go to the ‘Build’ tab and click ‘Build Website’</li>
+<li>Once you’re done adding content and editing, you’ll want to ‘Knit’ everything then go to the ‘Build’ tab and click ‘Build Website’.</li>
 </ul>
 </div>
 <div id="push-to-git" class="section level4">
 <h4>5. Push to Git</h4>
 <ul>
-<li>Open a terminal window, set working directory to your project folder</li>
-<li>Enter these commands in (after $):</li>
-</ul>
+<li><p>Open a terminal window, set working directory to your project folder</p></li>
+<li><p>Enter these commands in (after $):</p></li>
+<li><p>Using bash:</p>
+<pre><code>  to see all available Git commands:
+     $ git
 
-<pre><code>    if you to see a list of Git commands (optional, shows documentation for Git):
-       $ git
-       
-    this adds all the files in the directory to the index  
-       $ git add .
-       
-    this records all the changes that were made and labels this version &quot;first build&quot;  
-       $ git commit -m &quot;first build&quot;
-       
-    a summary of the changes you made will be printed in the window.
-    next you can use the push command to finalize your changes
-       $ git push
-    
-    (you can also do these things in the &#39;Git&#39; tab of Rstudio)</code></pre>
-<p>Your site should now be up on yourname.github.io. Nice!</p>
+  add the files in the directory to the index  
+     $ git add .
+
+  log changes and label the commit
+     $ git commit -m &quot;first build&quot;
+
+  now push changes
+     $ git push</code></pre></li>
+<li><p>or in Rstudio:</p>
 <ul>
-<li>it seems easier to just build from Rstudio? ‘Build &gt; Build website’</li>
+<li>go to ‘git’ tab</li>
+<li>check staged files for to commit/push</li>
+<li>Commit</li>
+<li>Push</li>
+</ul></li>
 </ul>
+<p>Your site should now be up at your_user_name.github.io within a couple minutes. Nice work!</p>
 <hr />
 </div>
 <div id="customize-styles" class="section level4">
@@ -506,9 +519,10 @@ div.tocify {
 <ul>
 <li>create a file called styles.css in your websites’ working directory</li>
 <li>add <code>css: style.css</code> to the end of the .yml file in <code>output</code></li>
+<li>adding a Bootstrap theme is easy: just change the name of theme in the header of the Rmd file (see below). Beyond that, you’ll need to add other elements of the <code>styles.css</code> file.</li>
 </ul>
 <pre><code>output:
-html_document:
+  html_document:
     theme: lumen
     highlight: textmate
     css: style.css</code></pre>
@@ -554,19 +568,6 @@ html_document:
 <pre><code>    This copies the contents of the id_rsa.pub file to your clipboard
         $ pbcopy &lt; ~/.ssh/id_rsa.pub</code></pre>
 <p>Now I can ‘Clone’ the repository by copying the SSH link from my github repository jmoggridge.github.io</p>
-<hr />
-</div>
-<div id="other-notes" class="section level4">
-<h4>Other notes</h4>
-<p><em>first build: 2020/03/07</em></p>
-<ul>
-<li>had to re-install devtools to get the ‘Build’ function working in Rstudio</li>
-</ul>
-<p><em>new version 2020/06/01</em></p>
-<ul>
-<li>switched theme to ‘lumen’</li>
-<li>added OttawaBeaches dashboard</li>
-</ul>
 </div>
 </div>
 
