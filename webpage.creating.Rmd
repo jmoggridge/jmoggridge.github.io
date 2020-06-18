@@ -1,6 +1,5 @@
 ---
 title: "Basic website with Shiny and hosting on Github"
-date: last update 2020/06/01
 output: 
   html_document:
     toc: true
@@ -25,15 +24,14 @@ output:
 ### Instructions  
   
 ---
+
+First make sure that your github account is setup.
      
 #### 1. Setup R environment  
   
-+ Create a new Rproject, give a name (jmoggridge.github.io.Rproj), use the Git option.  
-
 +  **Install/reinstall** if necessary:
-
-  *  R, Rstudio, Git (and SSH key; possibly install xcode on mac), Shiny, devtools, tidyverse  
-  *  note on devtools -> I had to reinstall this when the 'Build' menu only had the 'Configure built tools...' option for Shiny to render html documents. Reinstalling devtools solved the issue   
+   *  R, Rstudio, Git (and SSH key; possibly install xcode on mac), Shiny, devtools, tidyverse  
+   *  note on devtools -> I had to reinstall this when the 'Build' menu only had the 'Configure built tools...' option for Shiny to render html documents. Reinstalling devtools solved the issue   
 
 +  Create your **building environment** in Rstudio
 
@@ -41,8 +39,8 @@ output:
 
   *  Choose **version control** option  
   *  Choose **Git** option  
-  *  Your repository info should paste from the clipboard into the fields  
-  *  Choose a directory & save. All the files you'll need to build the site should now be downloaded and imported to your Rstudio environment for editing  
+  *  Your repository info should paste from the clipboard directly into the fields otherwise copy/paste.
+  *  Choose a directory & save. All the files you'll need to build the site should now be downloaded and imported to your Rstudio environment for editing.  
   
 ---  
   
@@ -57,78 +55,142 @@ output:
   
 #### 3. Add content and add structure
     
-      
+[Basic documentation for authoring Rmarkdown](https://rmarkdown.rstudio.com/authoring_basics.html)   
+[Cheatsheet for Rmarkdown](https://rstudio.com/wp-content/uploads/2015/02/rmarkdown-cheatsheet.pdf)
+
+
 *  ##### Rmarkdown text:
-   -  add to body of index.Rmd (or other linked .Rmd) 
-   -  use `<br><br>` to add extra line breaks. 
-   -  embed other elements in txt. links, pictures.  <br><br>
+   -  Add to body of index.Rmd (or other linked .Rmd) 
+   -  Use `<br><br>` to add extra line breaks. 
+   -  Embed other elements in text: links, pictures.  
+   -  Use 2 spaces at end of line to start a new line. 
+   -  Enclose text with single asterisk for *italics* or two for **bold** face.  
+   -  Use hash signs \# to create nesting headers   
+   -  Use \\$ to enclose math expressions written with mathjax syntax:  
+      -  $0 = e^{i*\pi}+1$    
+  <br>     
+     
+*  ##### Hyperlinks to other pages, including between different pages on your site:
+   - within site to other .html documents: `[text to appear on page](filename.html)`  
+   - URLs: `[text to appear](http://www.URL.com)`     <br><br>
    
-*  ##### Hyperlinks to other pages, include within site:
-   - within site: `[text on page](file.html)`  
-   - URL: `[text](URL)`     <br><br>
+*  ##### Navigation bar header:
+   -  for single page: add `toc` to header of .Rmd file  
+   -  for entire website: need to edit `navbar` in _site.yml file
+   - eg.
+
+```
+  navbar:
+    type: inverse
+    left:
+      - icon: fa-home
+        text: Home
+        href: index.html
+    right:
+      - text: Code
+        icon: fa-github
+        href: https://github.com/jmoggridge
+      - text: Email
+        icon: fa-envelope-o
+        href: mailto:ja.moggridge@gmail.com
+      - icon: fa-twitter fa-lg
+        href: https://twitter.com/quaxlikeaduck
+```
    
-*  ##### Navigation bar:
-   -  for single page: add `toc` to header of `.Rmd` file  
-   -  for entire website: need to edit `navbar` in `.yml` file   <br><br>
+*  ##### Code blocks like above:    
+   -  for line: enclose with backticks    
+   -  for multiple lines, create a code chunk with three  backticks. Or just use the add chunk command and remove the `{r}` from the header of the chunk to make it just echo the code and not try to interpret it.
+  
+   <br>
    
 *  ##### Create pages beyond the homepage (index.Rmd):
    -  Need to create new Rmd file  
    -  Create content as for index file above.
-   -  add link to file in text or yml??  <br><br>   
-     
+   -  'Knit' .Rmd file to render .html document.
+   -  Add a link to the html file in text using the filename as above.  
+    
+<br>
+      
+*   ##### Social media icons and links in the header
+    Done through the _site.yml file in the navbar section (as above). As with links, href can be an html file that you add to the repository or an address.
+
+   <br>
+
+
+- ##### Lists 
+  -  Easy to make but can be difficult to get spacing right         
+    +  Use a symbol `* - +` and two spaces to start                     
+    +  Add next item with same indentation    
+       *  start a new nested list by indenting further, 2 or 3 spaces     
+    +  Always add two spaces at the end of each line    
+    -  List bullets will vary by indentation automatically
+    + [x] Can make checklists using `[ ]` and `[x]` but buttons aren't reactive to clicking.    
+
 ---  
   
     
   
 #### 4. Build website  
   
-*  Once you're done adding and editing, and you want to upload it, save your files, go to the 'Build' tab and click 'Build Website'
-  
-
-
-#### 5. Push to Git
-
-*  Open a terminal window, set working directory to your project folder
-*  Enter these commands in (after $):
-
-\list \of \Git \commands \to \add \commit \push
-
-        if you to see a list of Git commands (optional, shows documentation for Git):
-           $ git
-           
-        this adds all the files in the directory to the index  
-           $ git add .
-           
-        this records all the changes that were made and labels this version "first build"  
-           $ git commit -m "first build"
-           
-        a summary of the changes you made will be printed in the window.
-        next you can use the push command to finalize your changes
-           $ git push
-        
-        (you can also do these things in the 'Git' tab of Rstudio)
-  
-  
- Your site should now be up on yourname.github.io. Nice! 
-  
-  - it seems easier to just build from Rstudio? 'Build > Build website'
+*  Once you're done adding content and editing, you'll want to 'Knit' everything then go to the 'Build' tab and click 'Build Website'.
   
 ---
   
-#### 6. Customize styles
-
-  - create a file called styles.css in your websites' working directory
-  - add `css: style.css` to the end of the .yml file in `output`
   
+#### 5. Customize styles
+
++ adding a Bootstrap theme is easy: just change the name of theme in the header of the Rmd file (see below). Beyond that, you'll need to add other elements of the `styles.css` file.
+
+
++ If you want to further customize, you'd need to edit the css formatting in a new file:
+  - create a file called styles.css in your websites' working directory.
+  - add css formatting parameters (beyond the scope of this document but many sources online).
+  - add `css: style.css` to the end of the .yml file in `output` to modify the bootstrap theme or create entirely custom layout/theme.
+
+
 ```
 output:
-html_document:
+  html_document:
     theme: lumen
     highlight: textmate
     css: style.css
 ```  
+  
+  
+---
+  
+  
+#### 6. Push to Git
 
----  
+*Using git command line*
+*  Open a terminal window, set working directory to your project folder
+*  Enter these commands in (after $):
+
+- Using bash:  
+
+        to see all available Git commands:
+           $ git
+           
+        add the files in the directory to the index  
+           $ git add .
+           
+        log changes and label the commit
+           $ git commit -m "first build"
+           
+        now push changes
+           $ git push
+
+ *or in Rstudio*
+    - go to 'git' tab in one of the Rstudio panes
+    - all new files in the R project working directory should show up here
+    - Check each file to include in the 'Staged' column
+    - 'Commit' to these changes
+    - 'Push' the changes to the git repository
+  
+ Your site should now be up at your_user_name.github.io within a couple minutes. Nice work! 
+  
+  
+---
   
     
 ### Troubleshooting
@@ -177,25 +239,10 @@ I’m using OSx10.12.6, so I found a good answer on StackOverflow and do this st
         When you edit the file, make sure it is "Plain Text" using the menu at the top of the screen and clicking Format->Make Plain Text.
         Set the permissions as instructed in your tutorial.
 
-Finish that GitHub tut and go to the next page to copy SSH info and add it into Github.
+Finish that GitHub tutorial and go to the next page to copy SSH info and add it into Github.
 This was fine using this:
 
     	This copies the contents of the id_rsa.pub file to your clipboard
         	$ pbcopy < ~/.ssh/id_rsa.pub
     
 Now I can ‘Clone’ the repository by copying the SSH link from my github repository jmoggridge.github.io
-
-
-----  
-####  Other notes
-     
-*first build: 2020/03/07*
-
-*  had to re-install devtools to get the 'Build' function working in Rstudio
-
-*new version 2020/06/01*
-
-* switched theme to 'lumen'
-* added OttawaBeaches dashboard
-
-

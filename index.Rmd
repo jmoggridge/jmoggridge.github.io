@@ -1,5 +1,5 @@
 ---
-title: 'Jason A. Moggridge'
+title: '**Jason A. Moggridge**'
 
 output: 
   html_document:
@@ -12,20 +12,20 @@ output:
 ---   
 
 
-  B. Sc. Biochemistry Hons.,  Carleton University, Ottawa ON  
-  Student, researcher, biologist, programmer, science communicator
+  B.Sc. Biochemistry (Hons),  Carleton University, Ottawa ON  
+  *Student, researcher, biologist, programmer, science communicator*
       
 ---
 
 ## Publications 
   
-- Sensitive Detection of Immunoglobulin G Stability Using in Real-Time Isothermal Differential Scanning Fluorimetry: Determinants of Protein Stability for Antibody-Based Therapeutics.  
+- Sensitive detection of Immunoglobulin G stability using in Real-Time Isothermal Differential Scanning Fluorimetry: determinants of protein stability for antibody-based therapeutics.  
 Technology in Cancer Research & Treatment. 2017-06. [DOI: 10.1177/1533034617714149](https://journals.sagepub.com/doi/10.1177/1533034617714149) [open-access](https://pubmed.ncbi.nlm.nih.gov/27090740)
 
-- The hibernating South American marsupial, Dromiciops gliroides, displays torpor-sensitive microRNA expression patterns. Scientific Reports. 2016-04. [DOI: 10.1038/srep24627](https://doi.org/10.1038/srep24627)  
+- The hibernating South American marsupial, *Dromiciops gliroides*, displays torpor-sensitive microRNA expression patterns. Scientific Reports. 2016-04. [DOI: 10.1038/srep24627](https://doi.org/10.1038/srep24627)  
   
   
-  [ORCID identifier](https://orcid.org/0000-0003-1291-5868)  
+  [ORCID id. 0000-0003-1291-5868](https://orcid.org/0000-0003-1291-5868)  
   
 <!-- --- -->
 <!-- bibliography: works.bib -->
@@ -36,65 +36,67 @@ Technology in Cancer Research & Treatment. 2017-06. [DOI: 10.1177/15330346177141
   
 ## Projects
   
-Find my code at: [Github](https://github.com/jmoggridge)  
+<br>    
   
----
+### *#OttBike Counters dashboard*
+
+   An interactive dashboard surveying nearly 10 years of municipal bike counter data from 13 different locations in Ottawa, ON. 
+   Readers can analyze and compare various aspects of each time series including: seasonality, autoregression and decomposition; effect of weather variables on traffic; and clustering of locations by similarity. I am interested in developing a predictive model for future years using time series forecasting methods like *exponential smoothing* or *autoreggresive integrated moving average*.     
   
-### Ottawa Beaches
+  Links to [dashboard](https://jmoggridge.shinyapps.io/OttBikeCounters/) and [Github repository](https://github.com/jmoggridge/ottbike_counters).  
 
-[Ottawa Beaches Water Quality Dashboard](https://jmoggridge.shinyapps.io/OttawaBeaches/)
+
+<br>  
   
-   A dashboard exploring beach water quality data from five public beaches in Ottawa during 2014-2019. This is a project that started on a whim because  I wanted to learn to make a dashboard in R using Shiny and dashboards are so hot right now.  
-  The city has made the data public, however I couldn't find any good visualizations of the entire set of two thousand paired observations (*E. coli* count, beach status).  It seemed like it would be useful to anyone interested in the beaches' water quality to provide some good visualizations from this dataset in it's entirety.  
-    Ultimately, I hope to turn this larger project beyond the dashboard; I am working on a predictive tool to augment the current persistence model for water quality-related closures. If the model proves accurate, I hope to write a paper/proposal about implementing it in the future. 
-
-##### Notebooks (R markdown with code):  
-
-  1. [Find & download data](beaches_pages/1-Download.nb.html)  
-  2. [Tidying](beaches_pages/2-Tidying.nb.html)   
-  3. [Exploratory analysis]  
-  4. [Modeling]
-  5. [Presentation & proposal slides]
-    - [**Random forests on Ottawa beaches**: a predictive water safety advisory tool for five City of Ottawa beaches]
-
-<hr> 
- 
-### Bioinformatics Notebooks 
-
-(coming soon)
-
-  1. Burrows-Wheeler transform and Manber Myers suffix array construction algorithm
-  2. Tree building: Neighbour-Joining, UPGMA
-  3. Clustering: Lloyd algorithm, k-means, hierarchical clustering
-  4. Sequence analysis
-    - Alignments: Smith-Waterman, Needleman-Wunsch
-    - De Bruijn graphs & assemble
-  5. Hidden Markov Models:
-    - Viterbi algorithm, maximum likelihood 
-    - Forward/backward algorithm, Viterbi learning, Baum-Welch learning
-
-<br>
-  
-<!-- Notes, codes, references collected hile working on doing the [Bioinformatics Algorithm MOOC by Compeau & Pevzner](https://www.coursera.org/specializations/bioinformatics). Topics include motif-finding, sequence alignment, phylogeny, clustering, mass-spectrometry -->
-
----
-  
-#### Small projects and tutorials
-  
-  <br>
-  
-##### Easy webpage with Rstudio, knitr, and GitHub
-
--  [tutorial](webpage.creating.html)
--  [github repository](https://github.com/jmoggridge/jmoggridge.github.io)
-
-----
-
+### *Ottawa Beaches Water Quality Dashboard*
     
-## About me
+   A dashboard exploring beach water quality data from five public beaches in Ottawa during 2014-2019. Dynamic visualizations of ~two thousand paired observations of *E. coli* counts and beach status. Includes analysis of E.coli count distributions by year, time of year, and location. The dashboard will eventually include graphs of interactions between E.coli counts, weather and river conditions and their predictive utility in beach water monitoring. Going forward, I hope to produce forecasting models to augment the current persistence model for closures based on these relationships. Similar systems are employed by NowCast for beaches in Ohio and elsewhere.  
+   
+Links to [dashboard](https://jmoggridge.shinyapps.io/OttawaBeaches/) and [Github repository](https://github.com/jmoggridge/ottawabeaches)
+    
+  **Notebooks** with details on data handling (R markdown with code):  
 
-Bioinformatics graduate student interested in next-generation sequencing and string algorithms for applications in molecular biology, biochemistry, genetics. Lives in Ottawa, Ontario. Enjoys cycling ([follow on Strava](https://www.strava.com/athletes/17492854)), cross-country skiing and exploring natural areas around the city. Favourite TV shows are Nathan For You and Freaks and Geeks. I have two cats. Challenge me to a game of [chess](https://lichess.org/@/JasonMoggridge)
+  1. [Finding & downloading data](beaches_pages/1-Download.nb.html)  
+  2. [Tidying](beaches_pages/2-Tidying.nb.html)   
+
+  <!-- 3. [Exploratory analysis]   -->
+  <!-- 4. [Modeling] -->
+  <!-- 5. [Presentation & proposal slides] -->
+  <!--   - [**Random forests on Ottawa beaches**: a predictive water safety advisory tool for five City of Ottawa beaches] -->
+
+<!-- <hr>  -->
+
+
+<!-- ### Bioinformatics Notebooks  -->
+
+<!-- (coming soon) -->
+
+<!--   1. Burrows-Wheeler transform and Manber Myers suffix array construction algorithm -->
+<!--   2. Tree building: Neighbour-Joining, UPGMA -->
+<!--   3. Clustering: Lloyd algorithm, k-means, hierarchical clustering -->
+<!--   4. Sequence analysis -->
+<!--     - Alignments: Smith-Waterman, Needleman-Wunsch -->
+<!--     - De Bruijn graphs & assemble -->
+<!--   5. Hidden Markov Models: -->
+<!--     - Viterbi algorithm, maximum likelihood  -->
+<!--     - Forward/backward algorithm, Viterbi learning, Baum-Welch learning -->
+
+
+---
+
+## Notebooks and Tutorials
+    
+   
+####  R/knitr website tutorial
+    
+   A short how-to create a website similar to this in Markdown with Rstudio & knitr, and host it on GitHub for free.    
+   [tutorial notebook](webpage.creating.html) &  [github repository](https://github.com/jmoggridge/jmoggridge.github.io)     
   
+----
+  
+## About me
+       
+  Graduate student most interested in next-generation sequencing and string algorithms for applications in molecular biology, biochemistry, genetics. Lives in Ottawa. Enjoys cycling ([follow me on Strava](https://www.strava.com/athletes/17492854)), cross-country skiing and exploring natural areas around the city. Favourite TV shows are *Nathan For You* and *Freaks and Geeks*. I have two cats. Challenge me to a game of chess on [Lichess](https://lichess.org/@/JasonMoggridge).
 <br>
 
 ---

@@ -388,21 +388,21 @@ div.tocify {
 
 
 
-<h1 class="title toc-ignore">Jason A. Moggridge</h1>
+<h1 class="title toc-ignore"><strong>Jason A. Moggridge</strong></h1>
 
 </div>
 
 
-<p>B. Sc. Biochemistry Hons., Carleton University, Ottawa ON<br />
-Student, researcher, biologist, programmer, science communicator</p>
+<p>B.Sc. Biochemistry (Hons), Carleton University, Ottawa ON<br />
+<em>Student, researcher, biologist, programmer, science communicator</em></p>
 <hr />
 <div id="publications" class="section level2">
 <h2>Publications</h2>
 <ul>
-<li><p>Sensitive Detection of Immunoglobulin G Stability Using in Real-Time Isothermal Differential Scanning Fluorimetry: Determinants of Protein Stability for Antibody-Based Therapeutics.<br />
+<li><p>Sensitive detection of Immunoglobulin G stability using in Real-Time Isothermal Differential Scanning Fluorimetry: determinants of protein stability for antibody-based therapeutics.<br />
 Technology in Cancer Research &amp; Treatment. 2017-06. <a href="https://journals.sagepub.com/doi/10.1177/1533034617714149">DOI: 10.1177/1533034617714149</a> <a href="https://pubmed.ncbi.nlm.nih.gov/27090740">open-access</a></p></li>
-<li><p>The hibernating South American marsupial, Dromiciops gliroides, displays torpor-sensitive microRNA expression patterns. Scientific Reports. 2016-04. <a href="https://doi.org/10.1038/srep24627">DOI: 10.1038/srep24627</a></p>
-<p><a href="https://orcid.org/0000-0003-1291-5868">ORCID identifier</a></p></li>
+<li><p>The hibernating South American marsupial, <em>Dromiciops gliroides</em>, displays torpor-sensitive microRNA expression patterns. Scientific Reports. 2016-04. <a href="https://doi.org/10.1038/srep24627">DOI: 10.1038/srep24627</a></p>
+<p><a href="https://orcid.org/0000-0003-1291-5868">ORCID id. 0000-0003-1291-5868</a></p></li>
 </ul>
 <!-- --- -->
 <!-- bibliography: works.bib -->
@@ -412,60 +412,51 @@ Technology in Cancer Research &amp; Treatment. 2017-06. <a href="https://journal
 </div>
 <div id="projects" class="section level2">
 <h2>Projects</h2>
-<p>Find my code at: <a href="https://github.com/jmoggridge">Github</a></p>
-<hr />
-<div id="ottawa-beaches" class="section level3">
-<h3>Ottawa Beaches</h3>
-<p><a href="https://jmoggridge.shinyapps.io/OttawaBeaches/">Ottawa Beaches Water Quality Dashboard</a></p>
-<p>A dashboard exploring beach water quality data from five public beaches in Ottawa during 2014-2019. This is a project that started on a whim because I wanted to learn to make a dashboard in R using Shiny and dashboards are so hot right now.<br />
-The city has made the data public, however I couldn’t find any good visualizations of the entire set of two thousand paired observations (<em>E. coli</em> count, beach status). It seemed like it would be useful to anyone interested in the beaches’ water quality to provide some good visualizations from this dataset in it’s entirety.<br />
-Ultimately, I hope to turn this larger project beyond the dashboard; I am working on a predictive tool to augment the current persistence model for water quality-related closures. If the model proves accurate, I hope to write a paper/proposal about implementing it in the future.</p>
-<div id="notebooks-r-markdown-with-code" class="section level5">
-<h5>Notebooks (R markdown with code):</h5>
-<ol style="list-style-type: decimal">
-<li><a href="beaches_pages/1-Download.nb.html">Find &amp; download data</a><br />
-</li>
-<li><a href="beaches_pages/2-Tidying.nb.html">Tidying</a><br />
-</li>
-<li>[Exploratory analysis]<br />
-</li>
-<li>[Modeling]</li>
-<li>[Presentation &amp; proposal slides] - [<strong>Random forests on Ottawa beaches</strong>: a predictive water safety advisory tool for five City of Ottawa beaches]</li>
-</ol>
-<hr>
-</div>
-</div>
-<div id="bioinformatics-notebooks" class="section level3">
-<h3>Bioinformatics Notebooks</h3>
-<p>(coming soon)</p>
-<ol style="list-style-type: decimal">
-<li>Burrows-Wheeler transform and Manber Myers suffix array construction algorithm</li>
-<li>Tree building: Neighbour-Joining, UPGMA</li>
-<li>Clustering: Lloyd algorithm, k-means, hierarchical clustering</li>
-<li>Sequence analysis - Alignments: Smith-Waterman, Needleman-Wunsch - De Bruijn graphs &amp; assemble</li>
-<li>Hidden Markov Models: - Viterbi algorithm, maximum likelihood - Forward/backward algorithm, Viterbi learning, Baum-Welch learning</li>
-</ol>
 <p><br></p>
-<!-- Notes, codes, references collected hile working on doing the [Bioinformatics Algorithm MOOC by Compeau & Pevzner](https://www.coursera.org/specializations/bioinformatics). Topics include motif-finding, sequence alignment, phylogeny, clustering, mass-spectrometry -->
-<hr />
-<div id="small-projects-and-tutorials" class="section level4">
-<h4>Small projects and tutorials</h4>
+<div id="ottbike-counters-dashboard" class="section level3">
+<h3><em>#OttBike Counters dashboard</em></h3>
+<p>An interactive dashboard surveying nearly 10 years of municipal bike counter data from 13 different locations in Ottawa, ON. Readers can analyze and compare various aspects of each time series including: seasonality, autoregression and decomposition; effect of weather variables on traffic; and clustering of locations by similarity. I am interested in developing a predictive model for future years using time series forecasting methods like <em>exponential smoothing</em> or <em>autoreggresive integrated moving average</em>.</p>
+<p>Links to <a href="https://jmoggridge.shinyapps.io/OttBikeCounters/">dashboard</a> and <a href="https://github.com/jmoggridge/ottbike_counters">Github repository</a>.</p>
 <p><br></p>
-<div id="easy-webpage-with-rstudio-knitr-and-github" class="section level5">
-<h5>Easy webpage with Rstudio, knitr, and GitHub</h5>
-<ul>
-<li><a href="webpage.creating.html">tutorial</a></li>
-<li><a href="https://github.com/jmoggridge/jmoggridge.github.io">github repository</a></li>
-</ul>
+</div>
+<div id="ottawa-beaches-water-quality-dashboard" class="section level3">
+<h3><em>Ottawa Beaches Water Quality Dashboard</em></h3>
+<p>A dashboard exploring beach water quality data from five public beaches in Ottawa during 2014-2019. Dynamic visualizations of ~two thousand paired observations of <em>E. coli</em> counts and beach status. Includes analysis of E.coli count distributions by year, time of year, and location. The dashboard will eventually include graphs of interactions between E.coli counts, weather and river conditions and their predictive utility in beach water monitoring. Going forward, I hope to produce forecasting models to augment the current persistence model for closures based on these relationships. Similar systems are employed by NowCast for beaches in Ohio and elsewhere.</p>
+<p>Links to <a href="https://jmoggridge.shinyapps.io/OttawaBeaches/">dashboard</a> and <a href="https://github.com/jmoggridge/ottawabeaches">Github repository</a></p>
+<p><strong>Notebooks</strong> with details on data handling (R markdown with code):</p>
+<ol style="list-style-type: decimal">
+<li><a href="beaches_pages/1-Download.nb.html">Finding &amp; downloading data</a><br />
+</li>
+<li><a href="beaches_pages/2-Tidying.nb.html">Tidying</a></li>
+</ol>
+<p><!-- 3. [Exploratory analysis]   --> <!-- 4. [Modeling] --> <!-- 5. [Presentation & proposal slides] --> <!--   - [**Random forests on Ottawa beaches**: a predictive water safety advisory tool for five City of Ottawa beaches] --></p>
+<!-- <hr>  -->
+<!-- ### Bioinformatics Notebooks  -->
+<!-- (coming soon) -->
+<!--   1. Burrows-Wheeler transform and Manber Myers suffix array construction algorithm -->
+<!--   2. Tree building: Neighbour-Joining, UPGMA -->
+<!--   3. Clustering: Lloyd algorithm, k-means, hierarchical clustering -->
+<!--   4. Sequence analysis -->
+<!--     - Alignments: Smith-Waterman, Needleman-Wunsch -->
+<!--     - De Bruijn graphs & assemble -->
+<!--   5. Hidden Markov Models: -->
+<!--     - Viterbi algorithm, maximum likelihood  -->
+<!--     - Forward/backward algorithm, Viterbi learning, Baum-Welch learning -->
 <hr />
 </div>
 </div>
+<div id="notebooks-and-tutorials" class="section level2">
+<h2>Notebooks and Tutorials</h2>
+<div id="rknitr-website-tutorial" class="section level4">
+<h4>R/knitr website tutorial</h4>
+<p>A short how-to create a website similar to this in Markdown with Rstudio &amp; knitr, and host it on GitHub for free.<br />
+<a href="webpage.creating.html">tutorial notebook</a> &amp; <a href="https://github.com/jmoggridge/jmoggridge.github.io">github repository</a></p>
+<hr />
 </div>
 </div>
 <div id="about-me" class="section level2">
 <h2>About me</h2>
-<p>Bioinformatics graduate student interested in next-generation sequencing and string algorithms for applications in molecular biology, biochemistry, genetics. Lives in Ottawa, Ontario. Enjoys cycling (<a href="https://www.strava.com/athletes/17492854">follow on Strava</a>), cross-country skiing and exploring natural areas around the city. Favourite TV shows are Nathan For You and Freaks and Geeks. I have two cats. Challenge me to a game of <a href="https://lichess.org/@/JasonMoggridge">chess</a></p>
-<p><br></p>
+<p>Graduate student most interested in next-generation sequencing and string algorithms for applications in molecular biology, biochemistry, genetics. Lives in Ottawa. Enjoys cycling (<a href="https://www.strava.com/athletes/17492854">follow me on Strava</a>), cross-country skiing and exploring natural areas around the city. Favourite TV shows are <em>Nathan For You</em> and <em>Freaks and Geeks</em>. I have two cats. Challenge me to a game of chess on <a href="https://lichess.org/@/JasonMoggridge">Lichess</a>. <br></p>
 <hr />
 </div>
 
