@@ -6,66 +6,103 @@ output:
     toc: true
     toc_float:
       toc_collapsed: false
-    toc_depth: 4
+    toc_depth: 2
     # number_sections: true
     # theme: lumen
 ---   
 
 
   B.Sc. Biochemistry (Hons),  Carleton University, Ottawa ON  
-  *Student, researcher, biologist, programmer, science communicator*
+  *Student, researcher, biologist, programmer*    
+  ORCID id. [0000-0003-1291-5868](https://orcid.org/0000-0003-1291-5868)  
       
 ---
 
 ## Publications 
-  
-- Sensitive detection of Immunoglobulin G stability using in Real-Time Isothermal Differential Scanning Fluorimetry: determinants of protein stability for antibody-based therapeutics.  
-Technology in Cancer Research & Treatment. 2017-06. [DOI: 10.1177/1533034617714149](https://journals.sagepub.com/doi/10.1177/1533034617714149) [open-access](https://pubmed.ncbi.nlm.nih.gov/27090740)
 
-- The hibernating South American marsupial, *Dromiciops gliroides*, displays torpor-sensitive microRNA expression patterns. Scientific Reports. 2016-04. [DOI: 10.1038/srep24627](https://doi.org/10.1038/srep24627)  
+- Moggridge J, Biggar K, Dawson N, &  Storey KB. Sensitive detection of Immunoglobulin G stability using in Real-Time Isothermal Differential Scanning Fluorimetry: determinants of protein stability for antibody-based therapeutics. *Technol. Cancer Res. Treat.*; 16(6):997-1005. (2017) PMID: [28602127](https://pubmed.ncbi.nlm.nih.gov/28602127/)
+
+- Hadj-Moussa H, Moggridge JA, Luu BE, Quintero-Galvis JF, Gaitán-Espitia JD, Nespolo RF, & Storey KB. The hibernating South American marsupial, *Dromiciops gliroides*, displays torpor-sensitive microRNA expression patterns. *Sci Rep.*; 6:24627. (2016). PMID: [27090740](https://pubmed.ncbi.nlm.nih.gov/27090740/)
+
+ 
+----
+
+## Skills
+
+### Computational
+
+  - Programming & scientific computing with Python and R
+  - HTML documents and dashboards with Rmarkdown and Shiny
+  - MS Office suite
+  - Various bioinformatics tools for sequencing
+  
+### Wet lab
+
+  - PCR
+  - Gel electrophoresis & blots
+  - DNA/RNA purification
+  - Protein and enzyme assays
+  - Cloning 
   
   
-  [ORCID id. 0000-0003-1291-5868](https://orcid.org/0000-0003-1291-5868)  
+---  
   
-<!-- --- -->
-<!-- bibliography: works.bib -->
-<!-- csl: style.csl -->
-<!-- ---   -->
   
+## Awards / Scholarships  
+
+- Master of Bioinformatics Entrance Scholarship 2020 (University of Guelph)
+- Carleton University Senate Medal 2016
+- NSERC Undergraduate student research awards (2014, 2015)
+-	David A Dunton Scholarship 2015 (Carleton)  
+- Clarence C. Gibson Scholarship 2014 (Carleton)  
+- E.W.R. Steacie Scholarship 2013 (Carleton)  
+- Dean’s Summer Research Internship 2013 (Carleton)  
+	
+
 ----
   
-## Projects
+## Projects  
   
-<br>    
+   
+### *Ottawa bike counters dashboard*
   
-### *#OttBike Counters dashboard*
-
    An interactive dashboard surveying nearly 10 years of municipal bike counter data from 13 different locations in Ottawa, ON. 
-   Readers can analyze and compare various aspects of each time series including: seasonality, autoregression and decomposition; effect of weather variables on traffic; and clustering of locations by similarity. I am interested in developing a predictive model for future years using time series forecasting methods like *exponential smoothing* or *autoreggresive integrated moving average*.     
-  
-  Links to [dashboard](https://jmoggridge.shinyapps.io/OttBikeCounters/) and [Github repository](https://github.com/jmoggridge/ottbike_counters).  
-
-
-<br>  
-  
-### *Ottawa Beaches Water Quality Dashboard*
+   Readers can analyze and compare various aspects of each time series including: seasonality, autoregression and decomposition; effect of weather variables on traffic; and clustering of locations by similarity. I am interested in developing a predictive model for future years using time series forecasting methods.     
+  Links to [dashboard](https://jmoggridge.shinyapps.io/OttBikeCounters/) and [Github repository](https://github.com/jmoggridge/ottbike_counters).
+       
+      
+### *Ottawa Beaches water quality dashboard*
     
-   A dashboard exploring beach water quality data from five public beaches in Ottawa during 2014-2019. Dynamic visualizations of ~two thousand paired observations of *E. coli* counts and beach status. Includes analysis of E.coli count distributions by year, time of year, and location. The dashboard will eventually include graphs of interactions between E.coli counts, weather and river conditions and their predictive utility in beach water monitoring. Going forward, I hope to produce forecasting models to augment the current persistence model for closures based on these relationships. Similar systems are employed by NowCast for beaches in Ohio and elsewhere.  
+   A dashboard exploring beach water quality data from five public beaches in Ottawa during 2014-2019. Dynamic visualizations of paired observations of *E. coli* counts and beach status. Includes analysis of *E.coli* count distributions by year, time of year, and location. The dashboard will eventually include graphs of interactions between *E.coli* counts, weather and river conditions and their predictive utility in beach water monitoring. Going forward, I hope to produce forecasting models to augment the current persistence model for closures based on these relationships. Similar systems are employed by NowCast for beaches in Ohio and elsewhere.  
    
 Links to [dashboard](https://jmoggridge.shinyapps.io/OttawaBeaches/) and [Github repository](https://github.com/jmoggridge/ottawabeaches)
     
-  **Notebooks** with details on data handling (R markdown with code):  
+  <!-- **Notebooks** with details on data handling (R markdown with code):   -->
 
-  1. [Finding & downloading data](beaches_pages/1-Download.nb.html)  
-  2. [Tidying](beaches_pages/2-Tidying.nb.html)   
+  <!-- 1. [Finding & downloading data](beaches_pages/1-Download.nb.html)   -->
+  <!-- 2. [Tidying](beaches_pages/2-Tidying.nb.html)    -->
 
   <!-- 3. [Exploratory analysis]   -->
   <!-- 4. [Modeling] -->
   <!-- 5. [Presentation & proposal slides] -->
   <!--   - [**Random forests on Ottawa beaches**: a predictive water safety advisory tool for five City of Ottawa beaches] -->
+     
+    
+### *Bioinformatics Notebooks*
+   
+(Under construction)  
+  Python implementations of [Bioinformatics Algorithms from Pevzner and Compeau](http://bioinformaticsalgorithms.com/) for their Coursera course and problems on Rosalind.  
 
-<!-- <hr>  -->
+  - Hidden Markov Models for Sequence Alignment:  
+     + [Viterbi algorithm and outcome likelihood problem](bioinfo_algos_notebooks/HMMs for sequences.html)     
+       
+       
+<!-- #### **Other notebooks/tutorials/modules**   -->
 
+<!--  - Create a github website: A short how-to create a website similar to this on in Markdown with Rstudio & knitr, and host it on GitHub for free.     -->
+<!--    [tutorial notebook](webpage.creating.html) &  [github repository](https://github.com/jmoggridge/jmoggridge.github.io)      -->
+
+  
 
 <!-- ### Bioinformatics Notebooks  -->
 
@@ -81,22 +118,27 @@ Links to [dashboard](https://jmoggridge.shinyapps.io/OttawaBeaches/) and [Github
 <!--     - Viterbi algorithm, maximum likelihood  -->
 <!--     - Forward/backward algorithm, Viterbi learning, Baum-Welch learning -->
 
-
+ 
 ---
 
-## Notebooks and Tutorials
-    
-   
-####  R/knitr website tutorial
-    
-   A short how-to create a website similar to this in Markdown with Rstudio & knitr, and host it on GitHub for free.    
-   [tutorial notebook](webpage.creating.html) &  [github repository](https://github.com/jmoggridge/jmoggridge.github.io)     
+## Work experience
+ 
+ - 2017-2020  - Cook at Union Local613, Ottawa, ON
+ - Fall 2015	- Teaching assistant for Biochemistry 2200 with Dr. Ken Storey at Carleton University
+ - 2013-2014  - Cook at Union Local613, Ottawa, ON
+ - 2008-2012  - Cook at the Manx Pub, Ottawa, ON
+ - 2006-2008  - Cook at the Whalesbone, Ottawa, ON
   
-----
-  
+--- 
+
+
 ## About me
+  
        
-  Graduate student most interested in next-generation sequencing and string algorithms for applications in molecular biology, biochemistry, genetics. Lives in Ottawa. Enjoys cycling ([follow me on Strava](https://www.strava.com/athletes/17492854)), cross-country skiing and exploring natural areas around the city. Favourite TV shows are *Nathan For You* and *Freaks and Geeks*. I have two cats. Challenge me to a game of chess on [Lichess](https://lichess.org/@/JasonMoggridge).
-<br>
-
+  Future U of Guelph master's student in bioinformatics (Fall 2020). Interested in next-generation sequencing and string algorithms. I really enjoy solving bioinformatics problems on [Rosalind](http://rosalind.info/users/jasonmoggridge/).
+  During my undergrad at Carleton, I spent three summers doing research under the supervision of [Dr. Ken Storey](http://www.kenstoreylab.com/ken-storey/). My undergrad research initially focused on developing assays for protein stability using a real-time PCR instrument; in my upper years and for my Honours thesis, I investigated changes in microRNA expression during hibernation  in the Monito del monte *Dromiciops gliroides* and in response to dehydration stress in the African clawed frog *Xenopus laevis*.
+  
+  Lives in Ottawa. Enjoys cycling, cross-country skiing and exploring natural areas around the city. Favourite TV shows are *Nathan For You* and *Freaks and Geeks*. I have two cats. Feel free to challenge me to a game of chess on [Lichess](https://lichess.org/@/JasonMoggridge) (don't worry, I'm not very good), follow me [Strava](https://www.strava.com/athletes/17492854) or troll me on [twitter](https://twitter.com/quaxlikeaduck).  
+  
 ---
+
