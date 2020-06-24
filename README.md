@@ -1,4 +1,4 @@
 # Repository for my personal page 
 
-HTML created using Rstudio/knitr
-page hosted on github here: jmoggridge.github.io
+HTML created using Rstudio/knitr;  
+Page hosted on github here: jmoggridge.github.io
