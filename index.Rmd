@@ -91,10 +91,11 @@ Links to [dashboard](https://jmoggridge.shinyapps.io/OttawaBeaches/) and [Github
 ### *Bioinformatics Notebooks*
    
 (Under construction)  
-  Python implementations of [Bioinformatics Algorithms from Pevzner and Compeau](http://bioinformaticsalgorithms.com/) for their Coursera course and problems on Rosalind.  
+  A series of Jupyter notebooks with my Python implementations for[Bioinformatics Algorithms from Pevzner and Compeau](http://bioinformaticsalgorithms.com/) for their Coursera course and problems on Rosalind.  
 
   - Hidden Markov Models for Sequence Alignment:  
-     + [Viterbi algorithm and outcome likelihood problem](bioinfo_algos_notebooks/HMMs for sequences.html)     
+     [1. Viterbi algorithm and outcome likelihood problem](bioinfo_algos_notebooks/HMMs for sequences.html)     
+     [2. Constructing a profile HMM from a multiple alignment](bioinfo_algos_notebooks/HMMs.notebook2.html)
        
        
 <!-- #### **Other notebooks/tutorials/modules**   -->
