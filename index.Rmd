@@ -32,18 +32,17 @@ output:
 ### Computational
 
   - Programming & scientific computing with Python and R
-  - HTML documents and dashboards with Rmarkdown and Shiny
+  - HTML documents, websites, and dashboards with Rmarkdown and Shiny
   - MS Office suite
   - Various bioinformatics tools for sequencing
+  - Version control with Git
   
 ### Wet lab
 
-  - PCR
-  - Gel electrophoresis & blots
+  - PCR Molecular cloning 
   - DNA/RNA purification
+  - Gel electrophoresis & blots
   - Protein and enzyme assays
-  - Cloning 
-  
   
 ---  
   
@@ -61,19 +60,43 @@ output:
 
 ----
   
+
+## Work experience
+ 
+ - 2017-2020  - Cook at Union Local613, Ottawa, ON
+ - Fall 2015	- Teaching assistant for 2nd year biochemistry with Dr. K. Storey at Carleton University
+ - 2013-2014  - Cook/dishwasher at Union Local613, Ottawa, ON
+ - 2008-2012  - Cook at the Manx Pub, Ottawa, ON
+ - 2006-2008  - Cook at the Whalesbone, Ottawa, ON
+  
+--- 
+
+
+## About me
+  
+       
+  Future U of Guelph master's student in bioinformatics (starting Sept. 2020). Interested in next-generation sequencing and string algorithms. I really enjoy solving bioinformatics coding challenges on [Rosalind](http://rosalind.info/users/jasonmoggridge/).    
+  
+  During my undergrad at Carleton, I spent three summers doing biochemistry & molecular biology research under the supervision of [Dr. Ken Storey](http://www.kenstoreylab.com/ken-storey/). My undergrad research initially focused on developing assays for protein stability using a real-time PCR instrument; in my upper years and for my Honours thesis, I investigated changes in microRNA expression during hibernation  in the Monito del monte *Dromiciops gliroides* and in response to dehydration stress in the African clawed frog *Xenopus laevis*.
+  
+  Lives in Ottawa. Enjoys cycling, cross-country skiing and exploring natural areas around the city. Favourite TV shows are *Nathan For You* and *Freaks and Geeks*. I have two cats. Feel free to challenge me to a game of chess on [Lichess](https://lichess.org/@/JasonMoggridge) (don't worry, I'm not very good), see my bike rides on  [Strava](https://www.strava.com/athletes/17492854) or hit me up on [twitter](https://twitter.com/quaxlikeaduck).  
+  
+  
+  ---
+  
 ## Projects  
   
    
 ### *Ottawa bike counters dashboard*
   
    An interactive dashboard surveying nearly 10 years of municipal bike counter data from 13 different locations in Ottawa, ON. 
-   Readers can analyze and compare various aspects of each time series including: seasonality, autoregression and decomposition; effect of weather variables on traffic; and clustering of locations by similarity. I am interested in developing a predictive model for future years using time series forecasting methods.     
+   Readers can analyze and compare various aspects of each time series including: seasonality, autocorrelation and decomposition; effect of weather variables on traffic; and clustering of locations by similarity. I currently developing a predictive model for future years using time series forecasting methods.     
   Links to [dashboard](https://jmoggridge.shinyapps.io/OttBikeCounters/) and [Github repository](https://github.com/jmoggridge/ottbike_counters).
        
       
 ### *Ottawa Beaches water quality dashboard*
     
-   A dashboard exploring beach water quality data from five public beaches in Ottawa during 2014-2019. Dynamic visualizations of paired observations of *E. coli* counts and beach status. Includes analysis of *E.coli* count distributions by year, time of year, and location. The dashboard will eventually include graphs of interactions between *E.coli* counts, weather and river conditions and their predictive utility in beach water monitoring. Going forward, I hope to produce forecasting models to augment the current persistence model for closures based on these relationships. Similar systems are employed by NowCast for beaches in Ohio and elsewhere.  
+   A dashboard exploring beach water quality data from five public beaches in Ottawa during 2014-2019. Dynamic visualizations of paired observations of *E. coli* counts and beach status. Includes analysis of *E.coli* count distributions by year, time of year, and location. The dashboard will eventually include graphs of interactions between *E.coli* counts, weather and river conditions and their predictive utility in beach water monitoring. Going forward, I would like to implement a 'nowcasting' model to augment the current persistence model for closures based on these relationships.
    
 Links to [dashboard](https://jmoggridge.shinyapps.io/OttawaBeaches/) and [Github repository](https://github.com/jmoggridge/ottawabeaches)
     
@@ -95,7 +118,7 @@ Links to [dashboard](https://jmoggridge.shinyapps.io/OttawaBeaches/) and [Github
 
   - Hidden Markov Models for Sequence Alignment:  
      [1. Viterbi algorithm and outcome likelihood problem](bioinfo_algos_notebooks/HMMs for sequences.html)     
-     [2. Constructing a profile HMM from a multiple alignment](bioinfo_algos_notebooks/HMMs.notebook2.html)
+     [2. Constructing a profile HMM from a multiple sequence alignment](bioinfo_algos_notebooks/HMMs.notebook2.html)
        
        
 <!-- #### **Other notebooks/tutorials/modules**   -->
@@ -119,27 +142,5 @@ Links to [dashboard](https://jmoggridge.shinyapps.io/OttawaBeaches/) and [Github
 <!--     - Viterbi algorithm, maximum likelihood  -->
 <!--     - Forward/backward algorithm, Viterbi learning, Baum-Welch learning -->
 
- 
----
-
-## Work experience
- 
- - 2017-2020  - Cook at Union Local613, Ottawa, ON
- - Fall 2015	- Teaching assistant for Biochemistry 2200 with Dr. Ken Storey at Carleton University
- - 2013-2014  - Cook at Union Local613, Ottawa, ON
- - 2008-2012  - Cook at the Manx Pub, Ottawa, ON
- - 2006-2008  - Cook at the Whalesbone, Ottawa, ON
-  
---- 
-
-
-## About me
-  
-       
-  Future U of Guelph master's student in bioinformatics (Fall 2020). Interested in next-generation sequencing and string algorithms. I really enjoy solving bioinformatics problems on [Rosalind](http://rosalind.info/users/jasonmoggridge/).
-  During my undergrad at Carleton, I spent three summers doing research under the supervision of [Dr. Ken Storey](http://www.kenstoreylab.com/ken-storey/). My undergrad research initially focused on developing assays for protein stability using a real-time PCR instrument; in my upper years and for my Honours thesis, I investigated changes in microRNA expression during hibernation  in the Monito del monte *Dromiciops gliroides* and in response to dehydration stress in the African clawed frog *Xenopus laevis*.
-  
-  Lives in Ottawa. Enjoys cycling, cross-country skiing and exploring natural areas around the city. Favourite TV shows are *Nathan For You* and *Freaks and Geeks*. I have two cats. Feel free to challenge me to a game of chess on [Lichess](https://lichess.org/@/JasonMoggridge) (don't worry, I'm not very good), follow me [Strava](https://www.strava.com/athletes/17492854) or troll me on [twitter](https://twitter.com/quaxlikeaduck).  
-  
----
+ ---
 
