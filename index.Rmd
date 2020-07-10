@@ -1,5 +1,5 @@
 ---
-title: '**Jason A. Moggridge**'
+title: 'Jason A. Moggridge'
 
 output: 
   html_document:
@@ -80,7 +80,7 @@ output:
   
   During my undergrad at Carleton, I spent three summers doing biochemistry & molecular biology research under the supervision of [Dr. Ken Storey](http://www.kenstoreylab.com/ken-storey/). My undergrad research initially focused on developing assays for protein stability using a real-time PCR instrument; in my upper years and for my Honours thesis, I investigated changes in microRNA expression during hibernation in the Monito del monte (*Dromiciops gliroides*) and in response to dehydration stress in the African clawed frog (*Xenopus laevis*).
   
-  Lives in Ottawa. Enjoys cycling, cross-country skiing and exploring natural areas around the city. Favourite TV shows are *Nathan For You* and *Freaks and Geeks*. I have two cats. Feel free to challenge me to a game of chess on [Lichess](https://lichess.org/@/JasonMoggridge) (don't worry, I'm not very good), see my bike rides on  [Strava](https://www.strava.com/athletes/17492854) or hit me up on [twitter](https://twitter.com/quaxlikeaduck).  
+  Lives in Ottawa. Enjoys cycling, cross-country skiing and exploring natural areas around the city. Favourite TV shows are *Nathan For You* and *Freaks and Geeks*. I have two cats.
   
   <!-- Other things I used to do: Lifeguard at Lac Lapêche (2001), Lived in New Zealand (2001-200)   -->
 

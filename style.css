@@ -30,8 +30,9 @@ Code block  #2469e0; (hyperlinks)
 }
 /* Controls header navbar?? */
 .navbar-inverse {
-    background-color: #fffff;
+    background-color: #00000;
     border-color: #e6e6e6;
+    /*color: red; #should be able to adjust header text color*/
 }
 /* Styles for toc on left */
 .list-group-item.active, .list-group-item.active:hover, .list-group-item.active:focus {
@@ -45,13 +46,9 @@ Code block  #2469e0; (hyperlinks)
 td {  /* Table  */
   font-size: 12px;
 }
-h1.title {
-  font-size: 36px;
-  color: #363966;
-}
 h1 { /* Header 1 */
-  font-size: 30px;
-  color: #138D75;
+  font-size: 36px;
+  color: MidnightBlue;
 }
 h2 { /* Header 2 */
     font-size: 28px;
@@ -65,9 +62,9 @@ h4 { /* Header 4 */
   font-size: 16px;
   color: #0E6655;
 }
-code.r{ /* Code block */
+code{ /* Code block */
     font-size: 12px;
-    colour: #2469e0;
+    color: #2469e0;
 }
 /*  hyperlinks colours; what else? */
 a, a > code {

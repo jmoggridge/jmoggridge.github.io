@@ -1,20 +1,15 @@
 name: "jmoggridge.github.io"
 output_dir: "."  # for GitHub
 navbar:
-  type: inverse
-  left:
-    - icon: fa-home
-      text: Home
-      href: index.html
   right:
-    - text: Code
-      icon: fa-github
-      href: https://github.com/jmoggridge
-    - text: Email
-      icon: fa-envelope-o
+    - icon: fa-paper-plane
       href: mailto:ja.moggridge@gmail.com
-    - icon: fa-twitter fa-lg
+    - icon: fa-twitter
       href: https://twitter.com/quaxlikeaduck
+    - icon: fa-github
+      href: https://github.com/jmoggridge
+    - icon: fa-linkedin
+      href: https://www.linkedin.com/in/jasonmoggridge/
 output:
   html_document:
     theme: lumen
