@@ -50,7 +50,7 @@ output:
 ## Awards / Scholarships  
 
 - Master of Bioinformatics Entrance Scholarship 2020 (University of Guelph)
-- Carleton University Senate Medal 2016
+- Senate Medal 2016 (Carleton University)
 - NSERC Undergraduate student research awards (2014, 2015)
 -	David A Dunton Scholarship 2015 (Carleton)  
 - Clarence C. Gibson Scholarship 2014 (Carleton)  
@@ -65,82 +65,60 @@ output:
  
  - 2017-2020  - Cook at Union Local613, Ottawa, ON
  - Fall 2015	- Teaching assistant for 2nd year biochemistry with Dr. K. Storey at Carleton University
- - 2013-2014  - Cook/dishwasher at Union Local613, Ottawa, ON
+ - 2013-2014  - Cook at Union Local 613, Ottawa, ON
  - 2008-2012  - Cook at the Manx Pub, Ottawa, ON
  - 2006-2008  - Cook at the Whalesbone, Ottawa, ON
-  
+ - 2004-2006  - Cook at Boulôt, Wellington, New Zealand
+
 --- 
 
 
 ## About me
   
        
-  Future U of Guelph master's student in bioinformatics (starting Sept. 2020). Interested in next-generation sequencing and string algorithms. I really enjoy solving bioinformatics coding challenges on [Rosalind](http://rosalind.info/users/jasonmoggridge/).    
+  Currently enrolled in the Master of Bioinformatics program at University of Guelph (starting Sept. 2020). Interested in next-generation sequencing and string algorithms. I really enjoy solving bioinformatics coding challenges on [Rosalind](http://rosalind.info/users/jasonmoggridge/).    
   
-  During my undergrad at Carleton, I spent three summers doing biochemistry & molecular biology research under the supervision of [Dr. Ken Storey](http://www.kenstoreylab.com/ken-storey/). My undergrad research initially focused on developing assays for protein stability using a real-time PCR instrument; in my upper years and for my Honours thesis, I investigated changes in microRNA expression during hibernation  in the Monito del monte *Dromiciops gliroides* and in response to dehydration stress in the African clawed frog *Xenopus laevis*.
+  During my undergrad at Carleton, I spent three summers doing biochemistry & molecular biology research under the supervision of [Dr. Ken Storey](http://www.kenstoreylab.com/ken-storey/). My undergrad research initially focused on developing assays for protein stability using a real-time PCR instrument; in my upper years and for my Honours thesis, I investigated changes in microRNA expression during hibernation in the Monito del monte (*Dromiciops gliroides*) and in response to dehydration stress in the African clawed frog (*Xenopus laevis*).
   
   Lives in Ottawa. Enjoys cycling, cross-country skiing and exploring natural areas around the city. Favourite TV shows are *Nathan For You* and *Freaks and Geeks*. I have two cats. Feel free to challenge me to a game of chess on [Lichess](https://lichess.org/@/JasonMoggridge) (don't worry, I'm not very good), see my bike rides on  [Strava](https://www.strava.com/athletes/17492854) or hit me up on [twitter](https://twitter.com/quaxlikeaduck).  
   
-  
+  <!-- Other things I used to do: Lifeguard at Lac Lapêche (2001), Lived in New Zealand (2001-200)   -->
+
   ---
   
 ## Projects  
   
-   
+<br>
+
 ### *Ottawa bike counters dashboard*
   
    An interactive dashboard surveying nearly 10 years of municipal bike counter data from 13 different locations in Ottawa, ON. 
-   Readers can analyze and compare various aspects of each time series including: seasonality, autocorrelation and decomposition; effect of weather variables on traffic; and clustering of locations by similarity. I currently developing a predictive model for future years using time series forecasting methods.     
+   Readers can analyze and compare various aspects of each time series including: seasonality, autocorrelation and decomposition; effect of weather variables on traffic; and correlation between counts at different locations. 
+   I am currently developing a seasonal+trend forecasting model for future years.
   Links to [dashboard](https://jmoggridge.shinyapps.io/OttBikeCounters/) and [Github repository](https://github.com/jmoggridge/ottbike_counters).
        
-      
+<br>
+
 ### *Ottawa Beaches water quality dashboard*
     
    A dashboard exploring beach water quality data from five public beaches in Ottawa during 2014-2019. Dynamic visualizations of paired observations of *E. coli* counts and beach status. Includes analysis of *E.coli* count distributions by year, time of year, and location. The dashboard will eventually include graphs of interactions between *E.coli* counts, weather and river conditions and their predictive utility in beach water monitoring. Going forward, I would like to implement a 'nowcasting' model to augment the current persistence model for closures based on these relationships.
    
 Links to [dashboard](https://jmoggridge.shinyapps.io/OttawaBeaches/) and [Github repository](https://github.com/jmoggridge/ottawabeaches)
     
-  <!-- **Notebooks** with details on data handling (R markdown with code):   -->
 
-  <!-- 1. [Finding & downloading data](beaches_pages/1-Download.nb.html)   -->
-  <!-- 2. [Tidying](beaches_pages/2-Tidying.nb.html)    -->
-
-  <!-- 3. [Exploratory analysis]   -->
-  <!-- 4. [Modeling] -->
-  <!-- 5. [Presentation & proposal slides] -->
-  <!--   - [**Random forests on Ottawa beaches**: a predictive water safety advisory tool for five City of Ottawa beaches] -->
-     
-    
+<br>
+  
 ### *Bioinformatics Notebooks*
    
 (Under construction)  
-  A series of Jupyter notebooks with my Python implementations for[Bioinformatics Algorithms from Pevzner and Compeau](http://bioinformaticsalgorithms.com/) for their Coursera course and problems on Rosalind.  
+  A series of Jupyter notebooks with my Python implementations from [Bioinformatics Algorithms by Pevzner and Compeau](http://bioinformaticsalgorithms.com/).
 
   - Hidden Markov Models for Sequence Alignment:  
      [1. Viterbi algorithm and outcome likelihood problem](bioinfo_algos_notebooks/HMMs for sequences.html)     
      [2. Constructing a profile HMM from a multiple sequence alignment](bioinfo_algos_notebooks/HMMs.notebook2.html)
        
-       
-<!-- #### **Other notebooks/tutorials/modules**   -->
 
-<!--  - Create a github website: A short how-to create a website similar to this on in Markdown with Rstudio & knitr, and host it on GitHub for free.     -->
-<!--    [tutorial notebook](webpage.creating.html) &  [github repository](https://github.com/jmoggridge/jmoggridge.github.io)      -->
+#### Other notebooks/tutorials/modules
 
-  
-
-<!-- ### Bioinformatics Notebooks  -->
-
-<!-- (coming soon) -->
-
-<!--   1. Burrows-Wheeler transform and Manber Myers suffix array construction algorithm -->
-<!--   2. Tree building: Neighbour-Joining, UPGMA -->
-<!--   3. Clustering: Lloyd algorithm, k-means, hierarchical clustering -->
-<!--   4. Sequence analysis -->
-<!--     - Alignments: Smith-Waterman, Needleman-Wunsch -->
-<!--     - De Bruijn graphs & assemble -->
-<!--   5. Hidden Markov Models: -->
-<!--     - Viterbi algorithm, maximum likelihood  -->
-<!--     - Forward/backward algorithm, Viterbi learning, Baum-Welch learning -->
-
- ---
-
+ - Create a github website: A short how-to create a website similar to this one with Rstudio & knitr, and host it on GitHub for free.
+   [tutorial notebook](webpage.creating.html) &  [github repository](https://github.com/jmoggridge/jmoggridge.github.io)
