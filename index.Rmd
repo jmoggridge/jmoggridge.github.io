@@ -106,8 +106,18 @@ output:
 Links to [dashboard](https://jmoggridge.shinyapps.io/OttawaBeaches/) and [Github repository](https://github.com/jmoggridge/ottawabeaches)
     
 
-<br>
-  
+----
+
+
+### A selection of work from U of Guelph Master of Bioinformatics courses
+
+**Para*sight***: a classifier for apicomplexan 18S rRNA sequences
+
+- [Parasight: article pdf](mbinf_works/JMoggridge_parasight_pdf.pdf)
+- [Parasight: R notebook pdf](mbinf_works/JMoggridge_parasight_pdf.pdf)
+
+----
+
 ### *Bioinformatics Notebooks*
    
 (Under construction)  

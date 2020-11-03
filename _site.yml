@@ -1,4 +1,7 @@
 name: "jmoggridge.github.io"
+title: "Personal webpage"
+author: "Jason Moggridge"
+
 output_dir: "."  # for GitHub
 navbar:
   right:
@@ -15,5 +18,3 @@ output:
     theme: lumen
     highlight: textmate
     css: style.css
-
-# lumen
