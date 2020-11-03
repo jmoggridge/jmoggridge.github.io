@@ -76,7 +76,7 @@ output:
 ## About me
   
        
-  Currently enrolled in the Master of Bioinformatics program at University of Guelph (starting Sept. 2020). Interested in next-generation sequencing and string algorithms. I really enjoy solving bioinformatics coding challenges on [Rosalind](http://rosalind.info/users/jasonmoggridge/).    
+  Currently enrolled in the Master of Bioinformatics program at University of Guelph (2020-2021). Interested in next-generation sequencing and designing algorithms. I really enjoy solving bioinformatics coding challenges on [Rosalind](http://rosalind.info/users/jasonmoggridge/).    
   
   During my undergrad at Carleton, I spent three summers doing biochemistry & molecular biology research under the supervision of [Dr. Ken Storey](http://www.kenstoreylab.com/ken-storey/). My undergrad research initially focused on developing assays for protein stability using a real-time PCR instrument; in my upper years and for my Honours thesis, I investigated changes in microRNA expression during hibernation in the Monito del monte (*Dromiciops gliroides*) and in response to dehydration stress in the African clawed frog (*Xenopus laevis*).
   
@@ -111,22 +111,22 @@ Links to [dashboard](https://jmoggridge.shinyapps.io/OttawaBeaches/) and [Github
 
 ### A selection of work from U of Guelph Master of Bioinformatics courses
 
-**Para*sight***: a classifier for apicomplexan 18S rRNA sequences
-
-- [Parasight: article pdf](mbinf_works/JMoggridge_parasight_pdf.pdf)
-- [Parasight: R notebook pdf](mbinf_works/JMoggridge_parasight_pdf.pdf)
+- **Para*sight***: a classifier for apicomplexan 18S rRNA sequences
+  
+  - [Parasight: article pdf](mbinf_works/JMoggridge_parasight_pdf.pdf)
+  - [Parasight: R notebook pdf](mbinf_works/JMoggridge_parasight_pdf.pdf)
 
 ----
 
-### *Bioinformatics Notebooks*
-   
-(Under construction)  
-  A series of Jupyter notebooks with my Python implementations from [Bioinformatics Algorithms by Pevzner and Compeau](http://bioinformaticsalgorithms.com/).
+<!-- ### *Bioinformatics Notebooks* -->
 
-  - Hidden Markov Models for Sequence Alignment:  
-     [1. Viterbi algorithm and outcome likelihood problem](bioinfo_algos_notebooks/HMMs for sequences.html)     
-     [2. Constructing a profile HMM from a multiple sequence alignment](bioinfo_algos_notebooks/HMMs.notebook2.html)
-       
+<!-- (Under construction)   -->
+<!--   A series of Jupyter notebooks with my Python implementations from [Bioinformatics Algorithms by Pevzner and Compeau](http://bioinformaticsalgorithms.com/). -->
+
+<!--   - Hidden Markov Models for Sequence Alignment:   -->
+<!--      [1. Viterbi algorithm and outcome likelihood problem](bioinfo_algos_notebooks/HMMs for sequences.html)      -->
+<!--      [2. Constructing a profile HMM from a multiple sequence alignment](bioinfo_algos_notebooks/HMMs.notebook2.html) -->
+
 
 #### Other notebooks/tutorials/modules
 
