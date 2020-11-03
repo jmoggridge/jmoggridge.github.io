@@ -109,12 +109,12 @@ Links to [dashboard](https://jmoggridge.shinyapps.io/OttawaBeaches/) and [Github
 ----
 
 
-### A selection of work from U of Guelph Master of Bioinformatics courses
+### Bioinformatics portfolio
 
 - **Para*sight***: a classifier for apicomplexan 18S rRNA sequences
   
-  - [Parasight: article pdf](mbinf_works/JMoggridge_parasight_pdf.pdf)
-  - [Parasight: R notebook pdf](mbinf_works/JMoggridge_Apicomplexa_classifier_notebook.pdf)
+  - [Parasight: article (pdf)](mbinf_works/JMoggridge_parasight_pdf.pdf)
+  - [Parasight: R notebook  (pdf)](mbinf_works/JMoggridge_Apicomplexa_classifier_notebook.pdf)
 
 ----
 
@@ -130,5 +130,5 @@ Links to [dashboard](https://jmoggridge.shinyapps.io/OttawaBeaches/) and [Github
 
 #### Other notebooks/tutorials/modules
 
- - Create a github website: A short how-to create a website similar to this one with Rstudio & knitr, and host it on GitHub for free.
-   [tutorial notebook](webpage.creating.html) &  [github repository](https://github.com/jmoggridge/jmoggridge.github.io)
+ - Create a github website: A short how-to create a website similar to this one  with Rstudio & knitr, and host it on GitHub for free (notes to myself for when I forget again, really). This project was forked from [Florian Privé's repo](https://github.com/privefl/rmarkdown-website-template) & he has an excellent tutorial too.
+   - [tutorial notebook](webpage_tutorial/webpage.creating.html) &  [github repository](https://github.com/jmoggridge/jmoggridge.github.io)
