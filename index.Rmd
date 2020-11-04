@@ -111,7 +111,7 @@ Links to [dashboard](https://jmoggridge.shinyapps.io/OttawaBeaches/) and [Github
 
 ### Bioinformatics portfolio
 
-- **Para*sight***: a classifier for apicomplexan 18S rRNA sequences
+- _Para*sight*_: a classifier for apicomplexan 18S rRNA sequences
   
   - [Parasight: article (pdf)](mbinf_works/JMoggridge_parasight_pdf.pdf)
   - [Parasight: R notebook  (pdf)](mbinf_works/JMoggridge_Apicomplexa_classifier_notebook.pdf)
