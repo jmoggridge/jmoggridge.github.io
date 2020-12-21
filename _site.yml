@@ -7,10 +7,10 @@ navbar:
   right:
     - icon: fa-paper-plane
       href: mailto:ja.moggridge@gmail.com
-    - icon: fa-twitter
-      href: https://twitter.com/quaxlikeaduck
     - icon: fa-github
       href: https://github.com/jmoggridge
+    - icon: fa-twitter
+      href: https://twitter.com/quaxlikeaduck
     - icon: fa-linkedin
       href: https://www.linkedin.com/in/jasonmoggridge/
 output:

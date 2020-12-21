@@ -38,7 +38,7 @@ output:
   
 ### Wet lab
 
-  - PCR & Molecular cloning 
+  - PCR
   - DNA/RNA purification
   - Electrophoresis
   - Protein and enzyme assays

@@ -6,8 +6,8 @@ output:
     toc_float:
       toc_collapsed: false
     toc_depth: 6
+    theme: lumen
     # number_sections: true
-    # theme: lumen
 ---
 
 
@@ -76,8 +76,7 @@ First make sure that your github account is setup.
    
 *  ##### Navigation bar header:
    -  for single page: add `toc` to header of .Rmd file  
-   -  for entire website: need to edit `navbar` in _site.yml file
-   - eg.
+   -  for entire website: need to edit `navbar` in _site.yml file, eg.:
 
 ```
   navbar:
@@ -163,8 +162,8 @@ output:
 #### 6. Push to Git
 
 *Using git command line*
-*  Open a terminal window, set working directory to your project folder
-*  Enter these commands in (after $):
+ -  Open a terminal window, set working directory to your project folder
+ -  Enter these commands in (after $):
 
 - Using bash:  
 
@@ -207,7 +206,7 @@ While doing that, you might run into an issue with this if you are on macOS > 10
   
 ***
 
-#### Problem encounter while setting SSH key for Github to Rstudio:
+#### Problem encountered while setting SSH key for Github to Rstudio:
   
   
 I get to this step where I need to modify the ‘.ssh/config’ file:  
